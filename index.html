@@ -1,0 +1,6093 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NetDNA API Docs</title>
+    <meta name="description" content="Manage your platform on NetDNA&amp;#039;s CDN with our advanced RESTful API, allowing you to instantly manage users, zones, and accounts with ease.">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta property="og:site_name" content="NetDNA API Docs">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NetDNA API Docs">
+    <meta property="og:description" content="Manage your platform on NetDNA&amp;#039;s CDN with our advanced RESTful API, allowing you to instantly manage users, zones, and accounts with ease.">
+    <meta property="og:image" content="https://www.netdna.com/wp-content/themes/newNetDNA/images/logo.png">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/prettify.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Cuprum:400,700">
+    <link rel="stylesheet" href="/css/docs.css">
+  </head>
+  <body data-spy="scroll" data-target="#docs-navbar" data-offset="81">
+    <div id="spacer"></div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a href="/" class="brand">NetDNA API Docs</a></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+          <div id="docs-navbar" data-spy="affix">
+            <div class="row">
+              <div class="span3">
+                <ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a href="#overview">Overview</a></li>
+                  <li><a href="#support" class="gotohash">Support</a></li>
+                  <li><a href="#changelog" class="gotohash">Changelog</a></li>
+                  <li><a href="#account-api" class="gotohash"><i class="icon-suitcase"></i> Account API</a></li>
+                  <li><a href="#users-api" class="gotohash"><i class="icon-user"></i> Users API</a></li>
+                  <li><a href="#zones-api" class="gotohash"><i class="icon-cloud"></i> Zones API</a></li>
+                  <li><a href="#reports-by-zone-api" class="gotohash"><i class="icon-file-alt"></i> Reports API</a></li>
+                  <li><a href="#reports-by-file-name-api" class="gotohash"><i class="icon-group"></i> Clients API</a></li>
+                  <li><a href="https://github.com/netdna/netdna.github.com"><i class="icon-github"></i> Github Repo</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="readme-docs" class="span9"><p><a href="http://www.netdna.com">NetDNA</a> is a fast &amp; reliable content delivery network (&quot;CDN&quot;) provider.</p>
+<h2>Index</h2>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#support">Support</a></li>
+<li><a href="#changelog">Changelog</a></li>
+<li><a href="#account-api">Account API</a></li>
+<li><a href="#users-api">Users API</a></li>
+<li><a href="#zones-api">Zones API</a></li>
+<li><a href="#reports-by-zone-api">Reports API</a></li>
+<li><a href="#reports-by-file-name-api">Clients API</a></li>
+</ul>
+<h2>Overview</h2>
+<ol>
+<li><p>Sign up for a free NetDNA <a href="http://www.netdna.com/netdna-free-trial/">developer account</a>.</p>
+</li>
+<li><p>Create a <a href="https://cp.netdna.com/account/api/create">new application</a>.</p>
+</li>
+<li><p>Integrate with our RESTful API using your language wrapper:</p>
+<ul>
+<li>Node (NPM) <a href="https://github.com/netdna/node-netdna">https://github.com/netdna/node-netdna</a></li>
+<li>.NET <a href="https://github.com/netdna/netdnarws-net">https://github.com/netdna/netdnarws-net</a></li>
+<li>Ruby <a href="https://github.com/netdna/netdnarws-ruby">https://github.com/netdna/netdnarws-ruby</a></li>
+<li>Python <a href="https://github.com/netdna/netdnarws">https://github.com/netdna/netdnarws</a></li>
+<li>PHP <a href="https://github.com/netdna/netdnarws-php">https://github.com/netdna/netdnarws-php</a></li>
+<li>Perl <a href="https://github.com/netdna/netdnarws-perl">https://github.com/netdna/netdnarws-perl</a></li>
+</ul>
+</li>
+</ol>
+<p>Follow the documentation for our API below!</p>
+<h2>Support</h2>
+<p>Have a question? Check out our <a href="http://support.netdna.com/">Knowledge base</a> to see if your question has already been answered.</p>
+<p>Still need help?  Visit our <a href="http://www.netdna.com/contact/">Contact</a> page to get in touch.</p>
+<p>Feel free to tweet and follow us <a href="https://twitter.com/netdna">@netdna</a> and <a href="https://twitter.com/netdnasupport">@netdnasupport</a>.</p>
+<h2>Changelog</h2>
+<ul>
+<li><strong>2013-03-29</strong>  Added &quot;Bad Request&quot; for Purges without file(s) parameter in body</li>
+<li><strong>2013-03-14</strong>  Added .ie to the TLD Validation</li>
+<li><strong>2013-03-12</strong>  Added single file Purge to use cURL multi</li>
+<li><strong>2013-03-12</strong>  Fixed SSL Update Bug</li>
+<li><strong>2013-03-08</strong>  cURL Multi Purge Files</li>
+<li><strong>2013-03-07</strong>  Fix 3-legged OAuth Restriction</li>
+<li><strong>2013-01-16</strong>  Fixed SSL Bug</li>
+<li><strong>2012-12-05</strong>  Added 2xx_hit calculation to all <code>statuscodebyfilename</code> Reports</li>
+<li><strong>2012-02-27</strong>  Released Alpha Version of RWS API.</li>
+</ul>
+<hr>
+<h1>Key: Path Parameters</h1>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{companyalias}</td>
+<td>The alias you used when creating your account</td>
+<td></td>
+</tr>
+<tr>
+<td>{zone_type}</td>
+<td>The type of zone you are making a request on - one of push,pull, vod, or live</td>
+<td></td>
+</tr>
+<tr>
+<td>{report_type}</td>
+<td>The format you want the reports summarized by - one of hourly,daily, or monthly. This value can be left blank to receive thetotals ungrouped.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Account API</h1>
+<h2>Get Account</h2>
+<p>Gets account information</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/account.json">https://rws.netdna.com/{companyalias}/account.json</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Account ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>The name of your account</td>
+<td></td>
+</tr>
+<tr>
+<td><code>address_id</code></td>
+<td>Address ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>alias</code></td>
+<td>Company Alias</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ssl_credits</code></td>
+<td>SSL Credits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>flex_credits</code></td>
+<td>Flex Location Credits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_created</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_updated</code></td>
+<td>Date Updated</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Update Account</h2>
+<p>Updates account information</p>
+<div class="heading">
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/account.json">https://rws.netdna.com/{companyalias}/account.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 1-30 chars</td>
+<td>The name of your account</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Account ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>The name of your account</td>
+<td></td>
+</tr>
+<tr>
+<td><code>address_id</code></td>
+<td>Address ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>alias</code></td>
+<td>Company Alias</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ssl_credits</code></td>
+<td>SSL Credits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>flex_credits</code></td>
+<td>Flex Location Credits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_created</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_updated</code></td>
+<td>Date Updated</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Account Address</h2>
+<p>Gets account address information</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/account.json/address">https://rws.netdna.com/{companyalias}/account.json/address</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Address ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>street1</code></td>
+<td>Street Address Line 1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>street2</code></td>
+<td>Street Address Line 2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>city</code></td>
+<td>City</td>
+<td></td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>State</td>
+<td></td>
+</tr>
+<tr>
+<td><code>zip</code></td>
+<td>ZIP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>country</code></td>
+<td>Country Code</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_created</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_updated</code></td>
+<td>Date Updated</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Update Account Address</h2>
+<p>Updates account address information</p>
+<div class="heading">
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/account.json/address">https://rws.netdna.com/{companyalias}/account.json/address</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>street1</code></td>
+<td>-</td>
+<td>length: 1-200 chars</td>
+<td>Street Address Line 1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>street2</code></td>
+<td>-</td>
+<td>length: 1-200 chars</td>
+<td>Street Address Line 2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>city</code></td>
+<td>-</td>
+<td>length: 1-50 chars</td>
+<td>City</td>
+<td></td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>-</td>
+<td>length: 1-50 chars</td>
+<td>State</td>
+<td></td>
+</tr>
+<tr>
+<td><code>zip</code></td>
+<td>-</td>
+<td>length: 3-5 chars; only digits accepted</td>
+<td>ZIP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>country</code></td>
+<td>-</td>
+<td>length: 2 chars</td>
+<td>Country Code</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Address ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>street1</code></td>
+<td>Street Address Line 1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>street2</code></td>
+<td>Street Address Line 2</td>
+<td></td>
+</tr>
+<tr>
+<td><code>city</code></td>
+<td>City</td>
+<td></td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>State</td>
+<td></td>
+</tr>
+<tr>
+<td><code>zip</code></td>
+<td>ZIP</td>
+<td></td>
+</tr>
+<tr>
+<td><code>country</code></td>
+<td>Country Code</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_created</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_updated</code></td>
+<td>Date Updated</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Users API</h1>
+<h2>List Users</h2>
+<p>Returns a list of all users on the specified account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/users.json">https://rws.netdna.com/{companyalias}/users.json</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>User ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>Email Address</td>
+<td></td>
+</tr>
+<tr>
+<td><code>firstname</code></td>
+<td>First Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>lastname</code></td>
+<td>Last Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td>Phone Number</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>User&#39;s Timezone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_last_login</code></td>
+<td>The date and time the user last logged into the system</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip_last_login</code></td>
+<td>The IP for the user at the last login</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_created</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_updated</code></td>
+<td>Date Updated</td>
+<td></td>
+</tr>
+<tr>
+<td><code>roles</code></td>
+<td>An array of roles for the given user</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Create User</h2>
+<p>Creates a new user on the specified account</p>
+<div class="heading">
+<div class="url POST"><span class="http_method">POST</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/users.json">https://rws.netdna.com/{companyalias}/users.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 6-200 chars; valid email address</td>
+<td>Email Address</td>
+<td></td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 5-30 chars</td>
+<td>Password</td>
+<td></td>
+</tr>
+<tr>
+<td><code>firstname</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 1-32 chars</td>
+<td>First Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>lastname</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 1-32 chars</td>
+<td>Last Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td>-</td>
+<td>length: 7, 10, 11, or 14 chars; only digits considered</td>
+<td>Phone Number</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>-</td>
+<td>valid::timezone</td>
+<td>Valid timezone (see <a href="http://php.net/manual/en/timezones.php">List ofSupported Timezones</a>)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>User ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>Email Address</td>
+<td></td>
+</tr>
+<tr>
+<td><code>firstname</code></td>
+<td>First Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>lastname</code></td>
+<td>Last Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td>Phone Number</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>User&#39;s Timezone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_last_login</code></td>
+<td>The date and time the user last logged into the system</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip_last_login</code></td>
+<td>The IP for the user at the last login</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_created</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_updated</code></td>
+<td>Date Updated</td>
+<td></td>
+</tr>
+<tr>
+<td><code>roles</code></td>
+<td>An array of roles for the given user</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get User</h2>
+<p>Gets a user specified by the {user_id} parameter</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/users.json/{user_id}">https://rws.netdna.com/{companyalias}/users.json/{user_id}</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>User ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>Email Address</td>
+<td></td>
+</tr>
+<tr>
+<td><code>firstname</code></td>
+<td>First Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>lastname</code></td>
+<td>Last Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td>Phone Number</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>User&#39;s Timezone</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Update User</h2>
+<p>Updates a user specified by the {user_id} parameter</p>
+<div class="heading">
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/users.json/{user_id}">https://rws.netdna.com/{companyalias}/users.json/{user_id}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>email</code></td>
+<td>-</td>
+<td>length: 6-200 chars; valid email address</td>
+<td>Email Address</td>
+<td></td>
+</tr>
+<tr>
+<td><code>firstname</code></td>
+<td>-</td>
+<td>length: 1-32 chars</td>
+<td>First Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>lastname</code></td>
+<td>-</td>
+<td>length: 1-32 chars</td>
+<td>Last Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td>-</td>
+<td>length: 7, 10, 11, or 14 chars; only digits considered</td>
+<td>Phone Number</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>-</td>
+<td>valid::timezone</td>
+<td>Valid timezone (see <a href="http://php.net/manual/en/timezones.php">List ofSupported Timezones</a>)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>User ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>Email Address</td>
+<td></td>
+</tr>
+<tr>
+<td><code>firstname</code></td>
+<td>First Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>lastname</code></td>
+<td>Last Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>phone</code></td>
+<td>Phone Number</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>User&#39;s Timezone</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Delete User</h2>
+<p>Deletes a user specified by the {user_id} parameter</p>
+<div class="heading">
+<div class="url DELETE"><span class="http_method">DELETE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/users.json/{user_id}">https://rws.netdna.com/{companyalias}/users.json/{user_id}</a></span></div>
+</div>
+
+
+
+<hr>
+<h1>Zones API</h1>
+<h2>List Zones</h2>
+<p>Returns a list of all zones on the specified account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones.json">https://rws.netdna.com/{companyalias}/zones.json</a></span></div>
+</div>
+
+<h2>Get Zone Summary</h2>
+<p>Gets a summarized count of all zone types on the specified
+account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones.json/summary">https://rws.netdna.com/{companyalias}/zones.json/summary</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pull</code></td>
+<td>The number of pull zones for your account</td>
+<td></td>
+</tr>
+<tr>
+<td><code>push</code></td>
+<td>The number of push zones for your account</td>
+<td></td>
+</tr>
+<tr>
+<td><code>vod</code></td>
+<td>The number of vod zones for your account</td>
+<td></td>
+</tr>
+<tr>
+<td><code>live</code></td>
+<td>The number of live zones for your account</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Zone Count</h2>
+<p>Counts all zones on the specified account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones.json/count">https://rws.netdna.com/{companyalias}/zones.json/count</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>count</code></td>
+<td>The total number of content zones for your account</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Pull Zone API</h1>
+<h2>List Pull Zones</h2>
+<p>Returns a list of all pull zones on the specified account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json">https://rws.netdna.com/{companyalias}/zones/pull.json</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Pull Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Pull Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>Origin URL</td>
+<td></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>Port</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip</code></td>
+<td>IP address of the Origin URL</td>
+<td></td>
+</tr>
+<tr>
+<td><code>compress</code></td>
+<td>On the fly compression of your files served from our edges.GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype</td>
+<td></td>
+</tr>
+<tr>
+<td><code>backend_compress</code></td>
+<td>Allow us to cache compressed versions of your files from theorigin. GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype</td>
+<td></td>
+</tr>
+<tr>
+<td><code>queries</code></td>
+<td>Treat Query Strings as a separate cacheable item</td>
+<td></td>
+</tr>
+<tr>
+<td><code>set_host_header</code></td>
+<td>The URL sent as the Host in all HTTP Response Headers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cache_valid</code></td>
+<td>Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ignore_setcookie_header</code></td>
+<td>Ignore any cookies set by the origin in order to make thecontent consistently cacheable</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ignore_cache_control</code></td>
+<td>Ignore any max age values set by the origin and use the CDN setvalue instead</td>
+<td></td>
+</tr>
+<tr>
+<td><code>use_stale</code></td>
+<td>Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found</td>
+<td></td>
+</tr>
+<tr>
+<td><code>proxy_cache_lock</code></td>
+<td>When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>valid_referers</code></td>
+<td>List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>expires</code></td>
+<td>Set any request with a no &quot;Cache-Control header&quot; from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disallow_robots</code></td>
+<td>Enable robots.txt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disallow_robots_txt</code></td>
+<td>Use custom robots.txt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>canonical_link_headers</code></td>
+<td>Pass the canonical URL in the Link HTTP Header</td>
+<td></td>
+</tr>
+<tr>
+<td><code>content_disposition</code></td>
+<td>Force files to download</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pseudo_streaming</code></td>
+<td>Enable the zone for pseudo streaming content</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sslshared</code></td>
+<td>Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don&#39;t need your own SSL certificate, our servernetdna-ssl.com will be used.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Create Pull Zone</h2>
+<p>Creates a new pull zone</p>
+<div class="heading">
+<div class="url POST"><span class="http_method">POST</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json">https://rws.netdna.com/{companyalias}/zones/pull.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 3-32 chars; only letters, digits, and dash (-)accepted</td>
+<td>Pull Zone Name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 4-100 chars; only valid URLs accepted</td>
+<td>Origin URL</td>
+<td></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>80</td>
+<td>length: 1-5 chars; only digits accepted</td>
+<td>Port</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip</code></td>
+<td>-</td>
+<td>length: 1-10 chars, only digits accepted</td>
+<td>Valid IP address of the Origin URL. If omitted, the servicewill try to lookup the IP automatically.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>compress</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>On the fly compression of your files served from our edges.Enable GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype</td>
+<td></td>
+</tr>
+<tr>
+<td><code>backend_compress</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Allow us to cache compressed versions of your files from theorigin. Enable GZip compression for the following file types:text/plain, text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype</td>
+<td></td>
+</tr>
+<tr>
+<td><code>queries</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Treat Query Strings as a separate cacheable item</td>
+<td></td>
+</tr>
+<tr>
+<td><code>set_host_header</code></td>
+<td>-</td>
+<td>length: 4-100 chars; only valid URLs accepted</td>
+<td>The URL to send as the Host in all HTTP Response Headers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cache_valid</code></td>
+<td>1d</td>
+<td>length: 1-30 chars; must be a number followed by one of s, m,h, d, M, or Y</td>
+<td>Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ignore_setcookie_header</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Ignore any cookies set by the origin in order to make thecontent consistently cacheable</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ignore_cache_control</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Ignore any max age values set by the origin and use the CDN setvalue instead</td>
+<td></td>
+</tr>
+<tr>
+<td><code>use_stale</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found</td>
+<td></td>
+</tr>
+<tr>
+<td><code>proxy_cache_lock</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>-</td>
+<td>length: 1-255 chars</td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>valid_referers</code></td>
+<td>-</td>
+<td>length: 1-100 chars</td>
+<td>List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>expires</code></td>
+<td>1d</td>
+<td>length: 1-32 chars</td>
+<td>Set any request with a no &quot;Cache-Control header&quot; from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disallow_robots</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Enable robots.txt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disallow_robots_txt</code></td>
+<td>-</td>
+<td>length 1-255 chars</td>
+<td>Use custom robots.txt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>canonical_link_headers</code></td>
+<td>1</td>
+<td>only 0 or 1 accepted</td>
+<td>Pass the canonical URL in the Link HTTP Header</td>
+<td></td>
+</tr>
+<tr>
+<td><code>content_disposition</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Force files to download</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pseudo_streaming</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Enable the zone for pseudo streaming content</td>
+<td></td>
+</tr>
+<tr>
+<td><code>secret</code></td>
+<td>-</td>
+<td>length: 1 - 32 chars</td>
+<td>Use a secret to protect your files from unwanted visitors</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sslshared</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don&#39;t need your own SSL certificate, our servernetdna-ssl.com will be used.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Pull Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Pull Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>Origin URL</td>
+<td></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>Port</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip</code></td>
+<td>IP address of the Origin URL</td>
+<td></td>
+</tr>
+<tr>
+<td><code>compress</code></td>
+<td>On the fly compression of your files served from our edges.GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype</td>
+<td></td>
+</tr>
+<tr>
+<td><code>backend_compress</code></td>
+<td>Allow us to cache compressed versions of your files from theorigin. GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype</td>
+<td></td>
+</tr>
+<tr>
+<td><code>queries</code></td>
+<td>Treat Query Strings as a separate cacheable item</td>
+<td></td>
+</tr>
+<tr>
+<td><code>set_host_header</code></td>
+<td>The URL sent as the Host in all HTTP Response Headers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cache_valid</code></td>
+<td>Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ignore_setcookie_header</code></td>
+<td>Ignore any cookies set by the origin in order to make thecontent consistently cacheable</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ignore_cache_control</code></td>
+<td>Ignore any max age values set by the origin and use the CDN setvalue instead</td>
+<td></td>
+</tr>
+<tr>
+<td><code>use_stale</code></td>
+<td>Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found</td>
+<td></td>
+</tr>
+<tr>
+<td><code>proxy_cache_lock</code></td>
+<td>When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>valid_referers</code></td>
+<td>List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>expires</code></td>
+<td>Set any request with a no &quot;Cache-Control header&quot; from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disallow_robots</code></td>
+<td>Enable robots.txt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disallow_robots_txt</code></td>
+<td>Use custom robots.txt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>canonical_link_headers</code></td>
+<td>Pass the canonical URL in the Link HTTP Header</td>
+<td></td>
+</tr>
+<tr>
+<td><code>content_disposition</code></td>
+<td>Force files to download</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pseudo_streaming</code></td>
+<td>Enable the zone for pseudo streaming content</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sslshared</code></td>
+<td>Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don&#39;t need your own SSL certificate, our servernetdna-ssl.com will be used.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Pull Zones Count</h2>
+<p>Counts all pull zones on the specified account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/count">https://rws.netdna.com/{companyalias}/zones/pull.json/count</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>count</code></td>
+<td>The number of pull zones on the specified account</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Pull Zone</h2>
+<p>Gets a pull zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The Pull Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Pull Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>Origin URL</td>
+<td></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>Port</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip</code></td>
+<td>Valid IP address of the Origin URL. If omitted, the servicewill try to lookup the IP automatically.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>compress</code></td>
+<td>On the fly compression of your files served from our edges.GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype</td>
+<td></td>
+</tr>
+<tr>
+<td><code>backend_compress</code></td>
+<td>Allow us to cache compressed versions of your files from theorigin. GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype</td>
+<td></td>
+</tr>
+<tr>
+<td><code>queries</code></td>
+<td>Treat Query Strings as a separate cacheable item</td>
+<td></td>
+</tr>
+<tr>
+<td><code>set_host_header</code></td>
+<td>The URL sent as the Host in all HTTP Response Headers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cache_valid</code></td>
+<td>Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ignore_setcookie_header</code></td>
+<td>Ignore any cookies set by the origin in order to make thecontent consistently cacheable</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ignore_cache_control</code></td>
+<td>Ignore any max age values set by the origin and use the CDN setvalue instead</td>
+<td></td>
+</tr>
+<tr>
+<td><code>use_stale</code></td>
+<td>Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found</td>
+<td></td>
+</tr>
+<tr>
+<td><code>proxy_cache_lock</code></td>
+<td>When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>valid_referers</code></td>
+<td>List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>expires</code></td>
+<td>Set any request with a no &quot;Cache-Control header&quot; from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disallow_robots</code></td>
+<td>Enable robots.txt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disallow_robots_txt</code></td>
+<td>Use custom robots.txt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>canonical_link_headers</code></td>
+<td>Pass the canonical URL in the Link HTTP Header</td>
+<td></td>
+</tr>
+<tr>
+<td><code>content_disposition</code></td>
+<td>Force files to download</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pseudo_streaming</code></td>
+<td>Enable the zone for pseudo streaming content</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sslshared</code></td>
+<td>Enable Shared SSL. This feature allows you use your zone in HTTPS mode. You don&#39;t need your own SSL certificate, our server netdna-ssl.com will be used.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Update Pull Zone</h2>
+<p>Updates a pull zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td>-</td>
+<td>length: 4-100 chars; only valid URLs accepted</td>
+<td>Origin URL</td>
+<td></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>80</td>
+<td>length: 1-5 chars; only digits accepted</td>
+<td>Port</td>
+<td></td>
+</tr>
+<tr>
+<td><code>compress</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>On the fly compression of your files served from our edges.Enable GZip compression for the following file types: <code>text/plain</code>, <code>text/html</code>, <code>text/javascript</code>, <code>text/css</code>, <code>text/xml</code>, <code>application/javascript</code>, <code>application/x-javascript</code>, <code>application/xml</code>, <code>text/x-component</code>, <code>application/json</code>, <code>application/xhtml+xml</code>, <code>application/rss+xml</code>, <code>application/atom+xml</code>, <code>app/vnd.ms-fontobject</code>, <code>image/svg+xml</code>, <code>application/x-font-ttf</code>, <code>font/opentype</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>backend_compress</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Allow us to cache compressed versions of your files from the origin. Enable GZip compression for the following file types: <code>text/plain</code>, <code>text/html</code>, <code>text/javascript</code>, <code>text/css</code>, <code>text/xml</code>, <code>application/javascript</code>, <code>application/x-javascript</code>, <code>application/xml</code>, <code>text/x-component</code>, <code>application/json</code>, <code>application/xhtml+xml</code>, <code>application/rss+xml</code>, <code>application/atom+xml</code>, <code>app/vnd.ms-fontobject</code>, <code>image/svg+xml</code>, <code>application/x-font-ttf</code>, <code>font/opentype</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>queries</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Treat Query Strings as a separate cacheable item</td>
+<td></td>
+</tr>
+<tr>
+<td><code>set_host_header</code></td>
+<td>-</td>
+<td>length: 4-100 chars; only valid URLs accepted</td>
+<td>The URL to send as the Host in all HTTP Response Headers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cache_valid</code></td>
+<td>-</td>
+<td>length: 1-30 chars; must be a number followed by one of <code>s</code>, <code>m</code>, <code>h</code>, <code>d</code>, <code>M</code>, or <code>Y</code></td>
+<td>Ignore the origin Cache-Control Header and set every request to have a Max-Age of <code>1d</code>, <code>7d</code>, <code>1M</code> or <code>12M</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>ignore_setcookie_header</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Ignore any cookies set by the origin in order to make the content consistently cacheable</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ignore_cache_control</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Ignore any max age values set by the origin and use the CDN set value instead</td>
+<td></td>
+</tr>
+<tr>
+<td><code>use_stale</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Serve expired content while fetching new content. This will also cause the CDN to serve expired content in cases where the origin is down or the file is not found</td>
+<td></td>
+</tr>
+<tr>
+<td><code>proxy_cache_lock</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>When multiple requests for an uncached file are received, they will wait until the first response is received rather than sending each request back to the origin</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>-</td>
+<td>length: 1-255 chars</td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>valid_referers</code></td>
+<td>-</td>
+<td>length: 1-100 chars</td>
+<td>List of domains for http referrer protection (separated by space). Only the domains in the list will be treated as valid referrers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>expires</code></td>
+<td>1d</td>
+<td>length: 1-32 chars</td>
+<td>Set any request with a no &quot;Cache-Control header&quot; from the origin to stay on the server. Possible values are 1d, 7d, 1M,12M</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disallow_robots</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Enable robots.txt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disallow_robots_txt</code></td>
+<td>-</td>
+<td>length: 1-255 chars</td>
+<td>Use custom robots.txt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>canonical_link_headers</code></td>
+<td>1</td>
+<td>only 0 or 1 accepted</td>
+<td>Pass the canonical URL in the Link HTTP Header</td>
+<td></td>
+</tr>
+<tr>
+<td><code>content_disposition</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Force files to download</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pseudo_streaming</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Enable the zone for pseudo streaming content</td>
+<td></td>
+</tr>
+<tr>
+<td><code>secret</code></td>
+<td>-</td>
+<td>length: 1 - 32 chars</td>
+<td>Use a secret to protect your files from unwanted visitors</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sslshared</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don&#39;t need your own SSL certificate, our servernetdna-ssl.com will be used.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Pull Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Pull Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>Origin URL</td>
+<td></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>Port</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ip</code></td>
+<td>Valid IP address of the Origin URL. If omitted, the servicewill try to lookup the IP automatically.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>compress</code></td>
+<td>On the fly compression of your files served from our edges.GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype</td>
+<td></td>
+</tr>
+<tr>
+<td><code>backend_compress</code></td>
+<td>Allow us to cache compressed versions of your files from theorigin. GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype</td>
+<td></td>
+</tr>
+<tr>
+<td><code>queries</code></td>
+<td>Treat Query Strings as a separate cacheable item</td>
+<td></td>
+</tr>
+<tr>
+<td><code>set_host_header</code></td>
+<td>The URL sent as the Host in all HTTP Response Headers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cache_valid</code></td>
+<td>Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ignore_setcookie_header</code></td>
+<td>Ignore any cookies set by the origin in order to make thecontent consistently cacheable</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ignore_cache_control</code></td>
+<td>Ignore any max age values set by the origin and use the CDN setvalue instead</td>
+<td></td>
+</tr>
+<tr>
+<td><code>use_stale</code></td>
+<td>Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found</td>
+<td></td>
+</tr>
+<tr>
+<td><code>proxy_cache_lock</code></td>
+<td>When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>valid_referers</code></td>
+<td>List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>expires</code></td>
+<td>Set any request with a no &quot;Cache-Control header&quot; from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disallow_robots</code></td>
+<td>Enable robots.txt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>disallow_robots_txt</code></td>
+<td>Use custom robots.txt</td>
+<td></td>
+</tr>
+<tr>
+<td><code>canonical_link_headers</code></td>
+<td>Pass the canonical URL in the Link HTTP Header</td>
+<td></td>
+</tr>
+<tr>
+<td><code>content_disposition</code></td>
+<td>Force files to download</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pseudo_streaming</code></td>
+<td>Enable the zone for pseudo streaming content</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sslshared</code></td>
+<td>Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don&#39;t need your own SSL certificate, our servernetdna-ssl.com will be used.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Delete Pull Zone</h2>
+<p>Deletes a pull zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url DELETE"><span class="http_method">DELETE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}</a></span></div>
+</div>
+
+<h2>Enable Pull Zone</h2>
+<p>Enables a pull zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url ENABLE"><span class="http_method">ENABLE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}</a></span></div>
+</div>
+
+<h2>Disable Pull Zone</h2>
+<p>Disables a pull zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url DISABLE"><span class="http_method">DISABLE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}</a></span></div>
+</div>
+
+<h2>Purge Cache</h2>
+<p>Purges pull zone cache</p>
+<div class="heading">
+<div class="url DELETE"><span class="http_method">DELETE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}/cache">https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}/cache</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>files</code></td>
+<td>-</td>
+<td>An array containing relative paths of the files to purge (i.e./favicon.ico)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Code Samples</h3>
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#ruby" data-toggle='tab'>Ruby</a></li>
+  <li><a href="#python" data-toggle='tab'>Python</a></li>
+  <li><a href="#php" data-toggle='tab'>PHP</a></li>
+  <li><a href="#node" data-toggle='tab'>Node</a></li>
+  <li><a href="#response" data-toggle='tab'>Response</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="ruby">
+  <pre>
+require &#39;netdnarws&#39;
+api = NetDNARWS::NetDNA.new(&quot;myalias&quot;, &quot;consumer_key&quot;, &quot;consumer_secret&quot;)
+api.purge(zone_id)
+api.purge(zone_id, &#39;/some_file&#39;)
+api.purge(zone_id, [&#39;/some_file&#39;, &#39;/another_file&#39;])</pre>
+  </div>
+  <div class="tab-pane" id="python">
+  <pre>
+from netdnarws import NetDNA
+api = NetDNA(&quot;myalias&quot;, &quot;consumer_key&quot;, &quot;consumer_secret&quot;)
+api.delete(&quot;/zones/pull.json/zone_id/cache&quot;)
+api.delete(&quot;/zones/pull.json/zone_id/cache&quot;, data={&#39;file&#39;: &#39;/my-file.png&#39;})</pre>
+  </div>
+  <div class="tab-pane" id="php">
+    <pre>
+&lt;?php
+require_once(&#39;NetDNA.php&#39;);
+$api = new NetDNA(&quot;my_alias&quot;,&quot;consumer_key&quot;,&quot;consumer_secret&quot;);
+$params = array(&#39;file&#39; =&gt; &#39;/robots.txt&#39;);
+echo $api-&gt;delete(&#39;/zones/pull.json/6055/cache&#39;, $params);
+?&gt;</pre>
+  </div>
+  <div class="tab-pane" id="node">
+  <pre>
+var netdna = require(&#39;netdna&#39;)({
+  companyAlias: &#39;alias&#39;
+  , consumerKey: &#39;key&#39;
+  , consumerSecret: &#39;secret&#39;
+})
+netdna.del(&#39;/zones/pull.json/zone_id&#39;, callback)
+function callback(err, response) {
+  if (err) return console.log(err)
+  console.log(response)
+}</pre>
+  </div>
+  <div class="tab-pane" id="response">
+  <pre>
+{ code: 200 }</pre>
+  </div>
+</div>
+
+<hr>
+<h1>Pull Zone Custom Domains API</h1>
+<h2>List Custom Domains</h2>
+<p>Returns a list of all custom domains on the zone specified by
+{zone_id}</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json">https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The id of the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The id of the zone the custom domain belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain</code></td>
+<td>A valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Create Custom Domain</h2>
+<p>Adds a new custom domain to {zone_id}</p>
+<div class="heading">
+<div class="url POST"><span class="http_method">POST</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json">https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>custom_domain</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain</td>
+<td>A valid custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>-</td>
+<td>Applies only to Vod Zones and must be either &#39;vod-rtmp&#39;,&#39;vod-pseudo&#39;, &#39;vod-direct&#39;, or &#39;vod-ftp&#39;</td>
+<td>The type of custom domain being created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The id of the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The id of the zone the custom domain belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain</code></td>
+<td>The valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Custom Domain</h2>
+<p>Gets a custom domain specified by the {zone_id} and
+{customdomain_id} parameters</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The id of the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The id of the zone the custom domain belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain</code></td>
+<td>The valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Update Custom Domain</h2>
+<p>Updates a custom domain specified by the id parameter</p>
+<div class="heading">
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>custom_domain</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain</td>
+<td>A new valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The id of the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The id of the zone the custom domain belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain</code></td>
+<td>The new valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Delete Custom Domain</h2>
+<p>Deletes a custom domain specified by the {zone_id} and
+{customdomain_id} parameters</p>
+<div class="heading">
+<div class="url DELETE"><span class="http_method">DELETE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
+</div>
+
+
+
+<hr>
+<h1>Push Zone API</h1>
+<h2>List Push Zones</h2>
+<p>Returns a list of all push zones on the specified account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json">https://rws.netdna.com/{companyalias}/zones/push.json</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Push Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Push Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>valid_referers</code></td>
+<td>List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>content_disposition</code></td>
+<td>Force files to download</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sslshared</code></td>
+<td>Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don&#39;t need your own SSL certificate, our servernetdna-ssl.com will be used.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Create Push Zone</h2>
+<p>Creates a new push zone</p>
+<div class="heading">
+<div class="url POST"><span class="http_method">POST</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json">https://rws.netdna.com/{companyalias}/zones/push.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted</td>
+<td>Push Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 5-30 chars;</td>
+<td>Push Zone FTP password</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>-</td>
+<td>length: 1-255 chars</td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>valid_referers</code></td>
+<td>-</td>
+<td>length: 1-200 chars</td>
+<td>List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>content_disposition</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Force files to download</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sslshared</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don&#39;t need your own SSL certificate, our servernetdna-ssl.com will be used.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Push Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Push Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>valid_referers</code></td>
+<td>List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>content_disposition</code></td>
+<td>Force files to download</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sslshared</code></td>
+<td>Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don&#39;t need your own SSL certificate, our servernetdna-ssl.com will be used.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Push Zones Count</h2>
+<p>Counts all push zones on the specified account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json/count">https://rws.netdna.com/{companyalias}/zones/push.json/count</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>count</code></td>
+<td>The number of push zones on the specified account</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Push Zone</h2>
+<p>Gets a push zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Push Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Push Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>valid_referers</code></td>
+<td>List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>content_disposition</code></td>
+<td>Force files to download</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sslshared</code></td>
+<td>Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don&#39;t need your own SSL certificate, our servernetdna-ssl.com will be used.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Update Push Zone</h2>
+<p>Updates a push zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>label</code></td>
+<td>-</td>
+<td>length: 1-255 chars</td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>valid_referers</code></td>
+<td>-</td>
+<td>length: 1-100 chars</td>
+<td>List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>content_disposition</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Force files to download</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sslshared</code></td>
+<td>0</td>
+<td>only 0 or 1 accepted</td>
+<td>Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don&#39;t need your own SSL certificate, our servernetdna-ssl.com will be used.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Push Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Push Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>valid_referers</code></td>
+<td>List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers</td>
+<td></td>
+</tr>
+<tr>
+<td><code>content_disposition</code></td>
+<td>Force files to download</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sslshared</code></td>
+<td>Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don&#39;t need your own SSL certificate, our servernetdna-ssl.com will be used.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Delete Push Zone</h2>
+<p>Deletes a push zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url DELETE"><span class="http_method">DELETE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}</a></span></div>
+</div>
+
+<h2>Enable Push Zone</h2>
+<p>Enables a push zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url ENABLE"><span class="http_method">ENABLE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}</a></span></div>
+</div>
+
+<h2>Disable Push Zone</h2>
+<p>Disables a push zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url DISABLE"><span class="http_method">DISABLE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}</a></span></div>
+</div>
+
+
+
+<hr>
+<h1>Push Zone Custom Domains API</h1>
+<h2>List Custom Domains</h2>
+<p>Returns a list of all custom domains on the zone specified by
+{zone_id}</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json">https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The id of the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The id of the zone the custom domain belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain</code></td>
+<td>A valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Create Custom Domain</h2>
+<p>Adds a new custom domain to {zone_id}</p>
+<div class="heading">
+<div class="url POST"><span class="http_method">POST</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json">https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>custom_domain</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain</td>
+<td>A valid custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>-</td>
+<td>Applies only to Vod Zones and must be either &#39;vod-rtmp&#39;,&#39;vod-pseudo&#39;, &#39;vod-direct&#39;, or &#39;vod-ftp&#39;</td>
+<td>The type of custom domain being created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The id of the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The id of the zone the custom domain belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain</code></td>
+<td>The valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Custom Domain</h2>
+<p>Gets a custom domain specified by the {zone_id} and
+{customdomain_id} parameters</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The id of the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The id of the zone the custom domain belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain</code></td>
+<td>The valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Update Custom Domain</h2>
+<p>Updates a custom domain specified by the id parameter</p>
+<div class="heading">
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>custom_domain</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain</td>
+<td>A new valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The id of the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The id of the zone the custom domain belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain</code></td>
+<td>The new valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Delete Custom Domain</h2>
+<p>Deletes a custom domain specified by the {zone_id} and
+{customdomain_id} parameters</p>
+<div class="heading">
+<div class="url DELETE"><span class="http_method">DELETE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
+</div>
+
+
+
+<hr>
+<h1>VOD Zone API</h1>
+<h2>List VOD Zones</h2>
+<p>Returns a list of all VOD zones on the specified account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json">https://rws.netdna.com/{companyalias}/zones/vod.json</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>VOD Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>VOD Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>The zone&#39;s description</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Create VOD Zone</h2>
+<p>Creates a new VOD zone</p>
+<div class="heading">
+<div class="url POST"><span class="http_method">POST</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json">https://rws.netdna.com/{companyalias}/zones/vod.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted</td>
+<td>VOD Zone user name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 5-30 chars</td>
+<td>Your desired password</td>
+<td></td>
+</tr>
+<tr>
+<td><code>token</code></td>
+<td>-</td>
+<td>length: 1-64 chars</td>
+<td>The token value (shared secret) for secure streaming</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>-</td>
+<td>length: 1-255 chars</td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>VOD Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>VOD Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>The zone&#39;s description</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get VOD Zones Count</h2>
+<p>Counts all vod zones on the specified account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json/count">https://rws.netdna.com/{companyalias}/zones/vod.json/count</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>count</code></td>
+<td>The number of vod zones on the specified account</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get VOD Zone</h2>
+<p>Gets a VOD zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>VOD Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>VOD Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>The zone&#39;s description</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Update VOD Zone</h2>
+<p>Updates a VOD zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>password</code></td>
+<td>-</td>
+<td>length: 5-30 chars</td>
+<td>Your desired password</td>
+<td></td>
+</tr>
+<tr>
+<td><code>token</code></td>
+<td>-</td>
+<td>length: 1-64 chars</td>
+<td>The token value (shared secret) for secure streaming</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>-</td>
+<td>length: 1-255 chars</td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>VOD Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>VOD Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>The zone&#39;s description</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Delete VOD Zone</h2>
+<p>Deletes a VOD zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url DELETE"><span class="http_method">DELETE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}</a></span></div>
+</div>
+
+<h2>Enable VOD Zone</h2>
+<p>Enables a VOD zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url ENABLE"><span class="http_method">ENABLE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}</a></span></div>
+</div>
+
+<h2>Disable VOD Zone</h2>
+<p>Disables a VOD zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url DISABLE"><span class="http_method">DISABLE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}</a></span></div>
+</div>
+
+
+
+<hr>
+<h1>VOD Zone Custom Domains API</h1>
+<h2>List Custom Domains</h2>
+<p>Returns a list of all custom domains on the zone specified by
+{zone_id}</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The id of the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The id of the zone the custom domain belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain</code></td>
+<td>A valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Create Custom Domain</h2>
+<p>Adds a new custom domain to {zone_id}</p>
+<div class="heading">
+<div class="url POST"><span class="http_method">POST</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>custom_domain</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain</td>
+<td>A valid custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>-</td>
+<td>Applies only to Vod Zones and must be either &#39;vod-rtmp&#39;,&#39;vod-pseudo&#39;, &#39;vod-direct&#39;, or &#39;vod-ftp&#39;</td>
+<td>The type of custom domain being created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The id of the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The id of the zone the custom domain belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain</code></td>
+<td>The valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Custom Domain</h2>
+<p>Gets a custom domain specified by the {zone_id} and
+{customdomain_id} parameters</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The id of the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The id of the zone the custom domain belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain</code></td>
+<td>The valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Update Custom Domain</h2>
+<p>Updates a custom domain specified by the id parameter</p>
+<div class="heading">
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>custom_domain</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain</td>
+<td>A new valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The id of the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The id of the zone the custom domain belongs to</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain</code></td>
+<td>The new valid custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Delete Custom Domain</h2>
+<p>Deletes a custom domain specified by the {zone_id} and
+{customdomain_id} parameters</p>
+<div class="heading">
+<div class="url DELETE"><span class="http_method">DELETE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
+</div>
+
+
+
+<hr>
+<h1>Live Zone API</h1>
+<h2>List Live Zones</h2>
+<p>Returns a list of all live zones on the specified account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json">https://rws.netdna.com/{companyalias}/zones/live.json</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Live Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Live Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>The zone&#39;s description</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Create Live Zone</h2>
+<p>Creates a new live zone</p>
+<div class="heading">
+<div class="url POST"><span class="http_method">POST</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json">https://rws.netdna.com/{companyalias}/zones/live.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted</td>
+<td>Your desired zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td>-</td>
+<td>length: 5-30 chars</td>
+<td>Your desired password</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>-</td>
+<td>length: 1-255 chars</td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Live Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Live Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>The zone&#39;s description</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Live Zones Count</h2>
+<p>Counts all live zones on the specified account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json/count">https://rws.netdna.com/{companyalias}/zones/live.json/count</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>count</code></td>
+<td>The number of live zones on the specified account</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Live Zone</h2>
+<p>Gets a live zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Live Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Live Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>The zone&#39;s description</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Update Live Zone</h2>
+<p>Updates a live zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>password</code></td>
+<td>-</td>
+<td>length: 5-30 chars</td>
+<td>Your desired password</td>
+<td></td>
+</tr>
+<tr>
+<td><code>token</code></td>
+<td>-</td>
+<td>length: 1-64 chars</td>
+<td>The token value (shared secret) for secure streaming</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>-</td>
+<td>length: 1-255 chars</td>
+<td>Something that describes your zone</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Live Zone ID</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Live Zone name</td>
+<td></td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>The zone&#39;s description</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suspend</code></td>
+<td>Flag denoting if the zone has been suspended</td>
+<td></td>
+</tr>
+<tr>
+<td><code>locked</code></td>
+<td>Flag denoting if the zone has been locked</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inactive</code></td>
+<td>Flag denoting if the zone has been deleted</td>
+<td></td>
+</tr>
+<tr>
+<td><code>creation_date</code></td>
+<td>Date Created</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Delete Live Zone</h2>
+<p>Deletes a live zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url DELETE"><span class="http_method">DELETE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}</a></span></div>
+</div>
+
+<h2>Enable Live Zone</h2>
+<p>Enables a live zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url ENABLE"><span class="http_method">ENABLE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}</a></span></div>
+</div>
+
+<h2>Disable Live Zone</h2>
+<p>Disables a live zone specified by the {zone_id} parameter</p>
+<div class="heading">
+<div class="url DISABLE"><span class="http_method">DISABLE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}</a></span></div>
+</div>
+
+
+
+<hr>
+<h1>Zones SSL API</h1>
+<h2>Get Zone&#39;s SSL Information</h2>
+<p>Get the SSL certificate for the specified {zone_type} and
+{zone_id}.</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json</a></span></div>
+</div>
+
+<h2>Install SSL on Zone</h2>
+<p>Upload an SSL certificate for the specified {zone_type} and
+{zone_id}.</p>
+<div class="heading">
+<div class="url POST"><span class="http_method">POST</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ssl_crt</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br /></td>
+<td>The SSL certificate you are installing.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ssl_key</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br /></td>
+<td>The key for the SSL certificate you are installing.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ssl_cabundle</code></td>
+<td>-</td>
+<td>The CA Bundle for the SSL Certificate you are installing.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The SSL Certificate ID.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ssl_crt</code></td>
+<td>The SSL certificate.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ssl_key</code></td>
+<td>The SSL Private Key.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ssl_cabundle</code></td>
+<td>The CA Bundle for the cert.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>domain</code></td>
+<td>The domain applicable to this certificate.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_expiration</code></td>
+<td>The date of expiration for the certificate.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>wildcard</code></td>
+<td>Flag to signify whether this is a wildcard certificate.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Update Zone&#39;s SSL Information</h2>
+<p>Update the SSL certificate for the specified {zone_type} and
+{zone_id}.</p>
+<div class="heading">
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ssl_crt</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br /></td>
+<td>The SSL certificate you are installing.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ssl_key</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br /></td>
+<td>The key for the SSL certificate you are installing.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ssl_cabundle</code></td>
+<td>-</td>
+<td>The CABundle for the SSL Certificate you are installing.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The SSL Certificate ID.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ssl_crt</code></td>
+<td>The SSL certificate.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ssl_key</code></td>
+<td>The SSL Private Key.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ssl_cabundle</code></td>
+<td>The CA Bundle for the cert.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>domain</code></td>
+<td>The domain applicable to this certificate.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_expiration</code></td>
+<td>The date of expiration for the certificate.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>wildcard</code></td>
+<td>Flag to signify whether this is a wildcard certificate.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Remove Zone&#39;s SSL Information</h2>
+<p>Remove the SSL certificate for the specified {zone_type} and
+{zone_id}.</p>
+<div class="heading">
+<div class="url DELETE"><span class="http_method">DELETE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json</a></span></div>
+</div>
+
+
+
+<hr>
+<h1>Zones Upstream API</h1>
+<h2>Get Upstream information for the current zone</h2>
+<p>Get the upstream information for the specified {zone_id}.</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json</a></span></div>
+</div>
+
+<h2>Enable Upstream on Zone</h2>
+<p>Create and enable Upstream for a specific {zone_id}.</p>
+<div class="heading">
+<div class="url POST"><span class="http_method">POST</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>server_url</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br /></td>
+<td>The server url or ip to provide the streaming resources</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br /></td>
+<td>The port where server is to be called</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The Upstream ID.</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The bucket_id it belongs to</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>server_url</code></td>
+<td>The server url or ip</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>The port it uses to call the server</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Update Zone&#39;s Upstream Information</h2>
+<p>Update the Upstream information for the specified {zone_id}.</p>
+<div class="heading">
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>upstream_id</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br /></td>
+<td>The Upstream Information you&#39;re modifying.</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>server_url</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br /></td>
+<td>The server url or ip</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>-</td>
+<td><span class="label important">required</span><br /></td>
+<td>The port it uses to call the server</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>The Upstream ID.</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The bucket_id it belongs to</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>server_url</code></td>
+<td>The server url or ip</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>The port it uses to call the server</td>
+<td>1.0.1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Remove Zone&#39;s Upstream Information</h2>
+<p>Remove the Upstream Information for the specified {zone_id}.</p>
+<div class="heading">
+<div class="url DELETE"><span class="http_method">DELETE</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json</a></span></div>
+</div>
+
+
+
+<hr>
+<h1>Reports by Zone API</h1>
+<h2>List Zone Stats</h2>
+<p>Gets all zone usage statistics optionally broken up by
+{report_type}. If no {report_type} is given the request will return
+the total usage for the zones.</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/stats.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/stats.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of times files were requested</td>
+<td></td>
+</tr>
+<tr>
+<td><code>noncache_hit</code></td>
+<td>The number of times a requested file was not in cache</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cache_hit</code></td>
+<td>The number of times a requested file was already cached</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>The timestamp for the corresponding {report_type}.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List Stats per Zone</h2>
+<p>Gets the {zone_id} usage statistics optionally broken up by
+{report_type}. If no {report_type} is given the request will return
+the total usage for the zones.</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/stats.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/stats.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of times files were requested</td>
+<td></td>
+</tr>
+<tr>
+<td><code>noncache_hit</code></td>
+<td>The number of times a requested file was not in cache</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cache_hit</code></td>
+<td>The number of times a requested file was already cached</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>The timestamp for the corresponding {report_type}.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Reports by Location API</h1>
+<h2>List Nodes</h2>
+<p>Gets a list of all active nodes (locations)</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/nodes.json">https://rws.netdna.com/{companyalias}/reports/nodes.json</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Node Id</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Node 3 letter code</td>
+<td></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Full node name</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List Nodes by Zone</h2>
+<p>Gets a list of all active nodes (locations) specified by the
+{zone_id} parameter</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json">https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Node Id</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Node 3 letter code</td>
+<td></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Full node name</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List Zone Node Stats by Report Type</h2>
+<p>Get usage statistics broken up by nodes and optionally
+{report_type}. If no {report_type} is given the request will return
+the total usage broken up by node.</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/nodes.json/stats/{report_type}">https://rws.netdna.com/{companyalias}/reports/nodes.json/stats/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-31)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-31)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pop_id</code></td>
+<td>Node Id</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pop_name</code></td>
+<td>Node 3 letter code. Only returned when {report_type} is notempty.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pop_description</code></td>
+<td>Full node name. Only returned when {report_type} is notempty.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of times files were requested</td>
+<td></td>
+</tr>
+<tr>
+<td><code>noncache_hit</code></td>
+<td>The number of times a requested file was not in cache</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cache_hit</code></td>
+<td>The number of times a requested file was already cached</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>A timestamp corresponding to {report_type}. Only returned when{report_type} is not empty.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List Node Stats by Zone and Report Type</h2>
+<p>Get usage statistics for a particular {zone_id} broken up by
+nodes and optionally {report_type}. If no {report_type} is given
+the request will return the total usage broken up by node.</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json/stats/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json/stats/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pop_id</code></td>
+<td>Node Id</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pop_name</code></td>
+<td>Node 3 letter code. Only returned when {report_type} is notempty.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>pop_description</code></td>
+<td>Full node name. Only returned when {report_type} is notempty.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of times files were requested</td>
+<td></td>
+</tr>
+<tr>
+<td><code>noncache_hit</code></td>
+<td>The number of times a requested file was not in cache</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cache_hit</code></td>
+<td>The number of times a requested file was already cached</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>A timestamp corresponding to {report_type}. Only returned when{report_type} is not empty.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Zone Node</h2>
+<p>Gets the node information for the specified {node_id}</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/nodes.json/{node_id}">https://rws.netdna.com/{companyalias}/reports/nodes.json/{node_id}</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Node Id</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Node 3 letter code</td>
+<td></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Full node name</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Node by Zone</h2>
+<p>Gets the node information for the specified {node_id} and
+{zone_id}</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json/{node_id}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json/{node_id}</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Node Id</td>
+<td></td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>Node 3 letter code</td>
+<td></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Full node name</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Zone Node Stats by Report Type</h2>
+<p>Get usage statistics for a particular {node_id} optionally
+broken up by {report_type}. If no {report_type} is given the
+request will return the total usage for the node.</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/nodes.json/{node_id}/stats/{report_type}">https://rws.netdna.com/{companyalias}/reports/nodes.json/{node_id}/stats/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of times files were requested</td>
+<td></td>
+</tr>
+<tr>
+<td><code>noncache_hit</code></td>
+<td>The number of times a requested file was not in cache</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cache_hit</code></td>
+<td>The number of times a requested file was already cached</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>A timestamp corresponding to {report_type}. Only returned when{report_type} is not empty.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Get Node Stats by Zone and Report Type</h2>
+<p>Get usage statistics for a particular {node_id} and {zone_id},
+optionally broken up by {report_type}. If no {report_type} is given
+the request will return the total usage for the node.</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json/{node_id}/stats/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json/{node_id}/stats/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of times files were requested</td>
+<td></td>
+</tr>
+<tr>
+<td><code>noncache_hit</code></td>
+<td>The number of times a requested file was not in cache</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cache_hit</code></td>
+<td>The number of times a requested file was already cached</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>A timestamp corresponding to {report_type}. Only returned when{report_type} is not empty.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Reports by Popular Files API</h1>
+<h2>List Popular Files</h2>
+<p>Gets the most popularly requested files for your account,
+grouped into daily statistics</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/popularfiles.json">https://rws.netdna.com/{companyalias}/reports/popularfiles.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01).</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01).</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The Zone ID for the popular file</td>
+<td></td>
+</tr>
+<tr>
+<td><code>uri</code></td>
+<td>The URI for the requested popular file</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of times the file was requested</td>
+<td></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred for the given file</td>
+<td></td>
+</tr>
+<tr>
+<td><code>vhost</code></td>
+<td>The CDN URL for the corresponding zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>The amount of bytes transferred</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List Popular Files</h2>
+<p>Gets the most popularly requested files for your account,
+filtered by {zone_type} and grouped into daily statistics</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/popularfiles.json">https://rws.netdna.com/{companyalias}/reports/{zone_type}/popularfiles.json</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The Zone ID for the popular file</td>
+<td></td>
+</tr>
+<tr>
+<td><code>uri</code></td>
+<td>The URI for the requested popular file</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of times the file was requested</td>
+<td></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred for the given file</td>
+<td></td>
+</tr>
+<tr>
+<td><code>vhost</code></td>
+<td>The CDN URL for the corresponding zone</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>The amount of bytes transferred</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Reports by Status Codes API</h1>
+<h2>List Status Code Responses</h2>
+<p>Gets HTTP status code response statistics for your account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/statuscodes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/statuscodes.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status_code</code></td>
+<td>The HTTP status code for the response</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of responses with this status code</td>
+<td></td>
+</tr>
+<tr>
+<td><code>definition</code></td>
+<td>The definition for the status code</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List Status Code Responses by Zone Id</h2>
+<p>Gets HTTP status code response statistics for a specific
+{zone_id}</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/statuscodes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/statuscodes.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status_code</code></td>
+<td>The HTTP status code for the response</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of responses with this status code</td>
+<td></td>
+</tr>
+<tr>
+<td><code>definition</code></td>
+<td>The definition for the status code</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List Status Codes by Zone Type</h2>
+<p>Gets HTTP status code response statistics for a specific
+{zone_type}</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/statuscodes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_type}/statuscodes.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status_code</code></td>
+<td>The HTTP status code for the response</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of responses with this status code</td>
+<td></td>
+</tr>
+<tr>
+<td><code>definition</code></td>
+<td>The definition for the status code</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List Status Codes by Zone Id</h2>
+<p>Gets HTTP status code response statistics for a specific
+{zone_type} and {zone_id}</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/{zone_id}/statuscodes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_type}/{zone_id}/statuscodes.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>status_code</code></td>
+<td>The HTTP status code for the response</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of responses with this status code</td>
+<td></td>
+</tr>
+<tr>
+<td><code>definition</code></td>
+<td>The definition for the status code</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Reports by File Types API</h1>
+<h2>List File Types</h2>
+<p>Gets file type statistics for your account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/filetypes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/filetypes.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file_type</code></td>
+<td>The file type requested</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of times a file of this type has been requested</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List File Types by Zone Id</h2>
+<p>Gets file type statistics for a specific {zone_id}</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/filetypes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/filetypes.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d e.g. 2012-01-01</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d e.g. 2012-01-01</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file_type</code></td>
+<td>The file type requested</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of times a file of this type has been requested</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List File Types by Zone Type</h2>
+<p>Gets file type statistics for a specific {zone_type}</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/filetypes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_type}/filetypes.json/{report_type}</a></span></div>
+</div>
+
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file_type</code></td>
+<td>The file type requested</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of times a file of this type has been requested</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List File Types by Zone Id</h2>
+<p>Gets file type statistics for a specific {zone_type} and
+{zone_id}</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/{zone_id}/filetypes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_type}/{zone_id}/filetypes.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file_type</code></td>
+<td>The file type requested</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of times a file of this type has been requested</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Reports by File Size Ranges API</h1>
+<h2>List File Sizes</h2>
+<p>Gets request statistics for your account based on file size
+ranges</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/filesizes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/filesizes.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>le_10k_hits</code></td>
+<td>The number of requests for files &lt;= 10KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_50k_hits</code></td>
+<td>The number of requests for files &lt;= 50KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_100k_hits</code></td>
+<td>The number of requests for files &lt;= 100KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_500k_hits</code></td>
+<td>The number of requests for files &lt;= 500KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_1m_hits</code></td>
+<td>The number of requests for files &lt;= 1MB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_10m_hits</code></td>
+<td>The number of requests for files &lt;= 10MB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_100m_hits</code></td>
+<td>The number of requests for files &lt;= 100MB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>gt_100m_hits</code></td>
+<td>The number of requests for files &gt; 100MB</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List File Sizes by Zone Id</h2>
+<p>Gets request statistics for the specified {zone_id} based on
+file size ranges</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/filesizes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/filesizes.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d e.g. 2012-01-01</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d e.g. 2012-01-01</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>le_10k_hits</code></td>
+<td>The number of requests for files &lt;= 10KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_50k_hits</code></td>
+<td>The number of requests for files &lt;= 50KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_100k_hits</code></td>
+<td>The number of requests for files &lt;= 100KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_500k_hits</code></td>
+<td>The number of requests for files &lt;= 500KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_1m_hits</code></td>
+<td>The number of requests for files &lt;= 1MB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_10m_hits</code></td>
+<td>The number of requests for files &lt;= 10MB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_100m_hits</code></td>
+<td>The number of requests for files &lt;= 100MB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>gt_100m_hits</code></td>
+<td>The number of requests for files &gt; 100MB</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List File Sizes by Zone Type</h2>
+<p>Gets request statistics for the specified {zone_type} based on
+file size ranges</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/filesizes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_type}/filesizes.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d e.g. 2012-01-01</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d e.g. 2012-01-01</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>le_10k_hits</code></td>
+<td>The number of requests for files &lt;= 10KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_50k_hits</code></td>
+<td>The number of requests for files &lt;= 50KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_100k_hits</code></td>
+<td>The number of requests for files &lt;= 100KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_500k_hits</code></td>
+<td>The number of requests for files &lt;= 500KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_1m_hits</code></td>
+<td>The number of requests for files &lt;= 1MB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_10m_hits</code></td>
+<td>The number of requests for files &lt;= 10MB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_100m_hits</code></td>
+<td>The number of requests for files &lt;= 100MB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>gt_100m_hits</code></td>
+<td>The number of requests for files &gt; 100MB</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List File Sizes by Zone Id</h2>
+<p>Gets request statistics for the specified {zone_type} and
+{zone_id} based on file size ranges</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/{zone_id}/filesizes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_type}/{zone_id}/filesizes.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>le_10k_hits</code></td>
+<td>The number of requests for files &lt;= 10KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_50k_hits</code></td>
+<td>The number of requests for files &lt;= 50KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_100k_hits</code></td>
+<td>The number of requests for files &lt;= 100KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_500k_hits</code></td>
+<td>The number of requests for files &lt;= 500KB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_1m_hits</code></td>
+<td>The number of requests for files &lt;= 1MB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_10m_hits</code></td>
+<td>The number of requests for files &lt;= 10MB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>le_100m_hits</code></td>
+<td>The number of requests for files &lt;= 100MB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>gt_100m_hits</code></td>
+<td>The number of requests for files &gt; 100MB</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Reports By Directory API</h1>
+<h2>List Stats By Directory</h2>
+<p>Gets usage statistics by directory for your account. (This
+report has to be enabled by Sales).</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/statsbydir.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/statsbydir.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The Zone ID for the top level directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>dir</code></td>
+<td>The name of the directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of requests made to files within this directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred from within this directory</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List Stats By Directory and Zone Id</h2>
+<p>Gets usage statistics by directory for the specified {zone_id}.
+(This report has to be enabled by Sales).</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/statsbydir.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/statsbydir.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The Zone ID for the top level directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>dir</code></td>
+<td>The name of the directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of requests made to files within this directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred from within this directory</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Reports By File Name API</h1>
+<h2>List Stats By File Name</h2>
+<p>Gets usage statistics by file name for your account</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/statsbyfilename.json/{report_type}">https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/statsbyfilename.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>file_names</code></td>
+<td>A JSON Encoded file names list</td>
+<td></td>
+</tr>
+<tr>
+<td><code>filter</code></td>
+<td>Matching expression for file names</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sort_by</code></td>
+<td>Field to sort by</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sort_dir</code></td>
+<td>Directory to sort files by</td>
+<td></td>
+</tr>
+<tr>
+<td><code>page_size</code></td>
+<td>-</td>
+<td>The number of records returned in the result set</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The Zone ID for the top level directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of requests made to files within this directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred from within this directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>200</code></td>
+<td>The amount of 200 hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>206</code></td>
+<td>The amount of 206 hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>2xx</code></td>
+<td>The amount of 2xx hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>3xx</code></td>
+<td>The amount of 3xx hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>The amount of 404 hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>4xx</code></td>
+<td>The amount of 4xx hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>5xx</code></td>
+<td>The amount of 206 hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>5xx</code></td>
+<td>The amount of 206 hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timestampf</code></td>
+<td>Timestamp</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List Stats By File Name and Zone Id</h2>
+<p>Gets usage statistics by file name for the specified
+{zone_id}</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/{zone_id}/statsbyfilename.json/{report_type}">https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/{zone_id}/statsbyfilename.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>file_names</code></td>
+<td>A JSON Encoded file names list</td>
+<td></td>
+</tr>
+<tr>
+<td><code>filter</code></td>
+<td>Matching expression for file names</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sort_by</code></td>
+<td>Field to sort by</td>
+<td></td>
+</tr>
+<tr>
+<td><code>sort_dir</code></td>
+<td>Directory to sort files by</td>
+<td></td>
+</tr>
+<tr>
+<td><code>page_size</code></td>
+<td>-</td>
+<td>The number of records returned in the result set</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The Zone ID for the top level directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of requests made to files within this directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred from within this directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>200</code></td>
+<td>The amount of 200 hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>206</code></td>
+<td>The amount of 206 hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>2xx</code></td>
+<td>The amount of 2xx hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>3xx</code></td>
+<td>The amount of 3xx hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>The amount of 404 hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>4xx</code></td>
+<td>The amount of 4xx hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>5xx</code></td>
+<td>The amount of 206 hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>5xx</code></td>
+<td>The amount of 206 hits</td>
+<td></td>
+</tr>
+<tr>
+<td><code>timestampf</code></td>
+<td>Timestamp</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Reports By Custom Domain API</h1>
+<h2>List Stats By Directory</h2>
+<p>Gets usage statistics by custom domain for your account. (This
+report has to be enabled by Sales).</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/statsbycustomdomain.json/{report_type}">https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/statsbycustomdomain.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The Zone ID for the custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain_id</code></td>
+<td>The ID of your custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of requests made to this custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred to/from this custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>List Stats By Custom Domain and Zone Id</h2>
+<p>Gets usage statistics by custom domain for the specified
+{zone_id}. (This report has to be enabled by Sales).</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/{zone_id}/statsbycustomdomain.json/{report_type}">https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/{zone_id}/statsbycustomdomain.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>now() - 1 month</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>now()</td>
+<td>Y-m-d (e.g. 2012-01-01)</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3>Response Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bucket_id</code></td>
+<td>The Zone ID for the top level directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>custom_domain_id</code></td>
+<td>The ID of the Custom Domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of requests made to this custom domain</td>
+<td></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred to/from this custom domain</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>Reports for Live Zones API</h1>
+<h2>List Connection Stats</h2>
+<p>Gets zone stats in hourly, daily, or monthly summaries</p>
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/live/connectionstats.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/live/connectionstats.json/{report_type}</a></span></div>
+</div>
+
+<h3>Accepted Request Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default Value</th>
+<th>Validation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_from</code></td>
+<td>-</td>
+<td>Y-m-d e.g. 2012-01-01</td>
+<td>Start date</td>
+<td></td>
+</tr>
+<tr>
+<td><code>date_to</code></td>
+<td>-</td>
+<td>Y-m-d e.g. 2012-01-01</td>
+<td>End date</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+        </div>
+      </div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="/js/vendor/prettify.js"></script>
+    <script src="/js/vendor/jquery.ba-hashchange.js"></script>
+    <script src="/js/vendor/jquery.scrollTo.js"></script>
+    <script src="/js/vendor/bootstrap-adjust-hash.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-9245214-1']);
+      _gaq.push(['_setDomainName', 'netdna.com']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
