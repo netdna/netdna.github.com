@@ -1,0 +1,36 @@
+{
+  "name": "netdna-api-docs",
+  "description": "API docs built with Wintersmith and Node",
+  "version": "0.0.1",
+  "author": "Nick Baugh <niftylettuce@gmail.com>",
+  "contributors": [
+    {
+      "name": "Nick Baugh",
+      "email": "niftylettuce@gmail.com"
+    }
+  ],
+  "keywords": [
+    "netdna",
+    "api",
+    "docs",
+    "cdn",
+    "s3",
+    "cloudfront",
+    "cloudflare"
+  ],
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/netdna/netdna.github.com.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "mkdirp": "~0.3.5",
+    "wintersmith-less": "~0.1.0",
+    "grunt": "~0.4.1",
+    "wintersmith": "git://github.com/niftylettuce/wintersmith"
+  }
+}

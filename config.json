@@ -1,0 +1,8 @@
+{
+  "plugins": [ "./node_modules/wintersmith-less" ],
+  "locals": {
+    "url": "http://docs.netdna.com",
+    "name": "NetDNA API Docs",
+    "owner": "NetDNA"
+  }
+}
