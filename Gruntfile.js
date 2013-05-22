@@ -1,7 +1,6 @@
 var exec = require('child_process').exec
 
-module.exports = function(grunt)
-{
+module.exports = function(grunt){
   var log = function (msg) {
         grunt.log.writeln(msg)
       }
@@ -45,15 +44,15 @@ module.exports = function(grunt)
     function setRemote(err) {
       if (err && !/exists/.test(err.message)) return done(err.message)
 
-      log('Setting gh-pages branch remote')
-      dirExec('git config branch.gh-pages.remote gh-pages', setMasterBranch)
+      log('Setting master branch remote')
+      dirExec('git config branch.master.remote master', setMasterBranch)
     }
 
     function setMasterBranch(err) {
       if (err) return done(err)
 
-      log('Setting gh-pages branch merge')
-      dirExec('git config branch.gh-pages.merge refs/heads/gh-pages', done)
+      log('Setting master branch merge')
+      dirExec('git config branch.master.merge refs/heads/master', done)
     }
   })
 
@@ -68,7 +67,7 @@ module.exports = function(grunt)
     this.requires('setup')
 
     log('Resetting repo')
-    dirExec('git fetch --all && git reset --hard origin/gh-pages', resetRepo)
+    dirExec('git fetch --all && git reset --hard origin/master', resetRepo)
 
     function resetRepo(err) {
       if (err) return done(err)
@@ -96,7 +95,7 @@ module.exports = function(grunt)
 
       if (process.env.NODE_ENV === 'travis-ci') {
         log('Add email/name to git config if deploying from travis ci')
-        dirExec('git config user.email "travis-ci@netdna.com" && git config user.name "Travis CI Bot"', makeCommit.bind(null, stdout))
+        dirExec('git config user.email "travis-ci@startupsupper.com" && git config user.name "Travis CI Bot"', makeCommit.bind(null, stdout))
       } else {
         makeCommit(stdout)
       }
@@ -119,7 +118,7 @@ module.exports = function(grunt)
       }
 
       log('Push changes to github')
-      dirExec('git push origin gh-pages', done)
+      dirExec('git push origin master', done)
     }
   })
 
