@@ -43,6 +43,9 @@ npm install -g grunt-cli
 7. When you're ready to deploy your changes:
 
     ```bash
+    git add .
+    git commit -m 'I made some changes'
+    git push origin source
     grunt
     ```
 
