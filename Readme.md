@@ -379,10 +379,21 @@ $api->put('/account.json/address',$params);</pre>
   </div>
   <div class="tab-pane" id="response4">
 		<pre>
-{"code":200,"data":
-	{"address":
-		{"id":"#####","street1":"1234 Main Street","street2":"apt 42","city":"los angeles","state":"CA","zip":"90068","country":"US","date_created":"0000-00-00 00:00:00","date_updated":"2013-05-23 18:01:29"}
-	}
+{
+    "code": 200,
+    "data": {
+        "address": {
+            "city": "los angeles",
+            "country": "US",
+            "date_created": "0000-00-00 00:00:00",
+            "date_updated": "2013-05-23 18:01:29",
+            "id": "#####",
+            "state": "CA",
+            "street1": "1234 Main Street",
+            "street2": "apt 42",
+            "zip": "90068"
+        }
+    }
 }</pre>
   </div>
 </div>
@@ -452,14 +463,75 @@ $api->get('/users.json');</pre>
   </div>
   <div class="tab-pane" id="response5">
 		<pre>
-{"code":200,"data":
-	{"page":1,"pages":1,"page_size":"50","current_page_size":4,"total":4,"users":
-		[
-			{"id":"33706","email":"name@domain.com","firstname":"Given","lastname":"Family","phone":"3235551400","isadmin":"0","isdisabled":"0","default_company_id":"#####","brand_id":"1","timezone":"Europe\/London","date_last_login":"2013-05-23 17:54:18","ip_last_login":"12.13.90.183","date_created":"2013-05-15 17:32:30","date_updated":"2013-05-15 17:33:09","roles":["User","Account Owner"]},
-			{"id":"33714","email":"caphammer1@hamcave.com","firstname":"Captain","lastname":"Hammer","phone":null,"isadmin":"0","isdisabled":"0","default_company_id":"19538","brand_id":"1","timezone":"Europe\/London","date_last_login":null,"ip_last_login":null,"date_created":"2013-05-15 20:16:34","date_updated":"0000-00-00 00:00:00","roles":["User"]},
-			{"id":"33716","email":"drhorrible3@ele.net","firstname":"Billy","lastname":"Horrible","phone":null,"isadmin":"0","isdisabled":"0","default_company_id":"19538","brand_id":"1","timezone":"Europe\/London","date_last_login":null,"ip_last_login":null,"date_created":"2013-05-15 20:20:03","date_updated":"2013-05-15 20:31:05","roles":["User"]}
-		]
-	}
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 4,
+        "page": 1,
+        "page_size": "50",
+        "pages": 1,
+        "total": 4,
+        "users": [
+            {
+                "brand_id": "1",
+                "date_created": "2013-05-15 17:32:30",
+                "date_last_login": "2013-05-23 17:54:18",
+                "date_updated": "2013-05-15 17:33:09",
+                "default_company_id": "#####",
+                "email": "name@domain.com",
+                "firstname": "Given",
+                "id": "33706",
+                "ip_last_login": "12.13.90.183",
+                "isadmin": "0",
+                "isdisabled": "0",
+                "lastname": "Family",
+                "phone": "3235551400",
+                "roles": [
+                    "User",
+                    "Account Owner"
+                ],
+                "timezone": "Europe/London"
+            },
+            {
+                "brand_id": "1",
+                "date_created": "2013-05-15 20:16:34",
+                "date_last_login": null,
+                "date_updated": "0000-00-00 00:00:00",
+                "default_company_id": "19538",
+                "email": "caphammer1@hamcave.com",
+                "firstname": "Captain",
+                "id": "33714",
+                "ip_last_login": null,
+                "isadmin": "0",
+                "isdisabled": "0",
+                "lastname": "Hammer",
+                "phone": null,
+                "roles": [
+                    "User"
+                ],
+                "timezone": "Europe/London"
+            },
+            {
+                "brand_id": "1",
+                "date_created": "2013-05-15 20:20:03",
+                "date_last_login": null,
+                "date_updated": "2013-05-15 20:31:05",
+                "default_company_id": "19538",
+                "email": "drhorrible3@ele.net",
+                "firstname": "Billy",
+                "id": "33716",
+                "ip_last_login": null,
+                "isadmin": "0",
+                "isdisabled": "0",
+                "lastname": "Horrible",
+                "phone": null,
+                "roles": [
+                    "User"
+                ],
+                "timezone": "Europe/London"
+            }
+        ]
+    }
 }</pre>
   </div>
 </div>
@@ -541,10 +613,29 @@ $api->post('/users.json',$params );</pre>
   </div>
   <div class="tab-pane" id="response6">
 		<pre>
-{"code":201,"data":
-	{"user":
-		{"id":33941,"email":"name@domain.com","firstname":"Given","lastname":"Family","phone":null,"isadmin":0,"isdisabled":0,"default_company_id":"19538","brand_id":null,"timezone":"America\/Los_Angeles","date_last_login":null,"ip_last_login":null,"date_created":"2013-05-23 18:22:11","date_updated":null,"roles":["User"]}
-	}
+{
+    "code": 201,
+    "data": {
+        "user": {
+            "brand_id": null,
+            "date_created": "2013-05-23 18:22:11",
+            "date_last_login": null,
+            "date_updated": null,
+            "default_company_id": "19538",
+            "email": "name@domain.com",
+            "firstname": "Given",
+            "id": 33941,
+            "ip_last_login": null,
+            "isadmin": 0,
+            "isdisabled": 0,
+            "lastname": "Family",
+            "phone": null,
+            "roles": [
+                "User"
+            ],
+            "timezone": "America/Los_Angeles"
+        }
+    }
 }</pre>
   </div>
 </div>
@@ -608,10 +699,29 @@ $api->get('/users.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="response7">
 		<pre>
-{"code":200,"data":
-	{"user":
-		{"id":"33941","email":"name@domain.com","firstname":"Given","lastname":"Family","phone":null,"isadmin":"0","isdisabled":"0","default_company_id":"19538","brand_id":"1","timezone":"Europe\/London","date_last_login":null,"ip_last_login":null,"date_created":"2013-05-23 18:22:11","date_updated":"0000-00-00 00:00:00","roles":["User"]}
-	}
+{
+    "code": 200,
+    "data": {
+        "user": {
+            "brand_id": "1",
+            "date_created": "2013-05-23 18:22:11",
+            "date_last_login": null,
+            "date_updated": "0000-00-00 00:00:00",
+            "default_company_id": "19538",
+            "email": "name@domain.com",
+            "firstname": "Given",
+            "id": "33941",
+            "ip_last_login": null,
+            "isadmin": "0",
+            "isdisabled": "0",
+            "lastname": "Family",
+            "phone": null,
+            "roles": [
+                "User"
+            ],
+            "timezone": "Europe/London"
+        }
+    }
 }</pre>
   </div>
 </div>
@@ -686,10 +796,29 @@ $api->put('/users.json/'.$id,$params);</pre>
   </div>
   <div class="tab-pane" id="response8">
 		<pre>
-{"code":200,"data":
-	{"user":
-		{"id":"33941","email":"name@domain.com","firstname":"Billy","lastname":"Family","phone":null,"isadmin":"0","isdisabled":"0","default_company_id":"19538","brand_id":"1","timezone":"Europe\/London","date_last_login":null,"ip_last_login":null,"date_created":"2013-05-23 18:22:11","date_updated":"2013-05-23 19:10:09","roles":["User"]}
-	}
+{
+    "code": 200,
+    "data": {
+        "user": {
+            "brand_id": "1",
+            "date_created": "2013-05-23 18:22:11",
+            "date_last_login": null,
+            "date_updated": "2013-05-23 19:10:09",
+            "default_company_id": "19538",
+            "email": "name@domain.com",
+            "firstname": "Billy",
+            "id": "33941",
+            "ip_last_login": null,
+            "isadmin": "0",
+            "isdisabled": "0",
+            "lastname": "Family",
+            "phone": null,
+            "roles": [
+                "User"
+            ],
+            "timezone": "Europe/London"
+        }
+    }
 }</pre>
   </div>
 </div>
@@ -796,15 +925,41 @@ $api->get('/zones.json');</pre>
   </div>
   <div class="tab-pane" id="response10">
 		<pre>
-{"code":200,"data":
-	{"page":1,"pages":1,"page_size":"50","current_page_size":4,"total":4,"zones":
-		[
-			{"id":"#####","name":"zoneName","type":"2","suspend":"0","label":"personal","inactive":"0","locked":"0","creation_date":"2013-05-15 20:45:44","cdn_url":"cdn.somedomain.com","tmp_url":"zone.alias.netdna-cdn.com"},
-			{"id":"#####","name":"newpushzone2","type":"3","suspend":"0","label":null,"inactive":"0","locked":"0","creation_date":"2013-05-16 15:25:19","cdn_url":"cdn.somedomain.net","tmp_url":"newpushzone2.alias.netdna-cdn.com"},
-			{"id":"#####","name":"newvodzone","type":"4","suspend":"0","label":null,"inactive":"0","locked":"0","creation_date":"2013-05-16 16:02:35","cdn_url":"cdn.somedomain.com","tmp_url":"newvodzone.alias.netdna-cdn.com"},
-			{"id":"#####","name":"newlivezone","type":"5","suspend":"0","label":null,"inactive":"0","locked":"0","creation_date":"2013-05-16 16:23:49","cdn_url":"newlivezone.somedomain.netdna-cdn.com","tmp_url":"newlivezone.alias.netdna-cdn.com"}
-		]
-	}
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 2,
+        "page": 1,
+        "page_size": "50",
+        "pages": 1,
+        "total": 2,
+        "zones": [
+            {
+                "cdn_url": "cdn.somedomain.com",
+                "creation_date": "2013-05-15 20:45:44",
+                "id": "#####",
+                "inactive": "0",
+                "label": "personal",
+                "locked": "0",
+                "name": "zoneName",
+                "suspend": "0",
+                "tmp_url": "zone.alias.netdna-cdn.com",
+                "type": "2"
+            },
+            {
+                "cdn_url": "newlivezone.somedomain.netdna-cdn.com",
+                "creation_date": "2013-05-16 16:23:49",
+                "id": "#####",
+                "inactive": "0",
+                "label": null,
+                "locked": "0",
+                "name": "newlivezone",
+                "suspend": "0",
+                "tmp_url": "newlivezone.alias.netdna-cdn.com",
+                "type": "5"
+            }
+        ]
+    }
 }</pre>
   </div>
 </div>
@@ -867,10 +1022,16 @@ $api->get('/zones.json/summary');</pre>
   </div>
   <div class="tab-pane" id="response11">
 		<pre>
-{"code":200,"data":
-	{"summary":
-		{"pull":1,"push":1,"vod":1,"live":1,"garmin":0}
-	}
+{
+    "code": 200,
+    "data": {
+        "summary": {
+            "live": 1,
+            "pull": 1,
+            "push": 1,
+            "vod": 1
+        }
+    }
 }</pre>
   </div>
 </div>
