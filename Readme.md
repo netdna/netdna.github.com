@@ -7508,8 +7508,10 @@ Parameter | Description |
 	</div>
   <div class="tab-pane" id="php96">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$id = '96061';
+$clientId = '';
+$api->get('/clients/'.$clientId.'/reports/'.$id.'/statsbyfilename.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node96">
 		<pre>
@@ -7518,8 +7520,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="response96">
 		<pre>
-		
-		</pre>
+</pre>
   </div>
 </div>
  
@@ -7585,8 +7586,9 @@ Parameter | Description |
 	</div>
   <div class="tab-pane" id="php97">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$clientId = '';
+$api->get('clients/'.$clientId.'/reports/statsbycustomdomain.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node97">
 		<pre>
@@ -7660,8 +7662,10 @@ Parameter | Description |
 	</div>
   <div class="tab-pane" id="php98">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$zoneId = '';
+$clientId = '';
+$api->get('clients/'.$clientId.'/reports/'.$zoneId.'/statsbycustomdomain.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node98">
 		<pre>
