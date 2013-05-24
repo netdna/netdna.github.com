@@ -8687,8 +8687,21 @@ netdna.get('/clients/' + clientId + '/reports/' + zoneId + '/statsbycustomdomain
   </div>
   <div class="tab-pane" id="response98">
 		<pre>
-
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 0,
+        "page": 1,
+        "page_size": "50",
+        "pages": 0,
+        "statsbycustomdomain": [],
+        "summary": {
+            "hit": null,
+            "size": null
+        },
+        "total": "0"
+    }
+}</pre>
   </div>
 </div>
 
