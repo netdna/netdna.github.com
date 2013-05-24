@@ -1284,7 +1284,7 @@ netdna.get('/zones/pull.json', function(err, response) {
                 "backend_compress": "0",
                 "cache_valid": "1d",
                 "canonical_link_headers": "0",
-                "cdn_url": "cdn.bconklin.com",
+                "cdn_url": "cdn.somedomain.com",
                 "compress": "1",
                 "content_disposition": "0",
                 "creation_date": "2013-05-15 20:45:44",
@@ -1300,7 +1300,7 @@ netdna.get('/zones/pull.json', function(err, response) {
                 "ip": "205.134.255.49",
                 "label": "personal",
                 "locked": "0",
-                "name": "bconklin",
+                "name": "somedomain",
                 "port": "80",
                 "proxy_cache_lock": "0",
                 "pseudo_streaming": "0",
@@ -1309,10 +1309,10 @@ netdna.get('/zones/pull.json', function(err, response) {
                 "set_host_header": null,
                 "sslshared": "0",
                 "suspend": "0",
-                "tmp_url": "bconklin.netdnadev1.netdna-cdn.com",
+                "tmp_url": "somedomain.alias.netdna-cdn.com",
                 "type": "2",
                 "upstream_enabled": "0",
-                "url": "http://bconklin.net",
+                "url": "http://somedomain.net",
                 "use_stale": "0",
                 "valid_referers": null
             },
@@ -1321,7 +1321,7 @@ netdna.get('/zones/pull.json', function(err, response) {
                 "backend_compress": "0",
                 "cache_valid": "1d",
                 "canonical_link_headers": "0",
-                "cdn_url": "newpullzone3.netdnadev1.netdna-cdn.com",
+                "cdn_url": "newpullzone3.alias.netdna-cdn.com",
                 "compress": "0",
                 "content_disposition": "0",
                 "creation_date": "2013-05-24 16:18:19",
@@ -1346,10 +1346,10 @@ netdna.get('/zones/pull.json', function(err, response) {
                 "set_host_header": null,
                 "sslshared": "0",
                 "suspend": "0",
-                "tmp_url": "newpullzone3.netdnadev1.netdna-cdn.com",
+                "tmp_url": "newpullzone3.alias.netdna-cdn.com",
                 "type": "2",
                 "upstream_enabled": "0",
-                "url": "http://bconklin.net",
+                "url": "http://somedomain.net",
                 "use_stale": "0",
                 "valid_referers": null
             }
@@ -1477,7 +1477,7 @@ netdna.post('/zones/pull.json', { name: 'newPullZone2', url: 'http://somedomain.
             "backend_compress": 0,
             "cache_valid": "1d",
             "canonical_link_headers": 1,
-            "cdn_url": "newpullzone3.netdnadev1.netdna-cdn.com",
+            "cdn_url": "newpullzone3.alias.netdna-cdn.com",
             "compress": 0,
             "content_disposition": 0,
             "creation_date": "2013-05-24 16:18:19",
@@ -1502,10 +1502,10 @@ netdna.post('/zones/pull.json', { name: 'newPullZone2', url: 'http://somedomain.
             "set_host_header": 1,
             "sslshared": null,
             "suspend": 0,
-            "tmp_url": "newpullzone3.netdnadev1.netdna-cdn.com",
+            "tmp_url": "newpullzone3.alias.netdna-cdn.com",
             "type": 2,
             "upstream_enabled": 0,
-            "url": "http://bconklin.net",
+            "url": "http://somedomain.net",
             "use_stale": 0,
             "valid_referers": null
         }
@@ -1690,10 +1690,10 @@ netdna.get('/zones/pull.json' + id, function(err, response) {
             "set_host_header": null,
             "sslshared": "0",
             "suspend": "0",
-            "tmp_url": "newpullzone2.netdnadev1.netdna-cdn.com",
+            "tmp_url": "newpullzone2.alias.netdna-cdn.com",
             "type": "2",
             "upstream_enabled": "0",
-            "url": "http://bconklin.net",
+            "url": "http://somedomain.net",
             "use_stale": "0",
             "valid_referers": null
         }
@@ -1845,10 +1845,10 @@ netdna.put('/zones/pull.json' + id, { label: 'Some other description' }, functio
             "set_host_header": null,
             "sslshared": "0",
             "suspend": "0",
-            "tmp_url": "newpullzone2.netdnadev1.netdna-cdn.com",
+            "tmp_url": "newpullzone2.alias.netdna-cdn.com",
             "type": "2",
             "upstream_enabled": "0",
-            "url": "http://bconklin.net",
+            "url": "http://somedomain.net",
             "use_stale": "0",
             "valid_referers": null
         }
@@ -2565,7 +2565,7 @@ netdna.get('/zones/push.json', function(err, response) {
                 "content_disposition": "0",
                 "creation_date": "2013-05-16 15:25:19",
                 "expires": null,
-                "ftp_url": "ftp.newpushzone2.netdnadev1.netdna-cdn.com",
+                "ftp_url": "ftp.newpushzone2.alias.netdna-cdn.com",
                 "id": "96182",
                 "inactive": "0",
                 "label": null,
@@ -2576,7 +2576,7 @@ netdna.get('/zones/push.json', function(err, response) {
                 "storage_updated": "2013-05-24 06:31:52",
                 "storage_used": "20480",
                 "suspend": "0",
-                "tmp_url": "newpushzone2.netdnadev1.netdna-cdn.com",
+                "tmp_url": "newpushzone2.alias.netdna-cdn.com",
                 "type": "3",
                 "valid_referers": null
             },
@@ -2586,7 +2586,7 @@ netdna.get('/zones/push.json', function(err, response) {
                 "content_disposition": "0",
                 "creation_date": "2013-05-23 21:01:39",
                 "expires": null,
-                "ftp_url": "ftp.newpushzone3.netdnadev1.netdna-cdn.com",
+                "ftp_url": "ftp.newpushzone3.alias.netdna-cdn.com",
                 "id": "97181",
                 "inactive": "0",
                 "label": "Some other description",
@@ -2597,7 +2597,7 @@ netdna.get('/zones/push.json', function(err, response) {
                 "storage_updated": "2013-05-24 06:31:52",
                 "storage_used": "20480",
                 "suspend": "0",
-                "tmp_url": "newpushzone3.netdnadev1.netdna-cdn.com",
+                "tmp_url": "newpushzone3.alias.netdna-cdn.com",
                 "type": "3",
                 "valid_referers": null
             }
@@ -2689,12 +2689,12 @@ netdna.post('/zones/push.json', { name: 'newPushZone', password: 'password' }, f
     "code": 201,
     "data": {
         "pushzone": {
-            "cdn_url": "newpushzone4.netdnadev1.netdna-cdn.com",
+            "cdn_url": "newpushzone4.alias.netdna-cdn.com",
             "compress": 0,
             "content_disposition": 0,
             "creation_date": "2013-05-24 16:41:53",
             "expires": null,
-            "ftp_url": "ftp.newpushzone4.netdnadev1.netdna-cdn.com",
+            "ftp_url": "ftp.newpushzone4.alias.netdna-cdn.com",
             "id": 97317,
             "inactive": 0,
             "label": null,
@@ -2705,7 +2705,7 @@ netdna.post('/zones/push.json', { name: 'newPushZone', password: 'password' }, f
             "storage_updated": null,
             "storage_used": null,
             "suspend": 0,
-            "tmp_url": "newpushzone4.netdnadev1.netdna-cdn.com",
+            "tmp_url": "newpushzone4.alias.netdna-cdn.com",
             "type": 3,
             "valid_referers": null
         }
@@ -2854,7 +2854,7 @@ netdna.get('/zones/push.json/' + id, function(err, response) {
             "content_disposition": "0",
             "creation_date": "2013-05-23 21:01:39",
             "expires": null,
-            "ftp_url": "ftp.newpushzone3.netdnadev1.netdna-cdn.com",
+            "ftp_url": "ftp.newpushzone3.alias.netdna-cdn.com",
             "id": "97181",
             "inactive": "0",
             "label": "Some other description",
@@ -2865,7 +2865,7 @@ netdna.get('/zones/push.json/' + id, function(err, response) {
             "storage_updated": "2013-05-24 06:31:52",
             "storage_used": "20480",
             "suspend": "0",
-            "tmp_url": "newpushzone3.netdnadev1.netdna-cdn.com",
+            "tmp_url": "newpushzone3.alias.netdna-cdn.com",
             "type": "3",
             "valid_referers": null
         }
@@ -2960,7 +2960,7 @@ netdna.get('/zones/push.json/' + id, { label: 'Some other description' }, functi
             "content_disposition": "0",
             "creation_date": "2013-05-23 21:01:39",
             "expires": null,
-            "ftp_url": "ftp.newpushzone3.netdnadev1.netdna-cdn.com",
+            "ftp_url": "ftp.newpushzone3.alias.netdna-cdn.com",
             "id": "97181",
             "inactive": "0",
             "label": "Some other description",
@@ -2971,7 +2971,7 @@ netdna.get('/zones/push.json/' + id, { label: 'Some other description' }, functi
             "storage_updated": "2013-05-24 06:31:52",
             "storage_used": "20480",
             "suspend": "0",
-            "tmp_url": "newpushzone3.netdnadev1.netdna-cdn.com",
+            "tmp_url": "newpushzone3.alias.netdna-cdn.com",
             "type": "3",
             "valid_referers": null
         }
@@ -3220,7 +3220,7 @@ netdna.get('/zones/push/' + id + '/customdomains.json', function(err, response) 
         "customdomains": [
             {
                 "bucket_id": "96061",
-                "custom_domain": "cdn.bconklin.com",
+                "custom_domain": "cdn.somedomain.com",
                 "id": "78330",
                 "type": null
             }
@@ -3610,40 +3610,40 @@ netdna.get('/zones/vod.json', function(err, response) {
             {
                 "cdn_url": "cdn.somedomain.com",
                 "creation_date": "2013-05-16 16:02:35",
-                "direct_url": "d.newvodzone.netdnadev1.netdna-cdn.com",
-                "ftp_url": "ftp.newvodzone.netdnadev1.netdna-cdn.com",
+                "direct_url": "d.newvodzone.alias.netdna-cdn.com",
+                "ftp_url": "ftp.newvodzone.alias.netdna-cdn.com",
                 "id": "96187",
                 "inactive": "0",
                 "label": null,
                 "locked": "0",
                 "name": "newvodzone",
-                "pseudo_url": "p.newvodzone.netdnadev1.netdna-cdn.com",
-                "rtmp_url": "r.newvodzone.netdnadev1.netdna-cdn.com",
+                "pseudo_url": "p.newvodzone.alias.netdna-cdn.com",
+                "rtmp_url": "r.newvodzone.alias.netdna-cdn.com",
                 "server_id": "30",
                 "storage_updated": "2013-05-24 06:35:35",
                 "storage_used": "4096",
                 "suspend": "0",
-                "tmp_url": "newvodzone.netdnadev1.netdna-cdn.com",
+                "tmp_url": "newvodzone.alias.netdna-cdn.com",
                 "token": null,
                 "type": "4"
             },
             {
                 "cdn_url": "cdn.somenewdomain3.com",
                 "creation_date": "2013-05-23 21:25:44",
-                "direct_url": "d.newvodzone3.netdnadev1.netdna-cdn.com",
-                "ftp_url": "ftp.newvodzone3.netdnadev1.netdna-cdn.com",
+                "direct_url": "d.newvodzone3.alias.netdna-cdn.com",
+                "ftp_url": "ftp.newvodzone3.alias.netdna-cdn.com",
                 "id": "97183",
                 "inactive": "0",
                 "label": "Some other description",
                 "locked": "0",
                 "name": "newvodzone3",
-                "pseudo_url": "p.newvodzone3.netdnadev1.netdna-cdn.com",
-                "rtmp_url": "r.newvodzone3.netdnadev1.netdna-cdn.com",
+                "pseudo_url": "p.newvodzone3.alias.netdna-cdn.com",
+                "rtmp_url": "r.newvodzone3.alias.netdna-cdn.com",
                 "server_id": "30",
                 "storage_updated": "2013-05-24 06:35:35",
                 "storage_used": "4096",
                 "suspend": "0",
-                "tmp_url": "newvodzone3.netdnadev1.netdna-cdn.com",
+                "tmp_url": "newvodzone3.alias.netdna-cdn.com",
                 "token": null,
                 "type": "4"
             }
@@ -3729,22 +3729,22 @@ netdna.post('/zones/vod.json', { name: 'newVODZone3', password: 'password' }, fu
     "code": 201,
     "data": {
         "vodzone": {
-            "cdn_url": "newvodzone4.netdnadev1.netdna-cdn.com",
+            "cdn_url": "newvodzone4.alias.netdna-cdn.com",
             "creation_date": "2013-05-24 16:50:18",
-            "direct_url": "d.newvodzone4.netdnadev1.netdna-cdn.com",
-            "ftp_url": "ftp.newvodzone4.netdnadev1.netdna-cdn.com",
+            "direct_url": "d.newvodzone4.alias.netdna-cdn.com",
+            "ftp_url": "ftp.newvodzone4.alias.netdna-cdn.com",
             "id": 97319,
             "inactive": 0,
             "label": null,
             "locked": 0,
             "name": "newvodzone4",
-            "pseudo_url": "p.newvodzone4.netdnadev1.netdna-cdn.com",
-            "rtmp_url": "r.newvodzone4.netdnadev1.netdna-cdn.com",
+            "pseudo_url": "p.newvodzone4.alias.netdna-cdn.com",
+            "rtmp_url": "r.newvodzone4.alias.netdna-cdn.com",
             "server_id": "30",
             "storage_updated": null,
             "storage_used": null,
             "suspend": 0,
-            "tmp_url": "newvodzone4.netdnadev1.netdna-cdn.com",
+            "tmp_url": "newvodzone4.alias.netdna-cdn.com",
             "token": null,
             "type": 4
         }
@@ -3886,20 +3886,20 @@ netdna.get('/zones/vod.json/' + id, function(err, response) {
         "vodzone": {
             "cdn_url": "cdn.somenewdomain3.com",
             "creation_date": "2013-05-23 21:25:44",
-            "direct_url": "d.newvodzone3.netdnadev1.netdna-cdn.com",
-            "ftp_url": "ftp.newvodzone3.netdnadev1.netdna-cdn.com",
+            "direct_url": "d.newvodzone3.alias.netdna-cdn.com",
+            "ftp_url": "ftp.newvodzone3.alias.netdna-cdn.com",
             "id": "97183",
             "inactive": "0",
             "label": "Some other description",
             "locked": "0",
             "name": "newvodzone3",
-            "pseudo_url": "p.newvodzone3.netdnadev1.netdna-cdn.com",
-            "rtmp_url": "r.newvodzone3.netdnadev1.netdna-cdn.com",
+            "pseudo_url": "p.newvodzone3.alias.netdna-cdn.com",
+            "rtmp_url": "r.newvodzone3.alias.netdna-cdn.com",
             "server_id": "30",
             "storage_updated": "2013-05-24 06:35:35",
             "storage_used": "4096",
             "suspend": "0",
-            "tmp_url": "newvodzone3.netdnadev1.netdna-cdn.com",
+            "tmp_url": "newvodzone3.alias.netdna-cdn.com",
             "token": null,
             "type": "4"
         }
@@ -3987,20 +3987,20 @@ netdna.put('/zones/vod.json/' + id, { label: 'Some other description' }, functio
         "vodzone": {
             "cdn_url": "cdn.somenewdomain3.com",
             "creation_date": "2013-05-23 21:25:44",
-            "direct_url": "d.newvodzone3.netdnadev1.netdna-cdn.com",
-            "ftp_url": "ftp.newvodzone3.netdnadev1.netdna-cdn.com",
+            "direct_url": "d.newvodzone3.alias.netdna-cdn.com",
+            "ftp_url": "ftp.newvodzone3.alias.netdna-cdn.com",
             "id": "97183",
             "inactive": "0",
             "label": "Some other description",
             "locked": "0",
             "name": "newvodzone3",
-            "pseudo_url": "p.newvodzone3.netdnadev1.netdna-cdn.com",
-            "rtmp_url": "r.newvodzone3.netdnadev1.netdna-cdn.com",
+            "pseudo_url": "p.newvodzone3.alias.netdna-cdn.com",
+            "rtmp_url": "r.newvodzone3.alias.netdna-cdn.com",
             "server_id": "30",
             "storage_updated": "2013-05-24 06:35:35",
             "storage_used": "4096",
             "suspend": "0",
-            "tmp_url": "newvodzone3.netdnadev1.netdna-cdn.com",
+            "tmp_url": "newvodzone3.alias.netdna-cdn.com",
             "token": null,
             "type": "4"
         }
@@ -4630,34 +4630,34 @@ netdna.get('/zones/live.json', function(err, response) {
         "current_page_size": 2,
         "livezones": [
             {
-                "cdn_url": "newlivezone.netdnadev1.netdna-cdn.com",
+                "cdn_url": "newlivezone.alias.netdna-cdn.com",
                 "creation_date": "2013-05-16 16:23:49",
                 "id": "96193",
                 "inactive": "0",
                 "label": null,
                 "locked": "0",
                 "name": "newlivezone",
-                "pub_url": "publish.newlivezone.netdnadev1.netdna-cdn.com/live/96193",
+                "pub_url": "publish.newlivezone.alias.netdna-cdn.com/live/96193",
                 "server_id": "3",
                 "suspend": "0",
-                "tmp_url": "newlivezone.netdnadev1.netdna-cdn.com",
+                "tmp_url": "newlivezone.alias.netdna-cdn.com",
                 "type": "5",
-                "view_url": "newlivezone.netdnadev1.netdna-cdn.com/live/96193"
+                "view_url": "newlivezone.alias.netdna-cdn.com/live/96193"
             },
             {
-                "cdn_url": "newlivezone3.netdnadev1.netdna-cdn.com",
+                "cdn_url": "newlivezone3.alias.netdna-cdn.com",
                 "creation_date": "2013-05-23 21:50:00",
                 "id": "97185",
                 "inactive": "0",
                 "label": "Some other description",
                 "locked": "0",
                 "name": "newlivezone3",
-                "pub_url": "publish.newlivezone3.netdnadev1.netdna-cdn.com/live/97185",
+                "pub_url": "publish.newlivezone3.alias.netdna-cdn.com/live/97185",
                 "server_id": "3",
                 "suspend": "0",
-                "tmp_url": "newlivezone3.netdnadev1.netdna-cdn.com",
+                "tmp_url": "newlivezone3.alias.netdna-cdn.com",
                 "type": "5",
-                "view_url": "newlivezone3.netdnadev1.netdna-cdn.com/live/97185"
+                "view_url": "newlivezone3.alias.netdna-cdn.com/live/97185"
             }
         ],
         "page": 1,
@@ -4743,19 +4743,19 @@ netdna.post('/zones/live.json',  { name: 'newLiveZone3', password: 'password' },
     "code": 201,
     "data": {
         "livezone": {
-            "cdn_url": "newlivezone4.netdnadev1.netdna-cdn.com",
+            "cdn_url": "newlivezone4.alias.netdna-cdn.com",
             "creation_date": "2013-05-24 17:01:30",
             "id": 97323,
             "inactive": 0,
             "label": null,
             "locked": 0,
             "name": "newlivezone4",
-            "pub_url": "publish.newlivezone4.netdnadev1.netdna-cdn.com/live/97323",
+            "pub_url": "publish.newlivezone4.alias.netdna-cdn.com/live/97323",
             "server_id": 3,
             "suspend": 0,
-            "tmp_url": "newlivezone4.netdnadev1.netdna-cdn.com",
+            "tmp_url": "newlivezone4.alias.netdna-cdn.com",
             "type": 5,
-            "view_url": "newlivezone4.netdnadev1.netdna-cdn.com/live/97323"
+            "view_url": "newlivezone4.alias.netdna-cdn.com/live/97323"
         }
     }
 }</pre>
@@ -4894,19 +4894,19 @@ netdna.get('/zones/live.json/' + id, function(err, response) {
     "code": 200,
     "data": {
         "livezone": {
-            "cdn_url": "newlivezone3.netdnadev1.netdna-cdn.com",
+            "cdn_url": "newlivezone3.alias.netdna-cdn.com",
             "creation_date": "2013-05-23 21:50:00",
             "id": "97185",
             "inactive": "0",
             "label": "Some other description",
             "locked": "0",
             "name": "newlivezone3",
-            "pub_url": "publish.newlivezone3.netdnadev1.netdna-cdn.com/live/97185",
+            "pub_url": "publish.newlivezone3.alias.netdna-cdn.com/live/97185",
             "server_id": "3",
             "suspend": "0",
-            "tmp_url": "newlivezone3.netdnadev1.netdna-cdn.com",
+            "tmp_url": "newlivezone3.alias.netdna-cdn.com",
             "type": "5",
-            "view_url": "newlivezone3.netdnadev1.netdna-cdn.com/live/97185"
+            "view_url": "newlivezone3.alias.netdna-cdn.com/live/97185"
         }
     }
 }</pre>
@@ -4991,19 +4991,19 @@ netdna.put('/zones/live.json/' + id, { label: 'Some other description' }, functi
     "code": 200,
     "data": {
         "livezone": {
-            "cdn_url": "newlivezone3.netdnadev1.netdna-cdn.com",
+            "cdn_url": "newlivezone3.alias.netdna-cdn.com",
             "creation_date": "2013-05-23 21:50:00",
             "id": "97185",
             "inactive": "0",
             "label": "Some other description",
             "locked": "0",
             "name": "newlivezone3",
-            "pub_url": "publish.newlivezone3.netdnadev1.netdna-cdn.com/live/97185",
+            "pub_url": "publish.newlivezone3.alias.netdna-cdn.com/live/97185",
             "server_id": "3",
             "suspend": "0",
-            "tmp_url": "newlivezone3.netdnadev1.netdna-cdn.com",
+            "tmp_url": "newlivezone3.alias.netdna-cdn.com",
             "type": "5",
-            "view_url": "newlivezone3.netdnadev1.netdna-cdn.com/live/97185"
+            "view_url": "newlivezone3.alias.netdna-cdn.com/live/97185"
         }
     }
 }</pre>
@@ -8364,7 +8364,55 @@ netdna.get('/clients/' + clientId + '/reports/statsbyfilename.json/' + reportTyp
   </div>
   <div class="tab-pane" id="response95">
 		<pre>
-</pre>
+{
+    "code": 200,
+    "data": {
+        "statsbyfilename": [
+            {
+                "200": "0",
+                "206": "0",
+                "2xx": "0",
+                "3xx": "0",
+                "404": "0",
+                "4xx": "0",
+                "5xx": "35036",
+                "bucket_id": "21597",
+                "file_name": "/",
+                "hit": "35036",
+                "size": "20110664",
+                "timestampf": "2013",
+                "vhost": "edge02.nycacorp.netdna-cdn.com"
+            },
+            {
+                "200": "0",
+                "206": "0",
+                "2xx": "0",
+                "3xx": "0",
+                "404": "0",
+                "4xx": "2",
+                "5xx": "35032",
+                "bucket_id": "21597",
+                "file_name": "/favicon.ico",
+                "hit": "35034",
+                "size": "20108368",
+                "timestampf": "2013",
+                "vhost": "edge02.nycacorp.netdna-cdn.com"
+            }
+        ],
+        "summary": {
+            "200": "0",
+            "206": "0",
+            "2xx": "0",
+            "3xx": "0",
+            "404": "0",
+            "4xx": "2",
+            "5xx": "70068",
+            "hit": "70070",
+            "size": "40219032"
+        },
+        "total": "2"
+    }
+}</pre>
   </div>
 </div>
 
@@ -8537,8 +8585,29 @@ netdna.get('/clients/' + clientId + '/reports/statsbycustomdomain.json/' + repor
   </div>
   <div class="tab-pane" id="response97">
 		<pre>
-
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 1,
+        "page": 1,
+        "page_size": "50",
+        "pages": 1,
+        "statsbycustomdomain": [
+            {
+                "bucket_id": "21597",
+                "custom_domain_id": "0",
+                "hit": "70320",
+                "size": "40362532",
+                "vhost": "edge02.nycacorp.netdna-cdn.com"
+            }
+        ],
+        "summary": {
+            "hit": "70320",
+            "size": "40362532"
+        },
+        "total": "1"
+    }
+}</pre>
   </div>
 </div>
 
