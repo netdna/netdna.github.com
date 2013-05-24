@@ -201,10 +201,26 @@ $api->put('/account.json',array("name"=>"newName"));</pre>
   </div>
   <div class="tab-pane" id="response2">
 		<pre>
-{"code":200,"data":
-	{"account":
-		{"id":"#####","name":"newName","alias":"aliasname","date_created":"2013-05-15 17:32:30","date_updated":"2013-05-23 17:58:27","server_id":"18","status":"2","storage_quota":"107374182400","storage_server_id":"11","ssl_credits":"-1","flex_credits":"-1","zone_credits":"-1","secure_token_pull_credits":"0","edgerules_credits":"0"}
-	}
+{
+    "code": 200,
+    "data": {
+        "account": {
+            "alias": "aliasname",
+            "date_created": "2013-05-15 17:32:30",
+            "date_updated": "2013-05-23 17:58:27",
+            "edgerules_credits": "0",
+            "flex_credits": "-1",
+            "id": "#####",
+            "name": "newName",
+            "secure_token_pull_credits": "0",
+            "server_id": "18",
+            "ssl_credits": "-1",
+            "status": "2",
+            "storage_quota": "107374182400",
+            "storage_server_id": "11",
+            "zone_credits": "-1"
+        }
+    }
 }</pre>
   </div>
 </div>
