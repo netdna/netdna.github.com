@@ -98,7 +98,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python1">
 		<pre>
-</pre>
+api.get("/account.json")</pre>
 	</div>
   <div class="tab-pane" id="php1">
   	<pre>
@@ -198,7 +198,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python2">
 		<pre>
-</pre>
+params={"name": "Monty"}
+	api.put('/account.json',params=params)</pre>
 	</div>
   <div class="tab-pane" id="php2">
   	<pre>
@@ -292,7 +293,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python3">
 		<pre>
-		</pre>
+api.get('/account.json/address')</pre>
 	</div>
   <div class="tab-pane" id="php3">
   	<pre>
@@ -394,7 +395,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python4">
 		<pre>
-		</pre>
+params = {"street1": "1234 Main Street", "street2": "apt 42", "state": "CA"}
+api.put('/account.json/address',params=params)</pre>
 	</div>
   <div class="tab-pane" id="php4">
   	<pre>
@@ -487,7 +489,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python5">
 		<pre>
-		</pre>
+api.get('/users.json')</pre>
 	</div>
   <div class="tab-pane" id="php5">
   	<pre>
@@ -645,7 +647,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python6">
 		<pre>
-		</pre>
+params={'email':'name43@domain.com','password':'password','firstname':'Given','lastname':'Family'}
+api.post('/users.json',data=params )</pre>
 	</div>
   <div class="tab-pane" id="php6">
   	<pre>
@@ -740,7 +743,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python7">
 		<pre>
-</pre>
+id = '33706'
+api.get('/users.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php7">
   	<pre>
@@ -846,7 +850,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python8">
 		<pre>
-</pre>
+print api.put('/users.json/'+id,params={'firstname': 'Verran'})</pre>
 	</div>
   <div class="tab-pane" id="php8">
   	<pre>
@@ -933,7 +937,8 @@ Deletes a user specified by the {user_id} parameter
   </div>
   <div class="tab-pane" id="python9">
 		<pre>
-</pre>
+id = '33706'
+api.delete('/users.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php9">
   	<pre>
