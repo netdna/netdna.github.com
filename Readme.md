@@ -286,10 +286,21 @@ $api->get('/account.json/address')</pre>
   </div>
   <div class="tab-pane" id="response3">
 		<pre>
-{"code":200,"data":
-	{"address":
-		{"id":"#####","street1":"123 Main Street","street2":"apt 42","city":"los angeles","state":"CA","zip":"90068","country":"US","date_created":"0000-00-00 00:00:00","date_updated":"2013-05-15 19:54:40"}
-	}
+{
+    "code": 200,
+    "data": {
+        "address": {
+            "city": "los angeles",
+            "country": "US",
+            "date_created": "0000-00-00 00:00:00",
+            "date_updated": "2013-05-15 19:54:40",
+            "id": "#####",
+            "state": "CA",
+            "street1": "123 Main Street",
+            "street2": "apt 42",
+            "zip": "90068"
+        }
+    }
 }</pre>
   </div>
 </div>
