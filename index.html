@@ -184,7 +184,7 @@
   </div>
   <div class="tab-pane" id="python1">
         <pre>
-</pre>
+api.get(&quot;/account.json&quot;)</pre>
     </div>
   <div class="tab-pane" id="php1">
       <pre>
@@ -330,7 +330,8 @@ function callback(err, response) {
   </div>
   <div class="tab-pane" id="python2">
         <pre>
-</pre>
+params={&quot;name&quot;: &quot;Monty&quot;}
+    api.put(&#39;/account.json&#39;,params=params)</pre>
     </div>
   <div class="tab-pane" id="php2">
       <pre>
@@ -461,7 +462,7 @@ function callback(err, response) {
   </div>
   <div class="tab-pane" id="python3">
         <pre>
-        </pre>
+api.get(&#39;/account.json/address&#39;)</pre>
     </div>
   <div class="tab-pane" id="php3">
       <pre>
@@ -643,7 +644,8 @@ function callback(err, response) {
   </div>
   <div class="tab-pane" id="python4">
         <pre>
-        </pre>
+params = {&quot;street1&quot;: &quot;1234 Main Street&quot;, &quot;street2&quot;: &quot;apt 42&quot;, &quot;state&quot;: &quot;CA&quot;}
+api.put(&#39;/account.json/address&#39;,params=params)</pre>
     </div>
   <div class="tab-pane" id="php4">
       <pre>
@@ -781,7 +783,7 @@ function callback(err, response) {
   </div>
   <div class="tab-pane" id="python5">
         <pre>
-        </pre>
+api.get(&#39;/users.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php5">
       <pre>
@@ -1026,7 +1028,8 @@ function callback(err, response) {
   </div>
   <div class="tab-pane" id="python6">
         <pre>
-        </pre>
+params={&#39;email&#39;:&#39;name43@domain.com&#39;,&#39;password&#39;:&#39;password&#39;,&#39;firstname&#39;:&#39;Given&#39;,&#39;lastname&#39;:&#39;Family&#39;}
+api.post(&#39;/users.json&#39;,data=params )</pre>
     </div>
   <div class="tab-pane" id="php6">
       <pre>
@@ -1146,7 +1149,8 @@ function callback(err, response) {
   </div>
   <div class="tab-pane" id="python7">
         <pre>
-</pre>
+id = &#39;33706&#39;
+api.get(&#39;/users.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php7">
       <pre>
@@ -1315,7 +1319,7 @@ function callback(err, response) {
   </div>
   <div class="tab-pane" id="python8">
         <pre>
-</pre>
+api.put(&#39;/users.json/&#39;+id,params={&#39;firstname&#39;: &#39;Verran&#39;})</pre>
     </div>
   <div class="tab-pane" id="php8">
       <pre>
@@ -1397,7 +1401,8 @@ function callback(err, response) {
   </div>
   <div class="tab-pane" id="python9">
         <pre>
-</pre>
+id = &#39;33706&#39;
+api.delete(&#39;/users.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php9">
       <pre>
@@ -1457,7 +1462,7 @@ function callback(err, response) {
   </div>
   <div class="tab-pane" id="python10">
         <pre>
-        </pre>
+api.get(&#39;/zones.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php10">
       <pre>
@@ -1573,7 +1578,7 @@ account</p>
   </div>
   <div class="tab-pane" id="python11">
         <pre>
-</pre>
+api.get(&#39;/zones.json/summary&#39;)</pre>
     </div>
   <div class="tab-pane" id="php11">
       <pre>
@@ -1647,7 +1652,7 @@ netdna.get(&#39;/zones.json/summary&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="python12">
         <pre>
-</pre>
+api.get(&#39;/zones.json/count&#39;)</pre>
     </div>
   <div class="tab-pane" id="php12">
       <pre>
@@ -1846,7 +1851,7 @@ netdna.get(&#39;/zones.json/count&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="python13">
         <pre>
-</pre>
+api.get(&#39;/zones/pull.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php13">
       <pre>
@@ -2298,7 +2303,8 @@ netdna.get(&#39;/zones/pull.json&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="python14">
         <pre>
-</pre>
+params = {&quot;name&quot;:&quot;newPullZone5&quot;,&quot;url&quot;:&quot;<a href="http://somedomain.net&quot;}">http://somedomain.net&quot;}</a>
+api.post(&#39;/zones/pull.json&#39;,data=params)</pre>
     </div>
   <div class="tab-pane" id="php14">
       <pre>
@@ -2403,7 +2409,7 @@ netdna.post(&#39;/zones/pull.json&#39;, { name: &#39;newPullZone2&#39;, url: &#3
   </div>
   <div class="tab-pane" id="python15">
         <pre>
-</pre>
+api.get(&#39;/zones/pull.json/count&#39;)</pre>
     </div>
   <div class="tab-pane" id="php15">
       <pre>
@@ -2601,7 +2607,7 @@ netdna.get(&#39;/zones/pull.json/count&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="python16">
         <pre>
-</pre>
+api.get(&#39;/zones/pull.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php16">
       <pre>
@@ -2997,7 +3003,9 @@ netdna.get(&#39;/zones/pull.json&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python17">
         <pre>
-</pre>
+id = &#39;97167&#39;
+params = {&quot;label&quot;:&quot;Some other description&quot;}
+api.put(&#39;/zones/pull.json/&#39;+id,params=params)</pre>
     </div>
   <div class="tab-pane" id="php17">
       <pre>
@@ -3089,7 +3097,8 @@ netdna.put(&#39;/zones/pull.json&#39; + id, { label: &#39;Some other description
   </div>
   <div class="tab-pane" id="python18">
         <pre>
-</pre>
+id = &#39;97167&#39;
+api.delete(&#39;/zones/pull.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php18">
       <pre>
@@ -3142,7 +3151,8 @@ netdna.del(&#39;/zones/pull.json&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python19">
         <pre>
-</pre>
+id = &#39;97167&#39;
+api.enable(&#39;/zones/pull.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php19">
       <pre>
@@ -3193,7 +3203,8 @@ netdna.enable(&#39;/zones/pull.json&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python20">
         <pre>
-</pre>
+id = &#39;97167&#39;
+api.disable(&#39;/zones/pull.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php20">
       <pre>
@@ -3266,10 +3277,9 @@ api.purge(zone_id, [&#39;/some_file&#39;, &#39;/another_file&#39;])</pre>
   </div>
   <div class="tab-pane" id="python21">
     <pre>
-from netdnarws import NetDNA
-api = NetDNA(&quot;myalias&quot;, &quot;consumer_key&quot;, &quot;consumer_secret&quot;)
-api.delete(&quot;/zones/pull.json/zone_id/cache&quot;)
-api.delete(&quot;/zones/pull.json/zone_id/cache&quot;, data={&#39;file&#39;: &#39;/my-file.png&#39;})</pre>
+id = &#39;97167&#39;
+params = {&quot;file&quot;:&quot;/robots.txt&quot;}
+api.delete(&#39;/zones/pull.json/&#39;+id+&#39;/cache&#39;,data=params)</pre>
     </div>
   <div class="tab-pane" id="php21">
       <pre>
@@ -3356,7 +3366,8 @@ function callback(err, response) {
   </div>
   <div class="tab-pane" id="python22">
         <pre>
-</pre>
+id = &#39;97167&#39;
+api.get(&#39;/zones/pull/&#39;+id+&#39;/customdomains.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php22">
       <pre>
@@ -3472,7 +3483,9 @@ netdna.get(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json&#39;, function
   </div>
   <div class="tab-pane" id="python23">
         <pre>
-</pre>
+id = &#39;97167&#39;
+params = {&quot;custom_domain&quot;:&quot;cdn.somedomain13.com&quot;}
+api.post(&#39;/zones/pull/&#39;+id+&#39;/customdomains.json&#39;, params)</pre>
     </div>
   <div class="tab-pane" id="php23">
       <pre>
@@ -3560,7 +3573,9 @@ netdna.post(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json&#39;, { custo
   </div>
   <div class="tab-pane" id="python24">
         <pre>
-</pre>
+zoneId = &#39;97167&#39;
+domainId = &#39;79182&#39;
+api.get(&#39;/zones/pull/&#39;+zoneId+&#39;/customdomains.json/&#39;+domainId)</pre>
     </div>
   <div class="tab-pane" id="php24">
       <pre>
@@ -3669,7 +3684,10 @@ netdna.get(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json/&#39; + domain
   </div>
   <div class="tab-pane" id="python25">
         <pre>
-</pre>
+zoneId = &#39;97167&#39;
+domainId = &#39;79182&#39;
+params = {&quot;custom_domain&quot;:&quot;cdn.somenewdomain41.com&quot;}
+api.put(&#39;/zones/pull/&#39;+zoneId+&#39;/customdomains.json/&#39;+domainId,params=params)</pre>
     </div>
   <div class="tab-pane" id="php25">
       <pre>
@@ -3734,7 +3752,9 @@ netdna.put(&#39;/zones/pull/&#39; + zoneId + &#39;/customdomains.json/&#39; + do
   </div>
   <div class="tab-pane" id="python26">
         <pre>
-</pre>
+zoneId = &#39;97167&#39;
+domainId = &#39;79182&#39;
+api.delete(&#39;/zones/pull/&#39;+zoneId+&#39;/customdomains.json/&#39;+domainId)</pre>
     </div>
   <div class="tab-pane" id="php26">
       <pre>
@@ -3850,7 +3870,7 @@ netdna.del(&#39;/zones/pull/&#39; + zoneId + &#39;/customdomains.json/&#39; + do
   </div>
   <div class="tab-pane" id="python27">
         <pre>
-</pre>
+api.get(&#39;/zones/push.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php27">
       <pre>
@@ -4067,7 +4087,8 @@ netdna.get(&#39;/zones/push.json&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="python28">
         <pre>
-</pre>
+params = {&quot;name&quot;:&quot;newPushZone6&quot;,&quot;password&quot;:&quot;password&quot;}
+api.post(&#39;/zones/push.json&#39;,data=params)</pre>
     </div>
   <div class="tab-pane" id="php28">
       <pre>
@@ -4157,7 +4178,7 @@ netdna.post(&#39;/zones/push.json&#39;, { name: &#39;newPushZone&#39;, password:
   </div>
   <div class="tab-pane" id="python29">
         <pre>
-</pre>
+api.get(&#39;/zones/push.json/count&#39;)</pre>
     </div>
   <div class="tab-pane" id="php29">
       <pre>
@@ -4272,7 +4293,8 @@ netdna.get(&#39;/zones/push.json/count&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="python30">
         <pre>
-</pre>
+id = &#39;96182&#39;
+api.get(&#39;/zones/push.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php30">
       <pre>
@@ -4449,7 +4471,9 @@ netdna.get(&#39;/zones/push.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python31">
         <pre>
-</pre>
+id = &#39;96182&#39;
+params = {&quot;label&quot;:&quot;Some other description&quot;}
+api.put(&#39;/zones/push.json/&#39;+id,params=params)</pre>
     </div>
   <div class="tab-pane" id="php31">
       <pre>
@@ -4525,7 +4549,8 @@ netdna.get(&#39;/zones/push.json/&#39; + id, { label: &#39;Some other descriptio
   </div>
   <div class="tab-pane" id="python32">
         <pre>
-</pre>
+id = &#39;96182&#39;
+api.delete(&#39;/zones/push.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php32">
       <pre>
@@ -4577,7 +4602,8 @@ netdna.del(&#39;/zones/push.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python33">
         <pre>
-</pre>
+id = &#39;96182&#39;
+api.enable(&#39;/zones/push.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php33">
       <pre>
@@ -4630,7 +4656,8 @@ netdna.enable(&#39;/zones/push.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python34">
         <pre>
-</pre>
+id = &#39;96182&#39;
+api.disable(&#39;/zones/push.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php34">
       <pre>
@@ -4711,7 +4738,8 @@ netdna.disable(&#39;/zones/push.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python35">
         <pre>
-</pre>
+id = &#39;96182&#39;
+api.get(&#39;/zones/push/&#39;+id+&#39;/customdomains.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php35">
       <pre>
@@ -4827,7 +4855,9 @@ netdna.get(&#39;/zones/push/&#39; + id + &#39;/customdomains.json&#39;, function
   </div>
   <div class="tab-pane" id="python36">
         <pre>
-</pre>
+id = &#39;96182&#39;
+params = {&quot;custom_domain&quot;:&quot;cdn.somedomain15.com&quot;}
+api.post(&#39;/zones/push/&#39;+id+&#39;/customdomains.json&#39;, params)</pre>
     </div>
   <div class="tab-pane" id="php36">
       <pre>
@@ -4916,7 +4946,9 @@ netdna.post(&#39;/zones/push/&#39; + id + &#39;/customdomains.json&#39;, { custo
   </div>
   <div class="tab-pane" id="python37">
         <pre>
-</pre>
+zoneId = &#39;96182&#39;
+domainId = &#39;79320&#39;
+api.get(&#39;/zones/push/&#39;+zoneId+&#39;/customdomains.json/&#39;+domainId)</pre>
     </div>
   <div class="tab-pane" id="php37">
       <pre>
@@ -5024,7 +5056,10 @@ netdna.get(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + do
   </div>
   <div class="tab-pane" id="python38">
         <pre>
-</pre>
+zoneId = &#39;96182&#39;
+domainId = &#39;79320&#39;
+params = {&quot;custom_domain&quot;:&quot;cdn.somenewdomain40.com&quot;}
+api.put(&#39;/zones/push/&#39;+zoneId+&#39;/customdomains.json/&#39;+domainId,params=params)</pre>
     </div>
   <div class="tab-pane" id="php38">
       <pre>
@@ -5090,7 +5125,9 @@ netdna.put(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + do
   </div>
   <div class="tab-pane" id="python39">
         <pre>
-</pre>
+zoneId = &#39;96182&#39;
+domainId = &#39;79320&#39;
+api.delete(&#39;/zones/push/&#39;+zoneId+&#39;/customdomains.json/&#39;+domainId)</pre>
     </div>
   <div class="tab-pane" id="php39">
       <pre>
@@ -5192,7 +5229,7 @@ netdna.del(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + do
   </div>
   <div class="tab-pane" id="python40">
         <pre>
-</pre>
+api.get(&#39;/zones/vod.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php40">
       <pre>
@@ -5378,7 +5415,8 @@ netdna.get(&#39;/zones/vod.json&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="python41">
         <pre>
-</pre>
+params = {&quot;name&quot;:&quot;newvodZone7&quot;,&quot;password&quot;:&quot;password&quot;}
+api.post(&#39;/zones/vod.json&#39;,data=params)</pre>
     </div>
   <div class="tab-pane" id="php41">
       <pre>
@@ -5467,7 +5505,7 @@ netdna.post(&#39;/zones/vod.json&#39;, { name: &#39;newVODZone3&#39;, password: 
   </div>
   <div class="tab-pane" id="python42">
         <pre>
-</pre>
+api.get(&#39;/zones/vod.json/count&#39;)</pre>
     </div>
   <div class="tab-pane" id="php42">
       <pre>
@@ -5566,7 +5604,8 @@ netdna.get(&#39;/zones/vod.json/count&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="python43">
         <pre>
-</pre>
+id = &#39;96187&#39;
+api.get(&#39;/zones/vod.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php43">
       <pre>
@@ -5720,7 +5759,9 @@ netdna.get(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python44">
         <pre>
-</pre>
+id = &#39;96187&#39;
+params = {&quot;label&quot;:&quot;Some other description&quot;}
+api.put(&#39;/zones/vod.json/&#39;+id,params=params)</pre>
     </div>
   <div class="tab-pane" id="php44">
       <pre>
@@ -5795,7 +5836,8 @@ netdna.put(&#39;/zones/vod.json/&#39; + id, { label: &#39;Some other description
   </div>
   <div class="tab-pane" id="python45">
         <pre>
-</pre>
+id = &#39;96187&#39;
+api.delete(&#39;/zones/vod.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php45">
       <pre>
@@ -5847,7 +5889,8 @@ netdna.del(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python46">
         <pre>
-</pre>
+id = &#39;96187&#39;
+api.enable(&#39;/zones/vod.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php46">
       <pre>
@@ -5899,7 +5942,8 @@ netdna.enable(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python47">
         <pre>
-</pre>
+id = &#39;96187&#39;
+api.disable(&#39;/zones/vod.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php47">
       <pre>
@@ -5979,7 +6023,8 @@ netdna.disable(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python48">
         <pre>
-</pre>
+id = &#39;96187&#39;
+api.get(&#39;/zones/vod/&#39;+id+&#39;/customdomains.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php48">
       <pre>
@@ -6095,7 +6140,9 @@ netdna.get(&#39;/zones/vod.json/&#39; + id + &#39;/customdomains.json, function(
   </div>
   <div class="tab-pane" id="python49">
         <pre>
-</pre>
+id = &#39;96187&#39;
+params = {&quot;custom_domain&quot;:&quot;cdn.somedomain16.com&quot;,&quot;type&quot;:&quot;vod-rtmp&quot;}
+api.post(&#39;/zones/vod/&#39;+id+&#39;/customdomains.json&#39;, params)</pre>
     </div>
   <div class="tab-pane" id="php49">
       <pre>
@@ -6183,7 +6230,9 @@ netdna.post(&#39;/zones/vod/&#39; + id + &#39;/customdomains.json&#39;, { custom
   </div>
   <div class="tab-pane" id="python50">
         <pre>
-</pre>
+zoneId = &#39;96187&#39;
+domainId = &#39;79321&#39;
+api.get(&#39;/zones/vod/&#39;+zoneId+&#39;/customdomains.json/&#39;+domainId)</pre>
     </div>
   <div class="tab-pane" id="php50">
       <pre>
@@ -6291,7 +6340,10 @@ netdna.get(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + dom
   </div>
   <div class="tab-pane" id="python51">
         <pre>
-</pre>
+zoneId = &#39;96187&#39;
+domainId = &#39;79321&#39;
+params = {&quot;custom_domain&quot;:&quot;cdn.somenewdomain401.com&quot;}
+api.put(&#39;/zones/vod/&#39;+zoneId+&#39;/customdomains.json/&#39;+domainId,params=params)</pre>
     </div>
   <div class="tab-pane" id="php51">
       <pre>
@@ -6356,7 +6408,9 @@ netdna.put(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + dom
   </div>
   <div class="tab-pane" id="python52">
         <pre>
-</pre>
+zoneId = &#39;96187&#39;
+domainId = &#39;79321&#39;
+api.delete(&#39;/zones/vod/&#39;+zoneId+&#39;/customdomains.json/&#39;+domainId)</pre>
     </div>
   <div class="tab-pane" id="php52">
       <pre>
@@ -6457,7 +6511,7 @@ netdna.del(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + dom
   </div>
   <div class="tab-pane" id="python53">
         <pre>
-</pre>
+api.get(&#39;/zones/live.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php53">
       <pre>
@@ -6626,7 +6680,8 @@ netdna.get(&#39;/zones/live.json&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="python54">
         <pre>
-</pre>
+params = {&quot;name&quot;:&quot;newliveZone7&quot;,&quot;password&quot;:&quot;password&quot;}
+api.post(&#39;/zones/live.json&#39;,data=params)</pre>
     </div>
   <div class="tab-pane" id="php54">
       <pre>
@@ -6709,7 +6764,7 @@ netdna.post(&#39;/zones/live.json&#39;,  { name: &#39;newLiveZone3&#39;, passwor
   </div>
   <div class="tab-pane" id="python55">
         <pre>
-</pre>
+api.get(&#39;/zones/live.json/count&#39;)</pre>
     </div>
   <div class="tab-pane" id="php55">
       <pre>
@@ -6809,7 +6864,8 @@ netdna.get(&#39;/zones.json&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="python56">
         <pre>
-</pre>
+id = &#39;96193&#39;
+api.get(&#39;/zones/live.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php56">
       <pre>
@@ -6958,7 +7014,9 @@ netdna.get(&#39;/zones/live.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python57">
         <pre>
-</pre>
+id = &#39;96193&#39;
+params = {&quot;label&quot;:&quot;Some other description&quot;}
+api.put(&#39;/zones/live.json/&#39;+id,params=params)</pre>
     </div>
   <div class="tab-pane" id="php57">
       <pre>
@@ -7029,7 +7087,8 @@ netdna.put(&#39;/zones/live.json/&#39; + id, { label: &#39;Some other descriptio
   </div>
   <div class="tab-pane" id="python58">
         <pre>
-</pre>
+id = &#39;96193&#39;
+api.delete(&#39;/zones/live.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php58">
       <pre>
@@ -7081,7 +7140,8 @@ netdna.del(&#39;/zones/live.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python59">
         <pre>
-</pre>
+id = &#39;96193&#39;
+api.enable(&#39;/zones/live.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php59">
       <pre>
@@ -7134,7 +7194,8 @@ netdna.enable(&#39;/zones/live.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python60">
         <pre>
-</pre>
+id = &#39;96193&#39;
+api.disable(&#39;/zones/live.json/&#39;+id)</pre>
     </div>
   <div class="tab-pane" id="php60">
       <pre>
@@ -7188,7 +7249,9 @@ netdna.disable(&#39;/zones/live.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="python61">
         <pre>
-</pre>
+id = &#39;96061&#39;
+type = &#39;pull&#39;
+api.get(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/ssl.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php61">
       <pre>
@@ -7320,7 +7383,11 @@ netdna.get(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, fu
   </div>
   <div class="tab-pane" id="python62">
         <pre>
-</pre>
+id = &#39;96061&#39;
+type = &#39;pull&#39;
+ssl_crt = &quot;&quot;
+params = {&quot;ssl_crt&quot;: ssl_crt,&quot;ssl_key&quot;: &quot;somesslkey&quot;}
+api.post(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/ssl.json&#39;,params)</pre>
     </div>
   <div class="tab-pane" id="php62">
       <pre>
@@ -7455,7 +7522,11 @@ netdna.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, {
   </div>
   <div class="tab-pane" id="python63">
         <pre>
-</pre>
+id = &#39;96061&#39;
+type = &#39;pull&#39;
+ssl_crt = &quot;&quot;
+params = {&quot;ssl_crt&quot;: ssl_crt,&quot;ssl_key&quot;: &quot;somesslkey&quot;}
+api.put(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/ssl.json&#39;,params)</pre>
     </div>
   <div class="tab-pane" id="php63">
       <pre>
@@ -7512,7 +7583,9 @@ netdna.put(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { 
   </div>
   <div class="tab-pane" id="python64">
         <pre>
-</pre>
+id = &#39;96061&#39;
+type = &#39;pull&#39;
+api.post(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/ssl.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php64">
       <pre>
@@ -7565,7 +7638,9 @@ netdna.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, f
   </div>
   <div class="tab-pane" id="python65">
         <pre>
-</pre>
+type = &#39;pull&#39;
+id = &#39;96061&#39;
+api.post(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/upstream.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php65">
       <pre>
@@ -7681,7 +7756,10 @@ netdna.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#3
   </div>
   <div class="tab-pane" id="python66">
         <pre>
-</pre>
+type = &#39;pull&#39;
+id = &#39;96061&#39;
+params = {&quot;server_url&quot;: &quot;<a href="http://cdn.somedomain.com&quot;,&quot;server">http://cdn.somedomain.com&quot;,&quot;server</a>&quot;: &quot;<a href="http://cdn.somedomain.com&quot;,&quot;port">http://cdn.somedomain.com&quot;,&quot;port</a>&quot;: &quot;80&quot;}
+api.post(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/upstream.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php66">
       <pre>
@@ -7806,7 +7884,10 @@ netdna.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#3
   </div>
   <div class="tab-pane" id="python67">
         <pre>
-</pre>
+type = &#39;pull&#39;
+id = &#39;96061&#39;
+params = {&quot;upsream_id&quot;: &quot;93013&quot;,&quot;server_url&quot;: &quot;<a href="http://somedomain.net&quot;,&quot;port">http://somedomain.net&quot;,&quot;port</a>&quot;: &quot;80&quot;}
+api.put(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/upstream.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php67">
       <pre>
@@ -7860,7 +7941,9 @@ netdna.put(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39
   </div>
   <div class="tab-pane" id="python68">
         <pre>
-</pre>
+type = &#39;pull&#39;
+id = &#39;96061&#39;
+api.delete(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/upstream.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php68">
       <pre>
