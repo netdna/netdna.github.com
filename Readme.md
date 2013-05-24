@@ -850,7 +850,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python8">
 		<pre>
-print api.put('/users.json/'+id,params={'firstname': 'Verran'})</pre>
+api.put('/users.json/'+id,params={'firstname': 'Verran'})</pre>
 	</div>
   <div class="tab-pane" id="php8">
   	<pre>
@@ -1004,7 +1004,7 @@ Returns a list of all zones on the specified account
   </div>
   <div class="tab-pane" id="python10">
 		<pre>
-		</pre>
+api.get('/zones.json')</pre>
 	</div>
   <div class="tab-pane" id="php10">
   	<pre>
@@ -1103,7 +1103,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python11">
 		<pre>
-</pre>
+api.get('/zones.json/summary')</pre>
 	</div>
   <div class="tab-pane" id="php11">
   	<pre>
@@ -1173,7 +1173,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python12">
 		<pre>
-</pre>
+api.get('/zones.json/count')</pre>
 	</div>
   <div class="tab-pane" id="php12">
   	<pre>
@@ -1263,7 +1263,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python13">
 		<pre>
-</pre>
+api.get('/zones/pull.json')</pre>
 	</div>
   <div class="tab-pane" id="php13">
   	<pre>
@@ -1460,7 +1460,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python14">
 		<pre>
-</pre>
+params = {"name":"newPullZone5","url":"http://somedomain.net"}
+api.post('/zones/pull.json',data=params)</pre>
 	</div>
   <div class="tab-pane" id="php14">
   	<pre>
@@ -1559,7 +1560,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python15">
 		<pre>
-</pre>
+api.get('/zones/pull.json/count')</pre>
 	</div>
   <div class="tab-pane" id="php15">
   	<pre>
@@ -1647,7 +1648,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python16">
 		<pre>
-</pre>
+api.get('/zones/pull.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php16">
   	<pre>
@@ -1801,7 +1802,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python17">
 		<pre>
-</pre>
+id = '97167'
+params = {"label":"Some other description"}
+api.put('/zones/pull.json/'+id,params=params)</pre>
 	</div>
   <div class="tab-pane" id="php17">
   	<pre>
@@ -1898,7 +1901,8 @@ Deletes a pull zone specified by the {zone_id} parameter
   </div>
   <div class="tab-pane" id="python18">
 		<pre>
-</pre>
+id = '97167'
+api.delete('/zones/pull.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php18">
   	<pre>
@@ -1956,7 +1960,8 @@ Enables a pull zone specified by the {zone_id} parameter
   </div>
   <div class="tab-pane" id="python19">
 		<pre>
-</pre>
+id = '97167'
+api.enable('/zones/pull.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php19">
   	<pre>
@@ -2012,7 +2017,8 @@ Disables a pull zone specified by the {zone_id} parameter
   </div>
   <div class="tab-pane" id="python20">
 		<pre>
-</pre>
+id = '97167'
+api.disable('/zones/pull.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php20">
   	<pre>
@@ -2077,10 +2083,9 @@ api.purge(zone_id, ['/some_file', '/another_file'])</pre>
   </div>
   <div class="tab-pane" id="python21">
 	<pre>
-from netdnarws import NetDNA
-api = NetDNA("myalias", "consumer_key", "consumer_secret")
-api.delete("/zones/pull.json/zone_id/cache")
-api.delete("/zones/pull.json/zone_id/cache", data={'file': '/my-file.png'})</pre>
+id = '97167'
+params = {"file":"/robots.txt"}
+api.delete('/zones/pull.json/'+id+'/cache',data=params)</pre>
 	</div>
   <div class="tab-pane" id="php21">
   	<pre>
@@ -2154,7 +2159,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python22">
 		<pre>
-</pre>
+id = '97167'
+api.get('/zones/pull/'+id+'/customdomains.json')</pre>
 	</div>
   <div class="tab-pane" id="php22">
   	<pre>
@@ -2239,7 +2245,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python23">
 		<pre>
-</pre>
+id = '97167'
+params = {"custom_domain":"cdn.somedomain13.com"}
+api.post('/zones/pull/'+id+'/customdomains.json', params)</pre>
 	</div>
   <div class="tab-pane" id="php23">
   	<pre>
@@ -2313,7 +2321,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python24">
 		<pre>
-</pre>
+zoneId = '97167'
+domainId = '79182'
+api.get('/zones/pull/'+zoneId+'/customdomains.json/'+domainId)</pre>
 	</div>
   <div class="tab-pane" id="php24">
   	<pre>
@@ -2397,7 +2407,10 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python25">
 		<pre>
-</pre>
+zoneId = '97167'
+domainId = '79182'
+params = {"custom_domain":"cdn.somenewdomain41.com"}
+api.put('/zones/pull/'+zoneId+'/customdomains.json/'+domainId,params=params)</pre>
 	</div>
   <div class="tab-pane" id="php25">
   	<pre>
@@ -2467,7 +2480,9 @@ Deletes a custom domain specified by the {zone_id} and
   </div>
   <div class="tab-pane" id="python26">
 		<pre>
-</pre>
+zoneId = '97167'
+domainId = '79182'
+api.delete('/zones/pull/'+zoneId+'/customdomains.json/'+domainId)</pre>
 	</div>
   <div class="tab-pane" id="php26">
   	<pre>
@@ -2542,7 +2557,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python27">
 		<pre>
-</pre>
+api.get('/zones/push.json')</pre>
 	</div>
   <div class="tab-pane" id="php27">
   	<pre>
@@ -2675,7 +2690,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python28">
 		<pre>
-</pre>
+params = {"name":"newPushZone6","password":"password"}
+api.post('/zones/push.json',data=params)</pre>
 	</div>
   <div class="tab-pane" id="php28">
   	<pre>
@@ -2760,7 +2776,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python29">
 		<pre>
-</pre>
+api.get('/zones/push.json/count')</pre>
 	</div>
   <div class="tab-pane" id="php29">
   	<pre>
@@ -2834,7 +2850,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python30">
 		<pre>
-</pre>
+id = '96182'
+api.get('/zones/push.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php30">
   	<pre>
@@ -2939,7 +2956,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python31">
 		<pre>
-</pre>
+id = '96182'
+params = {"label":"Some other description"}
+api.put('/zones/push.json/'+id,params=params)</pre>
 	</div>
   <div class="tab-pane" id="php31">
   	<pre>
@@ -3020,7 +3039,8 @@ Deletes a push zone specified by the {zone_id} parameter
   </div>
   <div class="tab-pane" id="python32">
 		<pre>
-</pre>
+id = '96182'
+api.delete('/zones/push.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php32">
   	<pre>
@@ -3077,7 +3097,8 @@ Enables a push zone specified by the {zone_id} parameter
   </div>
   <div class="tab-pane" id="python33">
 		<pre>
-</pre>
+id = '96182'
+api.enable('/zones/push.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php33">
   	<pre>
@@ -3135,7 +3156,8 @@ Disables a push zone specified by the {zone_id} parameter
   </div>
   <div class="tab-pane" id="python34">
 		<pre>
-</pre>
+id = '96182'
+api.disable('/zones/push.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php34">
   	<pre>
@@ -3203,7 +3225,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python35">
 		<pre>
-</pre>
+id = '96182'
+api.get('/zones/push/'+id+'/customdomains.json')</pre>
 	</div>
   <div class="tab-pane" id="php35">
   	<pre>
@@ -3287,7 +3310,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python36">
 		<pre>
-</pre>
+id = '96182'
+params = {"custom_domain":"cdn.somedomain15.com"}
+api.post('/zones/push/'+id+'/customdomains.json', params)</pre>
 	</div>
   <div class="tab-pane" id="php36">
   	<pre>
@@ -3363,7 +3388,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python37">
 		<pre>
-</pre>
+zoneId = '96182'
+domainId = '79320'
+api.get('/zones/push/'+zoneId+'/customdomains.json/'+domainId)</pre>
 	</div>
   <div class="tab-pane" id="php37">
   	<pre>
@@ -3445,7 +3472,10 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python38">
 		<pre>
-</pre>
+zoneId = '96182'
+domainId = '79320'
+params = {"custom_domain":"cdn.somenewdomain40.com"}
+api.put('/zones/push/'+zoneId+'/customdomains.json/'+domainId,params=params)</pre>
 	</div>
   <div class="tab-pane" id="php38">
   	<pre>
@@ -3516,7 +3546,9 @@ Deletes a custom domain specified by the {zone_id} and
   </div>
   <div class="tab-pane" id="python39">
 		<pre>
-</pre>
+zoneId = '96182'
+domainId = '79320'
+api.delete('/zones/push/'+zoneId+'/customdomains.json/'+domainId)</pre>
 	</div>
   <div class="tab-pane" id="php39">
   	<pre>
@@ -3589,7 +3621,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python40">
 		<pre>
-</pre>
+api.get('/zones/vod.json')</pre>
 	</div>
   <div class="tab-pane" id="php40">
   	<pre>
@@ -3715,7 +3747,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python41">
 		<pre>
-</pre>
+params = {"name":"newvodZone7","password":"password"}
+api.post('/zones/vod.json',data=params)</pre>
 	</div>
   <div class="tab-pane" id="php41">
   	<pre>
@@ -3799,7 +3832,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python42">
 		<pre>
-</pre>
+api.get('/zones/vod.json/count')</pre>
 	</div>
   <div class="tab-pane" id="php42">
   	<pre>
@@ -3869,7 +3902,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python43">
 		<pre>
-</pre>
+id = '96187'
+api.get('/zones/vod.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php43">
   	<pre>
@@ -3969,7 +4003,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python44">
 		<pre>
-</pre>
+id = '96187'
+params = {"label":"Some other description"}
+api.put('/zones/vod.json/'+id,params=params)</pre>
 	</div>
   <div class="tab-pane" id="php44">
   	<pre>
@@ -4049,7 +4085,8 @@ Deletes a VOD zone specified by the {zone_id} parameter
   </div>
   <div class="tab-pane" id="python45">
 		<pre>
-</pre>
+id = '96187'
+api.delete('/zones/vod.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php45">
   	<pre>
@@ -4106,7 +4143,8 @@ Enables a VOD zone specified by the {zone_id} parameter
   </div>
   <div class="tab-pane" id="python46">
 		<pre>
-</pre>
+id = '96187'
+api.enable('/zones/vod.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php46">
   	<pre>
@@ -4163,7 +4201,8 @@ Disables a VOD zone specified by the {zone_id} parameter
   </div>
   <div class="tab-pane" id="python47">
 		<pre>
-</pre>
+id = '96187'
+api.disable('/zones/vod.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php47">
   	<pre>
@@ -4231,7 +4270,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python48">
 		<pre>
-</pre>
+id = '96187'
+api.get('/zones/vod/'+id+'/customdomains.json')</pre>
 	</div>
   <div class="tab-pane" id="php48">
   	<pre>
@@ -4315,7 +4355,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python49">
 		<pre>
-</pre>
+id = '96187'
+params = {"custom_domain":"cdn.somedomain16.com","type":"vod-rtmp"}
+api.post('/zones/vod/'+id+'/customdomains.json', params)</pre>
 	</div>
   <div class="tab-pane" id="php49">
   	<pre>
@@ -4390,7 +4432,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python50">
 		<pre>
-</pre>
+zoneId = '96187'
+domainId = '79321'
+api.get('/zones/vod/'+zoneId+'/customdomains.json/'+domainId)</pre>
 	</div>
   <div class="tab-pane" id="php50">
   	<pre>
@@ -4472,7 +4516,10 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python51">
 		<pre>
-</pre>
+zoneId = '96187'
+domainId = '79321'
+params = {"custom_domain":"cdn.somenewdomain401.com"}
+api.put('/zones/vod/'+zoneId+'/customdomains.json/'+domainId,params=params)</pre>
 	</div>
   <div class="tab-pane" id="php51">
   	<pre>
@@ -4542,7 +4589,9 @@ Deletes a custom domain specified by the {zone_id} and
   </div>
   <div class="tab-pane" id="python52">
 		<pre>
-</pre>
+zoneId = '96187'
+domainId = '79321'
+api.delete('/zones/vod/'+zoneId+'/customdomains.json/'+domainId)</pre>
 	</div>
   <div class="tab-pane" id="php52">
   	<pre>
@@ -4615,7 +4664,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python53">
 		<pre>
-</pre>
+api.get('/zones/live.json')</pre>
 	</div>
   <div class="tab-pane" id="php53">
   	<pre>
@@ -4730,7 +4779,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python54">
 		<pre>
-</pre>
+params = {"name":"newliveZone7","password":"password"}
+api.post('/zones/live.json',data=params)</pre>
 	</div>
   <div class="tab-pane" id="php54">
   	<pre>
@@ -4808,7 +4858,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python55">
 		<pre>
-</pre>
+api.get('/zones/live.json/count')</pre>
 	</div>
   <div class="tab-pane" id="php55">
   	<pre>
@@ -4879,7 +4929,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python56">
 		<pre>
-</pre>
+id = '96193'
+api.get('/zones/live.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php56">
   	<pre>
@@ -4974,7 +5025,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python57">
 		<pre>
-</pre>
+id = '96193'
+params = {"label":"Some other description"}
+api.put('/zones/live.json/'+id,params=params)</pre>
 	</div>
   <div class="tab-pane" id="php57">
   	<pre>
@@ -5050,7 +5103,8 @@ Deletes a live zone specified by the {zone_id} parameter
   </div>
   <div class="tab-pane" id="python58">
 		<pre>
-</pre>
+id = '96193'
+api.delete('/zones/live.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php58">
   	<pre>
@@ -5107,7 +5161,8 @@ Enables a live zone specified by the {zone_id} parameter
   </div>
   <div class="tab-pane" id="python59">
 		<pre>
-</pre>
+id = '96193'
+api.enable('/zones/live.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php59">
   	<pre>
@@ -5165,7 +5220,8 @@ Disables a live zone specified by the {zone_id} parameter
   </div>
   <div class="tab-pane" id="python60">
 		<pre>
-</pre>
+id = '96193'
+api.disable('/zones/live.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php60">
   	<pre>
@@ -5225,7 +5281,9 @@ Get the SSL certificate for the specified {zone_type} and
   </div>
   <div class="tab-pane" id="python61">
 		<pre>
-</pre>
+id = '96061'
+type = 'pull'
+api.get('/zones/'+type+'/'+id+'/ssl.json')</pre>
 	</div>
   <div class="tab-pane" id="php61">
   	<pre>
@@ -5304,7 +5362,11 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python62">
 		<pre>
-</pre>
+id = '96061'
+type = 'pull'
+ssl_crt = ""
+params = {"ssl_crt": ssl_crt,"ssl_key": "somesslkey"}
+api.post('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
 	</div>
   <div class="tab-pane" id="php62">
   	<pre>
@@ -5386,7 +5448,11 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python63">
 		<pre>
-</pre>
+id = '96061'
+type = 'pull'
+ssl_crt = ""
+params = {"ssl_crt": ssl_crt,"ssl_key": "somesslkey"}
+api.put('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
 	</div>
   <div class="tab-pane" id="php63">
   	<pre>
@@ -5448,7 +5514,9 @@ Remove the SSL certificate for the specified {zone_type} and
   </div>
   <div class="tab-pane" id="python64">
 		<pre>
-</pre>
+id = '96061'
+type = 'pull'
+api.post('/zones/'+type+'/'+id+'/ssl.json')</pre>
 	</div>
   <div class="tab-pane" id="php64">
   	<pre>
@@ -5507,7 +5575,9 @@ Get the upstream information for the specified {zone_id}.
   </div>
   <div class="tab-pane" id="python65">
 		<pre>
-</pre>
+type = 'pull'
+id = '96061'
+api.post('/zones/'+type+'/'+id+'/upstream.json')</pre>
 	</div>
   <div class="tab-pane" id="php65">
   	<pre>
@@ -5581,7 +5651,10 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python66">
 		<pre>
-</pre>
+type = 'pull'
+id = '96061'
+params = {"server_url": "http://cdn.somedomain.com","server": "http://cdn.somedomain.com","port": "80"}
+api.post('/zones/'+type+'/'+id+'/upstream.json')</pre>
 	</div>
   <div class="tab-pane" id="php66">
   	<pre>
@@ -5657,7 +5730,10 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python67">
 		<pre>
-</pre>
+type = 'pull'
+id = '96061'
+params = {"upsream_id": "93013","server_url": "http://somedomain.net","port": "80"}
+api.put('/zones/'+type+'/'+id+'/upstream.json')</pre>
 	</div>
   <div class="tab-pane" id="php67">
   	<pre>
@@ -5716,7 +5792,9 @@ Remove the Upstream Information for the specified {zone_id}.
   </div>
   <div class="tab-pane" id="python68">
 		<pre>
-</pre>
+type = 'pull'
+id = '96061'
+api.delete('/zones/'+type+'/'+id+'/upstream.json')</pre>
 	</div>
   <div class="tab-pane" id="php68">
   	<pre>
