@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>API Docs</title>
+    <title>API Docs (BETA)</title>
     <meta name="description" content="Manage your platform on NetDNA&amp;#039;s CDN with our advanced RESTful API, allowing you to instantly manage users, zones, and accounts with ease.">
     <meta http-equiv="cleartype" content="on">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta property="og:site_name" content="API Docs">
+    <meta property="og:site_name" content="API Docs (BETA)">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="API Docs">
+    <meta property="og:title" content="API Docs (BETA)">
     <meta property="og:description" content="Manage your platform on NetDNA&amp;#039;s CDN with our advanced RESTful API, allowing you to instantly manage users, zones, and accounts with ease.">
     <meta property="og:image" content="https://www.netdna.com/wp-content/themes/newNetDNA/images/logo.png">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css">
@@ -21,7 +21,7 @@
     <div id="spacer"></div>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container"><a href="/" class="brand">API Docs</a></div>
+        <div class="container"><a href="/" class="brand">API Docs (BETA)</a></div>
       </div>
     </div>
     <div class="container">
@@ -1420,7 +1420,9 @@ function callback(err, response) {
   </div>
   <div class="tab-pane" id="response9">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -1660,7 +1662,9 @@ netdna.get(&#39;/zones.json/count&#39;, function(err, response) {
   <div class="tab-pane" id="response12">
         <pre>
 {&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;count&quot;:&quot;4&quot;}
+    {
+        &quot;count&quot;:&quot;4&quot;
+    }
 }</pre>
   </div>
 </div>
@@ -1856,11 +1860,89 @@ netdna.get(&#39;/zones/pull.json&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="response13">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;page&quot;:1,&quot;pages&quot;:1,&quot;page_size&quot;:&quot;50&quot;,&quot;current_page_size&quot;:1,&quot;total&quot;:1,&quot;pullzones&quot;:
-        [
-            {&quot;id&quot;:&quot;#####&quot;,&quot;name&quot;:&quot;zoneName&quot;,&quot;url&quot;:&quot;http:\/\/somedomain.net&quot;,&quot;port&quot;:&quot;80&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;,&quot;type&quot;:&quot;2&quot;,&quot;compress&quot;:&quot;1&quot;,&quot;backend_compress&quot;:&quot;0&quot;,&quot;queries&quot;:&quot;1&quot;,&quot;suspend&quot;:&quot;0&quot;,&quot;cache_valid&quot;:&quot;1d&quot;,&quot;label&quot;:&quot;personal&quot;,&quot;inactive&quot;:&quot;0&quot;,&quot;valid_referers&quot;:null,&quot;expires&quot;:null,&quot;disallow_robots&quot;:&quot;0&quot;,&quot;disallow_robots_txt&quot;:null,&quot;canonical_link_headers&quot;:&quot;0&quot;,&quot;content_disposition&quot;:&quot;0&quot;,&quot;locked&quot;:&quot;0&quot;,&quot;server_id&quot;:&quot;18&quot;,&quot;sslshared&quot;:&quot;0&quot;,&quot;creation_date&quot;:&quot;2013-05-15 20:45:44&quot;,&quot;set_host_header&quot;:null,&quot;dns_check&quot;:&quot;1&quot;,&quot;ignore_setcookie_header&quot;:&quot;0&quot;,&quot;hide_setcookie_header&quot;:&quot;0&quot;,&quot;ignore_cache_control&quot;:&quot;0&quot;,&quot;use_stale&quot;:&quot;0&quot;,&quot;proxy_cache_lock&quot;:&quot;0&quot;,&quot;pseudo_streaming&quot;:&quot;0&quot;,&quot;upstream_enabled&quot;:&quot;0&quot;,&quot;cdn_url&quot;:&quot;cdn.somedomain.com&quot;,&quot;tmp_url&quot;:&quot;somedomain.alias.netdna-cdn.com&quot;}
-        ]
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;current_page_size&quot;: 3,
+        &quot;page&quot;: 1,
+        &quot;page_size&quot;: &quot;50&quot;,
+        &quot;pages&quot;: 1,
+        &quot;pullzones&quot;: [
+            {
+                &quot;backend_compress&quot;: &quot;0&quot;,
+                &quot;cache_valid&quot;: &quot;1d&quot;,
+                &quot;canonical_link_headers&quot;: &quot;0&quot;,
+                &quot;cdn_url&quot;: &quot;cdn.somedomain.com&quot;,
+                &quot;compress&quot;: &quot;1&quot;,
+                &quot;content_disposition&quot;: &quot;0&quot;,
+                &quot;creation_date&quot;: &quot;2013-05-15 20:45:44&quot;,
+                &quot;disallow_robots&quot;: &quot;0&quot;,
+                &quot;disallow_robots_txt&quot;: null,
+                &quot;dns_check&quot;: &quot;1&quot;,
+                &quot;expires&quot;: null,
+                &quot;hide_setcookie_header&quot;: &quot;0&quot;,
+                &quot;id&quot;: &quot;96061&quot;,
+                &quot;ignore_cache_control&quot;: &quot;0&quot;,
+                &quot;ignore_setcookie_header&quot;: &quot;0&quot;,
+                &quot;inactive&quot;: &quot;0&quot;,
+                &quot;ip&quot;: &quot;205.134.255.49&quot;,
+                &quot;label&quot;: &quot;personal&quot;,
+                &quot;locked&quot;: &quot;0&quot;,
+                &quot;name&quot;: &quot;somedomain&quot;,
+                &quot;port&quot;: &quot;80&quot;,
+                &quot;proxy_cache_lock&quot;: &quot;0&quot;,
+                &quot;pseudo_streaming&quot;: &quot;0&quot;,
+                &quot;queries&quot;: &quot;1&quot;,
+                &quot;server_id&quot;: &quot;18&quot;,
+                &quot;set_host_header&quot;: null,
+                &quot;sslshared&quot;: &quot;0&quot;,
+                &quot;suspend&quot;: &quot;0&quot;,
+                &quot;tmp_url&quot;: &quot;somedomain.alias.netdna-cdn.com&quot;,
+                &quot;type&quot;: &quot;2&quot;,
+                &quot;upstream_enabled&quot;: &quot;0&quot;,
+                &quot;url&quot;: &quot;<a href="http://somedomain.net">http://somedomain.net</a>&quot;,
+                &quot;use_stale&quot;: &quot;0&quot;,
+                &quot;valid_referers&quot;: null
+            },
+            &lt;...&gt;,
+            {
+                &quot;backend_compress&quot;: &quot;0&quot;,
+                &quot;cache_valid&quot;: &quot;1d&quot;,
+                &quot;canonical_link_headers&quot;: &quot;0&quot;,
+                &quot;cdn_url&quot;: &quot;newpullzone3.alias.netdna-cdn.com&quot;,
+                &quot;compress&quot;: &quot;0&quot;,
+                &quot;content_disposition&quot;: &quot;0&quot;,
+                &quot;creation_date&quot;: &quot;2013-05-24 16:18:19&quot;,
+                &quot;disallow_robots&quot;: &quot;0&quot;,
+                &quot;disallow_robots_txt&quot;: null,
+                &quot;dns_check&quot;: &quot;1&quot;,
+                &quot;expires&quot;: null,
+                &quot;hide_setcookie_header&quot;: &quot;0&quot;,
+                &quot;id&quot;: &quot;97312&quot;,
+                &quot;ignore_cache_control&quot;: &quot;0&quot;,
+                &quot;ignore_setcookie_header&quot;: &quot;0&quot;,
+                &quot;inactive&quot;: &quot;0&quot;,
+                &quot;ip&quot;: &quot;205.134.255.49&quot;,
+                &quot;label&quot;: null,
+                &quot;locked&quot;: &quot;0&quot;,
+                &quot;name&quot;: &quot;newpullzone3&quot;,
+                &quot;port&quot;: &quot;80&quot;,
+                &quot;proxy_cache_lock&quot;: &quot;0&quot;,
+                &quot;pseudo_streaming&quot;: &quot;0&quot;,
+                &quot;queries&quot;: &quot;1&quot;,
+                &quot;server_id&quot;: &quot;18&quot;,
+                &quot;set_host_header&quot;: null,
+                &quot;sslshared&quot;: &quot;0&quot;,
+                &quot;suspend&quot;: &quot;0&quot;,
+                &quot;tmp_url&quot;: &quot;newpullzone3.alias.netdna-cdn.com&quot;,
+                &quot;type&quot;: &quot;2&quot;,
+                &quot;upstream_enabled&quot;: &quot;0&quot;,
+                &quot;url&quot;: &quot;<a href="http://somedomain.net">http://somedomain.net</a>&quot;,
+                &quot;use_stale&quot;: &quot;0&quot;,
+                &quot;valid_referers&quot;: null
+            }
+        ],
+        &quot;total&quot;: 3
     }
 }</pre>
   </div>
@@ -2231,9 +2313,45 @@ netdna.post(&#39;/zones/pull.json&#39;, { name: &#39;newPullZone2&#39;, url: &#3
   </div>
   <div class="tab-pane" id="response14">
         <pre>
-{&quot;code&quot;:201,&quot;data&quot;:
-    {&quot;pullzone&quot;:
-        {&quot;id&quot;:#####,&quot;name&quot;:&quot;newpullzone2&quot;,&quot;url&quot;:&quot;http:\/\/somedomain.net&quot;,&quot;port&quot;:80,&quot;ip&quot;:&quot;205.134.255.49&quot;,&quot;type&quot;:2,&quot;compress&quot;:0,&quot;backend_compress&quot;:0,&quot;queries&quot;:&quot;1&quot;,&quot;suspend&quot;:0,&quot;cache_valid&quot;:&quot;1d&quot;,&quot;label&quot;:null,&quot;inactive&quot;:0,&quot;valid_referers&quot;:null,&quot;expires&quot;:null,&quot;disallow_robots&quot;:0,&quot;disallow_robots_txt&quot;:null,&quot;canonical_link_headers&quot;:1,&quot;content_disposition&quot;:0,&quot;locked&quot;:0,&quot;server_id&quot;:&quot;18&quot;,&quot;sslshared&quot;:null,&quot;creation_date&quot;:&quot;2013-05-23 19:38:29&quot;,&quot;set_host_header&quot;:1,&quot;dns_check&quot;:0,&quot;ignore_setcookie_header&quot;:0,&quot;hide_setcookie_header&quot;:0,&quot;ignore_cache_control&quot;:0,&quot;use_stale&quot;:0,&quot;proxy_cache_lock&quot;:0,&quot;pseudo_streaming&quot;:0,&quot;upstream_enabled&quot;:0,&quot;cdn_url&quot;:&quot;newpullzone2.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newpullzone2.alias.netdna-cdn.com&quot;}
+{
+    &quot;code&quot;: 201,
+    &quot;data&quot;: {
+        &quot;pullzone&quot;: {
+            &quot;backend_compress&quot;: 0,
+            &quot;cache_valid&quot;: &quot;1d&quot;,
+            &quot;canonical_link_headers&quot;: 1,
+            &quot;cdn_url&quot;: &quot;newpullzone3.alias.netdna-cdn.com&quot;,
+            &quot;compress&quot;: 0,
+            &quot;content_disposition&quot;: 0,
+            &quot;creation_date&quot;: &quot;2013-05-24 16:18:19&quot;,
+            &quot;disallow_robots&quot;: 0,
+            &quot;disallow_robots_txt&quot;: null,
+            &quot;dns_check&quot;: 0,
+            &quot;expires&quot;: null,
+            &quot;hide_setcookie_header&quot;: 0,
+            &quot;id&quot;: 97312,
+            &quot;ignore_cache_control&quot;: 0,
+            &quot;ignore_setcookie_header&quot;: 0,
+            &quot;inactive&quot;: 0,
+            &quot;ip&quot;: &quot;205.134.255.49&quot;,
+            &quot;label&quot;: null,
+            &quot;locked&quot;: 0,
+            &quot;name&quot;: &quot;newpullzone3&quot;,
+            &quot;port&quot;: 80,
+            &quot;proxy_cache_lock&quot;: 0,
+            &quot;pseudo_streaming&quot;: 0,
+            &quot;queries&quot;: &quot;1&quot;,
+            &quot;server_id&quot;: &quot;18&quot;,
+            &quot;set_host_header&quot;: 1,
+            &quot;sslshared&quot;: null,
+            &quot;suspend&quot;: 0,
+            &quot;tmp_url&quot;: &quot;newpullzone3.alias.netdna-cdn.com&quot;,
+            &quot;type&quot;: 2,
+            &quot;upstream_enabled&quot;: 0,
+            &quot;url&quot;: &quot;<a href="http://somedomain.net">http://somedomain.net</a>&quot;,
+            &quot;use_stale&quot;: 0,
+            &quot;valid_referers&quot;: null
+        }
     }
 }</pre>
   </div>
@@ -2300,7 +2418,9 @@ netdna.get(&#39;/zones/pull.json/count&#39;, function(err, response) {
   <div class="tab-pane" id="response15">
         <pre>
 {&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;count&quot;:&quot;3&quot;}
+    {
+    &quot;count&quot;: &quot;3&quot;
+    }
 }</pre>
   </div>
 </div>
@@ -2497,9 +2617,45 @@ netdna.get(&#39;/zones/pull.json&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response16">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;pullzone&quot;:
-        {&quot;id&quot;:&quot;96076&quot;,&quot;name&quot;:&quot;newpullzone&quot;,&quot;url&quot;:&quot;http:\/\/somedomain.net&quot;,&quot;port&quot;:&quot;80&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;,&quot;type&quot;:&quot;2&quot;,&quot;compress&quot;:&quot;0&quot;,&quot;backend_compress&quot;:&quot;0&quot;,&quot;queries&quot;:&quot;1&quot;,&quot;suspend&quot;:&quot;0&quot;,&quot;cache_valid&quot;:&quot;1d&quot;,&quot;label&quot;:&quot;Some other description&quot;,&quot;inactive&quot;:&quot;1&quot;,&quot;valid_referers&quot;:null,&quot;expires&quot;:null,&quot;disallow_robots&quot;:&quot;0&quot;,&quot;disallow_robots_txt&quot;:null,&quot;canonical_link_headers&quot;:&quot;0&quot;,&quot;content_disposition&quot;:&quot;0&quot;,&quot;locked&quot;:&quot;0&quot;,&quot;server_id&quot;:&quot;18&quot;,&quot;sslshared&quot;:&quot;0&quot;,&quot;creation_date&quot;:&quot;2013-05-15 23:01:18&quot;,&quot;set_host_header&quot;:null,&quot;dns_check&quot;:&quot;1&quot;,&quot;ignore_setcookie_header&quot;:&quot;0&quot;,&quot;hide_setcookie_header&quot;:&quot;0&quot;,&quot;ignore_cache_control&quot;:&quot;0&quot;,&quot;use_stale&quot;:&quot;0&quot;,&quot;proxy_cache_lock&quot;:&quot;0&quot;,&quot;pseudo_streaming&quot;:&quot;0&quot;,&quot;upstream_enabled&quot;:&quot;0&quot;,&quot;cdn_url&quot;:&quot;newpullzone.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newpullzone.alias.netdna-cdn.com&quot;}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;pullzone&quot;: {
+            &quot;backend_compress&quot;: &quot;0&quot;,
+            &quot;cache_valid&quot;: &quot;1d&quot;,
+            &quot;canonical_link_headers&quot;: &quot;0&quot;,
+            &quot;cdn_url&quot;: &quot;cdn.somenewdomain.com&quot;,
+            &quot;compress&quot;: &quot;0&quot;,
+            &quot;content_disposition&quot;: &quot;0&quot;,
+            &quot;creation_date&quot;: &quot;2013-05-23 19:38:30&quot;,
+            &quot;disallow_robots&quot;: &quot;0&quot;,
+            &quot;disallow_robots_txt&quot;: null,
+            &quot;dns_check&quot;: &quot;1&quot;,
+            &quot;expires&quot;: null,
+            &quot;hide_setcookie_header&quot;: &quot;0&quot;,
+            &quot;id&quot;: &quot;97167&quot;,
+            &quot;ignore_cache_control&quot;: &quot;0&quot;,
+            &quot;ignore_setcookie_header&quot;: &quot;0&quot;,
+            &quot;inactive&quot;: &quot;0&quot;,
+            &quot;ip&quot;: &quot;205.134.255.49&quot;,
+            &quot;label&quot;: &quot;Some other description&quot;,
+            &quot;locked&quot;: &quot;0&quot;,
+            &quot;name&quot;: &quot;newpullzone2&quot;,
+            &quot;port&quot;: &quot;80&quot;,
+            &quot;proxy_cache_lock&quot;: &quot;0&quot;,
+            &quot;pseudo_streaming&quot;: &quot;0&quot;,
+            &quot;queries&quot;: &quot;1&quot;,
+            &quot;server_id&quot;: &quot;18&quot;,
+            &quot;set_host_header&quot;: null,
+            &quot;sslshared&quot;: &quot;0&quot;,
+            &quot;suspend&quot;: &quot;0&quot;,
+            &quot;tmp_url&quot;: &quot;newpullzone2.alias.netdna-cdn.com&quot;,
+            &quot;type&quot;: &quot;2&quot;,
+            &quot;upstream_enabled&quot;: &quot;0&quot;,
+            &quot;url&quot;: &quot;<a href="http://somedomain.net">http://somedomain.net</a>&quot;,
+            &quot;use_stale&quot;: &quot;0&quot;,
+            &quot;valid_referers&quot;: null
+        }
     }
 }</pre>
   </div>
@@ -2858,9 +3014,45 @@ netdna.put(&#39;/zones/pull.json&#39; + id, { label: &#39;Some other description
   </div>
   <div class="tab-pane" id="response17">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;pullzone&quot;:
-        {&quot;id&quot;:&quot;97167&quot;,&quot;name&quot;:&quot;newpullzone&quot;,&quot;url&quot;:&quot;http:\/\/somedomain.net&quot;,&quot;port&quot;:&quot;80&quot;,&quot;ip&quot;:&quot;127.0.0.1&quot;,&quot;type&quot;:&quot;2&quot;,&quot;compress&quot;:&quot;0&quot;,&quot;backend_compress&quot;:&quot;0&quot;,&quot;queries&quot;:&quot;1&quot;,&quot;suspend&quot;:&quot;0&quot;,&quot;cache_valid&quot;:&quot;1d&quot;,&quot;label&quot;:&quot;Some other description&quot;,&quot;inactive&quot;:&quot;0&quot;,&quot;valid_referers&quot;:null,&quot;expires&quot;:null,&quot;disallow_robots&quot;:&quot;0&quot;,&quot;disallow_robots_txt&quot;:null,&quot;canonical_link_headers&quot;:&quot;0&quot;,&quot;content_disposition&quot;:&quot;0&quot;,&quot;locked&quot;:&quot;0&quot;,&quot;server_id&quot;:&quot;18&quot;,&quot;sslshared&quot;:&quot;0&quot;,&quot;creation_date&quot;:&quot;2013-05-23 19:38:30&quot;,&quot;set_host_header&quot;:null,&quot;dns_check&quot;:&quot;1&quot;,&quot;ignore_setcookie_header&quot;:&quot;0&quot;,&quot;hide_setcookie_header&quot;:&quot;0&quot;,&quot;ignore_cache_control&quot;:&quot;0&quot;,&quot;use_stale&quot;:&quot;0&quot;,&quot;proxy_cache_lock&quot;:&quot;0&quot;,&quot;pseudo_streaming&quot;:&quot;0&quot;,&quot;upstream_enabled&quot;:&quot;0&quot;,&quot;cdn_url&quot;:&quot;newpullzone2.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newpullzone2.alias.netdna-cdn.com&quot;}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;pullzone&quot;: {
+            &quot;backend_compress&quot;: &quot;0&quot;,
+            &quot;cache_valid&quot;: &quot;1d&quot;,
+            &quot;canonical_link_headers&quot;: &quot;0&quot;,
+            &quot;cdn_url&quot;: &quot;cdn.somenewdomain.com&quot;,
+            &quot;compress&quot;: &quot;0&quot;,
+            &quot;content_disposition&quot;: &quot;0&quot;,
+            &quot;creation_date&quot;: &quot;2013-05-23 19:38:30&quot;,
+            &quot;disallow_robots&quot;: &quot;0&quot;,
+            &quot;disallow_robots_txt&quot;: null,
+            &quot;dns_check&quot;: &quot;1&quot;,
+            &quot;expires&quot;: null,
+            &quot;hide_setcookie_header&quot;: &quot;0&quot;,
+            &quot;id&quot;: &quot;97167&quot;,
+            &quot;ignore_cache_control&quot;: &quot;0&quot;,
+            &quot;ignore_setcookie_header&quot;: &quot;0&quot;,
+            &quot;inactive&quot;: &quot;0&quot;,
+            &quot;ip&quot;: &quot;205.134.255.49&quot;,
+            &quot;label&quot;: &quot;Some other description&quot;,
+            &quot;locked&quot;: &quot;0&quot;,
+            &quot;name&quot;: &quot;newpullzone2&quot;,
+            &quot;port&quot;: &quot;80&quot;,
+            &quot;proxy_cache_lock&quot;: &quot;0&quot;,
+            &quot;pseudo_streaming&quot;: &quot;0&quot;,
+            &quot;queries&quot;: &quot;1&quot;,
+            &quot;server_id&quot;: &quot;18&quot;,
+            &quot;set_host_header&quot;: null,
+            &quot;sslshared&quot;: &quot;0&quot;,
+            &quot;suspend&quot;: &quot;0&quot;,
+            &quot;tmp_url&quot;: &quot;newpullzone2.alias.netdna-cdn.com&quot;,
+            &quot;type&quot;: &quot;2&quot;,
+            &quot;upstream_enabled&quot;: &quot;0&quot;,
+            &quot;url&quot;: &quot;<a href="http://somedomain.net">http://somedomain.net</a>&quot;,
+            &quot;use_stale&quot;: &quot;0&quot;,
+            &quot;valid_referers&quot;: null
+        }
     }
 }</pre>
   </div>
@@ -2913,7 +3105,9 @@ netdna.del(&#39;/zones/pull.json&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response18">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -3015,7 +3209,9 @@ netdna.disable(&#39;/zones/pull.json&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response20">
         <pre>
-</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -3096,7 +3292,9 @@ function callback(err, response) {
   </div>
   <div class="tab-pane" id="response21">
     <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;: 200
+}</pre>
   </div>
 </div>
 
@@ -3174,11 +3372,18 @@ netdna.get(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json&#39;, function
   </div>
   <div class="tab-pane" id="response22">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;total&quot;:1,&quot;customdomains&quot;:
-        [
-            {&quot;id&quot;:&quot;79182&quot;,&quot;bucket_id&quot;:&quot;97167&quot;,&quot;custom_domain&quot;:&quot;cdn.somedomain3.com&quot;,&quot;type&quot;:null}
-        ]
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;customdomains&quot;: [
+            {
+                &quot;bucket_id&quot;: &quot;97167&quot;,
+                &quot;custom_domain&quot;: &quot;cdn.somenewdomain.com&quot;,
+                &quot;id&quot;: &quot;79182&quot;,
+                &quot;type&quot;: null
+            }
+        ],
+        &quot;total&quot;: 1
     }
 }</pre>
   </div>
@@ -3284,9 +3489,15 @@ netdna.post(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json&#39;, { custo
   </div>
   <div class="tab-pane" id="response23">
         <pre>
-{&quot;code&quot;:201,&quot;data&quot;:
-    {&quot;customdomain&quot;:
-        {&quot;id&quot;:79182,&quot;bucket_id&quot;:&quot;97167&quot;,&quot;custom_domain&quot;:&quot;cdn.somedomain3.com&quot;,&quot;type&quot;:null}
+{
+    &quot;code&quot;: 201,
+    &quot;data&quot;: {
+        &quot;customdomain&quot;: {
+            &quot;bucket_id&quot;: &quot;97167&quot;,
+            &quot;custom_domain&quot;: &quot;cdn.somedomain3.com&quot;,
+            &quot;id&quot;: 79282,
+            &quot;type&quot;: null
+        }
     }
 }</pre>
   </div>
@@ -3367,11 +3578,18 @@ netdna.get(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json/&#39; + domain
   </div>
   <div class="tab-pane" id="response24">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;customdomain&quot;:
-        {&quot;id&quot;:&quot;79182&quot;,&quot;bucket_id&quot;:&quot;97167&quot;,&quot;custom_domain&quot;:&quot;cdn.somedomain3.com&quot;,&quot;type&quot;:null}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;customdomain&quot;: {
+            &quot;bucket_id&quot;: &quot;97167&quot;,
+            &quot;custom_domain&quot;: &quot;cdn.somenewdomain.com&quot;,
+            &quot;id&quot;: &quot;79182&quot;,
+            &quot;type&quot;: null
+        }
     }
-}</pre>
+}
+</pre>
   </div>
 </div>
 
@@ -3470,9 +3688,15 @@ netdna.put(&#39;/zones/pull/&#39; + zoneId + &#39;/customdomains.json/&#39; + do
   </div>
   <div class="tab-pane" id="response25">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;customdomain&quot;:
-        {&quot;id&quot;:&quot;79182&quot;,&quot;bucket_id&quot;:&quot;97167&quot;,&quot;custom_domain&quot;:&quot;cdn.somenewdomain.com&quot;,&quot;type&quot;:null}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;customdomain&quot;: {
+            &quot;bucket_id&quot;: &quot;97167&quot;,
+            &quot;custom_domain&quot;: &quot;cdn.somenewdomain4.com&quot;,
+            &quot;id&quot;: &quot;79182&quot;,
+            &quot;type&quot;: null
+        }
     }
 }</pre>
   </div>
@@ -3528,7 +3752,9 @@ netdna.del(&#39;/zones/pull/&#39; + zoneId + &#39;/customdomains.json/&#39; + do
   </div>
   <div class="tab-pane" id="response26">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -3638,11 +3864,58 @@ netdna.get(&#39;/zones/push.json&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="response27">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;page&quot;:1,&quot;pages&quot;:1,&quot;page_size&quot;:&quot;50&quot;,&quot;current_page_size&quot;:1,&quot;total&quot;:1,&quot;pushzones&quot;:
-        [
-            {&quot;id&quot;:&quot;96182&quot;,&quot;name&quot;:&quot;newpushzone2&quot;,&quot;type&quot;:&quot;3&quot;,&quot;compress&quot;:&quot;0&quot;,&quot;suspend&quot;:&quot;0&quot;,&quot;label&quot;:null,&quot;inactive&quot;:&quot;0&quot;,&quot;valid_referers&quot;:null,&quot;expires&quot;:null,&quot;content_disposition&quot;:&quot;0&quot;,&quot;locked&quot;:&quot;0&quot;,&quot;server_id&quot;:&quot;11&quot;,&quot;sslshared&quot;:&quot;0&quot;,&quot;creation_date&quot;:&quot;2013-05-16 15:25:19&quot;,&quot;cdn_url&quot;:&quot;cdn.somedomain.net&quot;,&quot;tmp_url&quot;:&quot;newpushzone2.alias.netdna-cdn.com&quot;,&quot;ftp_url&quot;:&quot;ftp.newpushzone2.alias.netdna-cdn.com&quot;,&quot;storage_used&quot;:&quot;20480&quot;,&quot;storage_updated&quot;:&quot;2013-05-23 18:31:54&quot;}
-        ]
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;current_page_size&quot;: 2,
+        &quot;page&quot;: 1,
+        &quot;page_size&quot;: &quot;50&quot;,
+        &quot;pages&quot;: 1,
+        &quot;pushzones&quot;: [
+            {
+                &quot;cdn_url&quot;: &quot;cdn.somedomain.net&quot;,
+                &quot;compress&quot;: &quot;0&quot;,
+                &quot;content_disposition&quot;: &quot;0&quot;,
+                &quot;creation_date&quot;: &quot;2013-05-16 15:25:19&quot;,
+                &quot;expires&quot;: null,
+                &quot;ftp_url&quot;: &quot;ftp.newpushzone2.alias.netdna-cdn.com&quot;,
+                &quot;id&quot;: &quot;96182&quot;,
+                &quot;inactive&quot;: &quot;0&quot;,
+                &quot;label&quot;: null,
+                &quot;locked&quot;: &quot;0&quot;,
+                &quot;name&quot;: &quot;newpushzone2&quot;,
+                &quot;server_id&quot;: &quot;11&quot;,
+                &quot;sslshared&quot;: &quot;0&quot;,
+                &quot;storage_updated&quot;: &quot;2013-05-24 06:31:52&quot;,
+                &quot;storage_used&quot;: &quot;20480&quot;,
+                &quot;suspend&quot;: &quot;0&quot;,
+                &quot;tmp_url&quot;: &quot;newpushzone2.alias.netdna-cdn.com&quot;,
+                &quot;type&quot;: &quot;3&quot;,
+                &quot;valid_referers&quot;: null
+            },
+            {
+                &quot;cdn_url&quot;: &quot;cdn.somenewdomain2.com&quot;,
+                &quot;compress&quot;: &quot;0&quot;,
+                &quot;content_disposition&quot;: &quot;0&quot;,
+                &quot;creation_date&quot;: &quot;2013-05-23 21:01:39&quot;,
+                &quot;expires&quot;: null,
+                &quot;ftp_url&quot;: &quot;ftp.newpushzone3.alias.netdna-cdn.com&quot;,
+                &quot;id&quot;: &quot;97181&quot;,
+                &quot;inactive&quot;: &quot;0&quot;,
+                &quot;label&quot;: &quot;Some other description&quot;,
+                &quot;locked&quot;: &quot;0&quot;,
+                &quot;name&quot;: &quot;newpushzone3&quot;,
+                &quot;server_id&quot;: &quot;11&quot;,
+                &quot;sslshared&quot;: &quot;0&quot;,
+                &quot;storage_updated&quot;: &quot;2013-05-24 06:31:52&quot;,
+                &quot;storage_used&quot;: &quot;20480&quot;,
+                &quot;suspend&quot;: &quot;0&quot;,
+                &quot;tmp_url&quot;: &quot;newpushzone3.alias.netdna-cdn.com&quot;,
+                &quot;type&quot;: &quot;3&quot;,
+                &quot;valid_referers&quot;: null
+            }
+        ],
+        &quot;total&quot;: 2
     }
 }</pre>
   </div>
@@ -3809,12 +4082,32 @@ netdna.post(&#39;/zones/push.json&#39;, { name: &#39;newPushZone&#39;, password:
   </div>
   <div class="tab-pane" id="response28">
         <pre>
-{&quot;code&quot;:201,&quot;data&quot;:
-    {&quot;pushzone&quot;:
-        {&quot;id&quot;:97181,&quot;name&quot;:&quot;newpushzone&quot;,&quot;type&quot;:3,&quot;compress&quot;:0,&quot;suspend&quot;:0,&quot;label&quot;:null,&quot;inactive&quot;:0,&quot;valid_referers&quot;:null,&quot;expires&quot;:null,&quot;content_disposition&quot;:0,&quot;locked&quot;:0,&quot;server_id&quot;:&quot;11&quot;,&quot;sslshared&quot;:null,&quot;creation_date&quot;:&quot;2013-05-23 21:01:39&quot;,&quot;cdn_url&quot;:&quot;newpushzone.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newpushzone.alias.netdna-cdn.com&quot;,&quot;ftp_url&quot;:&quot;ftp.newpushzone.alias.netdna-cdn.com&quot;,&quot;storage_used&quot;:null,&quot;storage_updated&quot;:null}
+{
+    &quot;code&quot;: 201,
+    &quot;data&quot;: {
+        &quot;pushzone&quot;: {
+            &quot;cdn_url&quot;: &quot;newpushzone4.alias.netdna-cdn.com&quot;,
+            &quot;compress&quot;: 0,
+            &quot;content_disposition&quot;: 0,
+            &quot;creation_date&quot;: &quot;2013-05-24 16:41:53&quot;,
+            &quot;expires&quot;: null,
+            &quot;ftp_url&quot;: &quot;ftp.newpushzone4.alias.netdna-cdn.com&quot;,
+            &quot;id&quot;: 97317,
+            &quot;inactive&quot;: 0,
+            &quot;label&quot;: null,
+            &quot;locked&quot;: 0,
+            &quot;name&quot;: &quot;newpushzone4&quot;,
+            &quot;server_id&quot;: &quot;11&quot;,
+            &quot;sslshared&quot;: null,
+            &quot;storage_updated&quot;: null,
+            &quot;storage_used&quot;: null,
+            &quot;suspend&quot;: 0,
+            &quot;tmp_url&quot;: &quot;newpushzone4.alias.netdna-cdn.com&quot;,
+            &quot;type&quot;: 3,
+            &quot;valid_referers&quot;: null
+        }
     }
-}
-</pre>
+}</pre>
   </div>
 </div>
 
@@ -3878,9 +4171,13 @@ netdna.get(&#39;/zones/push.json/count&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="response29">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;count&quot;:&quot;3&quot;}
-}</pre>
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;count&quot;: &quot;3&quot;
+    }
+}
+</pre>
   </div>
 </div>
 
@@ -3991,12 +4288,32 @@ netdna.get(&#39;/zones/push.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response30">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;pushzone&quot;:
-        {&quot;id&quot;:&quot;97181&quot;,&quot;name&quot;:&quot;newpushzone3&quot;,&quot;type&quot;:&quot;3&quot;,&quot;compress&quot;:&quot;0&quot;,&quot;suspend&quot;:&quot;0&quot;,&quot;label&quot;:null,&quot;inactive&quot;:&quot;0&quot;,&quot;valid_referers&quot;:null,&quot;expires&quot;:null,&quot;content_disposition&quot;:&quot;0&quot;,&quot;locked&quot;:&quot;0&quot;,&quot;server_id&quot;:&quot;11&quot;,&quot;sslshared&quot;:&quot;0&quot;,&quot;creation_date&quot;:&quot;2013-05-23 21:01:39&quot;,&quot;cdn_url&quot;:&quot;newpushzone3.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newpushzone3.alias.netdna-cdn.com&quot;,&quot;ftp_url&quot;:&quot;ftp.newpushzone3.alias.netdna-cdn.com&quot;,&quot;storage_used&quot;:null,&quot;storage_updated&quot;:null}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;pushzone&quot;: {
+            &quot;cdn_url&quot;: &quot;cdn.somenewdomain2.com&quot;,
+            &quot;compress&quot;: &quot;0&quot;,
+            &quot;content_disposition&quot;: &quot;0&quot;,
+            &quot;creation_date&quot;: &quot;2013-05-23 21:01:39&quot;,
+            &quot;expires&quot;: null,
+            &quot;ftp_url&quot;: &quot;ftp.newpushzone3.alias.netdna-cdn.com&quot;,
+            &quot;id&quot;: &quot;97181&quot;,
+            &quot;inactive&quot;: &quot;0&quot;,
+            &quot;label&quot;: &quot;Some other description&quot;,
+            &quot;locked&quot;: &quot;0&quot;,
+            &quot;name&quot;: &quot;newpushzone3&quot;,
+            &quot;server_id&quot;: &quot;11&quot;,
+            &quot;sslshared&quot;: &quot;0&quot;,
+            &quot;storage_updated&quot;: &quot;2013-05-24 06:31:52&quot;,
+            &quot;storage_used&quot;: &quot;20480&quot;,
+            &quot;suspend&quot;: &quot;0&quot;,
+            &quot;tmp_url&quot;: &quot;newpushzone3.alias.netdna-cdn.com&quot;,
+            &quot;type&quot;: &quot;3&quot;,
+            &quot;valid_referers&quot;: null
+        }
     }
-}
-</pre>
+}</pre>
   </div>
 </div>
 
@@ -4149,9 +4466,30 @@ netdna.get(&#39;/zones/push.json/&#39; + id, { label: &#39;Some other descriptio
   </div>
   <div class="tab-pane" id="response31">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;pushzone&quot;:
-        {&quot;id&quot;:&quot;97181&quot;,&quot;name&quot;:&quot;newpushzone3&quot;,&quot;type&quot;:&quot;3&quot;,&quot;compress&quot;:&quot;0&quot;,&quot;suspend&quot;:&quot;0&quot;,&quot;label&quot;:&quot;Some other description&quot;,&quot;inactive&quot;:&quot;0&quot;,&quot;valid_referers&quot;:null,&quot;expires&quot;:null,&quot;content_disposition&quot;:&quot;0&quot;,&quot;locked&quot;:&quot;0&quot;,&quot;server_id&quot;:&quot;11&quot;,&quot;sslshared&quot;:&quot;0&quot;,&quot;creation_date&quot;:&quot;2013-05-23 21:01:39&quot;,&quot;cdn_url&quot;:&quot;newpushzone3.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newpushzone3.alias.netdna-cdn.com&quot;,&quot;ftp_url&quot;:&quot;ftp.newpushzone3.alias.netdna-cdn.com&quot;,&quot;storage_used&quot;:null,&quot;storage_updated&quot;:null}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;pushzone&quot;: {
+            &quot;cdn_url&quot;: &quot;cdn.somenewdomain2.com&quot;,
+            &quot;compress&quot;: &quot;0&quot;,
+            &quot;content_disposition&quot;: &quot;0&quot;,
+            &quot;creation_date&quot;: &quot;2013-05-23 21:01:39&quot;,
+            &quot;expires&quot;: null,
+            &quot;ftp_url&quot;: &quot;ftp.newpushzone3.alias.netdna-cdn.com&quot;,
+            &quot;id&quot;: &quot;97181&quot;,
+            &quot;inactive&quot;: &quot;0&quot;,
+            &quot;label&quot;: &quot;Some other description&quot;,
+            &quot;locked&quot;: &quot;0&quot;,
+            &quot;name&quot;: &quot;newpushzone3&quot;,
+            &quot;server_id&quot;: &quot;11&quot;,
+            &quot;sslshared&quot;: &quot;0&quot;,
+            &quot;storage_updated&quot;: &quot;2013-05-24 06:31:52&quot;,
+            &quot;storage_used&quot;: &quot;20480&quot;,
+            &quot;suspend&quot;: &quot;0&quot;,
+            &quot;tmp_url&quot;: &quot;newpushzone3.alias.netdna-cdn.com&quot;,
+            &quot;type&quot;: &quot;3&quot;,
+            &quot;valid_referers&quot;: null
+        }
     }
 }</pre>
   </div>
@@ -4203,7 +4541,9 @@ netdna.del(&#39;/zones/push.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response32">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -4253,7 +4593,9 @@ netdna.enable(&#39;/zones/push.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response33">
         <pre>
-No response</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -4304,7 +4646,9 @@ netdna.disable(&#39;/zones/push.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response34">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -4383,11 +4727,18 @@ netdna.get(&#39;/zones/push/&#39; + id + &#39;/customdomains.json&#39;, function
   </div>
   <div class="tab-pane" id="response35">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;total&quot;:1,&quot;customdomains&quot;:
-        [
-            {&quot;id&quot;:&quot;78330&quot;,&quot;bucket_id&quot;:&quot;96061&quot;,&quot;custom_domain&quot;:&quot;cdn.somedomain.com&quot;,&quot;type&quot;:null}
-        ]
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;customdomains&quot;: [
+            {
+                &quot;bucket_id&quot;: &quot;96061&quot;,
+                &quot;custom_domain&quot;: &quot;cdn.somedomain.com&quot;,
+                &quot;id&quot;: &quot;78330&quot;,
+                &quot;type&quot;: null
+            }
+        ],
+        &quot;total&quot;: 1
     }
 }</pre>
   </div>
@@ -4493,11 +4844,18 @@ netdna.post(&#39;/zones/push/&#39; + id + &#39;/customdomains.json&#39;, { custo
   </div>
   <div class="tab-pane" id="response36">
         <pre>
-{&quot;code&quot;:201,&quot;data&quot;:
-    {&quot;customdomain&quot;:
-        {&quot;id&quot;:79188,&quot;bucket_id&quot;:&quot;97181&quot;,&quot;custom_domain&quot;:&quot;cdn.somedomain3.net&quot;,&quot;type&quot;:null}
+{
+    &quot;code&quot;: 201,
+    &quot;data&quot;: {
+        &quot;customdomain&quot;: {
+            &quot;bucket_id&quot;: &quot;97181&quot;,
+            &quot;custom_domain&quot;: &quot;cdn.somedomain4.net&quot;,
+            &quot;id&quot;: 79283,
+            &quot;type&quot;: null
+        }
     }
-}</pre>
+}
+</pre>
   </div>
 </div>
 
@@ -4576,9 +4934,15 @@ netdna.get(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + do
   </div>
   <div class="tab-pane" id="response37">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;customdomain&quot;:
-        {&quot;id&quot;:&quot;79188&quot;,&quot;bucket_id&quot;:&quot;97181&quot;,&quot;custom_domain&quot;:&quot;cdn.somedomain3.net&quot;,&quot;type&quot;:null}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;customdomain&quot;: {
+            &quot;bucket_id&quot;: &quot;97181&quot;,
+            &quot;custom_domain&quot;: &quot;cdn.somenewdomain2.com&quot;,
+            &quot;id&quot;: &quot;79188&quot;,
+            &quot;type&quot;: null
+        }
     }
 }</pre>
   </div>
@@ -4680,9 +5044,15 @@ netdna.put(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + do
   </div>
   <div class="tab-pane" id="response38">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;customdomain&quot;:
-        {&quot;id&quot;:&quot;79188&quot;,&quot;bucket_id&quot;:&quot;97181&quot;,&quot;custom_domain&quot;:&quot;cdn.somenewdomain2.com&quot;,&quot;type&quot;:null}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;customdomain&quot;: {
+            &quot;bucket_id&quot;: &quot;97181&quot;,
+            &quot;custom_domain&quot;: &quot;cdn.somenewdomain12.com&quot;,
+            &quot;id&quot;: &quot;79188&quot;,
+            &quot;type&quot;: null
+        }
     }
 }</pre>
   </div>
@@ -4738,7 +5108,9 @@ netdna.del(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + do
   </div>
   <div class="tab-pane" id="response39">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -4834,10 +5206,55 @@ netdna.get(&#39;/zones/vod.json&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="response40">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;page&quot;:1,&quot;pages&quot;:1,&quot;page_size&quot;:&quot;50&quot;,&quot;current_page_size&quot;:1,&quot;total&quot;:1,&quot;vodzones&quot;:
-        [
-            {&quot;id&quot;:&quot;96187&quot;,&quot;name&quot;:&quot;newvodzone&quot;,&quot;type&quot;:&quot;4&quot;,&quot;suspend&quot;:&quot;0&quot;,&quot;label&quot;:null,&quot;inactive&quot;:&quot;0&quot;,&quot;token&quot;:null,&quot;locked&quot;:&quot;0&quot;,&quot;server_id&quot;:&quot;30&quot;,&quot;creation_date&quot;:&quot;2013-05-16 16:02:35&quot;,&quot;cdn_url&quot;:&quot;cdn.somedomain.com&quot;,&quot;tmp_url&quot;:&quot;newvodzone.alias.netdna-cdn.com&quot;,&quot;rtmp_url&quot;:&quot;r.newvodzone.alias.netdna-cdn.com&quot;,&quot;pseudo_url&quot;:&quot;p.newvodzone.alias.netdna-cdn.com&quot;,&quot;direct_url&quot;:&quot;d.newvodzone.alias.netdna-cdn.com&quot;,&quot;ftp_url&quot;:&quot;ftp.newvodzone.alias.netdna-cdn.com&quot;,&quot;storage_used&quot;:&quot;4096&quot;,&quot;storage_updated&quot;:&quot;2013-05-23 18:52:08&quot;}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;current_page_size&quot;: 2,
+        &quot;page&quot;: 1,
+        &quot;page_size&quot;: &quot;50&quot;,
+        &quot;pages&quot;: 1,
+        &quot;total&quot;: 2,
+        &quot;vodzones&quot;: [
+            {
+                &quot;cdn_url&quot;: &quot;cdn.somedomain.com&quot;,
+                &quot;creation_date&quot;: &quot;2013-05-16 16:02:35&quot;,
+                &quot;direct_url&quot;: &quot;d.newvodzone.alias.netdna-cdn.com&quot;,
+                &quot;ftp_url&quot;: &quot;ftp.newvodzone.alias.netdna-cdn.com&quot;,
+                &quot;id&quot;: &quot;96187&quot;,
+                &quot;inactive&quot;: &quot;0&quot;,
+                &quot;label&quot;: null,
+                &quot;locked&quot;: &quot;0&quot;,
+                &quot;name&quot;: &quot;newvodzone&quot;,
+                &quot;pseudo_url&quot;: &quot;p.newvodzone.alias.netdna-cdn.com&quot;,
+                &quot;rtmp_url&quot;: &quot;r.newvodzone.alias.netdna-cdn.com&quot;,
+                &quot;server_id&quot;: &quot;30&quot;,
+                &quot;storage_updated&quot;: &quot;2013-05-24 06:35:35&quot;,
+                &quot;storage_used&quot;: &quot;4096&quot;,
+                &quot;suspend&quot;: &quot;0&quot;,
+                &quot;tmp_url&quot;: &quot;newvodzone.alias.netdna-cdn.com&quot;,
+                &quot;token&quot;: null,
+                &quot;type&quot;: &quot;4&quot;
+            },
+            {
+                &quot;cdn_url&quot;: &quot;cdn.somenewdomain3.com&quot;,
+                &quot;creation_date&quot;: &quot;2013-05-23 21:25:44&quot;,
+                &quot;direct_url&quot;: &quot;d.newvodzone3.alias.netdna-cdn.com&quot;,
+                &quot;ftp_url&quot;: &quot;ftp.newvodzone3.alias.netdna-cdn.com&quot;,
+                &quot;id&quot;: &quot;97183&quot;,
+                &quot;inactive&quot;: &quot;0&quot;,
+                &quot;label&quot;: &quot;Some other description&quot;,
+                &quot;locked&quot;: &quot;0&quot;,
+                &quot;name&quot;: &quot;newvodzone3&quot;,
+                &quot;pseudo_url&quot;: &quot;p.newvodzone3.alias.netdna-cdn.com&quot;,
+                &quot;rtmp_url&quot;: &quot;r.newvodzone3.alias.netdna-cdn.com&quot;,
+                &quot;server_id&quot;: &quot;30&quot;,
+                &quot;storage_updated&quot;: &quot;2013-05-24 06:35:35&quot;,
+                &quot;storage_used&quot;: &quot;4096&quot;,
+                &quot;suspend&quot;: &quot;0&quot;,
+                &quot;tmp_url&quot;: &quot;newvodzone3.alias.netdna-cdn.com&quot;,
+                &quot;token&quot;: null,
+                &quot;type&quot;: &quot;4&quot;
+            }
         ]
     }
 }</pre>
@@ -4976,9 +5393,29 @@ netdna.post(&#39;/zones/vod.json&#39;, { name: &#39;newVODZone3&#39;, password: 
   </div>
   <div class="tab-pane" id="response41">
         <pre>
-{&quot;code&quot;:201,&quot;data&quot;:
-    {&quot;vodzone&quot;:
-        {&quot;id&quot;:97183,&quot;name&quot;:&quot;newvodzone3&quot;,&quot;type&quot;:4,&quot;suspend&quot;:0,&quot;label&quot;:null,&quot;inactive&quot;:0,&quot;token&quot;:null,&quot;locked&quot;:0,&quot;server_id&quot;:&quot;30&quot;,&quot;creation_date&quot;:&quot;2013-05-23 21:25:43&quot;,&quot;cdn_url&quot;:&quot;newvodzone3.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newvodzone3.alias.netdna-cdn.com&quot;,&quot;rtmp_url&quot;:&quot;r.newvodzone3.alias.netdna-cdn.com&quot;,&quot;pseudo_url&quot;:&quot;p.newvodzone3.alias.netdna-cdn.com&quot;,&quot;direct_url&quot;:&quot;d.newvodzone3.alias.netdna-cdn.com&quot;,&quot;ftp_url&quot;:&quot;ftp.newvodzone3.alias.netdna-cdn.com&quot;,&quot;storage_used&quot;:null,&quot;storage_updated&quot;:null}
+{
+    &quot;code&quot;: 201,
+    &quot;data&quot;: {
+        &quot;vodzone&quot;: {
+            &quot;cdn_url&quot;: &quot;newvodzone4.alias.netdna-cdn.com&quot;,
+            &quot;creation_date&quot;: &quot;2013-05-24 16:50:18&quot;,
+            &quot;direct_url&quot;: &quot;d.newvodzone4.alias.netdna-cdn.com&quot;,
+            &quot;ftp_url&quot;: &quot;ftp.newvodzone4.alias.netdna-cdn.com&quot;,
+            &quot;id&quot;: 97319,
+            &quot;inactive&quot;: 0,
+            &quot;label&quot;: null,
+            &quot;locked&quot;: 0,
+            &quot;name&quot;: &quot;newvodzone4&quot;,
+            &quot;pseudo_url&quot;: &quot;p.newvodzone4.alias.netdna-cdn.com&quot;,
+            &quot;rtmp_url&quot;: &quot;r.newvodzone4.alias.netdna-cdn.com&quot;,
+            &quot;server_id&quot;: &quot;30&quot;,
+            &quot;storage_updated&quot;: null,
+            &quot;storage_used&quot;: null,
+            &quot;suspend&quot;: 0,
+            &quot;tmp_url&quot;: &quot;newvodzone4.alias.netdna-cdn.com&quot;,
+            &quot;token&quot;: null,
+            &quot;type&quot;: 4
+        }
     }
 }</pre>
   </div>
@@ -5044,8 +5481,11 @@ netdna.get(&#39;/zones/vod.json/count&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="response42">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;count&quot;:&quot;3&quot;}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;count&quot;: &quot;4&quot;
+    }
 }</pre>
   </div>
 </div>
@@ -5142,9 +5582,29 @@ netdna.get(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response43">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;vodzone&quot;:
-        {&quot;id&quot;:&quot;97183&quot;,&quot;name&quot;:&quot;newvodzone3&quot;,&quot;type&quot;:&quot;4&quot;,&quot;suspend&quot;:&quot;0&quot;,&quot;label&quot;:null,&quot;inactive&quot;:&quot;0&quot;,&quot;token&quot;:null,&quot;locked&quot;:&quot;0&quot;,&quot;server_id&quot;:&quot;30&quot;,&quot;creation_date&quot;:&quot;2013-05-23 21:25:44&quot;,&quot;cdn_url&quot;:&quot;newvodzone3.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newvodzone3.alias.netdna-cdn.com&quot;,&quot;rtmp_url&quot;:&quot;r.newvodzone3.alias.netdna-cdn.com&quot;,&quot;pseudo_url&quot;:&quot;p.newvodzone3.alias.netdna-cdn.com&quot;,&quot;direct_url&quot;:&quot;d.newvodzone3.alias.netdna-cdn.com&quot;,&quot;ftp_url&quot;:&quot;ftp.newvodzone3.alias.netdna-cdn.com&quot;,&quot;storage_used&quot;:null,&quot;storage_updated&quot;:null}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;vodzone&quot;: {
+            &quot;cdn_url&quot;: &quot;cdn.somenewdomain3.com&quot;,
+            &quot;creation_date&quot;: &quot;2013-05-23 21:25:44&quot;,
+            &quot;direct_url&quot;: &quot;d.newvodzone3.alias.netdna-cdn.com&quot;,
+            &quot;ftp_url&quot;: &quot;ftp.newvodzone3.alias.netdna-cdn.com&quot;,
+            &quot;id&quot;: &quot;97183&quot;,
+            &quot;inactive&quot;: &quot;0&quot;,
+            &quot;label&quot;: &quot;Some other description&quot;,
+            &quot;locked&quot;: &quot;0&quot;,
+            &quot;name&quot;: &quot;newvodzone3&quot;,
+            &quot;pseudo_url&quot;: &quot;p.newvodzone3.alias.netdna-cdn.com&quot;,
+            &quot;rtmp_url&quot;: &quot;r.newvodzone3.alias.netdna-cdn.com&quot;,
+            &quot;server_id&quot;: &quot;30&quot;,
+            &quot;storage_updated&quot;: &quot;2013-05-24 06:35:35&quot;,
+            &quot;storage_used&quot;: &quot;4096&quot;,
+            &quot;suspend&quot;: &quot;0&quot;,
+            &quot;tmp_url&quot;: &quot;newvodzone3.alias.netdna-cdn.com&quot;,
+            &quot;token&quot;: null,
+            &quot;type&quot;: &quot;4&quot;
+        }
     }
 }</pre>
   </div>
@@ -5277,9 +5737,29 @@ netdna.put(&#39;/zones/vod.json/&#39; + id, { label: &#39;Some other description
   </div>
   <div class="tab-pane" id="response44">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;vodzone&quot;:
-        {&quot;id&quot;:&quot;97183&quot;,&quot;name&quot;:&quot;newvodzone3&quot;,&quot;type&quot;:&quot;4&quot;,&quot;suspend&quot;:&quot;0&quot;,&quot;label&quot;:&quot;Some other description&quot;,&quot;inactive&quot;:&quot;0&quot;,&quot;token&quot;:null,&quot;locked&quot;:&quot;0&quot;,&quot;server_id&quot;:&quot;30&quot;,&quot;creation_date&quot;:&quot;2013-05-23 21:25:44&quot;,&quot;cdn_url&quot;:&quot;newvodzone3.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newvodzone3.alias.netdna-cdn.com&quot;,&quot;rtmp_url&quot;:&quot;r.newvodzone3.alias.netdna-cdn.com&quot;,&quot;pseudo_url&quot;:&quot;p.newvodzone3.alias.netdna-cdn.com&quot;,&quot;direct_url&quot;:&quot;d.newvodzone3.alias.netdna-cdn.com&quot;,&quot;ftp_url&quot;:&quot;ftp.newvodzone3.alias.netdna-cdn.com&quot;,&quot;storage_used&quot;:null,&quot;storage_updated&quot;:null}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;vodzone&quot;: {
+            &quot;cdn_url&quot;: &quot;cdn.somenewdomain3.com&quot;,
+            &quot;creation_date&quot;: &quot;2013-05-23 21:25:44&quot;,
+            &quot;direct_url&quot;: &quot;d.newvodzone3.alias.netdna-cdn.com&quot;,
+            &quot;ftp_url&quot;: &quot;ftp.newvodzone3.alias.netdna-cdn.com&quot;,
+            &quot;id&quot;: &quot;97183&quot;,
+            &quot;inactive&quot;: &quot;0&quot;,
+            &quot;label&quot;: &quot;Some other description&quot;,
+            &quot;locked&quot;: &quot;0&quot;,
+            &quot;name&quot;: &quot;newvodzone3&quot;,
+            &quot;pseudo_url&quot;: &quot;p.newvodzone3.alias.netdna-cdn.com&quot;,
+            &quot;rtmp_url&quot;: &quot;r.newvodzone3.alias.netdna-cdn.com&quot;,
+            &quot;server_id&quot;: &quot;30&quot;,
+            &quot;storage_updated&quot;: &quot;2013-05-24 06:35:35&quot;,
+            &quot;storage_used&quot;: &quot;4096&quot;,
+            &quot;suspend&quot;: &quot;0&quot;,
+            &quot;tmp_url&quot;: &quot;newvodzone3.alias.netdna-cdn.com&quot;,
+            &quot;token&quot;: null,
+            &quot;type&quot;: &quot;4&quot;
+        }
     }
 }</pre>
   </div>
@@ -5331,7 +5811,9 @@ netdna.del(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response45">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -5381,7 +5863,9 @@ netdna.enable(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response46">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -5431,7 +5915,9 @@ netdna.disable(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response47">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -5509,11 +5995,18 @@ netdna.get(&#39;/zones/vod.json/&#39; + id + &#39;/customdomains.json, function(
   </div>
   <div class="tab-pane" id="response48">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;total&quot;:1,&quot;customdomains&quot;:
-        [
-            {&quot;id&quot;:&quot;79191&quot;,&quot;bucket_id&quot;:&quot;97183&quot;,&quot;custom_domain&quot;:&quot;cdn.somedomain2.com&quot;,&quot;type&quot;:&quot;vod-rtmp&quot;}
-        ]
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;customdomains&quot;: [
+            {
+                &quot;bucket_id&quot;: &quot;97183&quot;,
+                &quot;custom_domain&quot;: &quot;cdn.somenewdomain3.com&quot;,
+                &quot;id&quot;: &quot;79191&quot;,
+                &quot;type&quot;: &quot;vod-rtmp&quot;
+            }
+        ],
+        &quot;total&quot;: 1
     }
 }</pre>
   </div>
@@ -5619,9 +6112,15 @@ netdna.post(&#39;/zones/vod/&#39; + id + &#39;/customdomains.json&#39;, { custom
   </div>
   <div class="tab-pane" id="response49">
         <pre>
-{&quot;code&quot;:201,&quot;data&quot;:
-    {&quot;customdomain&quot;:
-        {&quot;id&quot;:79191,&quot;bucket_id&quot;:&quot;97183&quot;,&quot;custom_domain&quot;:&quot;cdn.somedomain2.com&quot;,&quot;type&quot;:&quot;vod-rtmp&quot;}
+{
+    &quot;code&quot;: 201,
+    &quot;data&quot;: {
+        &quot;customdomain&quot;: {
+            &quot;bucket_id&quot;: &quot;97183&quot;,
+            &quot;custom_domain&quot;: &quot;cdn.somedomain2.com&quot;,
+            &quot;id&quot;: 79284,
+            &quot;type&quot;: &quot;vod-rtmp&quot;
+        }
     }
 }</pre>
   </div>
@@ -5702,9 +6201,15 @@ netdna.get(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + dom
   </div>
   <div class="tab-pane" id="response50">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;customdomain&quot;:
-        {&quot;id&quot;:&quot;79191&quot;,&quot;bucket_id&quot;:&quot;97183&quot;,&quot;custom_domain&quot;:&quot;cdn.somedomain2.com&quot;,&quot;type&quot;:&quot;vod-rtmp&quot;}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;customdomain&quot;: {
+            &quot;bucket_id&quot;: &quot;97183&quot;,
+            &quot;custom_domain&quot;: &quot;cdn.somenewdomain3.com&quot;,
+            &quot;id&quot;: &quot;79191&quot;,
+            &quot;type&quot;: &quot;vod-rtmp&quot;
+        }
     }
 }</pre>
   </div>
@@ -5805,9 +6310,15 @@ netdna.put(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + dom
   </div>
   <div class="tab-pane" id="response51">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;customdomain&quot;:
-        {&quot;id&quot;:&quot;79191&quot;,&quot;bucket_id&quot;:&quot;97183&quot;,&quot;custom_domain&quot;:&quot;cdn.somenewdomain3.com&quot;,&quot;type&quot;:&quot;vod-rtmp&quot;}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;customdomain&quot;: {
+            &quot;bucket_id&quot;: &quot;97183&quot;,
+            &quot;custom_domain&quot;: &quot;cdn.somenewdomain42.com&quot;,
+            &quot;id&quot;: &quot;79284&quot;,
+            &quot;type&quot;: &quot;vod-rtmp&quot;
+        }
     }
 }</pre>
   </div>
@@ -5863,7 +6374,9 @@ netdna.del(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + dom
   </div>
   <div class="tab-pane" id="response52">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -5958,11 +6471,46 @@ netdna.get(&#39;/zones/live.json&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="response53">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;page&quot;:1,&quot;pages&quot;:1,&quot;page_size&quot;:&quot;50&quot;,&quot;current_page_size&quot;:1,&quot;total&quot;:1,&quot;livezones&quot;:
-        [
-            {&quot;id&quot;:&quot;96193&quot;,&quot;name&quot;:&quot;newlivezone&quot;,&quot;type&quot;:&quot;5&quot;,&quot;suspend&quot;:&quot;0&quot;,&quot;label&quot;:null,&quot;inactive&quot;:&quot;0&quot;,&quot;locked&quot;:&quot;0&quot;,&quot;server_id&quot;:&quot;3&quot;,&quot;creation_date&quot;:&quot;2013-05-16 16:23:49&quot;,&quot;cdn_url&quot;:&quot;newlivezone.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newlivezone.alias.netdna-cdn.com&quot;,&quot;pub_url&quot;:&quot;publish.newlivezone.alias.netdna-cdn.com\/live\/96193&quot;,&quot;view_url&quot;:&quot;newlivezone.alias.netdna-cdn.com\/live\/96193&quot;}
-        ]
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;current_page_size&quot;: 2,
+        &quot;livezones&quot;: [
+            {
+                &quot;cdn_url&quot;: &quot;newlivezone.alias.netdna-cdn.com&quot;,
+                &quot;creation_date&quot;: &quot;2013-05-16 16:23:49&quot;,
+                &quot;id&quot;: &quot;96193&quot;,
+                &quot;inactive&quot;: &quot;0&quot;,
+                &quot;label&quot;: null,
+                &quot;locked&quot;: &quot;0&quot;,
+                &quot;name&quot;: &quot;newlivezone&quot;,
+                &quot;pub_url&quot;: &quot;publish.newlivezone.alias.netdna-cdn.com/live/96193&quot;,
+                &quot;server_id&quot;: &quot;3&quot;,
+                &quot;suspend&quot;: &quot;0&quot;,
+                &quot;tmp_url&quot;: &quot;newlivezone.alias.netdna-cdn.com&quot;,
+                &quot;type&quot;: &quot;5&quot;,
+                &quot;view_url&quot;: &quot;newlivezone.alias.netdna-cdn.com/live/96193&quot;
+            },
+            {
+                &quot;cdn_url&quot;: &quot;newlivezone3.alias.netdna-cdn.com&quot;,
+                &quot;creation_date&quot;: &quot;2013-05-23 21:50:00&quot;,
+                &quot;id&quot;: &quot;97185&quot;,
+                &quot;inactive&quot;: &quot;0&quot;,
+                &quot;label&quot;: &quot;Some other description&quot;,
+                &quot;locked&quot;: &quot;0&quot;,
+                &quot;name&quot;: &quot;newlivezone3&quot;,
+                &quot;pub_url&quot;: &quot;publish.newlivezone3.alias.netdna-cdn.com/live/97185&quot;,
+                &quot;server_id&quot;: &quot;3&quot;,
+                &quot;suspend&quot;: &quot;0&quot;,
+                &quot;tmp_url&quot;: &quot;newlivezone3.alias.netdna-cdn.com&quot;,
+                &quot;type&quot;: &quot;5&quot;,
+                &quot;view_url&quot;: &quot;newlivezone3.alias.netdna-cdn.com/live/97185&quot;
+            }
+        ],
+        &quot;page&quot;: 1,
+        &quot;page_size&quot;: &quot;50&quot;,
+        &quot;pages&quot;: 1,
+        &quot;total&quot;: 2
     }
 }</pre>
   </div>
@@ -6092,9 +6640,24 @@ netdna.post(&#39;/zones/live.json&#39;,  { name: &#39;newLiveZone3&#39;, passwor
   </div>
   <div class="tab-pane" id="response54">
         <pre>
-{&quot;code&quot;:201,&quot;data&quot;:
-    {&quot;livezone&quot;:
-        {&quot;id&quot;:97185,&quot;name&quot;:&quot;newlivezone3&quot;,&quot;type&quot;:5,&quot;suspend&quot;:0,&quot;label&quot;:null,&quot;inactive&quot;:0,&quot;locked&quot;:0,&quot;server_id&quot;:3,&quot;creation_date&quot;:&quot;2013-05-23 21:50:00&quot;,&quot;cdn_url&quot;:&quot;newlivezone3.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newlivezone3.alias.netdna-cdn.com&quot;,&quot;pub_url&quot;:&quot;publish.newlivezone3.alias.netdna-cdn.com\/live\/97185&quot;,&quot;view_url&quot;:&quot;newlivezone3.alias.netdna-cdn.com\/live\/97185&quot;}
+{
+    &quot;code&quot;: 201,
+    &quot;data&quot;: {
+        &quot;livezone&quot;: {
+            &quot;cdn_url&quot;: &quot;newlivezone4.alias.netdna-cdn.com&quot;,
+            &quot;creation_date&quot;: &quot;2013-05-24 17:01:30&quot;,
+            &quot;id&quot;: 97323,
+            &quot;inactive&quot;: 0,
+            &quot;label&quot;: null,
+            &quot;locked&quot;: 0,
+            &quot;name&quot;: &quot;newlivezone4&quot;,
+            &quot;pub_url&quot;: &quot;publish.newlivezone4.alias.netdna-cdn.com/live/97323&quot;,
+            &quot;server_id&quot;: 3,
+            &quot;suspend&quot;: 0,
+            &quot;tmp_url&quot;: &quot;newlivezone4.alias.netdna-cdn.com&quot;,
+            &quot;type&quot;: 5,
+            &quot;view_url&quot;: &quot;newlivezone4.alias.netdna-cdn.com/live/97323&quot;
+        }
     }
 }</pre>
   </div>
@@ -6160,9 +6723,13 @@ netdna.get(&#39;/zones.json&#39;, function(err, response) {
   </div>
   <div class="tab-pane" id="response55">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;count&quot;:&quot;3&quot;}
-}</pre>
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;count&quot;: &quot;4&quot;
+    }
+}
+</pre>
   </div>
 </div>
 
@@ -6258,9 +6825,24 @@ netdna.get(&#39;/zones/live.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response56">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;livezone&quot;:
-        {&quot;id&quot;:&quot;96194&quot;,&quot;name&quot;:&quot;newlivezone2&quot;,&quot;type&quot;:&quot;5&quot;,&quot;suspend&quot;:&quot;0&quot;,&quot;label&quot;:&quot;Some other description&quot;,&quot;inactive&quot;:&quot;1&quot;,&quot;locked&quot;:&quot;0&quot;,&quot;server_id&quot;:&quot;3&quot;,&quot;creation_date&quot;:&quot;2013-05-16 16:23:59&quot;,&quot;cdn_url&quot;:&quot;newlivezone2.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newlivezone2.alias.netdna-cdn.com&quot;,&quot;pub_url&quot;:&quot;publish.newlivezone2.alias.netdna-cdn.com\/live\/96194&quot;,&quot;view_url&quot;:&quot;newlivezone2.alias.netdna-cdn.com\/live\/96194&quot;}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;livezone&quot;: {
+            &quot;cdn_url&quot;: &quot;newlivezone3.alias.netdna-cdn.com&quot;,
+            &quot;creation_date&quot;: &quot;2013-05-23 21:50:00&quot;,
+            &quot;id&quot;: &quot;97185&quot;,
+            &quot;inactive&quot;: &quot;0&quot;,
+            &quot;label&quot;: &quot;Some other description&quot;,
+            &quot;locked&quot;: &quot;0&quot;,
+            &quot;name&quot;: &quot;newlivezone3&quot;,
+            &quot;pub_url&quot;: &quot;publish.newlivezone3.alias.netdna-cdn.com/live/97185&quot;,
+            &quot;server_id&quot;: &quot;3&quot;,
+            &quot;suspend&quot;: &quot;0&quot;,
+            &quot;tmp_url&quot;: &quot;newlivezone3.alias.netdna-cdn.com&quot;,
+            &quot;type&quot;: &quot;5&quot;,
+            &quot;view_url&quot;: &quot;newlivezone3.alias.netdna-cdn.com/live/97185&quot;
+        }
     }
 }</pre>
   </div>
@@ -6394,9 +6976,24 @@ netdna.put(&#39;/zones/live.json/&#39; + id, { label: &#39;Some other descriptio
   </div>
   <div class="tab-pane" id="response57">
         <pre>
-{&quot;code&quot;:200,&quot;data&quot;:
-    {&quot;livezone&quot;:
-        {&quot;id&quot;:&quot;97185&quot;,&quot;name&quot;:&quot;newlivezone3&quot;,&quot;type&quot;:&quot;5&quot;,&quot;suspend&quot;:&quot;0&quot;,&quot;label&quot;:&quot;Some other description&quot;,&quot;inactive&quot;:&quot;0&quot;,&quot;locked&quot;:&quot;0&quot;,&quot;server_id&quot;:&quot;3&quot;,&quot;creation_date&quot;:&quot;2013-05-23 21:50:00&quot;,&quot;cdn_url&quot;:&quot;newlivezone3.alias.netdna-cdn.com&quot;,&quot;tmp_url&quot;:&quot;newlivezone3.alias.netdna-cdn.com&quot;,&quot;pub_url&quot;:&quot;publish.newlivezone3.alias.netdna-cdn.com\/live\/97185&quot;,&quot;view_url&quot;:&quot;newlivezone3.alias.netdna-cdn.com\/live\/97185&quot;}
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;livezone&quot;: {
+            &quot;cdn_url&quot;: &quot;newlivezone3.alias.netdna-cdn.com&quot;,
+            &quot;creation_date&quot;: &quot;2013-05-23 21:50:00&quot;,
+            &quot;id&quot;: &quot;97185&quot;,
+            &quot;inactive&quot;: &quot;0&quot;,
+            &quot;label&quot;: &quot;Some other description&quot;,
+            &quot;locked&quot;: &quot;0&quot;,
+            &quot;name&quot;: &quot;newlivezone3&quot;,
+            &quot;pub_url&quot;: &quot;publish.newlivezone3.alias.netdna-cdn.com/live/97185&quot;,
+            &quot;server_id&quot;: &quot;3&quot;,
+            &quot;suspend&quot;: &quot;0&quot;,
+            &quot;tmp_url&quot;: &quot;newlivezone3.alias.netdna-cdn.com&quot;,
+            &quot;type&quot;: &quot;5&quot;,
+            &quot;view_url&quot;: &quot;newlivezone3.alias.netdna-cdn.com/live/97185&quot;
+        }
     }
 }</pre>
   </div>
@@ -6448,7 +7045,9 @@ netdna.del(&#39;/zones/live.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response58">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -6498,7 +7097,9 @@ netdna.enable(&#39;/zones/live.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response59">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -6549,7 +7150,9 @@ netdna.disable(&#39;/zones/live.json/&#39; + id, function(err, response) {
   </div>
   <div class="tab-pane" id="response60">
         <pre>
-{&quot;code&quot;:200}</pre>
+{
+    &quot;code&quot;:200
+}</pre>
   </div>
 </div>
 
@@ -10881,7 +11484,55 @@ netdna.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbyfilename.json/&
   </div>
   <div class="tab-pane" id="response95">
         <pre>
-</pre>
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;statsbyfilename&quot;: [
+            {
+                &quot;200&quot;: &quot;0&quot;,
+                &quot;206&quot;: &quot;0&quot;,
+                &quot;2xx&quot;: &quot;0&quot;,
+                &quot;3xx&quot;: &quot;0&quot;,
+                &quot;404&quot;: &quot;0&quot;,
+                &quot;4xx&quot;: &quot;0&quot;,
+                &quot;5xx&quot;: &quot;35036&quot;,
+                &quot;bucket_id&quot;: &quot;21597&quot;,
+                &quot;file_name&quot;: &quot;/&quot;,
+                &quot;hit&quot;: &quot;35036&quot;,
+                &quot;size&quot;: &quot;20110664&quot;,
+                &quot;timestampf&quot;: &quot;2013&quot;,
+                &quot;vhost&quot;: &quot;edge02.nycacorp.netdna-cdn.com&quot;
+            },
+            {
+                &quot;200&quot;: &quot;0&quot;,
+                &quot;206&quot;: &quot;0&quot;,
+                &quot;2xx&quot;: &quot;0&quot;,
+                &quot;3xx&quot;: &quot;0&quot;,
+                &quot;404&quot;: &quot;0&quot;,
+                &quot;4xx&quot;: &quot;2&quot;,
+                &quot;5xx&quot;: &quot;35032&quot;,
+                &quot;bucket_id&quot;: &quot;21597&quot;,
+                &quot;file_name&quot;: &quot;/favicon.ico&quot;,
+                &quot;hit&quot;: &quot;35034&quot;,
+                &quot;size&quot;: &quot;20108368&quot;,
+                &quot;timestampf&quot;: &quot;2013&quot;,
+                &quot;vhost&quot;: &quot;edge02.nycacorp.netdna-cdn.com&quot;
+            }
+        ],
+        &quot;summary&quot;: {
+            &quot;200&quot;: &quot;0&quot;,
+            &quot;206&quot;: &quot;0&quot;,
+            &quot;2xx&quot;: &quot;0&quot;,
+            &quot;3xx&quot;: &quot;0&quot;,
+            &quot;404&quot;: &quot;0&quot;,
+            &quot;4xx&quot;: &quot;2&quot;,
+            &quot;5xx&quot;: &quot;70068&quot;,
+            &quot;hit&quot;: &quot;70070&quot;,
+            &quot;size&quot;: &quot;40219032&quot;
+        },
+        &quot;total&quot;: &quot;2&quot;
+    }
+}</pre>
   </div>
 </div>
 
@@ -11176,8 +11827,29 @@ netdna.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbycustomdomain.js
   </div>
   <div class="tab-pane" id="response97">
         <pre>
-
-        </pre>
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;current_page_size&quot;: 1,
+        &quot;page&quot;: 1,
+        &quot;page_size&quot;: &quot;50&quot;,
+        &quot;pages&quot;: 1,
+        &quot;statsbycustomdomain&quot;: [
+            {
+                &quot;bucket_id&quot;: &quot;21597&quot;,
+                &quot;custom_domain_id&quot;: &quot;0&quot;,
+                &quot;hit&quot;: &quot;70320&quot;,
+                &quot;size&quot;: &quot;40362532&quot;,
+                &quot;vhost&quot;: &quot;edge02.nycacorp.netdna-cdn.com&quot;
+            }
+        ],
+        &quot;summary&quot;: {
+            &quot;hit&quot;: &quot;70320&quot;,
+            &quot;size&quot;: &quot;40362532&quot;
+        },
+        &quot;total&quot;: &quot;1&quot;
+    }
+}</pre>
   </div>
 </div>
 
@@ -11292,8 +11964,21 @@ netdna.get(&#39;/clients/&#39; + clientId + &#39;/reports/&#39; + zoneId + &#39;
   </div>
   <div class="tab-pane" id="response98">
         <pre>
-
-        </pre>
+{
+    &quot;code&quot;: 200,
+    &quot;data&quot;: {
+        &quot;current_page_size&quot;: 0,
+        &quot;page&quot;: 1,
+        &quot;page_size&quot;: &quot;50&quot;,
+        &quot;pages&quot;: 0,
+        &quot;statsbycustomdomain&quot;: [],
+        &quot;summary&quot;: {
+            &quot;hit&quot;: null,
+            &quot;size&quot;: null
+        },
+        &quot;total&quot;: &quot;0&quot;
+    }
+}</pre>
   </div>
 </div>
 
