@@ -5874,8 +5874,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python69">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/stats.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php69">
   	<pre>
@@ -5964,8 +5964,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python70">
 		<pre>
-
-		</pre>
+id = '96061'
+reportType = ''
+api.get('/reports/'+id+'/stats.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php70">
   	<pre>
@@ -6050,8 +6051,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python71">
 		<pre>
-
-		</pre>
+api.get('/reports/nodes.json')</pre>
 	</div>
   <div class="tab-pane" id="php71">
   	<pre>
@@ -6180,8 +6180,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python72">
 		<pre>
-
-		</pre>
+id = '96061'
+api.get('/reports/'+id+'/nodes.json')</pre>
 	</div>
   <div class="tab-pane" id="php72">
   	<pre>
@@ -6316,8 +6316,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python73">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/nodes.json/stats'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php73">
   	<pre>
@@ -6499,8 +6499,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python74">
 		<pre>
-
-		</pre>
+id = '96061'
+reportType = ''
+api.get('/reports/'+id+'/nodes.json/stats'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php74">
   	<pre>
@@ -6578,8 +6579,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python75">
 		<pre>
-
-		</pre>
+id = '1'
+api.get('/reports/nodes.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php75">
   	<pre>
@@ -6654,8 +6655,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python76">
 		<pre>
-
-		</pre>
+zoneId = '96061'
+nodeId = '1'
+api.get('/reports/'+zoneId+'/nodes.json/'+nodeId)</pre>
 	</div>
   <div class="tab-pane" id="php76">
   	<pre>
@@ -6745,8 +6747,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python77">
 		<pre>
-
-		</pre>
+id = '1'
+reportType = ''
+api.get('/reports/nodes.json/'+id+'/stats'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php77">
   	<pre>
@@ -6839,8 +6842,10 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python78">
 		<pre>
-
-		</pre>
+zoneId='96061'
+nodeId='1'
+reportType = ''
+api.get('/reports/'+zoneId+'/nodes.json/'+nodeId+'/stats'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php78">
   	<pre>
@@ -6936,8 +6941,7 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python79">
 		<pre>
-
-		</pre>
+api.get('/reports/popularfiles.json')</pre>
 	</div>
   <div class="tab-pane" id="php79">
   	<pre>
@@ -7027,8 +7031,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python80">
 		<pre>
-
-		</pre>
+type='pull'
+api.get('/reports/'+type+'/popularfiles.json')</pre>
 	</div>
   <div class="tab-pane" id="php80">
   	<pre>
@@ -7116,8 +7120,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python81">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/statuscodes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php81">
   	<pre>
@@ -7205,8 +7209,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python82">
 		<pre>
-
-		</pre>
+reportType = ''
+id = '96061'
+api.get('/reports/'+id+'/statuscodes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php82">
   	<pre>
@@ -7290,8 +7295,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python83">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+api.get('/reports/'+zoneType+'/statuscodes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php83">
   	<pre>
@@ -7383,8 +7389,10 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python84">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+id = '96061'
+api.get('/reports/'+zoneType+'/'+id+'/statuscodes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php84">
   	<pre>
@@ -7470,8 +7478,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python85">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/filetypes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php85">
   	<pre>
@@ -7560,8 +7568,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python86">
 		<pre>
-
-		</pre>
+reportType = ''
+id = '96061'
+api.get('/reports/'+id+'/filetypes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php86">
   	<pre>
@@ -7639,8 +7648,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python87">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+api.get('/reports/'+zoneType+'/filetypes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php87">
   	<pre>
@@ -7733,8 +7743,10 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python88">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+id = '96061'
+api.get('/reports/'+zoneType+'/'+id+'/filetypes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php88">
   	<pre>
@@ -7832,8 +7844,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python89">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/filesizes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php89">
   	<pre>
@@ -7930,8 +7942,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python90">
 		<pre>
-
-		</pre>
+reportType = ''
+id = '96061'
+api.get('/reports/'+id+'/filesizes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php90">
   	<pre>
@@ -8030,8 +8043,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python91">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+api.get('/reports/'+zoneType+'/filesizes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php91">
   	<pre>
@@ -8131,8 +8145,10 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python92">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+id = '96061'
+api.get('/reports/'+zoneType+'/'+id+'/filesizes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php92">
   	<pre>
@@ -8232,8 +8248,8 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python93">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/statsbydir.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php93">
   	<pre>
@@ -8322,8 +8338,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python94">
 		<pre>
-
-		</pre>
+reportType = ''
+id = '96061'
+api.get('/reports/'+id+'/statsbydir.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php94">
   	<pre>
@@ -8428,8 +8445,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python95">
 		<pre>
-
-		</pre>
+reportType = ''
+clientId = '50'	
+api.get('/clients/'+clientId+'/reports/statsbyfilename.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php95">
   	<pre>
@@ -8567,8 +8585,10 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python96">
 		<pre>
-
-		</pre>
+reportType = ''
+id = '16888'
+clientId = '50'
+api.get('/clients/'+clientId+'/reports/'+id+'/statsbyfilename.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php96">
   	<pre>
@@ -8588,7 +8608,7 @@ netdna.get('/clients/' + clientId + '/reports/' + id + '/statsbyfilename.json/' 
   </div>
   <div class="tab-pane" id="response96">
 		<pre>
-</pre>
+Non functional</pre>
   </div>
 </div>
 
@@ -8649,8 +8669,9 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python97">
 		<pre>
-
-		</pre>
+reportType = ''
+clientId = '50'
+api.get('/clients/'+clientId+'/reports/statsbycustomdomain.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php97">
   	<pre>
@@ -8749,8 +8770,10 @@ Parameter | Description |
   </div>
   <div class="tab-pane" id="python98">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneId = '84199'
+clientId = '1'
+api.get('/clients/'+clientId+'/reports/'+zoneId+'/statsbycustomdomain.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php98">
   	<pre>
@@ -8834,8 +8857,8 @@ Parameter | Default Value | Validation | Description |
   </div>
   <div class="tab-pane" id="python99">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/live/connectionstats.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php99">
   	<pre>
