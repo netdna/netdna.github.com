@@ -70,16 +70,16 @@ Gets account information
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Account ID | 1.0 |
-`name` | The name of your account | 1.0 |
-`address_id` | Address ID | 1.0 |
-`alias` | Company Alias | 1.0 |
-`ssl_credits` | SSL Credits | 1.0 |
-`flex_credits` | Flex Location Credits | 1.0 |
-`date_created` | Date Created | 1.0 |
-`date_updated` | Date Updated | 1.0 |
+`id` | Account ID |
+`name` | The name of your account |
+`address_id` | Address ID |
+`alias` | Company Alias |
+`ssl_credits` | SSL Credits |
+`flex_credits` | Flex Location Credits |
+`date_created` | Date Created |
+`date_updated` | Date Updated |
 
 ### Code Samples
 
@@ -153,23 +153,23 @@ Updates account information
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`name` | - | <span class="label important">required</span><br />length: 1-30 chars | The name of your account | 1.0 |
+`name` | - | <span class="label important">required</span><br />length: 1-30 chars | The name of your account |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Account ID | 1.0 |
-`name` | The name of your account | 1.0 |
-`address_id` | Address ID | 1.0 |
-`alias` | Company Alias | 1.0 |
-`ssl_credits` | SSL Credits | 1.0 |
-`flex_credits` | Flex Location Credits | 1.0 |
-`date_created` | Date Created | 1.0 |
-`date_updated` | Date Updated | 1.0 |
+`id` | Account ID |
+`name` | The name of your account |
+`address_id` | Address ID |
+`alias` | Company Alias |
+`ssl_credits` | SSL Credits |
+`flex_credits` | Flex Location Credits |
+`date_created` | Date Created |
+`date_updated` | Date Updated |
 
 
 ### Code Samples
@@ -244,17 +244,17 @@ Gets account address information
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Address ID | 1.0 |
-`street1` | Street Address Line 1 | 1.0 |
-`street2` | Street Address Line 2 | 1.0 |
-`city` | City | 1.0 |
-`state` | State | 1.0 |
-`zip` | ZIP | 1.0 |
-`country` | Country Code | 1.0 |
-`date_created` | Date Created | 1.0 |
-`date_updated` | Date Updated | 1.0 |
+`id` | Address ID |
+`street1` | Street Address Line 1 |
+`street2` | Street Address Line 2 |
+`city` | City |
+`state` | State |
+`zip` | ZIP |
+`country` | Country Code |
+`date_created` | Date Created |
+`date_updated` | Date Updated |
 
 
 ### Code Samples
@@ -324,29 +324,29 @@ Updates account address information
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`street1` | - | length: 1-200 chars | Street Address Line 1 | 1.0 |
-`street2` | - | length: 1-200 chars | Street Address Line 2 | 1.0 |
-`city` | - | length: 1-50 chars | City | 1.0 |
-`state` | - | length: 1-50 chars | State | 1.0 |
-`zip` | - | length: 3-5 chars; only digits accepted | ZIP | 1.0 |
-`country` | - | length: 2 chars | Country Code | 1.0 |
+`street1` | - | length: 1-200 chars | Street Address Line 1 |
+`street2` | - | length: 1-200 chars | Street Address Line 2 |
+`city` | - | length: 1-50 chars | City |
+`state` | - | length: 1-50 chars | State |
+`zip` | - | length: 3-5 chars; only digits accepted | ZIP |
+`country` | - | length: 2 chars | Country Code |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Address ID | 1.0 |
-`street1` | Street Address Line 1 | 1.0 |
-`street2` | Street Address Line 2 | 1.0 |
-`city` | City | 1.0 |
-`state` | State | 1.0 |
-`zip` | ZIP | 1.0 |
-`country` | Country Code | 1.0 |
-`date_created` | Date Created | 1.0 |
-`date_updated` | Date Updated | 1.0 |
+`id` | Address ID |
+`street1` | Street Address Line 1 |
+`street2` | Street Address Line 2 |
+`city` | City |
+`state` | State |
+`zip` | ZIP |
+`country` | Country Code |
+`date_created` | Date Created |
+`date_updated` | Date Updated |
 
 
 ### Code Samples
@@ -419,19 +419,19 @@ Returns a list of all users on the specified account
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | User ID | 1.0 |
-`email` | Email Address | 1.0 |
-`firstname` | First Name | 1.0 |
-`lastname` | Last Name | 1.0 |
-`phone` | Phone Number | 1.0 |
-`timezone` | User's Timezone | 1.0 |
-`date_last_login` | The date and time the user last logged into the system | 1.0 |
-`ip_last_login` | The IP for the user at the last login | 1.0 |
-`date_created` | Date Created | 1.0 |
-`date_updated` | Date Updated | 1.0 |
-`roles` | An array of roles for the given user | 1.0 |
+`id` | User ID |
+`email` | Email Address |
+`firstname` | First Name |
+`lastname` | Last Name |
+`phone` | Phone Number |
+`timezone` | User's Timezone |
+`date_last_login` | The date and time the user last logged into the system |
+`ip_last_login` | The IP for the user at the last login |
+`date_created` | Date Created |
+`date_updated` | Date Updated |
+`roles` | An array of roles for the given user |
 
 ### Code Samples
 
@@ -556,31 +556,31 @@ Creates a new user on the specified account
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`email` | - | <span class="label important">required</span><br />length: 6-200 chars; valid email address | Email Address | 1.0 |
-`password` | - | <span class="label important">required</span><br />length: 5-30 chars | Password | 1.0 |
-`firstname` | - | <span class="label important">required</span><br />length: 1-32 chars | First Name | 1.0 |
-`lastname` | - | <span class="label important">required</span><br />length: 1-32 chars | Last Name | 1.0 |
-`phone` | - | length: 7, 10, 11, or 14 chars; only digits considered | Phone Number | 1.0 |
-`timezone` | - | valid::timezone | Valid timezone (see [List ofSupported Timezones](http://php.net/manual/en/timezones.php)) | 1.0 |
+`email` | - | <span class="label important">required</span><br />length: 6-200 chars; valid email address | Email Address |
+`password` | - | <span class="label important">required</span><br />length: 5-30 chars | Password |
+`firstname` | - | <span class="label important">required</span><br />length: 1-32 chars | First Name |
+`lastname` | - | <span class="label important">required</span><br />length: 1-32 chars | Last Name |
+`phone` | - | length: 7, 10, 11, or 14 chars; only digits considered | Phone Number |
+`timezone` | - | valid::timezone | Valid timezone (see [List ofSupported Timezones](http://php.net/manual/en/timezones.php)) |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | User ID | 1.0 |
-`email` | Email Address | 1.0 |
-`firstname` | First Name | 1.0 |
-`lastname` | Last Name | 1.0 |
-`phone` | Phone Number | 1.0 |
-`timezone` | User's Timezone | 1.0 |
-`date_last_login` | The date and time the user last logged into the system | 1.0 |
-`ip_last_login` | The IP for the user at the last login | 1.0 |
-`date_created` | Date Created | 1.0 |
-`date_updated` | Date Updated | 1.0 |
-`roles` | An array of roles for the given user | 1.0 |
+`id` | User ID |
+`email` | Email Address |
+`firstname` | First Name |
+`lastname` | Last Name |
+`phone` | Phone Number |
+`timezone` | User's Timezone |
+`date_last_login` | The date and time the user last logged into the system |
+`ip_last_login` | The IP for the user at the last login |
+`date_created` | Date Created |
+`date_updated` | Date Updated |
+`roles` | An array of roles for the given user |
 
 
 ### Code Samples
@@ -659,14 +659,14 @@ Gets a user specified by the {user_id} parameter
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | User ID | 1.0 |
-`email` | Email Address | 1.0 |
-`firstname` | First Name | 1.0 |
-`lastname` | Last Name | 1.0 |
-`phone` | Phone Number | 1.0 |
-`timezone` | User's Timezone | 1.0 |
+`id` | User ID |
+`email` | Email Address |
+`firstname` | First Name |
+`lastname` | Last Name |
+`phone` | Phone Number |
+`timezone` | User's Timezone |
 
 
 ### Code Samples
@@ -745,25 +745,25 @@ Updates a user specified by the {user_id} parameter
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`email` | - | length: 6-200 chars; valid email address | Email Address | 1.0 |
-`firstname` | - | length: 1-32 chars | First Name | 1.0 |
-`lastname` | - | length: 1-32 chars | Last Name | 1.0 |
-`phone` | - | length: 7, 10, 11, or 14 chars; only digits considered | Phone Number | 1.0 |
-`timezone` | - | valid::timezone | Valid timezone (see [List ofSupported Timezones](http://php.net/manual/en/timezones.php)) | 1.0 |
+`email` | - | length: 6-200 chars; valid email address | Email Address |
+`firstname` | - | length: 1-32 chars | First Name |
+`lastname` | - | length: 1-32 chars | Last Name |
+`phone` | - | length: 7, 10, 11, or 14 chars; only digits considered | Phone Number |
+`timezone` | - | valid::timezone | Valid timezone (see [List ofSupported Timezones](http://php.net/manual/en/timezones.php)) |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | User ID | 1.0 |
-`email` | Email Address | 1.0 |
-`firstname` | First Name | 1.0 |
-`lastname` | Last Name | 1.0 |
-`phone` | Phone Number | 1.0 |
-`timezone` | User's Timezone | 1.0 |
+`id` | User ID |
+`email` | Email Address |
+`firstname` | First Name |
+`lastname` | Last Name |
+`phone` | Phone Number |
+`timezone` | User's Timezone |
 
 ### Code Samples
 
@@ -985,12 +985,12 @@ account
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`pull` | The number of pull zones for your account | 1.0 |
-`push` | The number of push zones for your account | 1.0 |
-`vod` | The number of vod zones for your account | 1.0 |
-`live` | The number of live zones for your account | 1.0 |
+`pull` | The number of pull zones for your account |
+`push` | The number of push zones for your account |
+`vod` | The number of vod zones for your account |
+`live` | The number of live zones for your account |
 
 
 ### Code Samples
@@ -1055,9 +1055,9 @@ Counts all zones on the specified account
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`count` | The total number of content zones for your account | 1.0 |
+`count` | The total number of content zones for your account |
 
 
 
@@ -1117,35 +1117,35 @@ Returns a list of all pull zones on the specified account
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Pull Zone ID | 1.0 |
-`name` | Pull Zone name | 1.0 |
-`url` | Origin URL | 1.0 |
-`port` | Port | 1.0 |
-`ip` | IP address of the Origin URL | 1.0 |
-`compress` | On the fly compression of your files served from our edges.GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype | 1.0 |
-`backend_compress` | Allow us to cache compressed versions of your files from theorigin. GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype | 1.0 |
-`queries` | Treat Query Strings as a separate cacheable item | 1.0 |
-`set_host_header` | The URL sent as the Host in all HTTP Response Headers | 1.0 |
-`cache_valid` | Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M | 1.0 |
-`ignore_setcookie_header` | Ignore any cookies set by the origin in order to make thecontent consistently cacheable | 1.0 |
-`ignore_cache_control` | Ignore any max age values set by the origin and use the CDN setvalue instead | 1.0 |
-`use_stale` | Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found | 1.0 |
-`proxy_cache_lock` | When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin | 1.0 |
-`label` | Something that describes your zone | 1.0 |
-`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers | 1.0 |
-`expires` | Set any request with a no "Cache-Control header" from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M | 1.0 |
-`disallow_robots` | Enable robots.txt | 1.0 |
-`disallow_robots_txt` | Use custom robots.txt | 1.0 |
-`canonical_link_headers` | Pass the canonical URL in the Link HTTP Header | 1.0 |
-`content_disposition` | Force files to download | 1.0 |
-`pseudo_streaming` | Enable the zone for pseudo streaming content | 1.0 |
-`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | Pull Zone ID |
+`name` | Pull Zone name |
+`url` | Origin URL |
+`port` | Port |
+`ip` | IP address of the Origin URL |
+`compress` | On the fly compression of your files served from our edges.GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype |
+`backend_compress` | Allow us to cache compressed versions of your files from theorigin. GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype |
+`queries` | Treat Query Strings as a separate cacheable item |
+`set_host_header` | The URL sent as the Host in all HTTP Response Headers |
+`cache_valid` | Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M |
+`ignore_setcookie_header` | Ignore any cookies set by the origin in order to make thecontent consistently cacheable |
+`ignore_cache_control` | Ignore any max age values set by the origin and use the CDN setvalue instead |
+`use_stale` | Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found |
+`proxy_cache_lock` | When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin |
+`label` | Something that describes your zone |
+`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers |
+`expires` | Set any request with a no "Cache-Control header" from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M |
+`disallow_robots` | Enable robots.txt |
+`disallow_robots_txt` | Use custom robots.txt |
+`canonical_link_headers` | Pass the canonical URL in the Link HTTP Header |
+`content_disposition` | Force files to download |
+`pseudo_streaming` | Enable the zone for pseudo streaming content |
+`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -1205,64 +1205,64 @@ Creates a new pull zone
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`name` | - | <span class="label important">required</span><br />length: 3-32 chars; only letters, digits, and dash (-)accepted | Pull Zone Name | 1.0 |
-`url` | - | <span class="label important">required</span><br />length: 4-100 chars; only valid URLs accepted | Origin URL | 1.0 |
-`port` | 80 | length: 1-5 chars; only digits accepted | Port | 1.0 |
-`ip` | - | length: 1-10 chars, only digits accepted | Valid IP address of the Origin URL. If omitted, the servicewill try to lookup the IP automatically. | 1.0 |
-`compress` | 0 | only 0 or 1 accepted | On the fly compression of your files served from our edges.Enable GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype | 1.0 |
-`backend_compress` | 0 | only 0 or 1 accepted | Allow us to cache compressed versions of your files from theorigin. Enable GZip compression for the following file types:text/plain, text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype | 1.0 |
-`queries` | 0 | only 0 or 1 accepted | Treat Query Strings as a separate cacheable item | 1.0 |
-`set_host_header` | - | length: 4-100 chars; only valid URLs accepted | The URL to send as the Host in all HTTP Response Headers | 1.0 |
-`cache_valid` | 1d | length: 1-30 chars; must be a number followed by one of s, m,h, d, M, or Y | Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M | 1.0 |
-`ignore_setcookie_header` | 0 | only 0 or 1 accepted | Ignore any cookies set by the origin in order to make thecontent consistently cacheable | 1.0 |
-`ignore_cache_control` | 0 | only 0 or 1 accepted | Ignore any max age values set by the origin and use the CDN setvalue instead | 1.0 |
-`use_stale` | 0 | only 0 or 1 accepted | Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found | 1.0 |
-`proxy_cache_lock` | 0 | only 0 or 1 accepted | When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin | 1.0 |
-`label` | - | length: 1-255 chars | Something that describes your zone | 1.0 |
-`valid_referers` | - | length: 1-100 chars | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers | 1.0 |
-`expires` | 1d | length: 1-32 chars | Set any request with a no "Cache-Control header" from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M | 1.0 |
-`disallow_robots` | 0 | only 0 or 1 accepted | Enable robots.txt | 1.0 |
-`disallow_robots_txt` | - | length 1-255 chars | Use custom robots.txt | 1.0 |
-`canonical_link_headers` | 1 | only 0 or 1 accepted | Pass the canonical URL in the Link HTTP Header | 1.0 |
-`content_disposition` | 0 | only 0 or 1 accepted | Force files to download | 1.0 |
-`pseudo_streaming` | 0 | only 0 or 1 accepted | Enable the zone for pseudo streaming content | 1.0 |
-`secret` | - | length: 1 - 32 chars | Use a secret to protect your files from unwanted visitors | 1.0 |
-`sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. | 1.0 |
+`name` | - | <span class="label important">required</span><br />length: 3-32 chars; only letters, digits, and dash (-)accepted | Pull Zone Name |
+`url` | - | <span class="label important">required</span><br />length: 4-100 chars; only valid URLs accepted | Origin URL |
+`port` | 80 | length: 1-5 chars; only digits accepted | Port |
+`ip` | - | length: 1-10 chars, only digits accepted | Valid IP address of the Origin URL. If omitted, the servicewill try to lookup the IP automatically. |
+`compress` | 0 | only 0 or 1 accepted | On the fly compression of your files served from our edges.Enable GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype |
+`backend_compress` | 0 | only 0 or 1 accepted | Allow us to cache compressed versions of your files from theorigin. Enable GZip compression for the following file types:text/plain, text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype |
+`queries` | 0 | only 0 or 1 accepted | Treat Query Strings as a separate cacheable item |
+`set_host_header` | - | length: 4-100 chars; only valid URLs accepted | The URL to send as the Host in all HTTP Response Headers |
+`cache_valid` | 1d | length: 1-30 chars; must be a number followed by one of s, m,h, d, M, or Y | Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M |
+`ignore_setcookie_header` | 0 | only 0 or 1 accepted | Ignore any cookies set by the origin in order to make thecontent consistently cacheable |
+`ignore_cache_control` | 0 | only 0 or 1 accepted | Ignore any max age values set by the origin and use the CDN setvalue instead |
+`use_stale` | 0 | only 0 or 1 accepted | Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found |
+`proxy_cache_lock` | 0 | only 0 or 1 accepted | When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin |
+`label` | - | length: 1-255 chars | Something that describes your zone |
+`valid_referers` | - | length: 1-100 chars | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers |
+`expires` | 1d | length: 1-32 chars | Set any request with a no "Cache-Control header" from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M |
+`disallow_robots` | 0 | only 0 or 1 accepted | Enable robots.txt |
+`disallow_robots_txt` | - | length 1-255 chars | Use custom robots.txt |
+`canonical_link_headers` | 1 | only 0 or 1 accepted | Pass the canonical URL in the Link HTTP Header |
+`content_disposition` | 0 | only 0 or 1 accepted | Force files to download |
+`pseudo_streaming` | 0 | only 0 or 1 accepted | Enable the zone for pseudo streaming content |
+`secret` | - | length: 1 - 32 chars | Use a secret to protect your files from unwanted visitors |
+`sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Pull Zone ID | 1.0 |
-`name` | Pull Zone name | 1.0 |
-`url` | Origin URL | 1.0 |
-`port` | Port | 1.0 |
-`ip` | IP address of the Origin URL | 1.0 |
-`compress` | On the fly compression of your files served from our edges.GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype | 1.0 |
-`backend_compress` | Allow us to cache compressed versions of your files from theorigin. GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype | 1.0 |
-`queries` | Treat Query Strings as a separate cacheable item | 1.0 |
-`set_host_header` | The URL sent as the Host in all HTTP Response Headers | 1.0 |
-`cache_valid` | Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M | 1.0 |
-`ignore_setcookie_header` | Ignore any cookies set by the origin in order to make thecontent consistently cacheable | 1.0 |
-`ignore_cache_control` | Ignore any max age values set by the origin and use the CDN setvalue instead | 1.0 |
-`use_stale` | Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found | 1.0 |
-`proxy_cache_lock` | When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin | 1.0 |
-`label` | Something that describes your zone | 1.0 |
-`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers | 1.0 |
-`expires` | Set any request with a no "Cache-Control header" from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M | 1.0 |
-`disallow_robots` | Enable robots.txt | 1.0 |
-`disallow_robots_txt` | Use custom robots.txt | 1.0 |
-`canonical_link_headers` | Pass the canonical URL in the Link HTTP Header | 1.0 |
-`content_disposition` | Force files to download | 1.0 |
-`pseudo_streaming` | Enable the zone for pseudo streaming content | 1.0 |
-`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | Pull Zone ID |
+`name` | Pull Zone name |
+`url` | Origin URL |
+`port` | Port |
+`ip` | IP address of the Origin URL |
+`compress` | On the fly compression of your files served from our edges.GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype |
+`backend_compress` | Allow us to cache compressed versions of your files from theorigin. GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype |
+`queries` | Treat Query Strings as a separate cacheable item |
+`set_host_header` | The URL sent as the Host in all HTTP Response Headers |
+`cache_valid` | Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M |
+`ignore_setcookie_header` | Ignore any cookies set by the origin in order to make thecontent consistently cacheable |
+`ignore_cache_control` | Ignore any max age values set by the origin and use the CDN setvalue instead |
+`use_stale` | Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found |
+`proxy_cache_lock` | When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin |
+`label` | Something that describes your zone |
+`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers |
+`expires` | Set any request with a no "Cache-Control header" from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M |
+`disallow_robots` | Enable robots.txt |
+`disallow_robots_txt` | Use custom robots.txt |
+`canonical_link_headers` | Pass the canonical URL in the Link HTTP Header |
+`content_disposition` | Force files to download |
+`pseudo_streaming` | Enable the zone for pseudo streaming content |
+`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -1321,9 +1321,9 @@ Counts all pull zones on the specified account
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`count` | The number of pull zones on the specified account | 1.0 |
+`count` | The number of pull zones on the specified account |
 
 ### Code Samples
 
@@ -1379,35 +1379,35 @@ Gets a pull zone specified by the {zone_id} parameter
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The Pull Zone ID | 1.0 |
-`name` | Pull Zone name | 1.0 |
-`url` | Origin URL | 1.0 |
-`port` | Port | 1.0 |
-`ip` | Valid IP address of the Origin URL. If omitted, the servicewill try to lookup the IP automatically. | 1.0 |
-`compress` | On the fly compression of your files served from our edges.GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype | 1.0 |
-`backend_compress` | Allow us to cache compressed versions of your files from theorigin. GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype | 1.0 |
-`queries` | Treat Query Strings as a separate cacheable item | 1.0 |
-`set_host_header` | The URL sent as the Host in all HTTP Response Headers | 1.0 |
-`cache_valid` | Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M | 1.0 |
-`ignore_setcookie_header` | Ignore any cookies set by the origin in order to make thecontent consistently cacheable | 1.0 |
-`ignore_cache_control` | Ignore any max age values set by the origin and use the CDN setvalue instead | 1.0 |
-`use_stale` | Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found | 1.0 |
-`proxy_cache_lock` | When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin | 1.0 |
-`label` | Something that describes your zone | 1.0 |
-`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers | 1.0 |
-`expires` | Set any request with a no "Cache-Control header" from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M | 1.0 |
-`disallow_robots` | Enable robots.txt | 1.0 |
-`disallow_robots_txt` | Use custom robots.txt | 1.0 |
-`canonical_link_headers` | Pass the canonical URL in the Link HTTP Header | 1.0 |
-`content_disposition` | Force files to download | 1.0 |
-`pseudo_streaming` | Enable the zone for pseudo streaming content | 1.0 |
-`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | The Pull Zone ID |
+`name` | Pull Zone name |
+`url` | Origin URL |
+`port` | Port |
+`ip` | Valid IP address of the Origin URL. If omitted, the servicewill try to lookup the IP automatically. |
+`compress` | On the fly compression of your files served from our edges.GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype |
+`backend_compress` | Allow us to cache compressed versions of your files from theorigin. GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype |
+`queries` | Treat Query Strings as a separate cacheable item |
+`set_host_header` | The URL sent as the Host in all HTTP Response Headers |
+`cache_valid` | Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M |
+`ignore_setcookie_header` | Ignore any cookies set by the origin in order to make thecontent consistently cacheable |
+`ignore_cache_control` | Ignore any max age values set by the origin and use the CDN setvalue instead |
+`use_stale` | Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found |
+`proxy_cache_lock` | When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin |
+`label` | Something that describes your zone |
+`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers |
+`expires` | Set any request with a no "Cache-Control header" from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M |
+`disallow_robots` | Enable robots.txt |
+`disallow_robots_txt` | Use custom robots.txt |
+`canonical_link_headers` | Pass the canonical URL in the Link HTTP Header |
+`content_disposition` | Force files to download |
+`pseudo_streaming` | Enable the zone for pseudo streaming content |
+`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -1467,62 +1467,62 @@ Updates a pull zone specified by the {zone_id} parameter
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`url` | - | length: 4-100 chars; only valid URLs accepted | Origin URL | 1.0 |
-`port` | 80 | length: 1-5 chars; only digits accepted | Port | 1.0 |
-`compress` | 0 | only 0 or 1 accepted | On the fly compression of your files served from our edges.Enable GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype | 1.0 |
-`backend_compress` | 0 | only 0 or 1 accepted | Allow us to cache compressed versions of your files from theorigin. Enable GZip compression for the following file types:text/plain, text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype | 1.0 |
-`queries` | 0 | only 0 or 1 accepted | Treat Query Strings as a separate cacheable item | 1.0 |
-`set_host_header` | - | length: 4-100 chars; only valid URLs accepted | The URL to send as the Host in all HTTP Response Headers | 1.0 |
-`cache_valid` | - | length: 1-30 chars; must be a number followed by one of s, m,h, d, M, or Y | Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M | 1.0 |
-`ignore_setcookie_header` | 0 | only 0 or 1 accepted | Ignore any cookies set by the origin in order to make thecontent consistently cacheable | 1.0 |
-`ignore_cache_control` | 0 | only 0 or 1 accepted | Ignore any max age values set by the origin and use the CDN setvalue instead | 1.0 |
-`use_stale` | 0 | only 0 or 1 accepted | Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found | 1.0 |
-`proxy_cache_lock` | 0 | only 0 or 1 accepted | When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin | 1.0 |
-`label` | - | length: 1-255 chars | Something that describes your zone | 1.0 |
-`valid_referers` | - | length: 1-100 chars | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers | 1.0 |
-`expires` | 1d | length: 1-32 chars | Set any request with a no "Cache-Control header" from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M | 1.0 |
-`disallow_robots` | 0 | only 0 or 1 accepted | Enable robots.txt | 1.0 |
-`disallow_robots_txt` | - | length: 1-255 chars | Use custom robots.txt | 1.0 |
-`canonical_link_headers` | 1 | only 0 or 1 accepted | Pass the canonical URL in the Link HTTP Header | 1.0 |
-`content_disposition` | 0 | only 0 or 1 accepted | Force files to download | 1.0 |
-`pseudo_streaming` | 0 | only 0 or 1 accepted | Enable the zone for pseudo streaming content | 1.0 |
-`secret` | - | length: 1 - 32 chars | Use a secret to protect your files from unwanted visitors | 1.0 |
-`sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. | 1.0 |
+`url` | - | length: 4-100 chars; only valid URLs accepted | Origin URL |
+`port` | 80 | length: 1-5 chars; only digits accepted | Port |
+`compress` | 0 | only 0 or 1 accepted | On the fly compression of your files served from our edges.Enable GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype |
+`backend_compress` | 0 | only 0 or 1 accepted | Allow us to cache compressed versions of your files from theorigin. Enable GZip compression for the following file types:text/plain, text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype |
+`queries` | 0 | only 0 or 1 accepted | Treat Query Strings as a separate cacheable item |
+`set_host_header` | - | length: 4-100 chars; only valid URLs accepted | The URL to send as the Host in all HTTP Response Headers |
+`cache_valid` | - | length: 1-30 chars; must be a number followed by one of s, m,h, d, M, or Y | Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M |
+`ignore_setcookie_header` | 0 | only 0 or 1 accepted | Ignore any cookies set by the origin in order to make thecontent consistently cacheable |
+`ignore_cache_control` | 0 | only 0 or 1 accepted | Ignore any max age values set by the origin and use the CDN setvalue instead |
+`use_stale` | 0 | only 0 or 1 accepted | Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found |
+`proxy_cache_lock` | 0 | only 0 or 1 accepted | When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin |
+`label` | - | length: 1-255 chars | Something that describes your zone |
+`valid_referers` | - | length: 1-100 chars | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers |
+`expires` | 1d | length: 1-32 chars | Set any request with a no "Cache-Control header" from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M |
+`disallow_robots` | 0 | only 0 or 1 accepted | Enable robots.txt |
+`disallow_robots_txt` | - | length: 1-255 chars | Use custom robots.txt |
+`canonical_link_headers` | 1 | only 0 or 1 accepted | Pass the canonical URL in the Link HTTP Header |
+`content_disposition` | 0 | only 0 or 1 accepted | Force files to download |
+`pseudo_streaming` | 0 | only 0 or 1 accepted | Enable the zone for pseudo streaming content |
+`secret` | - | length: 1 - 32 chars | Use a secret to protect your files from unwanted visitors |
+`sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Pull Zone ID | 1.0 |
-`name` | Pull Zone name | 1.0 |
-`url` | Origin URL | 1.0 |
-`port` | Port | 1.0 |
-`ip` | Valid IP address of the Origin URL. If omitted, the servicewill try to lookup the IP automatically. | 1.0 |
-`compress` | On the fly compression of your files served from our edges.GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype | 1.0 |
-`backend_compress` | Allow us to cache compressed versions of your files from theorigin. GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype | 1.0 |
-`queries` | Treat Query Strings as a separate cacheable item | 1.0 |
-`set_host_header` | The URL sent as the Host in all HTTP Response Headers | 1.0 |
-`cache_valid` | Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M | 1.0 |
-`ignore_setcookie_header` | Ignore any cookies set by the origin in order to make thecontent consistently cacheable | 1.0 |
-`ignore_cache_control` | Ignore any max age values set by the origin and use the CDN setvalue instead | 1.0 |
-`use_stale` | Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found | 1.0 |
-`proxy_cache_lock` | When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin | 1.0 |
-`label` | Something that describes your zone | 1.0 |
-`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers | 1.0 |
-`expires` | Set any request with a no "Cache-Control header" from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M | 1.0 |
-`disallow_robots` | Enable robots.txt | 1.0 |
-`disallow_robots_txt` | Use custom robots.txt | 1.0 |
-`canonical_link_headers` | Pass the canonical URL in the Link HTTP Header | 1.0 |
-`content_disposition` | Force files to download | 1.0 |
-`pseudo_streaming` | Enable the zone for pseudo streaming content | 1.0 |
-`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | Pull Zone ID |
+`name` | Pull Zone name |
+`url` | Origin URL |
+`port` | Port |
+`ip` | Valid IP address of the Origin URL. If omitted, the servicewill try to lookup the IP automatically. |
+`compress` | On the fly compression of your files served from our edges.GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype |
+`backend_compress` | Allow us to cache compressed versions of your files from theorigin. GZip compression for the following file types: text/plain,text/html, text/javascript, text/css, text/xml,application/javascript, application/x-javascript, application/xml,text/x-component, application/json, application/xhtml+xml,application/rss+xml, application/atom+xml, app/vnd.ms-fontobject,image/svg+xml, application/x-font-ttf, font/opentype |
+`queries` | Treat Query Strings as a separate cacheable item |
+`set_host_header` | The URL sent as the Host in all HTTP Response Headers |
+`cache_valid` | Ignore the origin Cache-Control Header and set every request tohave a Max-Age of 1d, 7d, 1M or 12M |
+`ignore_setcookie_header` | Ignore any cookies set by the origin in order to make thecontent consistently cacheable |
+`ignore_cache_control` | Ignore any max age values set by the origin and use the CDN setvalue instead |
+`use_stale` | Serve expired content while fetching new content. This willalso cause the CDN to serve expired content in cases where theorigin is down or the file is not found |
+`proxy_cache_lock` | When multiple requests for an uncached file are received, theywill wait until the first response is received rather than sendingeach request back to the origin |
+`label` | Something that describes your zone |
+`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers |
+`expires` | Set any request with a no "Cache-Control header" from theorigin to stay on the server. Possible values are 1d, 7d, 1M,12M |
+`disallow_robots` | Enable robots.txt |
+`disallow_robots_txt` | Use custom robots.txt |
+`canonical_link_headers` | Pass the canonical URL in the Link HTTP Header |
+`content_disposition` | Force files to download |
+`pseudo_streaming` | Enable the zone for pseudo streaming content |
+`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 
 ### Code Samples
@@ -1744,9 +1744,9 @@ Purges pull zone cache
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`files` | - | An array containing relative paths of the files to purge (i.e./favicon.ico) | 1.0 |
+`files` | - | An array containing relative paths of the files to purge (i.e./favicon.ico) |
 
 ### Code Samples
 
@@ -1819,11 +1819,11 @@ Returns a list of all custom domains on the zone specified by
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The id of the custom domain | 1.0 |
-`bucket_id` | The id of the zone the custom domain belongs to | 1.0 |
-`custom_domain` | A valid custom domain | 1.0 |
+`id` | The id of the custom domain |
+`bucket_id` | The id of the zone the custom domain belongs to |
+`custom_domain` | A valid custom domain |
 
 ### Code Samples
 
@@ -1885,19 +1885,19 @@ Adds a new custom domain to {zone_id}
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`custom_domain` | - | <span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain | A valid custom domain | 1.0 |
-`type` | - | Applies only to Vod Zones and must be either 'vod-rtmp','vod-pseudo', 'vod-direct', or 'vod-ftp' | The type of custom domain being created | 1.0 |
+`custom_domain` | - | <span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain | A valid custom domain |
+`type` | - | Applies only to Vod Zones and must be either 'vod-rtmp','vod-pseudo', 'vod-direct', or 'vod-ftp' | The type of custom domain being created |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The id of the custom domain | 1.0 |
-`bucket_id` | The id of the zone the custom domain belongs to | 1.0 |
-`custom_domain` | The valid custom domain | 1.0 |
+`id` | The id of the custom domain |
+`bucket_id` | The id of the zone the custom domain belongs to |
+`custom_domain` | The valid custom domain |
 
 
 ### Code Samples
@@ -1959,11 +1959,11 @@ Gets a custom domain specified by the {zone_id} and
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The id of the custom domain | 1.0 |
-`bucket_id` | The id of the zone the custom domain belongs to | 1.0 |
-`custom_domain` | The valid custom domain | 1.0 |
+`id` | The id of the custom domain |
+`bucket_id` | The id of the zone the custom domain belongs to |
+`custom_domain` | The valid custom domain |
 
 ### Code Samples
 
@@ -2024,18 +2024,18 @@ Updates a custom domain specified by the id parameter
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`custom_domain` | - | <span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain | A new valid custom domain | 1.0 |
+`custom_domain` | - | <span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain | A new valid custom domain |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The id of the custom domain | 1.0 |
-`bucket_id` | The id of the zone the custom domain belongs to | 1.0 |
-`custom_domain` | The new valid custom domain | 1.0 |
+`id` | The id of the custom domain |
+`bucket_id` | The id of the zone the custom domain belongs to |
+`custom_domain` | The new valid custom domain |
 
 
 ### Code Samples
@@ -2155,18 +2155,18 @@ Returns a list of all push zones on the specified account
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Push Zone ID | 1.0 |
-`name` | Push Zone name | 1.0 |
-`label` | Something that describes your zone | 1.0 |
-`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers | 1.0 |
-`content_disposition` | Force files to download | 1.0 |
-`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | Push Zone ID |
+`name` | Push Zone name |
+`label` | Something that describes your zone |
+`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers |
+`content_disposition` | Force files to download |
+`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -2227,30 +2227,30 @@ Creates a new push zone
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`name` | - | <span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted | Push Zone name | 1.0 |
-`password` | - | <span class="label important">required</span><br />length: 5-30 chars; | Push Zone FTP password | 1.0 |
-`label` | - | length: 1-255 chars | Something that describes your zone | 1.0 |
-`valid_referers` | - | length: 1-200 chars | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers | 1.0 |
-`content_disposition` | 0 | only 0 or 1 accepted | Force files to download | 1.0 |
-`sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. | 1.0 |
+`name` | - | <span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted | Push Zone name |
+`password` | - | <span class="label important">required</span><br />length: 5-30 chars; | Push Zone FTP password |
+`label` | - | length: 1-255 chars | Something that describes your zone |
+`valid_referers` | - | length: 1-200 chars | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers |
+`content_disposition` | 0 | only 0 or 1 accepted | Force files to download |
+`sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Push Zone ID | 1.0 |
-`name` | Push Zone name | 1.0 |
-`label` | Something that describes your zone | 1.0 |
-`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers | 1.0 |
-`content_disposition` | Force files to download | 1.0 |
-`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | Push Zone ID |
+`name` | Push Zone name |
+`label` | Something that describes your zone |
+`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers |
+`content_disposition` | Force files to download |
+`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -2311,9 +2311,9 @@ Counts all push zones on the specified account
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`count` | The number of push zones on the specified account | 1.0 |
+`count` | The number of push zones on the specified account |
 
 ### Code Samples
 
@@ -2370,18 +2370,18 @@ Gets a push zone specified by the {zone_id} parameter
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Push Zone ID | 1.0 |
-`name` | Push Zone name | 1.0 |
-`label` | Something that describes your zone | 1.0 |
-`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers | 1.0 |
-`content_disposition` | Force files to download | 1.0 |
-`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | Push Zone ID |
+`name` | Push Zone name |
+`label` | Something that describes your zone |
+`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers |
+`content_disposition` | Force files to download |
+`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -2442,28 +2442,28 @@ Updates a push zone specified by the {zone_id} parameter
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`label` | - | length: 1-255 chars | Something that describes your zone | 1.0 |
-`valid_referers` | - | length: 1-100 chars | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers | 1.0 |
-`content_disposition` | 0 | only 0 or 1 accepted | Force files to download | 1.0 |
-`sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. | 1.0 |
+`label` | - | length: 1-255 chars | Something that describes your zone |
+`valid_referers` | - | length: 1-100 chars | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers |
+`content_disposition` | 0 | only 0 or 1 accepted | Force files to download |
+`sslshared` | 0 | only 0 or 1 accepted | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Push Zone ID | 1.0 |
-`name` | Push Zone name | 1.0 |
-`label` | Something that describes your zone | 1.0 |
-`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers | 1.0 |
-`content_disposition` | Force files to download | 1.0 |
-`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | Push Zone ID |
+`name` | Push Zone name |
+`label` | Something that describes your zone |
+`valid_referers` | List of domains for http referrer protection (separated byspace). Only the domains in the list will be treated as validreferrers |
+`content_disposition` | Force files to download |
+`sslshared` | Enable Shared SSL. This feature allows you use your zone inHTTPS mode. You don't need your own SSL certificate, our servernetdna-ssl.com will be used. |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -2684,11 +2684,11 @@ Returns a list of all custom domains on the zone specified by
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The id of the custom domain | 1.0 |
-`bucket_id` | The id of the zone the custom domain belongs to | 1.0 |
-`custom_domain` | A valid custom domain | 1.0 |
+`id` | The id of the custom domain |
+`bucket_id` | The id of the zone the custom domain belongs to |
+`custom_domain` | A valid custom domain |
 
 ### Code Samples
 
@@ -2750,19 +2750,19 @@ Adds a new custom domain to {zone_id}
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`custom_domain` | - | <span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain | A valid custom domain | 1.0 |
-`type` | - | Applies only to Vod Zones and must be either 'vod-rtmp','vod-pseudo', 'vod-direct', or 'vod-ftp' | The type of custom domain being created | 1.0 |
+`custom_domain` | - | <span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain | A valid custom domain |
+`type` | - | Applies only to Vod Zones and must be either 'vod-rtmp','vod-pseudo', 'vod-direct', or 'vod-ftp' | The type of custom domain being created |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The id of the custom domain | 1.0 |
-`bucket_id` | The id of the zone the custom domain belongs to | 1.0 |
-`custom_domain` | The valid custom domain | 1.0 |
+`id` | The id of the custom domain |
+`bucket_id` | The id of the zone the custom domain belongs to |
+`custom_domain` | The valid custom domain |
 
 ### Code Samples
 
@@ -2824,11 +2824,11 @@ Gets a custom domain specified by the {zone_id} and
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The id of the custom domain | 1.0 |
-`bucket_id` | The id of the zone the custom domain belongs to | 1.0 |
-`custom_domain` | The valid custom domain | 1.0 |
+`id` | The id of the custom domain |
+`bucket_id` | The id of the zone the custom domain belongs to |
+`custom_domain` | The valid custom domain |
 
 ### Code Samples
 
@@ -2889,18 +2889,18 @@ Updates a custom domain specified by the id parameter
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`custom_domain` | - | <span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain | A new valid custom domain | 1.0 |
+`custom_domain` | - | <span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain | A new valid custom domain |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The id of the custom domain | 1.0 |
-`bucket_id` | The id of the zone the custom domain belongs to | 1.0 |
-`custom_domain` | The new valid custom domain | 1.0 |
+`id` | The id of the custom domain |
+`bucket_id` | The id of the zone the custom domain belongs to |
+`custom_domain` | The new valid custom domain |
 
 ### Code Samples
 
@@ -3020,15 +3020,15 @@ Returns a list of all VOD zones on the specified account
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | VOD Zone ID | 1.0 |
-`name` | VOD Zone name | 1.0 |
-`label` | The zone's description | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | VOD Zone ID |
+`name` | VOD Zone name |
+`label` | The zone's description |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -3089,25 +3089,25 @@ Creates a new VOD zone
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`name` | - | <span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted | VOD Zone user name | 1.0 |
-`password` | - | <span class="label important">required</span><br />length: 5-30 chars | Your desired password | 1.0 |
-`token` | - | length: 1-64 chars | The token value (shared secret) for secure streaming | 1.0 |
-`label` | - | length: 1-255 chars | Something that describes your zone | 1.0 |
+`name` | - | <span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted | VOD Zone user name |
+`password` | - | <span class="label important">required</span><br />length: 5-30 chars | Your desired password |
+`token` | - | length: 1-64 chars | The token value (shared secret) for secure streaming |
+`label` | - | length: 1-255 chars | Something that describes your zone |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | VOD Zone ID | 1.0 |
-`name` | VOD Zone name | 1.0 |
-`label` | The zone's description | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | VOD Zone ID |
+`name` | VOD Zone name |
+`label` | The zone's description |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -3167,9 +3167,9 @@ Counts all vod zones on the specified account
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`count` | The number of vod zones on the specified account | 1.0 |
+`count` | The number of vod zones on the specified account |
 
 ### Code Samples
 
@@ -3226,15 +3226,15 @@ Gets a VOD zone specified by the {zone_id} parameter
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | VOD Zone ID | 1.0 |
-`name` | VOD Zone name | 1.0 |
-`label` | The zone's description | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | VOD Zone ID |
+`name` | VOD Zone name |
+`label` | The zone's description |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -3294,24 +3294,24 @@ Updates a VOD zone specified by the {zone_id} parameter
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`password` | - | length: 5-30 chars | Your desired password | 1.0 |
-`token` | - | length: 1-64 chars | The token value (shared secret) for secure streaming | 1.0 |
-`label` | - | length: 1-255 chars | Something that describes your zone | 1.0 |
+`password` | - | length: 5-30 chars | Your desired password |
+`token` | - | length: 1-64 chars | The token value (shared secret) for secure streaming |
+`label` | - | length: 1-255 chars | Something that describes your zone |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | VOD Zone ID | 1.0 |
-`name` | VOD Zone name | 1.0 |
-`label` | The zone's description | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | VOD Zone ID |
+`name` | VOD Zone name |
+`label` | The zone's description |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -3531,11 +3531,11 @@ Returns a list of all custom domains on the zone specified by
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The id of the custom domain | 1.0 |
-`bucket_id` | The id of the zone the custom domain belongs to | 1.0 |
-`custom_domain` | A valid custom domain | 1.0 |
+`id` | The id of the custom domain |
+`bucket_id` | The id of the zone the custom domain belongs to |
+`custom_domain` | A valid custom domain |
 
 ### Code Samples
 
@@ -3597,19 +3597,19 @@ Adds a new custom domain to {zone_id}
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`custom_domain` | - | <span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain | A valid custom domain | 1.0 |
-`type` | - | Applies only to Vod Zones and must be either 'vod-rtmp','vod-pseudo', 'vod-direct', or 'vod-ftp' | The type of custom domain being created | 1.0 |
+`custom_domain` | - | <span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain | A valid custom domain |
+`type` | - | Applies only to Vod Zones and must be either 'vod-rtmp','vod-pseudo', 'vod-direct', or 'vod-ftp' | The type of custom domain being created |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The id of the custom domain | 1.0 |
-`bucket_id` | The id of the zone the custom domain belongs to | 1.0 |
-`custom_domain` | The valid custom domain | 1.0 |
+`id` | The id of the custom domain |
+`bucket_id` | The id of the zone the custom domain belongs to |
+`custom_domain` | The valid custom domain |
 
 ### Code Samples
 
@@ -3671,11 +3671,11 @@ Gets a custom domain specified by the {zone_id} and
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The id of the custom domain | 1.0 |
-`bucket_id` | The id of the zone the custom domain belongs to | 1.0 |
-`custom_domain` | The valid custom domain | 1.0 |
+`id` | The id of the custom domain |
+`bucket_id` | The id of the zone the custom domain belongs to |
+`custom_domain` | The valid custom domain |
 
 ### Code Samples
 
@@ -3736,18 +3736,18 @@ Updates a custom domain specified by the id parameter
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`custom_domain` | - | <span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain | A new valid custom domain | 1.0 |
+`custom_domain` | - | <span class="label important">required</span><br />length: 1-255 chars, valid::custom_domain, !valid::full_domain | A new valid custom domain |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The id of the custom domain | 1.0 |
-`bucket_id` | The id of the zone the custom domain belongs to | 1.0 |
-`custom_domain` | The new valid custom domain | 1.0 |
+`id` | The id of the custom domain |
+`bucket_id` | The id of the zone the custom domain belongs to |
+`custom_domain` | The new valid custom domain |
 
 ### Code Samples
 
@@ -3866,15 +3866,15 @@ Returns a list of all live zones on the specified account
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Live Zone ID | 1.0 |
-`name` | Live Zone name | 1.0 |
-`label` | The zone's description | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | Live Zone ID |
+`name` | Live Zone name |
+`label` | The zone's description |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -3935,24 +3935,24 @@ Creates a new live zone
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`name` | - | <span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted | Your desired zone name | 1.0 |
-`password` | - | length: 5-30 chars | Your desired password | 1.0 |
-`label` | - | length: 1-255 chars | Something that describes your zone | 1.0 |
+`name` | - | <span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted | Your desired zone name |
+`password` | - | length: 5-30 chars | Your desired password |
+`label` | - | length: 1-255 chars | Something that describes your zone |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Live Zone ID | 1.0 |
-`name` | Live Zone name | 1.0 |
-`label` | The zone's description | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | Live Zone ID |
+`name` | Live Zone name |
+`label` | The zone's description |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -4011,9 +4011,9 @@ Counts all live zones on the specified account
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`count` | The number of live zones on the specified account | 1.0 |
+`count` | The number of live zones on the specified account |
 
 ### Code Samples
 
@@ -4070,15 +4070,15 @@ Gets a live zone specified by the {zone_id} parameter
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Live Zone ID | 1.0 |
-`name` | Live Zone name | 1.0 |
-`label` | The zone's description | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | Live Zone ID |
+`name` | Live Zone name |
+`label` | The zone's description |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -4138,24 +4138,24 @@ Updates a live zone specified by the {zone_id} parameter
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`password` | - | length: 5-30 chars | Your desired password | 1.0 |
-`token` | - | length: 1-64 chars | The token value (shared secret) for secure streaming | 1.0 |
-`label` | - | length: 1-255 chars | Something that describes your zone | 1.0 |
+`password` | - | length: 5-30 chars | Your desired password |
+`token` | - | length: 1-64 chars | The token value (shared secret) for secure streaming |
+`label` | - | length: 1-255 chars | Something that describes your zone |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Live Zone ID | 1.0 |
-`name` | Live Zone name | 1.0 |
-`label` | The zone's description | 1.0 |
-`suspend` | Flag denoting if the zone has been suspended | 1.0 |
-`locked` | Flag denoting if the zone has been locked | 1.0 |
-`inactive` | Flag denoting if the zone has been deleted | 1.0 |
-`creation_date` | Date Created | 1.0 |
+`id` | Live Zone ID |
+`name` | Live Zone name |
+`label` | The zone's description |
+`suspend` | Flag denoting if the zone has been suspended |
+`locked` | Flag denoting if the zone has been locked |
+`inactive` | Flag denoting if the zone has been deleted |
+`creation_date` | Date Created |
 
 ### Code Samples
 
@@ -4431,24 +4431,24 @@ Upload an SSL certificate for the specified {zone_type} and
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`ssl_crt` | - | <span class="label important">required</span><br /> | The SSL certificate you are installing. | 1.0 |
-`ssl_key` | - | <span class="label important">required</span><br /> | The key for the SSL certificate you are installing. | 1.0 |
-`ssl_cabundle` | - | The CA Bundle for the SSL Certificate you are installing. | 1.0 |
+`ssl_crt` | - | <span class="label important">required</span><br /> | The SSL certificate you are installing. |
+`ssl_key` | - | <span class="label important">required</span><br /> | The key for the SSL certificate you are installing. |
+`ssl_cabundle` | - | The CA Bundle for the SSL Certificate you are installing. |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The SSL Certificate ID. | 1.0 |
-`ssl_crt` | The SSL certificate. | 1.0 |
-`ssl_key` | The SSL Private Key. | 1.0 |
-`ssl_cabundle` | The CA Bundle for the cert. | 1.0 |
-`domain` | The domain applicable to this certificate. | 1.0 |
-`date_expiration` | The date of expiration for the certificate. | 1.0 |
-`wildcard` | Flag to signify whether this is a wildcard certificate. | 1.0 |
+`id` | The SSL Certificate ID. |
+`ssl_crt` | The SSL certificate. |
+`ssl_key` | The SSL Private Key. |
+`ssl_cabundle` | The CA Bundle for the cert. |
+`domain` | The domain applicable to this certificate. |
+`date_expiration` | The date of expiration for the certificate. |
+`wildcard` | Flag to signify whether this is a wildcard certificate. |
 
 ### Code Samples
 
@@ -4508,24 +4508,24 @@ Update the SSL certificate for the specified {zone_type} and
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`ssl_crt` | - | <span class="label important">required</span><br /> | The SSL certificate you are installing. | 1.0 |
-`ssl_key` | - | <span class="label important">required</span><br /> | The key for the SSL certificate you are installing. | 1.0 |
-`ssl_cabundle` | - | The CABundle for the SSL Certificate you are installing. | 1.0 |
+`ssl_crt` | - | <span class="label important">required</span><br /> | The SSL certificate you are installing. |
+`ssl_key` | - | <span class="label important">required</span><br /> | The key for the SSL certificate you are installing. |
+`ssl_cabundle` | - | The CABundle for the SSL Certificate you are installing. |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | The SSL Certificate ID. | 1.0 |
-`ssl_crt` | The SSL certificate. | 1.0 |
-`ssl_key` | The SSL Private Key. | 1.0 |
-`ssl_cabundle` | The CA Bundle for the cert. | 1.0 |
-`domain` | The domain applicable to this certificate. | 1.0 |
-`date_expiration` | The date of expiration for the certificate. | 1.0 |
-`wildcard` | Flag to signify whether this is a wildcard certificate. | 1.0 |
+`id` | The SSL Certificate ID. |
+`ssl_crt` | The SSL certificate. |
+`ssl_key` | The SSL Private Key. |
+`ssl_cabundle` | The CA Bundle for the cert. |
+`domain` | The domain applicable to this certificate. |
+`date_expiration` | The date of expiration for the certificate. |
+`wildcard` | Flag to signify whether this is a wildcard certificate. |
 
 ### Code Samples
 
@@ -4694,7 +4694,7 @@ Create and enable Upstream for a specific {zone_id}.
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
 `server_url` | - | <span class="label important">required</span><br /> | The server url or ip to provide the streaming resources | 1.0.1 |
 `port` | - | <span class="label important">required</span><br /> | The port where server is to be called | 1.0.1 |
@@ -4702,7 +4702,7 @@ Parameter | Default Value | Validation | Description | Since |
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
 `id` | The Upstream ID. | 1.0.1 |
 `bucket_id` | The bucket_id it belongs to | 1.0.1 |
@@ -4765,7 +4765,7 @@ Update the Upstream information for the specified {zone_id}.
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
 `upstream_id` | - | <span class="label important">required</span><br /> | The Upstream Information you're modifying. | 1.0.1 |
 `server_url` | - | <span class="label important">required</span><br /> | The server url or ip | 1.0.1 |
@@ -4774,7 +4774,7 @@ Parameter | Default Value | Validation | Description | Since |
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
 `id` | The Upstream ID. | 1.0.1 |
 `bucket_id` | The bucket_id it belongs to | 1.0.1 |
@@ -4895,21 +4895,21 @@ the total usage for the zones.
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`size` | The amount of bytes transferred | 1.0 |
-`hit` | The number of times files were requested | 1.0 |
-`noncache_hit` | The number of times a requested file was not in cache | 1.0 |
-`cache_hit` | The number of times a requested file was already cached | 1.0 |
-`timestamp` | The timestamp for the corresponding {report_type}. | 1.0 |
+`size` | The amount of bytes transferred |
+`hit` | The number of times files were requested |
+`noncache_hit` | The number of times a requested file was not in cache |
+`cache_hit` | The number of times a requested file was already cached |
+`timestamp` | The timestamp for the corresponding {report_type}. |
 
 ### Code Samples
 
@@ -4971,21 +4971,21 @@ the total usage for the zones.
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`size` | The amount of bytes transferred | 1.0 |
-`hit` | The number of times files were requested | 1.0 |
-`noncache_hit` | The number of times a requested file was not in cache | 1.0 |
-`cache_hit` | The number of times a requested file was already cached | 1.0 |
-`timestamp` | The timestamp for the corresponding {report_type}. | 1.0 |
+`size` | The amount of bytes transferred |
+`hit` | The number of times files were requested |
+`noncache_hit` | The number of times a requested file was not in cache |
+`cache_hit` | The number of times a requested file was already cached |
+`timestamp` | The timestamp for the corresponding {report_type}. |
 
 
 
@@ -5049,11 +5049,11 @@ Gets a list of all active nodes (locations)
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Node Id | 1.0 |
-`name` | Node 3 letter code | 1.0 |
-`description` | Full node name | 1.0 |
+`id` | Node Id |
+`name` | Node 3 letter code |
+`description` | Full node name |
 
 ### Code Samples
 
@@ -5114,11 +5114,11 @@ Gets a list of all active nodes (locations) specified by the
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Node Id | 1.0 |
-`name` | Node 3 letter code | 1.0 |
-`description` | Full node name | 1.0 |
+`id` | Node Id |
+`name` | Node 3 letter code |
+`description` | Full node name |
 
 ### Code Samples
 
@@ -5180,24 +5180,24 @@ the total usage broken up by node.
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-31) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-31) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-31) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-31) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`pop_id` | Node Id | 1.0 |
-`pop_name` | Node 3 letter code. Only returned when {report_type} is notempty. | 1.0 |
-`pop_description` | Full node name. Only returned when {report_type} is notempty. | 1.0 |
-`size` | The amount of bytes transferred | 1.0 |
-`hit` | The number of times files were requested | 1.0 |
-`noncache_hit` | The number of times a requested file was not in cache | 1.0 |
-`cache_hit` | The number of times a requested file was already cached | 1.0 |
-`timestamp` | A timestamp corresponding to {report_type}. Only returned when{report_type} is not empty. | 1.0 |
+`pop_id` | Node Id |
+`pop_name` | Node 3 letter code. Only returned when {report_type} is notempty. |
+`pop_description` | Full node name. Only returned when {report_type} is notempty. |
+`size` | The amount of bytes transferred |
+`hit` | The number of times files were requested |
+`noncache_hit` | The number of times a requested file was not in cache |
+`cache_hit` | The number of times a requested file was already cached |
+`timestamp` | A timestamp corresponding to {report_type}. Only returned when{report_type} is not empty. |
 
 ### Code Samples
 
@@ -5259,24 +5259,24 @@ the request will return the total usage broken up by node.
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`pop_id` | Node Id | 1.0 |
-`pop_name` | Node 3 letter code. Only returned when {report_type} is notempty. | 1.0 |
-`pop_description` | Full node name. Only returned when {report_type} is notempty. | 1.0 |
-`size` | The amount of bytes transferred | 1.0 |
-`hit` | The number of times files were requested | 1.0 |
-`noncache_hit` | The number of times a requested file was not in cache | 1.0 |
-`cache_hit` | The number of times a requested file was already cached | 1.0 |
-`timestamp` | A timestamp corresponding to {report_type}. Only returned when{report_type} is not empty. | 1.0 |
+`pop_id` | Node Id |
+`pop_name` | Node 3 letter code. Only returned when {report_type} is notempty. |
+`pop_description` | Full node name. Only returned when {report_type} is notempty. |
+`size` | The amount of bytes transferred |
+`hit` | The number of times files were requested |
+`noncache_hit` | The number of times a requested file was not in cache |
+`cache_hit` | The number of times a requested file was already cached |
+`timestamp` | A timestamp corresponding to {report_type}. Only returned when{report_type} is not empty. |
 
 ### Code Samples
 
@@ -5336,11 +5336,11 @@ Gets the node information for the specified {node_id}
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Node Id | 1.0 |
-`name` | Node 3 letter code | 1.0 |
-`description` | Full node name | 1.0 |
+`id` | Node Id |
+`name` | Node 3 letter code |
+`description` | Full node name |
 
 ### Code Samples
 
@@ -5401,11 +5401,11 @@ Gets the node information for the specified {node_id} and
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`id` | Node Id | 1.0 |
-`name` | Node 3 letter code | 1.0 |
-`description` | Full node name | 1.0 |
+`id` | Node Id |
+`name` | Node 3 letter code |
+`description` | Full node name |
 
 ### Code Samples
 
@@ -5467,21 +5467,21 @@ request will return the total usage for the node.
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date. | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date. | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date. |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date. |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`size` | The amount of bytes transferred | 1.0 |
-`hit` | The number of times files were requested | 1.0 |
-`noncache_hit` | The number of times a requested file was not in cache | 1.0 |
-`cache_hit` | The number of times a requested file was already cached | 1.0 |
-`timestamp` | A timestamp corresponding to {report_type}. Only returned when{report_type} is not empty. | 1.0 |
+`size` | The amount of bytes transferred |
+`hit` | The number of times files were requested |
+`noncache_hit` | The number of times a requested file was not in cache |
+`cache_hit` | The number of times a requested file was already cached |
+`timestamp` | A timestamp corresponding to {report_type}. Only returned when{report_type} is not empty. |
 
 ### Code Samples
 
@@ -5543,21 +5543,21 @@ the request will return the total usage for the node.
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`size` | The amount of bytes transferred | 1.0 |
-`hit` | The number of times files were requested | 1.0 |
-`noncache_hit` | The number of times a requested file was not in cache | 1.0 |
-`cache_hit` | The number of times a requested file was already cached | 1.0 |
-`timestamp` | A timestamp corresponding to {report_type}. Only returned when{report_type} is not empty. | 1.0 |
+`size` | The amount of bytes transferred |
+`hit` | The number of times files were requested |
+`noncache_hit` | The number of times a requested file was not in cache |
+`cache_hit` | The number of times a requested file was already cached |
+`timestamp` | A timestamp corresponding to {report_type}. Only returned when{report_type} is not empty. |
 
 
 
@@ -5623,22 +5623,22 @@ grouped into daily statistics
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01). | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01). | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01). | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01). | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`bucket_id` | The Zone ID for the popular file | 1.0 |
-`uri` | The URI for the requested popular file | 1.0 |
-`hit` | The number of times the file was requested | 1.0 |
-`size` | The amount of bytes transferred for the given file | 1.0 |
-`vhost` | The CDN URL for the corresponding zone | 1.0 |
-`timestamp` | The amount of bytes transferred | 1.0 |
+`bucket_id` | The Zone ID for the popular file |
+`uri` | The URI for the requested popular file |
+`hit` | The number of times the file was requested |
+`size` | The amount of bytes transferred for the given file |
+`vhost` | The CDN URL for the corresponding zone |
+`timestamp` | The amount of bytes transferred |
 
 ### Code Samples
 
@@ -5699,22 +5699,22 @@ filtered by {zone_type} and grouped into daily statistics
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`bucket_id` | The Zone ID for the popular file | 1.0 |
-`uri` | The URI for the requested popular file | 1.0 |
-`hit` | The number of times the file was requested | 1.0 |
-`size` | The amount of bytes transferred for the given file | 1.0 |
-`vhost` | The CDN URL for the corresponding zone | 1.0 |
-`timestamp` | The amount of bytes transferred | 1.0 |
+`bucket_id` | The Zone ID for the popular file |
+`uri` | The URI for the requested popular file |
+`hit` | The number of times the file was requested |
+`size` | The amount of bytes transferred for the given file |
+`vhost` | The CDN URL for the corresponding zone |
+`timestamp` | The amount of bytes transferred |
 
 
 
@@ -5778,19 +5778,19 @@ Gets HTTP status code response statistics for your account
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`status_code` | The HTTP status code for the response | 1.0 |
-`hit` | The number of responses with this status code | 1.0 |
-`definition` | The definition for the status code | 1.0 |
+`status_code` | The HTTP status code for the response |
+`hit` | The number of responses with this status code |
+`definition` | The definition for the status code |
 
 ### Code Samples
 
@@ -5851,19 +5851,19 @@ Gets HTTP status code response statistics for a specific
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`status_code` | The HTTP status code for the response | 1.0 |
-`hit` | The number of responses with this status code | 1.0 |
-`definition` | The definition for the status code | 1.0 |
+`status_code` | The HTTP status code for the response |
+`hit` | The number of responses with this status code |
+`definition` | The definition for the status code |
 
 ### Code Samples
 
@@ -5924,19 +5924,19 @@ Gets HTTP status code response statistics for a specific
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`status_code` | The HTTP status code for the response | 1.0 |
-`hit` | The number of responses with this status code | 1.0 |
-`definition` | The definition for the status code | 1.0 |
+`status_code` | The HTTP status code for the response |
+`hit` | The number of responses with this status code |
+`definition` | The definition for the status code |
 
 ### Code Samples
 
@@ -5997,19 +5997,19 @@ Gets HTTP status code response statistics for a specific
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`status_code` | The HTTP status code for the response | 1.0 |
-`hit` | The number of responses with this status code | 1.0 |
-`definition` | The definition for the status code | 1.0 |
+`status_code` | The HTTP status code for the response |
+`hit` | The number of responses with this status code |
+`definition` | The definition for the status code |
 
 
 
@@ -6073,18 +6073,18 @@ Gets file type statistics for your account
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`file_type` | The file type requested | 1.0 |
-`hit` | The number of times a file of this type has been requested | 1.0 |
+`file_type` | The file type requested |
+`hit` | The number of times a file of this type has been requested |
 
 ### Code Samples
 
@@ -6144,18 +6144,18 @@ Gets file type statistics for a specific {zone_id}
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d e.g. 2012-01-01 | Start date | 1.0 |
-`date_to` | now() | Y-m-d e.g. 2012-01-01 | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d e.g. 2012-01-01 | Start date |
+`date_to` | now() | Y-m-d e.g. 2012-01-01 | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`file_type` | The file type requested | 1.0 |
-`hit` | The number of times a file of this type has been requested | 1.0 |
+`file_type` | The file type requested |
+`hit` | The number of times a file of this type has been requested |
 
 ### Code Samples
 
@@ -6215,10 +6215,10 @@ Gets file type statistics for a specific {zone_type}
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`file_type` | The file type requested | 1.0 |
-`hit` | The number of times a file of this type has been requested | 1.0 |
+`file_type` | The file type requested |
+`hit` | The number of times a file of this type has been requested |
 
 ### Code Samples
 
@@ -6279,18 +6279,18 @@ Gets file type statistics for a specific {zone_type} and
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`file_type` | The file type requested | 1.0 |
-`hit` | The number of times a file of this type has been requested | 1.0 |
+`file_type` | The file type requested |
+`hit` | The number of times a file of this type has been requested |
 
 
 ### Code Samples
@@ -6355,24 +6355,24 @@ ranges
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`le_10k_hits` | The number of requests for files &lt;= 10KB | 1.0 |
-`le_50k_hits` | The number of requests for files &lt;= 50KB | 1.0 |
-`le_100k_hits` | The number of requests for files &lt;= 100KB | 1.0 |
-`le_500k_hits` | The number of requests for files &lt;= 500KB | 1.0 |
-`le_1m_hits` | The number of requests for files &lt;= 1MB | 1.0 |
-`le_10m_hits` | The number of requests for files &lt;= 10MB | 1.0 |
-`le_100m_hits` | The number of requests for files &lt;= 100MB | 1.0 |
-`gt_100m_hits` | The number of requests for files &gt; 100MB | 1.0 |
+`le_10k_hits` | The number of requests for files &lt;= 10KB |
+`le_50k_hits` | The number of requests for files &lt;= 50KB |
+`le_100k_hits` | The number of requests for files &lt;= 100KB |
+`le_500k_hits` | The number of requests for files &lt;= 500KB |
+`le_1m_hits` | The number of requests for files &lt;= 1MB |
+`le_10m_hits` | The number of requests for files &lt;= 10MB |
+`le_100m_hits` | The number of requests for files &lt;= 100MB |
+`gt_100m_hits` | The number of requests for files &gt; 100MB |
 
 ### Code Samples
 
@@ -6433,24 +6433,24 @@ file size ranges
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d e.g. 2012-01-01 | Start date | 1.0 |
-`date_to` | now() | Y-m-d e.g. 2012-01-01 | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d e.g. 2012-01-01 | Start date |
+`date_to` | now() | Y-m-d e.g. 2012-01-01 | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`le_10k_hits` | The number of requests for files &lt;= 10KB | 1.0 |
-`le_50k_hits` | The number of requests for files &lt;= 50KB | 1.0 |
-`le_100k_hits` | The number of requests for files &lt;= 100KB | 1.0 |
-`le_500k_hits` | The number of requests for files &lt;= 500KB | 1.0 |
-`le_1m_hits` | The number of requests for files &lt;= 1MB | 1.0 |
-`le_10m_hits` | The number of requests for files &lt;= 10MB | 1.0 |
-`le_100m_hits` | The number of requests for files &lt;= 100MB | 1.0 |
-`gt_100m_hits` | The number of requests for files &gt; 100MB | 1.0 |
+`le_10k_hits` | The number of requests for files &lt;= 10KB |
+`le_50k_hits` | The number of requests for files &lt;= 50KB |
+`le_100k_hits` | The number of requests for files &lt;= 100KB |
+`le_500k_hits` | The number of requests for files &lt;= 500KB |
+`le_1m_hits` | The number of requests for files &lt;= 1MB |
+`le_10m_hits` | The number of requests for files &lt;= 10MB |
+`le_100m_hits` | The number of requests for files &lt;= 100MB |
+`gt_100m_hits` | The number of requests for files &gt; 100MB |
 
 ### Code Samples
 
@@ -6511,24 +6511,24 @@ file size ranges
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d e.g. 2012-01-01 | Start date | 1.0 |
-`date_to` | now() | Y-m-d e.g. 2012-01-01 | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d e.g. 2012-01-01 | Start date |
+`date_to` | now() | Y-m-d e.g. 2012-01-01 | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`le_10k_hits` | The number of requests for files &lt;= 10KB | 1.0 |
-`le_50k_hits` | The number of requests for files &lt;= 50KB | 1.0 |
-`le_100k_hits` | The number of requests for files &lt;= 100KB | 1.0 |
-`le_500k_hits` | The number of requests for files &lt;= 500KB | 1.0 |
-`le_1m_hits` | The number of requests for files &lt;= 1MB | 1.0 |
-`le_10m_hits` | The number of requests for files &lt;= 10MB | 1.0 |
-`le_100m_hits` | The number of requests for files &lt;= 100MB | 1.0 |
-`gt_100m_hits` | The number of requests for files &gt; 100MB | 1.0 |
+`le_10k_hits` | The number of requests for files &lt;= 10KB |
+`le_50k_hits` | The number of requests for files &lt;= 50KB |
+`le_100k_hits` | The number of requests for files &lt;= 100KB |
+`le_500k_hits` | The number of requests for files &lt;= 500KB |
+`le_1m_hits` | The number of requests for files &lt;= 1MB |
+`le_10m_hits` | The number of requests for files &lt;= 10MB |
+`le_100m_hits` | The number of requests for files &lt;= 100MB |
+`gt_100m_hits` | The number of requests for files &gt; 100MB |
 
 ### Code Samples
 
@@ -6589,24 +6589,24 @@ Gets request statistics for the specified {zone_type} and
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`le_10k_hits` | The number of requests for files &lt;= 10KB | 1.0 |
-`le_50k_hits` | The number of requests for files &lt;= 50KB | 1.0 |
-`le_100k_hits` | The number of requests for files &lt;= 100KB | 1.0 |
-`le_500k_hits` | The number of requests for files &lt;= 500KB | 1.0 |
-`le_1m_hits` | The number of requests for files &lt;= 1MB | 1.0 |
-`le_10m_hits` | The number of requests for files &lt;= 10MB | 1.0 |
-`le_100m_hits` | The number of requests for files &lt;= 100MB | 1.0 |
-`gt_100m_hits` | The number of requests for files &gt; 100MB | 1.0 |
+`le_10k_hits` | The number of requests for files &lt;= 10KB |
+`le_50k_hits` | The number of requests for files &lt;= 50KB |
+`le_100k_hits` | The number of requests for files &lt;= 100KB |
+`le_500k_hits` | The number of requests for files &lt;= 500KB |
+`le_1m_hits` | The number of requests for files &lt;= 1MB |
+`le_10m_hits` | The number of requests for files &lt;= 10MB |
+`le_100m_hits` | The number of requests for files &lt;= 100MB |
+`gt_100m_hits` | The number of requests for files &gt; 100MB |
 
 
 ### Code Samples
@@ -6671,20 +6671,20 @@ report has to be enabled by Sales).
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`bucket_id` | The Zone ID for the top level directory | 1.0 |
-`dir` | The name of the directory | 1.0 |
-`hit` | The number of requests made to files within this directory | 1.0 |
-`size` | The amount of bytes transferred from within this directory | 1.0 |
+`bucket_id` | The Zone ID for the top level directory |
+`dir` | The name of the directory |
+`hit` | The number of requests made to files within this directory |
+`size` | The amount of bytes transferred from within this directory |
 
 ### Code Samples
 
@@ -6745,20 +6745,20 @@ Gets usage statistics by directory for the specified {zone_id}.
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`bucket_id` | The Zone ID for the top level directory | 1.0 |
-`dir` | The name of the directory | 1.0 |
-`hit` | The number of requests made to files within this directory | 1.0 |
-`size` | The amount of bytes transferred from within this directory | 1.0 |
+`bucket_id` | The Zone ID for the top level directory |
+`dir` | The name of the directory |
+`hit` | The number of requests made to files within this directory |
+`size` | The amount of bytes transferred from within this directory |
 
 
 ### Code Samples
@@ -6822,33 +6822,33 @@ Gets usage statistics by file name for your account
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
-`file_names` | A JSON Encoded file names list | 1.0 |
-`filter` | Matching expression for file names | 1.0 |
-`sort_by` | Field to sort by | 1.0 |
-`sort_dir` | Directory to sort files by | 1.0 |
-`page_size` | - | The number of records returned in the result set | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
+`file_names` | A JSON Encoded file names list |
+`filter` | Matching expression for file names |
+`sort_by` | Field to sort by |
+`sort_dir` | Directory to sort files by |
+`page_size` | - | The number of records returned in the result set |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`bucket_id` | The Zone ID for the top level directory | 1.0 |
-`hit` | The number of requests made to files within this directory | 1.0 |
-`size` | The amount of bytes transferred from within this directory | 1.0 |
-`200` | The amount of 200 hits | 1.0 |
-`206` | The amount of 206 hits | 1.0 |
-`2xx` | The amount of 2xx hits | 1.0 |
-`3xx` | The amount of 3xx hits | 1.0 |
-`404` | The amount of 404 hits | 1.0 |
-`4xx` | The amount of 4xx hits | 1.0 |
-`5xx` | The amount of 206 hits | 1.0 |
-`5xx` | The amount of 206 hits | 1.0 |
-`timestampf` | Timestamp | 1.0 |
+`bucket_id` | The Zone ID for the top level directory |
+`hit` | The number of requests made to files within this directory |
+`size` | The amount of bytes transferred from within this directory |
+`200` | The amount of 200 hits |
+`206` | The amount of 206 hits |
+`2xx` | The amount of 2xx hits |
+`3xx` | The amount of 3xx hits |
+`404` | The amount of 404 hits |
+`4xx` | The amount of 4xx hits |
+`5xx` | The amount of 206 hits |
+`5xx` | The amount of 206 hits |
+`timestampf` | Timestamp |
 
 ### Code Samples
 
@@ -6909,33 +6909,33 @@ Gets usage statistics by file name for the specified
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
-`file_names` | A JSON Encoded file names list | 1.0 |
-`filter` | Matching expression for file names | 1.0 |
-`sort_by` | Field to sort by | 1.0 |
-`sort_dir` | Directory to sort files by | 1.0 |
-`page_size` | - | The number of records returned in the result set | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
+`file_names` | A JSON Encoded file names list |
+`filter` | Matching expression for file names |
+`sort_by` | Field to sort by |
+`sort_dir` | Directory to sort files by |
+`page_size` | - | The number of records returned in the result set |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`bucket_id` | The Zone ID for the top level directory | 1.0 |
-`hit` | The number of requests made to files within this directory | 1.0 |
-`size` | The amount of bytes transferred from within this directory | 1.0 |
-`200` | The amount of 200 hits | 1.0 |
-`206` | The amount of 206 hits | 1.0 |
-`2xx` | The amount of 2xx hits | 1.0 |
-`3xx` | The amount of 3xx hits | 1.0 |
-`404` | The amount of 404 hits | 1.0 |
-`4xx` | The amount of 4xx hits | 1.0 |
-`5xx` | The amount of 206 hits | 1.0 |
-`5xx` | The amount of 206 hits | 1.0 |
-`timestampf` | Timestamp | 1.0 |
+`bucket_id` | The Zone ID for the top level directory |
+`hit` | The number of requests made to files within this directory |
+`size` | The amount of bytes transferred from within this directory |
+`200` | The amount of 200 hits |
+`206` | The amount of 206 hits |
+`2xx` | The amount of 2xx hits |
+`3xx` | The amount of 3xx hits |
+`404` | The amount of 404 hits |
+`4xx` | The amount of 4xx hits |
+`5xx` | The amount of 206 hits |
+`5xx` | The amount of 206 hits |
+`timestampf` | Timestamp |
 
 
 ### Code Samples
@@ -7000,20 +7000,20 @@ report has to be enabled by Sales).
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`bucket_id` | The Zone ID for the custom domain | 1.0 |
-`custom_domain_id` | The ID of your custom domain | 1.0 |
-`hit` | The number of requests made to this custom domain | 1.0 |
-`size` | The amount of bytes transferred to/from this custom domain | 1.0 |
+`bucket_id` | The Zone ID for the custom domain |
+`custom_domain_id` | The ID of your custom domain |
+`hit` | The number of requests made to this custom domain |
+`size` | The amount of bytes transferred to/from this custom domain |
 
 ### Code Samples
 
@@ -7074,20 +7074,20 @@ Gets usage statistics by custom domain for the specified
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date | 1.0 |
-`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date | 1.0 |
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
 
 
 ### Response Parameters
 
-Parameter | Description | Since |
+Parameter | Description |
 --- | --- | ---
-`bucket_id` | The Zone ID for the top level directory | 1.0 |
-`custom_domain_id` | The ID of the Custom Domain | 1.0 |
-`hit` | The number of requests made to this custom domain | 1.0 |
-`size` | The amount of bytes transferred to/from this custom domain | 1.0 |
+`bucket_id` | The Zone ID for the top level directory |
+`custom_domain_id` | The ID of the Custom Domain |
+`hit` | The number of requests made to this custom domain |
+`size` | The amount of bytes transferred to/from this custom domain |
 
 
 
@@ -7152,10 +7152,10 @@ Gets zone stats in hourly, daily, or monthly summaries
 
 ### Accepted Request Parameters
 
-Parameter | Default Value | Validation | Description | Since |
+Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`date_from` | - | Y-m-d e.g. 2012-01-01 | Start date | 1.0 |
-`date_to` | - | Y-m-d e.g. 2012-01-01 | End date | 1.0 |
+`date_from` | - | Y-m-d e.g. 2012-01-01 | Start date |
+`date_to` | - | Y-m-d e.g. 2012-01-01 | End date |
 
 ### Code Samples
 
