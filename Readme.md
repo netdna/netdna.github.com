@@ -254,11 +254,23 @@ $api->get('/account.json/address')</pre>
   </div>
   <div class="tab-pane" id="response3">
 		<pre>
-{"code":200,"data":
-	{"address":
-		{"id":"#####","street1":"123 Main Street","street2":"apt 42","city":"los angeles","state":"CA","zip":"90068","country":"US","date_created":"0000-00-00 00:00:00","date_updated":"2013-05-15 19:54:40"}
-	}
-}</pre>
+{
+    "code": 200,
+    "data": {
+        "address": {
+            "city": "los angeles",
+            "country": "US",
+            "date_created": "0000-00-00 00:00:00",
+            "date_updated": "2013-05-15 19:54:40",
+            "id": "#####",
+            "state": "CA",
+            "street1": "123 Main Street",
+            "street2": "apt 42",
+            "zip": "90068"
+        }
+    }
+}
+</pre>
   </div>
 </div>
  
@@ -4600,7 +4612,7 @@ Parameter | Description | Since |
   	<pre>
 $type = 'pull';
 $id = '96061';
-$params = array("upsream_id"=>"93013","server_url"=>"http://somedomain.net","port"=>"80");
+$params = array("upstream_id"=>"93013","server_url"=>"http://somedomain.net","port"=>"80");
 $api->put('/zones/'.$type.'/'.$id.'/upstream.json');</pre>
   </div>
   <div class="tab-pane" id="node67">
@@ -4730,8 +4742,8 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php69">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$api->get('/reports/stats.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node69">
 		<pre>
@@ -4740,8 +4752,18 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response69">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "stats": {
+            "cache_hit": "0",
+            "hit": "20",
+            "noncache_hit": "20",
+            "size": "0"
+        },
+        "total": "1"
+    }
+}</pre>
   </div>
 </div>
  
@@ -4808,8 +4830,9 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php70">
   	<pre>
-
-  	</pre>
+$id = '96061';
+$reportType = '';
+$api->get('/reports/'.$id.'/stats.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node70">
 		<pre>
@@ -4818,8 +4841,24 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response70">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "stats": {
+            "cache_hit": null,
+            "hit": null,
+            "noncache_hit": null,
+            "size": null
+        },
+        "summary": {
+            "cache_hit": null,
+            "hit": null,
+            "noncache_hit": null,
+            "size": null
+        },
+        "total": "0"
+    }
+}</pre>
   </div>
 </div>
  
@@ -4874,8 +4913,7 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php71">
   	<pre>
-
-  	</pre>
+$api->get('/reports/nodes.json');</pre>
   </div>
   <div class="tab-pane" id="node71">
 		<pre>
@@ -4884,8 +4922,73 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response71">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "nodes": [
+            {
+                "description": "Los Angeles",
+                "id": "1",
+                "name": "lax"
+            },
+            {
+                "description": "New York",
+                "id": "3",
+                "name": "jfk"
+            },
+            {
+                "description": "Seattle",
+                "id": "2",
+                "name": "sea"
+            },
+            {
+                "description": "Atlanta",
+                "id": "4",
+                "name": "atl"
+            },
+            {
+                "description": "Amsterdam",
+                "id": "5",
+                "name": "ams"
+            },
+            {
+                "description": "Dallas",
+                "id": "6",
+                "name": "dal"
+            },
+            {
+                "description": "Chicago",
+                "id": "8",
+                "name": "chi"
+            },
+            {
+                "description": "Virginia",
+                "id": "9",
+                "name": "vir"
+            },
+            {
+                "description": "Miami",
+                "id": "7",
+                "name": "mia"
+            },
+            {
+                "description": "London",
+                "id": "12",
+                "name": "lhr"
+            },
+            {
+                "description": "San Francisco",
+                "id": "13",
+                "name": "sfo"
+            },
+            {
+                "description": "Los Angeles 3",
+                "id": "30",
+                "name": "lax"
+            }
+        ]
+    }
+}</pre>
   </div>
 </div>
  
@@ -4939,8 +5042,8 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php72">
   	<pre>
-
-  	</pre>
+$id = '96061';
+$api->get('/reports/'.$id.'/nodes.json');</pre>
   </div>
   <div class="tab-pane" id="node72">
 		<pre>
@@ -4949,8 +5052,63 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response72">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "nodes": [
+            {
+                "description": "Dallas",
+                "id": "6",
+                "name": "dal"
+            },
+            {
+                "description": "Los Angeles",
+                "id": "1",
+                "name": "lax"
+            },
+            {
+                "description": "Seattle",
+                "id": "2",
+                "name": "sea"
+            },
+            {
+                "description": "New York",
+                "id": "3",
+                "name": "jfk"
+            },
+            {
+                "description": "Atlanta",
+                "id": "4",
+                "name": "atl"
+            },
+            {
+                "description": "Amsterdam",
+                "id": "5",
+                "name": "ams"
+            },
+            {
+                "description": "Chicago",
+                "id": "8",
+                "name": "chi"
+            },
+            {
+                "description": "Virginia",
+                "id": "9",
+                "name": "vir"
+            },
+            {
+                "description": "London",
+                "id": "12",
+                "name": "lhr"
+            },
+            {
+                "description": "San Francisco",
+                "id": "13",
+                "name": "sfo"
+            }
+        ]
+    }
+}</pre>
   </div>
 </div>
  
@@ -5018,8 +5176,8 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php73">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$api->get('/reports/nodes.json/stats'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node73">
 		<pre>
@@ -5028,8 +5186,110 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response73">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "stats": [
+            {
+                "cache_hit": "0",
+                "hit": "2",
+                "noncache_hit": "2",
+                "pop_description": "Los Angeles",
+                "pop_id": "1",
+                "pop_name": "lax",
+                "size": "0"
+            },
+            {
+                "cache_hit": "0",
+                "hit": "2",
+                "noncache_hit": "2",
+                "pop_description": "Atlanta",
+                "pop_id": "4",
+                "pop_name": "atl",
+                "size": "0"
+            },
+            {
+                "cache_hit": "0",
+                "hit": "2",
+                "noncache_hit": "2",
+                "pop_description": "Chicago",
+                "pop_id": "8",
+                "pop_name": "chi",
+                "size": "0"
+            },
+            {
+                "cache_hit": "0",
+                "hit": "2",
+                "noncache_hit": "2",
+                "pop_description": "San Francisco",
+                "pop_id": "13",
+                "pop_name": "sfo",
+                "size": "0"
+            },
+            {
+                "cache_hit": "0",
+                "hit": "2",
+                "noncache_hit": "2",
+                "pop_description": "Seattle",
+                "pop_id": "2",
+                "pop_name": "sea",
+                "size": "0"
+            },
+            {
+                "cache_hit": "0",
+                "hit": "2",
+                "noncache_hit": "2",
+                "pop_description": "Amsterdam",
+                "pop_id": "5",
+                "pop_name": "ams",
+                "size": "0"
+            },
+            {
+                "cache_hit": "0",
+                "hit": "2",
+                "noncache_hit": "2",
+                "pop_description": "Virginia",
+                "pop_id": "9",
+                "pop_name": "vir",
+                "size": "0"
+            },
+            {
+                "cache_hit": "0",
+                "hit": "2",
+                "noncache_hit": "2",
+                "pop_description": "New York",
+                "pop_id": "3",
+                "pop_name": "jfk",
+                "size": "0"
+            },
+            {
+                "cache_hit": "0",
+                "hit": "2",
+                "noncache_hit": "2",
+                "pop_description": "Dallas",
+                "pop_id": "6",
+                "pop_name": "dal",
+                "size": "0"
+            },
+            {
+                "cache_hit": "0",
+                "hit": "2",
+                "noncache_hit": "2",
+                "pop_description": "London",
+                "pop_id": "12",
+                "pop_name": "lhr",
+                "size": "0"
+            }
+        ],
+        "summary": {
+            "cache_hit": "0",
+            "hit": "20",
+            "noncache_hit": "20",
+            "size": "0"
+        },
+        "total": "1"
+    }
+}</pre>
   </div>
 </div>
  
@@ -5097,8 +5357,9 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php74">
   	<pre>
-
-  	</pre>
+$id = '96061';
+$reportType = '';
+$api->get('/reports/'.$id.'/nodes.json/stats'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node74">
 		<pre>
@@ -5107,8 +5368,19 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response74">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "stats": [],
+        "summary": {
+            "cache_hit": null,
+            "hit": null,
+            "noncache_hit": null,
+            "size": null
+        },
+        "total": null
+    }
+}</pre>
   </div>
 </div>
  
@@ -5161,8 +5433,8 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php75">
   	<pre>
-
-  	</pre>
+$id = '1';
+$api->get('/reports/nodes.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node75">
 		<pre>
@@ -5171,8 +5443,17 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response75">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "node": {
+            "description": "Los Angeles",
+            "id": "1",
+            "name": "lax"
+        }
+    }
+}
+</pre>
   </div>
 </div>
  
@@ -5226,8 +5507,9 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php76">
   	<pre>
-
-  	</pre>
+$zoneId = '96061';
+$nodeId = '1';
+$api->get('/reports/'.$zoneId.'/nodes.json/'.$nodeId);</pre>
   </div>
   <div class="tab-pane" id="node76">
 		<pre>
@@ -5236,8 +5518,19 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response76">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "stats": [],
+        "summary": {
+            "cache_hit": null,
+            "hit": null,
+            "noncache_hit": null,
+            "size": null
+        },
+        "total": null
+    }
+}</pre>
   </div>
 </div>
  
@@ -5302,8 +5595,9 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php77">
   	<pre>
-
-  	</pre>
+$id = '1';
+$reportType = '';
+$api->get('/reports/nodes.json/'.$id.'/stats'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node77">
 		<pre>
@@ -5312,8 +5606,20 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response77">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "stats": [
+            {
+                "cache_hit": "0",
+                "hit": "2",
+                "noncache_hit": "2",
+                "size": "0"
+            }
+        ],
+        "total": "1"
+    }
+}</pre>
   </div>
 </div>
  
@@ -5380,8 +5686,10 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php78">
   	<pre>
-
-  	</pre>
+$zoneId='96061';
+$nodeId='1';
+$reportType = '';
+$api->get('/reports/'.$zoneId.'/nodes.json/'.$nodeId.'/stats'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node78">
 		<pre>
@@ -5390,8 +5698,20 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response78">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "stats": [
+            {
+                "cache_hit": null,
+                "hit": null,
+                "noncache_hit": null,
+                "size": null
+            }
+        ],
+        "total": "0"
+    }
+}</pre>
   </div>
 </div>
  
@@ -5459,8 +5779,7 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php79">
   	<pre>
-
-  	</pre>
+$api->get('/reports/popularfiles.json');</pre>
   </div>
   <div class="tab-pane" id="node79">
 		<pre>
@@ -5469,8 +5788,21 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response79">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 0,
+        "page": 1,
+        "page_size": "50",
+        "pages": 0,
+        "popularfiles": [],
+        "summary": {
+            "hit": null,
+            "size": null
+        },
+        "total": "0"
+    }
+}</pre>
   </div>
 </div>
  
@@ -5483,7 +5815,7 @@ Parameter | Description | Since |
 ---
 
 
-## List Popular Files
+## List Popular Files By Zone Type
 
 Gets the most popularly requested files for your account,
 filtered by {zone_type} and grouped into daily statistics
@@ -5537,8 +5869,8 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php80">
   	<pre>
-
-  	</pre>
+$type='pull';
+$api->get('/reports/'.$type.'/popularfiles.json');</pre>
   </div>
   <div class="tab-pane" id="node80">
 		<pre>
@@ -5547,8 +5879,21 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response80">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 0,
+        "page": 1,
+        "page_size": "50",
+        "pages": 0,
+        "popularfiles": [],
+        "summary": {
+            "hit": null,
+            "size": null
+        },
+        "total": "0"
+    }
+}</pre>
   </div>
 </div>
  
@@ -5611,8 +5956,8 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php81">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$api->get('/reports/statuscodes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node81">
 		<pre>
@@ -5621,8 +5966,22 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response81">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "statuscodes": [
+            {
+                "definition": "Not Found",
+                "hit": "20",
+                "status_code": "404"
+            }
+        ],
+        "summary": {
+            "hit": "20"
+        },
+        "total": "1"
+    }
+}</pre>
   </div>
 </div>
  
@@ -5684,8 +6043,9 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php82">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$id = '96061';
+$api->get('/reports/'.$id.'/statuscodes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node82">
 		<pre>
@@ -5694,8 +6054,16 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response82">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "statuscodes": [],
+        "summary": {
+            "hit": null
+        },
+        "total": "0"
+    }
+}</pre>
   </div>
 </div>
  
@@ -5757,8 +6125,9 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php83">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$zoneType = 'pull';
+$api->get('/reports/'.$zoneType.'/statuscodes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node83">
 		<pre>
@@ -5767,8 +6136,22 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response83">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "statuscodes": [
+            {
+                "definition": "Not Found",
+                "hit": "20",
+                "status_code": "404"
+            }
+        ],
+        "summary": {
+            "hit": "20"
+        },
+        "total": "1"
+    }
+}</pre>
   </div>
 </div>
  
@@ -5832,8 +6215,10 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php84">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$zoneType = 'pull';
+$id = '96061';
+$api->get('/reports/'.$zoneType.'/'.$id.'/statuscodes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node84">
 		<pre>
@@ -5842,8 +6227,16 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response84">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "statuscodes": [],
+        "summary": {
+            "hit": null
+        },
+        "total": "0"
+    }
+}</pre>
   </div>
 </div>
  
@@ -5905,8 +6298,8 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php85">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$api->get('/reports/filetypes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node85">
 		<pre>
@@ -5915,8 +6308,25 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response85">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 1,
+        "filetypes": [
+            {
+                "file_type": "txt",
+                "hit": "20"
+            }
+        ],
+        "page": 1,
+        "page_size": "50",
+        "pages": 1,
+        "summary": {
+            "hit": "20"
+        },
+        "total": "1"
+    }
+}</pre>
   </div>
 </div>
  
@@ -5976,8 +6386,9 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php86">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$id = '96061';
+$api->get('/reports/'.$id.'/filetypes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node86">
 		<pre>
@@ -5986,8 +6397,20 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response86">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 0,
+        "filetypes": [],
+        "page": 1,
+        "page_size": "50",
+        "pages": 0,
+        "summary": {
+            "hit": null
+        },
+        "total": "0"
+    }
+}</pre>
   </div>
 </div>
  
@@ -6039,8 +6462,9 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php87">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$zoneType = 'pull';
+$api->get('/reports/'.$zoneType.'/filetypes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node87">
 		<pre>
@@ -6049,8 +6473,25 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response87">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 1,
+        "filetypes": [
+            {
+                "file_type": "txt",
+                "hit": "20"
+            }
+        ],
+        "page": 1,
+        "page_size": "50",
+        "pages": 1,
+        "summary": {
+            "hit": "20"
+        },
+        "total": "1"
+    }
+}</pre>
   </div>
 </div>
  
@@ -6112,8 +6553,10 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php88">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$zoneType = 'pull';
+$id = '96061';
+$api->get('/reports/'.$zoneType.'/'.$id.'/filetypes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node88">
 		<pre>
@@ -6122,8 +6565,20 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response88">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 0,
+        "filetypes": [],
+        "page": 1,
+        "page_size": "50",
+        "pages": 0,
+        "summary": {
+            "hit": null
+        },
+        "total": "0"
+    }
+}</pre>
   </div>
 </div>
  
@@ -6193,8 +6648,8 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php89">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$api->get('/reports/filesizes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node89">
 		<pre>
@@ -6203,8 +6658,26 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response89">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "filesizes": [
+            {
+                "gt_100m_hit": "0",
+                "le_100k_hit": "0",
+                "le_100m_hit": "0",
+                "le_10k_hit": "20",
+                "le_10m_hit": "0",
+                "le_1m_hit": "0",
+                "le_500k_hit": "0",
+                "le_50k_hit": "0"
+            }
+        ],
+        "summary": {
+            "hit": "20"
+        }
+    }
+}</pre>
   </div>
 </div>
  
@@ -6271,8 +6744,9 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php90">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$id = '96061';
+$api->get('/reports/'.$id.'/filesizes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node90">
 		<pre>
@@ -6281,8 +6755,26 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response90">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "filesizes": [
+            {
+                "gt_100m_hit": null,
+                "le_100k_hit": null,
+                "le_100m_hit": null,
+                "le_10k_hit": null,
+                "le_10m_hit": null,
+                "le_1m_hit": null,
+                "le_500k_hit": null,
+                "le_50k_hit": null
+            }
+        ],
+        "summary": {
+            "hit": null
+        }
+    }
+}</pre>
   </div>
 </div>
  
@@ -6349,8 +6841,9 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php91">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$zoneType = 'pull';
+$api->get('/reports/'.$zoneType.'/filesizes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node91">
 		<pre>
@@ -6359,8 +6852,26 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response91">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "filesizes": [
+            {
+                "gt_100m_hit": "0",
+                "le_100k_hit": "0",
+                "le_100m_hit": "0",
+                "le_10k_hit": "20",
+                "le_10m_hit": "0",
+                "le_1m_hit": "0",
+                "le_500k_hit": "0",
+                "le_50k_hit": "0"
+            }
+        ],
+        "summary": {
+            "hit": "20"
+        }
+    }
+}</pre>
   </div>
 </div>
  
@@ -6428,8 +6939,10 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php92">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$zoneType = 'pull';
+$id = '96061';
+$api->get('/reports/'.$zoneType.'/'.$id.'/filesizes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node92">
 		<pre>
@@ -6438,8 +6951,26 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response92">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "filesizes": [
+            {
+                "gt_100m_hit": null,
+                "le_100k_hit": null,
+                "le_100m_hit": null,
+                "le_10k_hit": null,
+                "le_10m_hit": null,
+                "le_1m_hit": null,
+                "le_500k_hit": null,
+                "le_50k_hit": null
+            }
+        ],
+        "summary": {
+            "hit": null
+        }
+    }
+}</pre>
   </div>
 </div>
  
@@ -6505,8 +7036,8 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php93">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$api->get('/reports/statsbydir.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node93">
 		<pre>
@@ -6515,8 +7046,21 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response93">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 0,
+        "page": 1,
+        "page_size": "50",
+        "pages": 0,
+        "statsbydir": [],
+        "summary": {
+            "hit": null,
+            "size": null
+        },
+        "total": "0"
+    }
+}</pre>
   </div>
 </div>
  
@@ -6580,18 +7124,32 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php94">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$id = '96061';
+$api->get('/reports/'.$id.'/statsbydir.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node94">
 		<pre>
 
 		</pre>
   </div>
-  <div class="tab-pane" id="response">
+  <div class="tab-pane" id="response94">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 0,
+        "page": 1,
+        "page_size": "50",
+        "pages": 0,
+        "statsbydir": [],
+        "summary": {
+            "hit": null,
+            "size": null
+        },
+        "total": "0"
+    }
+}</pre>
   </div>
 </div>
  
@@ -6669,8 +7227,9 @@ Parameter | Description | Since |
 	</div>
   <div class="tab-pane" id="php95">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$clientId = '';
+$api->get('/clients/'.$clientId.'/reports/statsbyfilename.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node95">
 		<pre>
@@ -6679,8 +7238,7 @@ Parameter | Description | Since |
   </div>
   <div class="tab-pane" id="response95">
 		<pre>
-		
-		</pre>
+</pre>
   </div>
 </div>
  
@@ -6976,8 +7534,8 @@ Parameter | Default Value | Validation | Description | Since |
 	</div>
   <div class="tab-pane" id="php99">
   	<pre>
-
-  	</pre>
+$reportType = '';
+$api->get('/reports/live/connectionstats.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node99">
 		<pre>
@@ -6986,8 +7544,17 @@ Parameter | Default Value | Validation | Description | Since |
   </div>
   <div class="tab-pane" id="response99">
 		<pre>
-		
-		</pre>
+{
+    "code": 200,
+    "data": {
+        "current_page_size": 0,
+        "page": 1,
+        "page_size": "50",
+        "pages": 0,
+        "stats": [],
+        "total": "0"
+    }
+}</pre>
   </div>
 </div>
  
