@@ -88,18 +88,26 @@ $('a').click(function(ev) {
   ev.preventDefault();
 
   var target = this.hash;
+	
+	console.log(target.toString());
 
-  if (this.href !== '#') {
-    $('html, body').animate({
-      scrollTop: $(target).offset().top - 80
-    }, 1000);
-  }
+	if (target.toString().indexOf('#ruby') ==-1 &&
+			target.toString().indexOf('#python') ==-1 &&
+			target.toString().indexOf('#php') ==-1 &&
+			target.toString().indexOf('#node') ==-1 &&
+			target.toString().indexOf('#response') ==-1 ){
+		if (this.href !== '#') {
+			$('html, body').animate({
+				scrollTop: $(target).offset().top - 80
+			}, 1000);
+		}
 
-  if ($(document).width()< 768 && this.href !== '#') {
-    $('html, body').animate({
-      scrollTop: $(target).offset().top - 0
-    }, 1000);
-  }
+		if ($(document).width()< 768 && this.href !== '#') {
+			$('html, body').animate({
+				scrollTop: $(target).offset().top - 0
+			}, 1000);
+		}
+	}
 
 });
 
