@@ -84,12 +84,14 @@ $(function() {
 
 // hash function
 $('a').click(function(ev) {
-
-  ev.preventDefault();
+	
+  if (this.toString().indexOf("github.com") == -1){
+		ev.preventDefault();
+	} else {
+		$(this).attr('target','_blank');
+	}
 
   var target = this.hash;
-	
-	console.log(target.toString());
 
 	if (target.toString().indexOf('#ruby') ==-1 &&
 			target.toString().indexOf('#python') ==-1 &&
