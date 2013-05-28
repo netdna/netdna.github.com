@@ -16,7 +16,7 @@ html(lang='en')
     //- TODO: add apple touch icons as per HTML5 boilerplate github index.html file
     //- <https://github.com/h5bp/html5-boilerplate>
     link(rel="stylesheet", href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css")
-    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css")
+    link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css")
     link(rel="stylesheet", href="/css/prettify.css")
     link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Cuprum:400,700")
     link(rel="stylesheet", href="/css/docs.css")
@@ -36,12 +36,12 @@ html(lang='en')
                   li.active: a(href='#overview') Overview
                   li: a.gotohash(href="#support") Support
                   li: a.gotohash(href="#changelog") Changelog
-                  li: a.gotohash(href="#account-api") <i class="icon-suitcase"></i> Account API
-                  li: a.gotohash(href="#users-api") <i class="icon-user"></i> Users API
-                  li: a.gotohash(href="#zones-api") <i class="icon-cloud"></i> Zones API
-                  li: a.gotohash(href="#reports-by-zone-api") <i class="icon-file-alt"></i> Reports API
-                  li: a.gotohash(href="#reports-by-file-name-api") <i class="icon-group"></i> Clients API
-                  li: a(href='https://github.com/netdna/netdna.github.com') <i class="icon-github"></i> Github Repo
+                  li: a.gotohash(href="#account-api") <span id="iconSizer"><i class="icon-suitcase"></i></span> Account API
+                  li: a.gotohash(href="#users-api") <span id="iconSizer"><i class="icon-user"></i></span> Users API
+                  li: a.gotohash(href="#zones-api") <span id="iconSizer"><i class="icon-cloud"></i></span> Zones API
+                  li: a.gotohash(href="#reports-by-zone-api") <span id="iconSizer"><i class="icon-file-alt"></i></span> Reports API
+                  li: a.gotohash(href="#reports-by-file-name-api") <span id="iconSizer"><i class="icon-group"></i></span> Clients API
+                  li: a(href='https://github.com/netdna/netdna.github.com') <span id="iconSizer"><i class="icon-github"></i></span> Github Repo
         .span9#readme-docs
           - var content = marked(contents['Readme.md']._content)
           != content
