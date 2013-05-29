@@ -1463,7 +1463,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby14">
 		<pre>
-params = {"name"=>"newPullZone6","url"=>"http://bconklin.net"}
+params = {"name"=>"newPullZone6","url"=>"http://somedomain.com"}
 api.post('/zones/pull.json',params)</pre>
   </div>
   <div class="tab-pane" id="python14">
@@ -5343,7 +5343,7 @@ Get the SSL certificate for the specified {zone_type} and
 		<pre>
 id = '96061'
 type = 'pull'
-@api.get('/zones/'+type+'/'+id+'/ssl.json')</pre>
+api.get('/zones/'+type+'/'+id+'/ssl.json')</pre>
   </div>
   <div class="tab-pane" id="python61">
 		<pre>
@@ -5809,7 +5809,7 @@ Parameter | Description |
 		<pre>
 type = 'pull'
 id = '96061'
-params = {"upsream_id"=> "93013","server_url"=> "http=>//bconklin.net","port"=> "80"}
+params = {"upsream_id"=> "93013","server_url"=> "http=>//somedomain.com","port"=> "80"}
 api.put('/zones/'+type+'/'+id+'/upstream.json')</pre>
   </div>
   <div class="tab-pane" id="python67">
