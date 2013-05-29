@@ -7832,7 +7832,7 @@ netdna.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#3
         <pre>
 type = &#39;pull&#39;
 id = &#39;96061&#39;
-params = {&quot;server_url&quot;=&gt; &quot;http=&gt;//cdn.bconklin.com&quot;,&quot;server&quot;=&gt; &quot;http=&gt;//cdn.bconklin.com&quot;,&quot;port&quot;=&gt; &quot;80&quot;}
+params = {&quot;server_url&quot;=&gt; &quot;http=&gt;//cdn.somedomain.com&quot;,&quot;server&quot;=&gt; &quot;http=&gt;//cdn.somedomain.com&quot;,&quot;port&quot;=&gt; &quot;80&quot;}
 api.post(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/upstream.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python66">
@@ -8143,8 +8143,8 @@ the total usage for the zones.</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby69">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+api.get(&#39;/reports/stats.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python69">
         <pre>
@@ -8271,8 +8271,9 @@ the total usage for the zones.</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby70">
         <pre>
-
-        </pre>
+id = &#39;96061&#39;
+reportType = &#39;&#39;
+api.get(&#39;/reports/&#39;+id+&#39;/stats.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python70">
         <pre>
@@ -8370,8 +8371,7 @@ netdna.get(&#39;/reports/&#39; + id + &#39;/stats.json/&#39; + reportType, funct
 <div class="tab-content">
   <div class="tab-pane active" id="ruby71">
         <pre>
-
-        </pre>
+api.get(&#39;/reports/nodes.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python71">
         <pre>
@@ -8512,8 +8512,8 @@ netdna.get(&#39;/reports/nodes.json&#39;, function(err, response) {
 <div class="tab-content">
   <div class="tab-pane active" id="ruby72">
         <pre>
-
-        </pre>
+id = &#39;96061&#39;
+api.get(&#39;/reports/&#39;+id+&#39;/nodes.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python72">
         <pre>
@@ -8700,8 +8700,8 @@ the total usage broken up by node.</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby73">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+api.get(&#39;/reports/nodes.json/stats&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python73">
         <pre>
@@ -8935,8 +8935,9 @@ the request will return the total usage broken up by node.</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby74">
         <pre>
-
-        </pre>
+id = &#39;96061&#39;
+reportType = &#39;&#39;
+api.get(&#39;/reports/&#39;+id+&#39;/nodes.json/stats&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python74">
         <pre>
@@ -9028,8 +9029,8 @@ netdna.get(&#39;/reports/&#39; + id + &#39;/nodes.json/stats/&#39; + reportType,
 <div class="tab-content">
   <div class="tab-pane active" id="ruby75">
         <pre>
-
-        </pre>
+id = &#39;1&#39;
+api.get(&#39;/reports/nodes.json/&#39;+id)</pre>
   </div>
   <div class="tab-pane" id="python75">
         <pre>
@@ -9117,8 +9118,9 @@ netdna.get(&#39;/reports/nodes.json/&#39; + id, function(err, response) {
 <div class="tab-content">
   <div class="tab-pane active" id="ruby76">
         <pre>
-
-        </pre>
+zoneId = &#39;96061&#39;
+nodeId = &#39;1&#39;
+api.get(&#39;/reports/&#39;+zoneId+&#39;/nodes.json/&#39;+nodeId)</pre>
   </div>
   <div class="tab-pane" id="python76">
         <pre>
@@ -9249,8 +9251,9 @@ request will return the total usage for the node.</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby77">
         <pre>
-
-        </pre>
+id = &#39;1&#39;
+reportType = &#39;&#39;
+api.get(&#39;/reports/nodes.json/&#39;+id+&#39;/stats&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python77">
         <pre>
@@ -9382,8 +9385,10 @@ the request will return the total usage for the node.</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby78">
         <pre>
-
-        </pre>
+zoneId=&#39;96061&#39;
+nodeId=&#39;1&#39;
+reportType = &#39;&#39;
+api.get(&#39;/reports/&#39;+zoneId+&#39;/nodes.json/&#39;+nodeId+&#39;/stats&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python78">
         <pre>
@@ -9523,8 +9528,7 @@ grouped into daily statistics</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby79">
         <pre>
-
-        </pre>
+api.get(&#39;/reports/popularfiles.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python79">
         <pre>
@@ -9655,8 +9659,8 @@ filtered by {zone_type} and grouped into daily statistics</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby80">
         <pre>
-
-        </pre>
+type=&#39;pull&#39;
+api.get(&#39;/reports/&#39;+type+&#39;/popularfiles.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python80">
         <pre>
@@ -9775,8 +9779,8 @@ netdna.get(&#39;/reports/&#39; + type + &#39;/popularfiles.json&#39;, function(e
 <div class="tab-content">
   <div class="tab-pane active" id="ruby81">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+api.get(&#39;/reports/statuscodes.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python81">
         <pre>
@@ -9896,8 +9900,9 @@ netdna.get(&#39;/reports/statuscodes.json/&#39; + reportType, function(err, resp
 <div class="tab-content">
   <div class="tab-pane active" id="ruby82">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+id = &#39;96061&#39;
+api.get(&#39;/reports/&#39;+id+&#39;/statuscodes.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python82">
         <pre>
@@ -10014,8 +10019,9 @@ netdna.get(&#39;/reports/&#39; + id + &#39;/statuscodes.json/&#39; + reportType,
 <div class="tab-content">
   <div class="tab-pane active" id="ruby83">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+zoneType = &#39;pull&#39;
+api.get(&#39;/reports/&#39;+zoneType+&#39;/statuscodes.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python83">
         <pre>
@@ -10138,8 +10144,10 @@ netdna.get(&#39;/reports/&#39; + zoneType + &#39;/statuscodes.json/&#39; + repor
 <div class="tab-content">
   <div class="tab-pane active" id="ruby84">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+zoneType = &#39;pull&#39;
+id = &#39;96061&#39;
+api.get(&#39;/reports/&#39;+zoneType+&#39;/&#39;+id+&#39;/statuscodes.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python84">
         <pre>
@@ -10254,8 +10262,8 @@ netdna.get(&#39;/reports/&#39; + zoneType + &#39;/&#39; + id + &#39;/statuscodes
 <div class="tab-content">
   <div class="tab-pane active" id="ruby85">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+api.get(&#39;/reports/filetypes.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python85">
         <pre>
@@ -10372,8 +10380,9 @@ netdna.get(&#39;/reports/filetypes.json&#39;, function(err, response) {
 <div class="tab-content">
   <div class="tab-pane active" id="ruby86">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+id = &#39;96061&#39;
+api.get(&#39;/reports/&#39;+id+&#39;/filetypes.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python86">
         <pre>
@@ -10461,8 +10470,9 @@ netdna.get(&#39;/reports/&#39; + id + &#39;/filetypes.json/&#39; + reportType, f
 <div class="tab-content">
   <div class="tab-pane active" id="ruby87">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+zoneType = &#39;pull&#39;
+api.get(&#39;/reports/&#39;+zoneType+&#39;/filetypes.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python87">
         <pre>
@@ -10583,8 +10593,10 @@ netdna.get(&#39;/reports/&#39; + zoneType + &#39;/filetypes.json/&#39; + reportT
 <div class="tab-content">
   <div class="tab-pane active" id="ruby88">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+zoneType = &#39;pull&#39;
+id = &#39;96061&#39;
+api.get(&#39;/reports/&#39;+zoneType+&#39;/&#39;+id+&#39;/filetypes.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python88">
         <pre>
@@ -10734,8 +10746,10 @@ ranges</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby89">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+zoneType = &#39;pull&#39;
+id = &#39;96061&#39;
+api.get(&#39;/reports/&#39;+zoneType+&#39;/&#39;+id+&#39;/filetypes.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python89">
         <pre>
@@ -10884,8 +10898,9 @@ file size ranges</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby90">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+id = &#39;96061&#39;
+api.get(&#39;/reports/&#39;+id+&#39;/filesizes.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python90">
         <pre>
@@ -11037,8 +11052,9 @@ file size ranges</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby91">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+zoneType = &#39;pull&#39;
+api.get(&#39;/reports/&#39;+zoneType+&#39;/filesizes.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python91">
         <pre>
@@ -11190,8 +11206,10 @@ netdna.get(&#39;/reports/&#39; + zoneType + &#39;/filesizes.json/&#39; + reportT
 <div class="tab-content">
   <div class="tab-pane active" id="ruby92">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+zoneType = &#39;pull&#39;
+id = &#39;96061&#39;
+api.get(&#39;/reports/&#39;+zoneType+&#39;/&#39;+id+&#39;/filesizes.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python92">
         <pre>
@@ -11327,8 +11345,8 @@ report has to be enabled by Sales).</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby93">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+api.get(&#39;/reports/statsbydir.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python93">
         <pre>
@@ -11452,8 +11470,9 @@ netdna.get(&#39;/reports/statsbydir.json/&#39; + reportType, function(err, respo
 <div class="tab-content">
   <div class="tab-pane active" id="ruby94">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+id = &#39;96061&#39;
+api.get(&#39;/reports/&#39;+id+&#39;/statsbydir.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python94">
         <pre>
@@ -11646,13 +11665,14 @@ netdna.get(&#39;/reports/&#39; + id + &#39;/&#39; + &#39;/statsbydir.json/&#39; 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby95">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+clientId = &#39;&#39;
+api.get(&#39;/clients/&#39;+clientId+&#39;/reports/statsbyfilename.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python95">
         <pre>
 reportType = &#39;&#39;
-clientId = &#39;50&#39;<br>api.get(&#39;/clients/&#39;+clientId+&#39;/reports/statsbyfilename.json&#39;+reportType)</pre>
+clientId = &#39;&#39;<br>api.get(&#39;/clients/&#39;+clientId+&#39;/reports/statsbyfilename.json&#39;+reportType)</pre>
     </div>
   <div class="tab-pane" id="php95">
       <pre>
@@ -11873,14 +11893,16 @@ netdna.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbyfilename.json/&
 <div class="tab-content">
   <div class="tab-pane active" id="ruby96">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+id = &#39;&#39;
+clientId = &#39;&#39;
+api.get(&#39;/clients/&#39;+clientId+&#39;/reports/&#39;+id+&#39;/statsbyfilename.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python96">
         <pre>
 reportType = &#39;&#39;
-id = &#39;16888&#39;
-clientId = &#39;50&#39;
+id = &#39;&#39;
+clientId = &#39;&#39;
 api.get(&#39;/clients/&#39;+clientId+&#39;/reports/&#39;+id+&#39;/statsbyfilename.json&#39;+reportType)</pre>
     </div>
   <div class="tab-pane" id="php96">
@@ -11991,13 +12013,14 @@ report has to be enabled by Sales).</p>
 <div class="tab-content">
   <div class="tab-pane active" id="ruby97">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+clientId = &#39;&#39;
+api.get(&#39;/clients/&#39;+clientId+&#39;/reports/statsbycustomdomain.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python97">
         <pre>
 reportType = &#39;&#39;
-clientId = &#39;50&#39;
+clientId = &#39;&#39;
 api.get(&#39;/clients/&#39;+clientId+&#39;/reports/statsbycustomdomain.json&#39;+reportType)</pre>
     </div>
   <div class="tab-pane" id="php97">
@@ -12127,8 +12150,11 @@ netdna.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbycustomdomain.js
 <div class="tab-content">
   <div class="tab-pane active" id="ruby98">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+zoneId = &#39;&#39;
+clientId = &#39;&#39;
+api.get(&#39;/clients/&#39;+clientId+&#39;/reports/&#39;+zoneId+&#39;/statsbycustomdomain.json&#39;+reportType)
+</pre>
   </div>
   <div class="tab-pane" id="python98">
         <pre>
@@ -12227,8 +12253,8 @@ netdna.get(&#39;/clients/&#39; + clientId + &#39;/reports/&#39; + zoneId + &#39;
 <div class="tab-content">
   <div class="tab-pane active" id="ruby99">
         <pre>
-
-        </pre>
+reportType = &#39;&#39;
+api.get(&#39;/reports/live/connectionstats.json&#39;+reportType)</pre>
   </div>
   <div class="tab-pane" id="python99">
         <pre>
