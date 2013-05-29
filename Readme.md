@@ -22,7 +22,7 @@
 2. Create a [new application](https://cp.netdna.com/account/api/create).
 
 3. Integrate with our RESTful API using your language wrapper:
-  - Node (NPM) <https://github.com/niftylettuce/node-netdna>
+  - Node (NPM) <https://github.com/netdna/node-netdna>
   - .NET <https://github.com/netdna/netdnarws-net>
   - Ruby <https://github.com/netdna/netdnarws-ruby>
   - Python <https://github.com/netdna/netdnarws>
@@ -97,8 +97,7 @@ Parameter | Description |
 api.get("/account.json")</pre>
   </div>
   <div class="tab-pane" id="python1">
-		<pre>list:"devteam.netdna.com"
-api.get("/account.json")</pre>
+		<pre>api.get("/account.json")</pre>
 	</div>
   <div class="tab-pane" id="php1">
   	<pre>
@@ -106,12 +105,7 @@ $api->get('/account.json');</pre>
   </div>
   <div class="tab-pane" id="node1">
 	<pre>
-var netdna = require('netdna')({
-	companyAlias: 'alias'
-	, consumerKey: 'key'
-	, consumerSecret: 'secret'
-})
-netdna.get('/account.json', callback)
+api.get('/account.json', callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
@@ -200,7 +194,7 @@ api.put('/account.json',params)</pre>
   <div class="tab-pane" id="python2">
 		<pre>
 params={"name": "Monty"}
-	api.put('/account.json',params=params)</pre>
+api.put('/account.json',params=params)</pre>
 	</div>
   <div class="tab-pane" id="php2">
   	<pre>
@@ -208,12 +202,7 @@ $api->put('/account.json',array("name"=>"newName"));</pre>
   </div>
   <div class="tab-pane" id="node2">
 	<pre>
-var netdna = require('netdna')({
-	companyAlias: 'alias'
-	, consumerKey: 'key'
-	, consumerSecret: 'secret'
-})
-netdna.put('/account.json', { name: 'newName' }, callback)
+api.put('/account.json', { name: 'newName' }, callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
@@ -302,12 +291,7 @@ $api->get('/account.json/address')</pre>
   </div>
   <div class="tab-pane" id="node3">
 	<pre>
-var netdna = require('netdna')({
-	companyAlias: 'alias'
-	, consumerKey: 'key'
-	, consumerSecret: 'secret'
-})
-netdna.get('/account.json/address', callback)
+api.get('/account.json/address', callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
@@ -407,12 +391,7 @@ $api->put('/account.json/address',$params);</pre>
   </div>
   <div class="tab-pane" id="node4">
 	<pre>
-var netdna = require('netdna')({
-	companyAlias: 'alias'
-	, consumerKey: 'key'
-	, consumerSecret: 'secret'
-})
-netdna.put('/account.json/address', { street1: '123 Main Street', street2: 'apt 42', state: 'CA' }, callback)
+api.put('/account.json/address', { street1: '123 Main Street', street2: 'apt 42', state: 'CA' }, callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
@@ -499,12 +478,7 @@ $api->get('/users.json');</pre>
   </div>
   <div class="tab-pane" id="node5">
 	<pre>
-var netdna = require('netdna')({
-	companyAlias: 'alias'
-	, consumerKey: 'key'
-	, consumerSecret: 'secret'
-})
-netdna.get('/users.json', callback)
+api.get('/users.json', callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
@@ -660,12 +634,7 @@ $api->post('/users.json',$params );</pre>
   </div>
   <div class="tab-pane" id="node6">
 	<pre>
-var netdna = require('netdna')({
-	companyAlias: 'alias'
-	, consumerKey: 'key'
-	, consumerSecret: 'secret'
-})
-netdna.post('/users.json', { email: 'name@domain.com', password: 'password', firstname: 'Given', lastname: 'Family' }, callback)
+api.post('/users.json', { email: 'name@domain.com', password: 'password', firstname: 'Given', lastname: 'Family' }, callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
@@ -757,13 +726,8 @@ $api->get('/users.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node7">
 	<pre>
-var netdna = require('netdna')({
-	companyAlias: 'alias'
-	, consumerKey: 'key'
-	, consumerSecret: 'secret'
-})
 var id = '33941'
-netdna.get('/users.json/' + id, callback)
+api.get('/users.json/' + id, callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
@@ -849,14 +813,15 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby8">
+  <pre>
 id = '33706'
-params={'firstname'=> 'Verran'}
-api.put('/users.json/'+id,params)<pre>
+params={'firstname'=> 'name'}
+api.put('/users.json/'+id,params)
 </pre>
   </div>
   <div class="tab-pane" id="python8">
 		<pre>
-api.put('/users.json/'+id,params={'firstname': 'Verran'})</pre>
+api.put('/users.json/'+id,params={'firstname': 'name'})</pre>
 	</div>
   <div class="tab-pane" id="php8">
   	<pre>
@@ -866,13 +831,8 @@ $api->put('/users.json/'.$id,$params);</pre>
 </div>
   <div class="tab-pane" id="node8">
 	<pre>
-var netdna = require('netdna')({
-	companyAlias: 'alias'
-	, consumerKey: 'key'
-	, consumerSecret: 'secret'
-})
 var id = '33941'
-netdna.put('/users.json/' + id, { firstname: 'Billy' }, callback)
+api.put('/users.json/' + id, { firstname: 'Billy' }, callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
@@ -954,13 +914,8 @@ $api->delete('/users.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node9">
 	<pre>
-var netdna = require('netdna')({
-	companyAlias: 'alias'
-	, consumerKey: 'key'
-	, consumerSecret: 'secret'
-})
 var id = '33715'
-netdna.del('/users.json/' + id, callback)
+api.del('/users.json/' + id, callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
@@ -1019,7 +974,7 @@ $api->get('/zones.json');</pre>
   </div>
   <div class="tab-pane" id="node10">
 	<pre>
-netdna.get('/zones.json', function(err, response) {
+api.get('/zones.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -1118,7 +1073,7 @@ $api->get('/zones.json/summary');</pre>
   </div>
   <div class="tab-pane" id="node11">
 	<pre>
-netdna.get('/zones.json/summary', function(err, response) {
+api.get('/zones.json/summary', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -1188,16 +1143,17 @@ $api->get('/zones.json/count');</pre>
   </div>
   <div class="tab-pane" id="node12">
 	<pre>
-netdna.get('/zones.json/count', function(err, response) {
+api.get('/zones.json/count', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response12">
 		<pre>
-{"code":200,"data":
-	{
-		"count":"4"
-	}
+{
+	"code":200,"data":
+		{
+			"count":"4"
+		}
 }</pre>
   </div>
 </div>
@@ -1278,7 +1234,7 @@ $api->get('/zones/pull.json');</pre>
   </div>
   <div class="tab-pane" id="node13">
 	<pre>
-netdna.get('/zones/pull.json', function(err, response) {
+api.get('/zones/pull.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -1478,7 +1434,7 @@ $api->post('/zones/pull.json',$params);</pre>
   </div>
   <div class="tab-pane" id="node14">
 	<pre>
-netdna.post('/zones/pull.json', { name: 'newPullZone2', url: 'http://somedomain.net' }, function(err, response) {
+api.post('/zones/pull.json', { name: 'newPullZone2', url: 'http://somedomain.net' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -1576,16 +1532,17 @@ $api->get('/zones/pull.json/count');</pre>
   </div>
   <div class="tab-pane" id="node15">
 	<pre>
-netdna.get('/zones/pull.json/count', function(err, response) {
+api.get('/zones/pull.json/count', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response15">
 		<pre>
-{"code":200,"data":
-	{
-    "count": "3"
-	}
+{
+	"code":200,"data":
+		{
+			"count": "3"
+		}
 }</pre>
   </div>
 </div>
@@ -1657,6 +1614,7 @@ api.get('/zones/pull.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python16">
 		<pre>
+id = '97167'
 api.get('/zones/pull.json/'+id)</pre>
 	</div>
   <div class="tab-pane" id="php16">
@@ -1667,7 +1625,7 @@ $api->get('/zones/pull.json/'.$id);</pre>
   <div class="tab-pane" id="node16">
 	<pre>
 var id = '96076'
-netdna.get('/zones/pull.json' + id, function(err, response) {
+api.get('/zones/pull.json' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -1826,7 +1784,7 @@ $api->put('/zones/pull.json/'.$id, $params);</pre>
   <div class="tab-pane" id="node17">
 	<pre>
 var id = '96167'
-netdna.put('/zones/pull.json' + id, { label: 'Some other description' }, function(err, response) {
+api.put('/zones/pull.json' + id, { label: 'Some other description' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -1924,7 +1882,7 @@ $api->delete('/zones/pull.json/'.$id);</pre>
   <div class="tab-pane" id="node18">
 	<pre>
 var id = '97167'
-netdna.del('/zones/pull.json' + id, function(err, response) {
+api.del('/zones/pull.json' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -1984,7 +1942,7 @@ $api->enable('/zones/pull.json/'.$id);</pre>
   <div class="tab-pane" id="node19">
 	<pre>
 var id = '97167'
-netdna.enable('/zones/pull.json' + id, function(err, response) {
+api.enable('/zones/pull.json' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -2042,7 +2000,7 @@ $api->disable('/zones/pull.json/'.$id);</pre>
   <div class="tab-pane" id="node20">
 	<pre>
 var id = '97167'
-netdna.disable('/zones/pull.json' + id, function(err, response) {
+api.disable('/zones/pull.json' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -2091,30 +2049,39 @@ Parameter | Default Value | Validation | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby21">
 	<pre>
+#Purge Zone
 id = '97167'
-params = {"file"=>"/robots.txt"}
-api.delete('/zones/pull.json/'+id+'/cache',params)</pre>
+api.purge(id)
+
+#Purge File
+id = '97167'
+api.purge(id,'/file1.txt')
+
+#Purge Files
+id = '97167'
+api.purge(id, ['/file1.txt','/file2.txt'])</pre>
   </div>
   <div class="tab-pane" id="python21">
 	<pre>
+#Purge Zone
 id = '97167'
-params = {"file":"/robots.txt"}
-api.delete('/zones/pull.json/'+id+'/cache',data=params)</pre>
+api.purge(id)
+
+#Purge File
+id = '97167'
+api.purge(id,'/file1.txt')
+
+#Purge Files
+id = '97167'
+api.purge(id, ['/file1.txt','/file2.txt'])</pre>
 	</div>
   <div class="tab-pane" id="php21">
   	<pre>
-$id = '97167';
-$params = array('file' => '/robots.txt');
-$api->delete('/zones/pull.json/'.$id.'/cache', $params);</pre>
+Purge not yet available for PHP</pre>
   </div>
   <div class="tab-pane" id="node21">
 	<pre>
-var netdna = require('netdna')({
-	companyAlias: 'alias'
-	, consumerKey: 'key'
-	, consumerSecret: 'secret'
-})
-netdna.del('/zones/pull.json/zone_id', callback)
+api.del('/zones/pull.json/zone_id', callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
@@ -2185,7 +2152,7 @@ $api->get('/zones/pull/'.$id.'/customdomains.json');</pre>
   <div class="tab-pane" id="node22">
 	<pre>
 var id = '96061'
-netdna.get('/zones/pull/' + id + '/customdomains.json', function(err, response) {
+api.get('/zones/pull/' + id + '/customdomains.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -2275,7 +2242,7 @@ $api->post('/zones/pull/'.$id.'/customdomains.json', $params);</pre>
   <div class="tab-pane" id="node23">
 	<pre>
 var id = '96167'
-netdna.post('/zones/pull/' + id + '/customdomains.json', { custom_domain: 'cdn.somedomain3.com' }, function(err, response) {
+api.post('/zones/pull/' + id + '/customdomains.json', { custom_domain: 'cdn.somedomain3.com' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -2354,7 +2321,7 @@ $api->get('/zones/pull/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
 	<pre>
 var id = '97167'
 var domainId = '79182'
-netdna.get('/zones/pull/' + id + '/customdomains.json/' + domainId, function(err, response) {
+api.get('/zones/pull/' + id + '/customdomains.json/' + domainId, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -2445,7 +2412,7 @@ $response =  $api->put('/zones/pull/'.$zoneId.'/customdomains.json/'.$domainId, 
 	<pre>
 var zoneId = '97167'
 var domainId = '79182'
-netdna.put('/zones/pull/' + zoneId + '/customdomains.json/' + domainId, { custom_domain: 'cdn.somenewdomain.com' }, function(err, response) {
+api.put('/zones/pull/' + zoneId + '/customdomains.json/' + domainId, { custom_domain: 'cdn.somenewdomain.com' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -2518,7 +2485,7 @@ $api->delete('/zones/pull/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
 	<pre>
 var zoneId = '97167'
 var domainId = '79182'
-netdna.del('/zones/pull/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
+api.del('/zones/pull/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -2589,7 +2556,7 @@ $api->get('/zones/push.json');</pre>
   </div>
   <div class="tab-pane" id="node27">
 	<pre>
-netdna.get('/zones/push.json', function(err, response) {
+api.get('/zones/push.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -2725,7 +2692,7 @@ $api->post('/zones/push.json', $params);</pre>
   </div>
   <div class="tab-pane" id="node28">
 	<pre>
-netdna.post('/zones/push.json', { name: 'newPushZone', password: 'password' }, function(err, response) {
+api.post('/zones/push.json', { name: 'newPushZone', password: 'password' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -2809,7 +2776,7 @@ $api->get('/zones/push.json/count');</pre>
   </div>
   <div class="tab-pane" id="node29">
 	<pre>
-netdna.get('/zones/push.json/count', function(err, response) {
+api.get('/zones/push.json/count', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -2887,7 +2854,7 @@ $api->get('/zones/push.json/'.$id);</pre>
   <div class="tab-pane" id="node30">
 	<pre>
 var id = '97182'
-netdna.get('/zones/push.json/' + id, function(err, response) {
+api.get('/zones/push.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -2997,7 +2964,7 @@ $api->put('/zones/push.json/'.$id, $params);</pre>
   <div class="tab-pane" id="node31">
 	<pre>
 var id = '97182'
-netdna.get('/zones/push.json/' + id, { label: 'Some other description' }, function(err, response) {
+api.get('/zones/push.json/' + id, { label: 'Some other description' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -3079,7 +3046,7 @@ $api->delete('/zones/push.json/'.$id);</pre>
   <div class="tab-pane" id="node32">
 	<pre>
 var id = '97181'
-netdna.del('/zones/push.json/' + id, function(err, response) {
+api.del('/zones/push.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -3138,7 +3105,7 @@ $api->enable('/zones/push.json/'.$id);</pre>
   <div class="tab-pane" id="node33">
 	<pre>
 var id = '97181'
-netdna.enable('/zones/push.json/' + id, function(err, response) {
+api.enable('/zones/push.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -3198,7 +3165,7 @@ $api->disable('/zones/push.json/'.$id);</pre>
   <div class="tab-pane" id="node34">
 	<pre>
 var id = '97181'
-netdna.disable('/zones/push.json/' + id, function(err, response) {
+api.disable('/zones/push.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -3268,7 +3235,7 @@ $api->get('/zones/push/'.$id.'/customdomains.json');</pre>
   <div class="tab-pane" id="node35">
 	<pre>
 var id = '96061'
-netdna.get('/zones/push/' + id + '/customdomains.json', function(err, response) {
+api.get('/zones/push/' + id + '/customdomains.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -3357,7 +3324,7 @@ $api->post('/zones/push/'.$id.'/customdomains.json', $params);</pre>
   <div class="tab-pane" id="node36">
 	<pre>
 var id = '97181'
-netdna.post('/zones/push/' + id + '/customdomains.json', { custom_domain: 'cdn.somedomain2.net' }, function(err, response) {
+api.post('/zones/push/' + id + '/customdomains.json', { custom_domain: 'cdn.somedomain2.net' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -3438,7 +3405,7 @@ $api->get('/zones/push/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
 	<pre>
 var zoneId = '97181'
 var domainId = '79188'
-netdna.get('/zones/push/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
+api.get('/zones/push/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -3528,7 +3495,7 @@ $api->put('/zones/push/'.$zoneId.'/customdomains.json/'.$domainId, $params);
 	<pre>
 var zoneId = '97181'
 var domainId = '79188'
-netdna.put('/zones/push/' + zoneId + '/customdomains.json/' + domainId, { custom_domain: 'cdn.somenewdomain2.com' }, function(err, response) {
+api.put('/zones/push/' + zoneId + '/customdomains.json/' + domainId, { custom_domain: 'cdn.somenewdomain2.com' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -3601,7 +3568,7 @@ $api->delete('/zones/push/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
 	<pre>
 var zoneId = '97181'
 var domainId = '79188'
-netdna.del('/zones/push/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
+api.del('/zones/push/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -3670,7 +3637,7 @@ $api->get('/zones/vod.json');</pre>
   </div>
   <div class="tab-pane" id="node40">
 	<pre>
-netdna.get('/zones/vod.json', function(err, response) {
+api.get('/zones/vod.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -3799,7 +3766,7 @@ $response = $api->post('/zones/vod.json',$params);</pre>
   </div>
   <div class="tab-pane" id="node41">
 	<pre>
-netdna.post('/zones/vod.json', { name: 'newVODZone3', password: 'password' }, function(err, response) {
+api.post('/zones/vod.json', { name: 'newVODZone3', password: 'password' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -3882,7 +3849,7 @@ $api->get('/zones/vod.json/count');</pre>
   </div>
   <div class="tab-pane" id="node42">
 	<pre>
-netdna.get('/zones/vod.json/count', function(err, response) {
+api.get('/zones/vod.json/count', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -3956,7 +3923,7 @@ $api->get('/zones/vod.json/'.$id);</pre>
   <div class="tab-pane" id="node43">
 	<pre>
 var id = '97183'
-netdna.get('/zones/vod.json/' + id, function(err, response) {
+api.get('/zones/vod.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4061,7 +4028,7 @@ $api->put('/zones/vod.json/'.$id,$params);</pre>
   <div class="tab-pane" id="node44">
 	<pre>
 var id = '97183'
-netdna.put('/zones/vod.json/' + id, { label: 'Some other description' }, function(err, response) {
+api.put('/zones/vod.json/' + id, { label: 'Some other description' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4142,7 +4109,7 @@ $api->delete('/zones/vod.json/'.$id);</pre>
   <div class="tab-pane" id="node45">
 	<pre>
 var id = '97183'
-netdna.del('/zones/vod.json/' + id, function(err, response) {
+api.del('/zones/vod.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4201,7 +4168,7 @@ $api->enable('/zones/vod.json/'.$id);</pre>
   <div class="tab-pane" id="node46">
 	<pre>
 var id = '96187'
-netdna.enable('/zones/vod.json/' + id, function(err, response) {
+api.enable('/zones/vod.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4260,7 +4227,7 @@ $api->disable('/zones/vod.json/'.$id);</pre>
   <div class="tab-pane" id="node47">
 	<pre>
 var id = '96187'
-netdna.disable('/zones/vod.json/' + id, function(err, response) {
+api.disable('/zones/vod.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4330,7 +4297,7 @@ $api->get('/zones/vod/'.$id.'/customdomains.json');</pre>
   <div class="tab-pane" id="node48">
 	<pre>
 var id = '97183'
-netdna.get('/zones/vod.json/' + id + '/customdomains.json, function(err, response) {
+api.get('/zones/vod.json/' + id + '/customdomains.json, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4419,7 +4386,7 @@ $api->post('/zones/vod/'.$id.'/customdomains.json', $params);</pre>
   <div class="tab-pane" id="node49">
 	<pre>
 var id = '97183'
-netdna.post('/zones/vod/' + id + '/customdomains.json', { custom_domain: 'cdn.somedomain2.com', type: 'vod-rtmp' }, function(err, response) {
+api.post('/zones/vod/' + id + '/customdomains.json', { custom_domain: 'cdn.somedomain2.com', type: 'vod-rtmp' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4499,7 +4466,7 @@ $response =  $api->get('/zones/vod/'.$zoneId.'/customdomains.json/'.$domainId);<
 	<pre>
 var zoneId = '97183'
 var domainId = '79191'
-netdna.get('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
+api.get('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4588,7 +4555,7 @@ $api->put('/zones/vod/'.$zoneId.'/customdomains.json/'.$domainId, $params);</pre
 	<pre>
 var zoneId = '97183'
 var domainId = '79191'
-netdna.put('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, { custom_domain: 'cdn.somenewdomain3.com' }, function(err, response) {
+api.put('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, { custom_domain: 'cdn.somenewdomain3.com' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4661,7 +4628,7 @@ $api->delete('/zones/vod/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
 	<pre>
 var zoneId = '97183'
 var domainId = '79191'
-netdna.del('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
+api.del('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4730,7 +4697,7 @@ $api->get('/zones/live.json');</pre>
   </div>
   <div class="tab-pane" id="node53">
 	<pre>
-netdna.get('/zones/live.json', function(err, response) {
+api.get('/zones/live.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4843,11 +4810,12 @@ api.post('/zones/live.json',data=params)</pre>
 	</div>
   <div class="tab-pane" id="php54">
   	<pre>
-$api->post('/zones/live.json', array("name"=>"newLiveZone3","password"=>"password"));</pre>
+$params = array("name"=>"newLiveZone3","password"=>"password");
+$api->post('/zones/live.json', $params);</pre>
   </div>
   <div class="tab-pane" id="node54">
 	<pre>
-netdna.post('/zones/live.json',  { name: 'newLiveZone3', password: 'password' }, function(err, response) {
+api.post('/zones/live.json',  { name: 'newLiveZone3', password: 'password' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -4925,7 +4893,7 @@ $api->get('/zones/live.json/count');</pre>
   </div>
   <div class="tab-pane" id="node55">
 	<pre>
-netdna.get('/zones.json', function(err, response) {
+api.get('/zones.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5000,7 +4968,7 @@ $api->get('/zones/live.json/'.$id);</pre>
   <div class="tab-pane" id="node56">
 	<pre>
 var id = '97185'
-netdna.get('/zones/live.json/' + id, function(err, response) {
+api.get('/zones/live.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5081,8 +5049,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby57">
 		<pre>
-id = '97795'
-api.get('/zones/live.json/'+id)</pre>
+id = '96193'
+params = {"label"=>"Some other description"}
+api.put('/zones/live.json/'+id,params)</pre>
   </div>
   <div class="tab-pane" id="python57">
 		<pre>
@@ -5100,7 +5069,7 @@ $response =  $api->put('/zones/live.json/'.$id,$params);
   <div class="tab-pane" id="node57">
 	<pre>
 var id = '97185'
-netdna.put('/zones/live.json/' + id, { label: 'Some other description' }, function(err, response) {
+api.put('/zones/live.json/' + id, { label: 'Some other description' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5176,7 +5145,7 @@ $api->delete('/zones/live.json/'.$id);</pre>
   <div class="tab-pane" id="node58">
 	<pre>
 var id = '97185'
-netdna.del('/zones/live.json/' + id, function(err, response) {
+api.del('/zones/live.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5235,7 +5204,7 @@ $api->enable('/zones/live.json/'.$id);</pre>
   <div class="tab-pane" id="node59">
 	<pre>
 var id = '96061'
-netdna.enable('/zones/live.json/' + id, function(err, response) {
+api.enable('/zones/live.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5295,7 +5264,7 @@ api->disable('/zones/live.json/'.$id);</pre>
   <div class="tab-pane" id="node60">
 	<pre>
 var id = '96061'
-netdna.disable('/zones/live.json/' + id, function(err, response) {
+api.disable('/zones/live.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5361,7 +5330,7 @@ $api->get('/zones/'.$type.'/'.$id.'/ssl.json');</pre>
 	<pre>
 var id = '96061'
 var type = 'pull'
-netdna.get('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
+api.get('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5451,7 +5420,7 @@ $api->post('/zones/'.$type.'/'.$id.'/ssl.json',$params);</pre>
 var id = '96061'
 var type = 'pull'
 var ssl_crt = " ... "
-netdna.post('/zones/' + type + '/' + id + '/ssl.json', { ssl_crt: ssl_crt, ssl_key: 'somesslkey' }, function(err, response) {
+api.post('/zones/' + type + '/' + id + '/ssl.json', { ssl_crt: ssl_crt, ssl_key: 'somesslkey' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5541,7 +5510,7 @@ $api->put('/zones/'.$type.'/'.$id.'/ssl.json',$params);</pre>
 var id = '96061'
 var type = 'pull'
 var ssl_crt = " ... "
-netdna.put('/zones/' + type + '/' + id + '/ssl.json', { ssl_crt: ssl_crt, ssl_key: 'somesslkey' }, function(err, response) {
+api.put('/zones/' + type + '/' + id + '/ssl.json', { ssl_crt: ssl_crt, ssl_key: 'somesslkey' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5604,7 +5573,7 @@ $api->post('/zones/'.$type.'/'.$id.'/ssl.json');</pre>
 	<pre>
 var id = '96061'
 var type = 'pull'
-netdna.post('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
+api.post('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5667,7 +5636,7 @@ $api->post('/zones/'.$type.'/'.$id.'/upstream.json');</pre>
 	<pre>
 var type = 'pull'
 var id = '96061'
-netdna.post('/zones/' + type + '/' + id + '/upstream.json', function(err, response) {
+api.post('/zones/' + type + '/' + id + '/upstream.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5748,7 +5717,7 @@ $api->post('/zones/'.$type.'/'.$id.'/upstream.json');</pre>
 	<pre>
 var type = 'pull'
 var id = '96061'
-netdna.post('/zones/' + type + '/' + id + '/upstream.json', { server_url: 'http://cdn.somedomain.com', server: 'http://cdn.somedomain.com', port: '80' }, function(err, response) {
+api.post('/zones/' + type + '/' + id + '/upstream.json', { server_url: 'http://cdn.somedomain.com', server: 'http://cdn.somedomain.com', port: '80' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5830,7 +5799,7 @@ $api->put('/zones/'.$type.'/'.$id.'/upstream.json');</pre>
 	<pre>
 var type = 'pull'
 var id = '96061'
-netdna.put('/zones/' + type + '/' + id + '/upstream.json', { upstream_id: '93013', server_url: 'http://somedomain.net', port: '80' }, function(err, response) {
+api.put('/zones/' + type + '/' + id + '/upstream.json', { upstream_id: '93013', server_url: 'http://somedomain.net', port: '80' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5892,7 +5861,7 @@ $api->delete('/zones/'.$type.'/'.$id.'/upstream.json');</pre>
 	<pre>
 var type = 'pull'
 var id = '96061'
-netdna.del('/zones/' + type + '/' + id + '/upstream.json', function(err, response) {
+api.del('/zones/' + type + '/' + id + '/upstream.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -5971,7 +5940,7 @@ $api->get('/reports/stats.json/'.$reportType);</pre>
   <div class="tab-pane" id="node69">
 	<pre>
 var reportType = ''
-netdna.get('/reports/stats.json/' + reportType, function(err, response) {
+api.get('/reports/stats.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -6065,7 +6034,7 @@ $api->get('/reports/'.$id.'/stats.json/'.$reportType);</pre>
 	<pre>
 var id = '96061'
 var reportType = ''
-netdna.get('/reports/' + id + '/stats.json/' + reportType, function(err, response) {
+api.get('/reports/' + id + '/stats.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -6145,7 +6114,7 @@ $api->get('/reports/nodes.json');</pre>
   </div>
   <div class="tab-pane" id="node71">
 	<pre>
-netdna.get('/reports/nodes.json', function(err, response) {
+api.get('/reports/nodes.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -6277,7 +6246,7 @@ $api->get('/reports/'.$id.'/nodes.json');</pre>
   <div class="tab-pane" id="node72">
 	<pre>
 var id = '96061'
-netdna.get('/reports/' + id + '/nodes.json', function(err, response) {
+api.get('/reports/' + id + '/nodes.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -6413,7 +6382,7 @@ $api->get('/reports/nodes.json/stats/'.$reportType);</pre>
   <div class="tab-pane" id="node73">
 	<pre>
 var reportType = ''
-netdna.get('/reports/nodes.json/stats/' + reportType, function(err, response) {
+api.get('/reports/nodes.json/stats/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -6600,7 +6569,7 @@ $api->get('/reports/'.$id.'/nodes.json/stats/'.$reportType);</pre>
 	<pre>
 var id = '96061'
 var reportType = ''
-netdna.get('/reports/' + id + '/nodes.json/stats/' + reportType, function(err, response) {
+api.get('/reports/' + id + '/nodes.json/stats/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -6677,7 +6646,7 @@ $api->get('/reports/nodes.json/'.$id);</pre>
   <div class="tab-pane" id="node75">
 	<pre>
 var id = '1'
-netdna.get('/reports/nodes.json/' + id, function(err, response) {
+api.get('/reports/nodes.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -6757,7 +6726,7 @@ $api->get('/reports/'.$zoneId.'/nodes.json/'.$nodeId);</pre>
 	<pre>
 var zoneId = '96061'
 var nodeId = '1'
-netdna.get('/reports/' + zoneId + '/nodes.json/' + nodeId, function(err, response) {
+api.get('/reports/' + zoneId + '/nodes.json/' + nodeId, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -6850,7 +6819,7 @@ $api->get('/reports/nodes.json/'.$id.'/stats/'.$reportType);</pre>
 	<pre>
 var id = '1'
 var reportType = ''
-netdna.get('/reports/nodes.json/' + id + '/stats/' + reportType, function(err, response) {
+api.get('/reports/nodes.json/' + id + '/stats/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -6950,7 +6919,7 @@ $api->get('/reports/'.$zoneId.'/nodes.json/'.$nodeId.'/stats/'.$reportType);</pr
 var zoneId = '96061'
 var nodeId = '1'
 var reportType = ''
-netdna.get('/reports/' + zoneId + '/nodes.json/' + nodeId + '/stats/' + reportType, function(err, response) {
+api.get('/reports/' + zoneId + '/nodes.json/' + nodeId + '/stats/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -7039,7 +7008,7 @@ $api->get('/reports/popularfiles.json');</pre>
   </div>
   <div class="tab-pane" id="node79">
 	<pre>
-netdna.get('/reports/popularfiles.json', function(err, response) {
+api.get('/reports/popularfiles.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -7132,7 +7101,7 @@ $api->get('/reports/'.$type.'/popularfiles.json');</pre>
   <div class="tab-pane" id="node80">
 	<pre>
 var type = 'pull'
-netdna.get('/reports/' + type + '/popularfiles.json', function(err, response) {
+api.get('/reports/' + type + '/popularfiles.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -7221,7 +7190,7 @@ $api->get('/reports/statuscodes.json/'.$reportType);</pre>
   <div class="tab-pane" id="node81">
 	<pre>
 var reportType = ''
-netdna.get('/reports/statuscodes.json/' + reportType, function(err, response) {
+api.get('/reports/statuscodes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -7314,7 +7283,7 @@ $api->get('/reports/'.$id.'/statuscodes.json/'.$reportType);</pre>
 	<pre>
 var reportType = ''
 var id = '96061'
-netdna.get('/reports/' + id + '/statuscodes.json/' + reportType, function(err, response) {
+api.get('/reports/' + id + '/statuscodes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -7401,7 +7370,7 @@ $api->get('/reports/'.$zoneType.'/statuscodes.json/'.$reportType);</pre>
 	<pre>
 var reportType = ''
 var zoneType = 'pull'
-netdna.get('/reports/' + zoneType + '/statuscodes.json/' + reportType, function(err, response) {
+api.get('/reports/' + zoneType + '/statuscodes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -7500,7 +7469,7 @@ $api->get('/reports/'.$zoneType.'/'.$id.'/statuscodes.json/'.$reportType);</pre>
 var reportType = ''
 var zoneType = 'pull'
 var id = '96061'
-netdna.get('/reports/' + zoneType + '/' + id + '/statuscodes.json/' + reportType, function(err, response) {
+api.get('/reports/' + zoneType + '/' + id + '/statuscodes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -7583,7 +7552,7 @@ $api->get('/reports/filetypes.json'.$reportType);</pre>
   <div class="tab-pane" id="node85">
 	<pre>
 var reportType = ''
-netdna.get('/reports/filetypes.json', function(err, response) {
+api.get('/reports/filetypes.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -7677,7 +7646,7 @@ $api->get('/reports/'.$id.'/filetypes.json/'.$reportType);</pre>
 	<pre>
 var reportType = ''
 var id = '96061'
-netdna.get('/reports/' + id + '/filetypes.json/' + reportType, function(err, response) {
+api.get('/reports/' + id + '/filetypes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -7758,7 +7727,7 @@ $api->get('/reports/'.$zoneType.'/filetypes.json/'.$reportType);</pre>
 	<pre>
 var reportType = ''
 var zoneType = 'pull'
-netdna.get('/reports/' + zoneType + '/filetypes.json/' + reportType, function(err, response) {
+api.get('/reports/' + zoneType + '/filetypes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -7858,7 +7827,7 @@ $api->get('/reports/'.$zoneType.'/'.$id.'/filetypes.json/'.$reportType);</pre>
 var reportType = ''
 var zoneType = 'pull'
 var id = '96061'
-netdna.get('/reports/' + zoneType + '/' + id + '/filetypes.json/' + reportType, function(err, response) {
+api.get('/reports/' + zoneType + '/' + id + '/filetypes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -7955,7 +7924,7 @@ $api->get('/reports/filesizes.json/'.$reportType);</pre>
   <div class="tab-pane" id="node89">
 	<pre>
 var reportType = ''
-netdna.get('/reports/filesizes.json/' + reportType, function(err, response) {
+api.get('/reports/filesizes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -8057,7 +8026,7 @@ $api->get('/reports/'.$id.'/filesizes.json/'.$reportType);</pre>
 	<pre>
 var reportType = ''
 var id = '96061'
-netdna.get('/reports/' + id + '/filesizes.json/' + reportType, function(err, response) {
+api.get('/reports/' + id + '/filesizes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -8159,7 +8128,7 @@ $api->get('/reports/'.$zoneType.'/filesizes.json/'.$reportType);</pre>
 	<pre>
 var reportType = ''
 var zoneType = 'pull'
-netdna.get('/reports/' + zoneType + '/filesizes.json/' + reportType, function(err, response) {
+api.get('/reports/' + zoneType + '/filesizes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -8266,7 +8235,7 @@ $api->get('/reports/'.$zoneType.'/'.$id.'/filesizes.json/'.$reportType);</pre>
 var reportType = ''
 var zoneType = 'pull'
 var id = '96061'
-netdna.get('/reports/' + zoneType + '/' + id + '/filesizes.json/' + reportType, function(err, response) {
+api.get('/reports/' + zoneType + '/' + id + '/filesizes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -8363,7 +8332,7 @@ $api->get('/reports/statsbydir.json/'.$reportType);</pre>
   <div class="tab-pane" id="node93">
 	<pre>
 var reportType = ''
-netdna.get('/reports/statsbydir.json/' + reportType, function(err, response) {
+api.get('/reports/statsbydir.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -8457,7 +8426,7 @@ $api->get('/reports/'.$id.'/statsbydir.json/'.$reportType);</pre>
 	<pre>
 var reportType = ''
 var id = '96061'
-netdna.get('/reports/' + id + '/' + '/statsbydir.json/' + reportType, function(err, response) {
+api.get('/reports/' + id + '/' + '/statsbydir.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -8565,7 +8534,7 @@ $api->get('/clients/'.$clientId.'/reports/statsbyfilename.json/'.$reportType);</
 	<pre>
 var reportType = ''
 var clientId = ''
-netdna.get('/clients/' + clientId + '/reports/statsbyfilename.json/' + reportType, function(err, response) {
+api.get('/clients/' + clientId + '/reports/statsbyfilename.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -8710,7 +8679,7 @@ $api->get('/clients/'.$clientId.'/reports/'.$id.'/statsbyfilename.json/'.$report
 var reportType = ''
 var id = '96061'
 var clientId = ''
-netdna.get('/clients/' + clientId + '/reports/' + id + '/statsbyfilename.json/' + reportType, function(err, response) {
+api.get('/clients/' + clientId + '/reports/' + id + '/statsbyfilename.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -8792,7 +8761,7 @@ $api->get('clients/'.$clientId.'/reports/statsbycustomdomain.json/'.$reportType)
 	<pre>
 var reportType = ''
 var clientId = ''
-netdna.get('/clients/' + clientId + '/reports/statsbycustomdomain.json/' + reportType, function(err, response) {
+api.get('/clients/' + clientId + '/reports/statsbycustomdomain.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -8899,7 +8868,7 @@ $api->get('clients/'.$clientId.'/reports/'.$zoneId.'/statsbycustomdomain.json/'.
 var reportType = ''
 var zoneId = ''
 var clientId = ''
-netdna.get('/clients/' + clientId + '/reports/' + zoneId + '/statsbycustomdomain.json/' + reportType, function(err, response) {
+api.get('/clients/' + clientId + '/reports/' + zoneId + '/statsbycustomdomain.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -8980,7 +8949,7 @@ $api->get('/reports/live/connectionstats.json/'.$reportType);</pre>
   <div class="tab-pane" id="node99">
 	<pre>
 var reportType = ''
-netdna.get('/reports/live/connectionstats.json/' + reportType, function(err, response) {
+api.get('/reports/live/connectionstats.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
@@ -9008,4 +8977,3 @@ netdna.get('/reports/live/connectionstats.json/' + reportType, function(err, res
 
 ---
 
-[@niftylettuce](https://github.com/niftylettuce) was here.
