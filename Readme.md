@@ -94,10 +94,10 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby1">
 		<pre>
-</pre>
+api.get("/account.json")</pre>
   </div>
   <div class="tab-pane" id="python1">
-		<pre>
+		<pre>list:"devteam.netdna.com"
 api.get("/account.json")</pre>
 	</div>
   <div class="tab-pane" id="php1">
@@ -194,7 +194,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby2">
 		<pre>
-</pre>
+params={"name"=> "UserName"}
+api.put('/account.json',params)</pre>
   </div>
   <div class="tab-pane" id="python2">
 		<pre>
@@ -289,7 +290,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby3">
 		<pre>
-		</pre>
+api.get('/account.json/address')</pre>
   </div>
   <div class="tab-pane" id="python3">
 		<pre>
@@ -391,7 +392,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby4">
 		<pre>
-		</pre>
+params = {"street1"=> "1234 Main Street", "street2"=> "apt 42", "state"=> "CA"}
+api.put('/account.json/address',params)</pre>
   </div>
   <div class="tab-pane" id="python4">
 		<pre>
@@ -485,7 +487,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby5">
 		<pre>
-		</pre>
+api.get('/users.json')</pre>
   </div>
   <div class="tab-pane" id="python5">
 		<pre>
@@ -643,7 +645,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby6">
 		<pre>
-		</pre>
+params={"email"=>"name44@domain.com","password"=>"password","firstname"=>"Given","lastname"=>"Family"}
+api.post('/users.json',params )</pre>
   </div>
   <div class="tab-pane" id="python6">
 		<pre>
@@ -739,7 +742,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby7">
 		<pre>
-</pre>
+id = '33706'
+api.get('/users.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python7">
 		<pre>
@@ -845,7 +849,9 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby8">
-		<pre>
+id = '33706'
+params={'firstname'=> 'Verran'}
+api.put('/users.json/'+id,params)<pre>
 </pre>
   </div>
   <div class="tab-pane" id="python8">
@@ -933,7 +939,8 @@ Deletes a user specified by the {user_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby9">
 		<pre>
-</pre>
+id = '33706'
+api.delete('/users.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python9">
 		<pre>
@@ -987,7 +994,7 @@ Returns a list of all zones on the specified account
 <span class="path">https://rws.netdna.com/{companyalias}/zones.json</span></div>
 </div>
 
-### Code Samples
+### Code Samples	@
 
 <ul class="nav nav-tabs" id="myTab10">
   <li class="active"><a href="#ruby10" data-toggle='tab'>Ruby</a></li>
@@ -1000,7 +1007,7 @@ Returns a list of all zones on the specified account
 <div class="tab-content">
   <div class="tab-pane active" id="ruby10">
 		<pre>
-</pre>
+api.get('/zones.json')</pre>
   </div>
   <div class="tab-pane" id="python10">
 		<pre>
@@ -1099,7 +1106,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby11">
 		<pre>
-</pre>
+api.get('/zones.json/summary')</pre>
   </div>
   <div class="tab-pane" id="python11">
 		<pre>
@@ -1169,7 +1176,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby12">
 		<pre>
-</pre>
+api.get('/zones.json/count')</pre>
   </div>
   <div class="tab-pane" id="python12">
 		<pre>
@@ -1259,7 +1266,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby13">
 		<pre>
-</pre>
+api.get('/zones/pull.json')</pre>
   </div>
   <div class="tab-pane" id="python13">
 		<pre>
@@ -1456,7 +1463,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby14">
 		<pre>
-</pre>
+params = {"name"=>"newPullZone6","url"=>"http://bconklin.net"}
+api.post('/zones/pull.json',params)</pre>
   </div>
   <div class="tab-pane" id="python14">
 		<pre>
@@ -1556,7 +1564,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby15">
 		<pre>
-</pre>
+api.get('/zones/pull.json/count')</pre>
   </div>
   <div class="tab-pane" id="python15">
 		<pre>
@@ -1644,7 +1652,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby16">
 		<pre>
-</pre>
+id = '97167'
+api.get('/zones/pull.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python16">
 		<pre>
@@ -1798,7 +1807,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby17">
 		<pre>
-</pre>
+id = '97167'
+params = {"label"=>"Some other description"}
+api.put('/zones/pull.json/'+id,params)</pre>
   </div>
   <div class="tab-pane" id="python17">
 		<pre>
@@ -1897,7 +1908,8 @@ Deletes a pull zone specified by the {zone_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby18">
 		<pre>
-</pre>
+id = '97167'
+api.delete('/zones/pull.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python18">
 		<pre>
@@ -1956,7 +1968,8 @@ Enables a pull zone specified by the {zone_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby19">
 		<pre>
-</pre>
+id = '97167'
+api.enable('/zones/pull.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python19">
 		<pre>
@@ -2013,7 +2026,8 @@ Disables a pull zone specified by the {zone_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby20">
 		<pre>
-</pre>
+id = '97167'
+api.disable('/zones/pull.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python20">
 		<pre>
@@ -2077,9 +2091,9 @@ Parameter | Default Value | Validation | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby21">
 	<pre>
-api.purge(zone_id)
-api.purge(zone_id, '/some_file')
-api.purge(zone_id, ['/some_file', '/another_file'])</pre>
+id = '97167'
+params = {"file"=>"/robots.txt"}
+api.delete('/zones/pull.json/'+id+'/cache',params)</pre>
   </div>
   <div class="tab-pane" id="python21">
 	<pre>
@@ -2155,7 +2169,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby22">
 		<pre>
-</pre>
+id = '97167'
+api.get('/zones/pull/'+id+'/customdomains.json')</pre>
   </div>
   <div class="tab-pane" id="python22">
 		<pre>
@@ -2241,7 +2256,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby23">
 		<pre>
-</pre>
+id = '97167'
+params = {"custom_domain"=>"cdn.somedomain14.com"}
+api.post('/zones/pull/'+id+'/customdomains.json', params)</pre>
   </div>
   <div class="tab-pane" id="python23">
 		<pre>
@@ -2317,7 +2334,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby24">
 		<pre>
-		</pre>
+zoneId = '97167'
+domainId = '79182'
+api.get('/zones/pull/'+zoneId+'/customdomains.json/'+domainId)</pre>
   </div>
   <div class="tab-pane" id="python24">
 		<pre>
@@ -2403,7 +2422,10 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby25">
 		<pre>
-</pre>
+zoneId = '97167'
+domainId = '79182'
+params = {"custom_domain"=>"cdn.somenewdomain41.com"}
+api.put('/zones/pull/'+zoneId+'/customdomains.json/'+domainId,params)</pre>
   </div>
   <div class="tab-pane" id="python25">
 		<pre>
@@ -2476,7 +2498,9 @@ Deletes a custom domain specified by the {zone_id} and
 <div class="tab-content">
   <div class="tab-pane active" id="ruby26">
 		<pre>
-</pre>
+zoneId = '97167'
+domainId = '79182'
+api.delete('/zones/pull/'+zoneId+'/customdomains.json/'+domainId)</pre>
   </div>
   <div class="tab-pane" id="python26">
 		<pre>
@@ -2553,7 +2577,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby27">
 		<pre>
-</pre>
+api.get('/zones/push.json')</pre>
   </div>
   <div class="tab-pane" id="python27">
 		<pre>
@@ -2686,7 +2710,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby28">
 		<pre>
-		</pre>
+params = {"name"=>"newPushZone99","password"=>"password"}
+api.post('/zones/push.json',params)</pre>
   </div>
   <div class="tab-pane" id="python28">
 		<pre>
@@ -2772,7 +2797,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby29">
 		<pre>
-</pre>
+api.get('/zones/push.json/count')</pre>
   </div>
   <div class="tab-pane" id="python29">
 		<pre>
@@ -2846,7 +2871,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby30">
 		<pre>
-</pre>
+id = '97793'
+api.get('/zones/push.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python30">
 		<pre>
@@ -2952,7 +2978,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby31">
 		<pre>
-</pre>
+id = '97793'
+params = {"label"=>"Some other description"}
+api.put('/zones/push.json/'+id,params)</pre>
   </div>
   <div class="tab-pane" id="python31">
 		<pre>
@@ -3035,7 +3063,8 @@ Deletes a push zone specified by the {zone_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby32">
 		<pre>
-</pre>
+id = '97793'
+api.delete('/zones/push.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python32">
 		<pre>
@@ -3093,7 +3122,8 @@ Enables a push zone specified by the {zone_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby33">
 		<pre>
-</pre>
+id = '97793'
+api.enable('/zones/push.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python33">
 		<pre>
@@ -3152,7 +3182,8 @@ Disables a push zone specified by the {zone_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby34">
 		<pre>
-</pre>
+id = '97793'
+api.disable('/zones/push.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python34">
 		<pre>
@@ -3221,7 +3252,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby35">
 		<pre>
-</pre>
+id = '97793'
+api.get('/zones/push/'+id+'/customdomains.json')</pre>
   </div>
   <div class="tab-pane" id="python35">
 		<pre>
@@ -3306,7 +3338,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby36">
 		<pre>
-</pre>
+id = '97793'
+params = {"custom_domain"=>"cdn.somedomain19.com"}
+api.post('/zones/push/'+id+'/customdomains.json', params)</pre>
   </div>
   <div class="tab-pane" id="python36">
 		<pre>
@@ -3384,7 +3418,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby37">
 		<pre>
-</pre>
+zoneId = '97793'
+domainId = '79747'
+api.get('/zones/push/'+zoneId+'/customdomains.json/'+domainId)</pre>
   </div>
   <div class="tab-pane" id="python37">
 		<pre>
@@ -3468,7 +3504,10 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby38">
 		<pre>
-</pre>
+zoneId = '97793'
+domainId = '79747'
+params = {"custom_domain"=>"cdn.somenewdomain41.com"}
+api.put('/zones/push/'+zoneId+'/customdomains.json/'+domainId,params)</pre>
   </div>
   <div class="tab-pane" id="python38">
 		<pre>
@@ -3542,7 +3581,9 @@ Deletes a custom domain specified by the {zone_id} and
 <div class="tab-content">
   <div class="tab-pane active" id="ruby39">
 		<pre>
-</pre>
+zoneId = '97793'
+domainId = '79747'
+api.delete('/zones/push/'+zoneId+'/customdomains.json/'+domainId)</pre>
   </div>
   <div class="tab-pane" id="python39">
 		<pre>
@@ -3617,7 +3658,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby40">
 		<pre>
-</pre>
+api.get('/zones/vod.json')</pre>
   </div>
   <div class="tab-pane" id="python40">
 		<pre>
@@ -3743,7 +3784,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby41">
 		<pre>
-</pre>
+params = {"name"=>"newVodZone99","password"=>"password"}
+api.post('/zones/vod.json',params)</pre>
   </div>
   <div class="tab-pane" id="python41">
 		<pre>
@@ -3828,7 +3870,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby42">
 		<pre>
-</pre>
+api.get('/zones/vod.json/count')</pre>
   </div>
   <div class="tab-pane" id="python42">
 		<pre>
@@ -3898,7 +3940,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby43">
 		<pre>
-</pre>
+id = '97794'
+api.get('/zones/vod.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python43">
 		<pre>
@@ -3999,7 +4042,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby44">
 		<pre>
-</pre>
+id = '97794'
+params = {"label"=>"Some other description"}
+api.put('/zones/vod.json/'+id,params)</pre>
   </div>
   <div class="tab-pane" id="python44">
 		<pre>
@@ -4081,7 +4126,8 @@ Deletes a VOD zone specified by the {zone_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby45">
 		<pre>
-</pre>
+id = '97794'
+api.delete('/zones/vod.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python45">
 		<pre>
@@ -4139,7 +4185,8 @@ Enables a VOD zone specified by the {zone_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby46">
 		<pre>
-</pre>
+id = '97794'
+api.enable('/zones/vod.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python46">
 		<pre>
@@ -4197,7 +4244,8 @@ Disables a VOD zone specified by the {zone_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby47">
 		<pre>
-</pre>
+id = '97794'
+api.disable('/zones/vod.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python47">
 		<pre>
@@ -4266,7 +4314,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby48">
 		<pre>
-</pre>
+id = '97794'
+api.get('/zones/vod/'+id+'/customdomains.json')</pre>
   </div>
   <div class="tab-pane" id="python48">
 		<pre>
@@ -4351,7 +4400,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby49">
 		<pre>
-</pre>
+id = '97794'
+params = {"custom_domain"=>"cdn.somedomain39.com","type"=>"vod-rtmp"}
+api.post('/zones/vod/'+id+'/customdomains.json', params)</pre>
   </div>
   <div class="tab-pane" id="python49">
 		<pre>
@@ -4428,7 +4479,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby50">
 		<pre>
-</pre>
+zoneId = '97794'
+domainId = '79748'
+api.get('/zones/vod/'+zoneId+'/customdomains.json/'+domainId)</pre>
   </div>
   <div class="tab-pane" id="python50">
 		<pre>
@@ -4512,7 +4565,10 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby51">
 		<pre>
-</pre>
+zoneId = '97794'
+domainId = '79748'
+params = {"custom_domain"=>"cdn.somenewdomain49.com"}
+api.put('/zones/vod/'+zoneId+'/customdomains.json/'+domainId,params)</pre>
   </div>
   <div class="tab-pane" id="python51">
 		<pre>
@@ -4585,7 +4641,9 @@ Deletes a custom domain specified by the {zone_id} and
 <div class="tab-content">
   <div class="tab-pane active" id="ruby52">
 		<pre>
-</pre>
+zoneId = '97794'
+domainId = '79748'
+api.delete('/zones/vod/'+zoneId+'/customdomains.json/'+domainId)</pre>
   </div>
   <div class="tab-pane" id="python52">
 		<pre>
@@ -4660,7 +4718,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby53">
 		<pre>
-</pre>
+api.get('/zones/live.json')</pre>
   </div>
   <div class="tab-pane" id="python53">
 		<pre>
@@ -4775,7 +4833,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby54">
 		<pre>
-</pre>
+params = {"name"=>"newLiveZone99","password"=>"password"}
+api.post('/zones/live.json',params)</pre>
   </div>
   <div class="tab-pane" id="python54">
 		<pre>
@@ -4854,7 +4913,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby55">
 		<pre>
-</pre>
+api.get('/zones/live.json/count')</pre>
   </div>
   <div class="tab-pane" id="python55">
 		<pre>
@@ -4925,7 +4984,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby56">
 		<pre>
-</pre>
+id = '97795'
+api.get('/zones/live.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python56">
 		<pre>
@@ -5021,7 +5081,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby57">
 		<pre>
-</pre>
+id = '97795'
+api.get('/zones/live.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python57">
 		<pre>
@@ -5099,7 +5160,8 @@ Deletes a live zone specified by the {zone_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby58">
 		<pre>
-</pre>
+id = '97795'
+api.delete('/zones/live.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python58">
 		<pre>
@@ -5157,7 +5219,8 @@ Enables a live zone specified by the {zone_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby59">
 		<pre>
-</pre>
+id = '97795'
+api.enable('/zones/live.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python59">
 		<pre>
@@ -5216,7 +5279,8 @@ Disables a live zone specified by the {zone_id} parameter
 <div class="tab-content">
   <div class="tab-pane active" id="ruby60">
 		<pre>
-</pre>
+id = '97795'
+api.disable('/zones/live.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python60">
 		<pre>
@@ -5277,7 +5341,9 @@ Get the SSL certificate for the specified {zone_type} and
 <div class="tab-content">
   <div class="tab-pane active" id="ruby61">
 		<pre>
-</pre>
+id = '96061'
+type = 'pull'
+@api.get('/zones/'+type+'/'+id+'/ssl.json')</pre>
   </div>
   <div class="tab-pane" id="python61">
 		<pre>
@@ -5358,7 +5424,11 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby62">
 		<pre>
-</pre>
+id = '96061'
+type = 'pull'
+ssl_crt = ""
+params = {"ssl_crt"=> ssl_crt,"ssl_key"=> "somesslkey"}
+api.post('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
   </div>
   <div class="tab-pane" id="python62">
 		<pre>
@@ -5444,7 +5514,11 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby63">
 		<pre>
-</pre>
+id = '96061'
+type = 'pull'
+ssl_crt = ""
+params = {"ssl_crt"=> ssl_crt,"ssl_key"=> "somesslkey"}
+api.put('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
   </div>
   <div class="tab-pane" id="python63">
 		<pre>
@@ -5510,7 +5584,9 @@ Remove the SSL certificate for the specified {zone_type} and
 <div class="tab-content">
   <div class="tab-pane active" id="ruby64">
 		<pre>
-</pre>
+id = '96061'
+type = 'pull'
+api.post('/zones/'+type+'/'+id+'/ssl.json')</pre>
   </div>
   <div class="tab-pane" id="python64">
 		<pre>
@@ -5571,7 +5647,9 @@ Get the upstream information for the specified {zone_id}.
 <div class="tab-content">
   <div class="tab-pane active" id="ruby65">
 		<pre>
-</pre>
+type = 'pull'
+id = '96061'
+api.post('/zones/'+type+'/'+id+'/upstream.json')</pre>
   </div>
   <div class="tab-pane" id="python65">
 		<pre>
@@ -5647,7 +5725,10 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby66">
 		<pre>
-</pre>
+type = 'pull'
+id = '96061'
+params = {"server_url"=> "http=>//cdn.bconklin.com","server"=> "http=>//cdn.bconklin.com","port"=> "80"}
+api.post('/zones/'+type+'/'+id+'/upstream.json')</pre>
   </div>
   <div class="tab-pane" id="python66">
 		<pre>
@@ -5726,7 +5807,10 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby67">
 		<pre>
-</pre>
+type = 'pull'
+id = '96061'
+params = {"upsream_id"=> "93013","server_url"=> "http=>//bconklin.net","port"=> "80"}
+api.put('/zones/'+type+'/'+id+'/upstream.json')</pre>
   </div>
   <div class="tab-pane" id="python67">
 		<pre>
@@ -5788,7 +5872,9 @@ Remove the Upstream Information for the specified {zone_id}.
 <div class="tab-content">
   <div class="tab-pane active" id="ruby68">
 		<pre>
-</pre>
+type = 'pull'
+id = '96061'
+api.delete('/zones/'+type+'/'+id+'/upstream.json')</pre>
   </div>
   <div class="tab-pane" id="python68">
 		<pre>
