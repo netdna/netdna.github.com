@@ -5727,7 +5727,7 @@ Parameter | Description |
 		<pre>
 type = 'pull'
 id = '96061'
-params = {"server_url"=> "http=>//cdn.bconklin.com","server"=> "http=>//cdn.bconklin.com","port"=> "80"}
+params = {"server_url"=> "http=>//cdn.somedomain.com","server"=> "http=>//cdn.somedomain.com","port"=> "80"}
 api.post('/zones/'+type+'/'+id+'/upstream.json')</pre>
   </div>
   <div class="tab-pane" id="python66">
@@ -5955,8 +5955,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby69">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/stats.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python69">
 		<pre>
@@ -6045,8 +6045,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby70">
 		<pre>
-
-		</pre>
+id = '96061'
+reportType = ''
+api.get('/reports/'+id+'/stats.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python70">
 		<pre>
@@ -6132,8 +6133,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby71">
 		<pre>
-
-		</pre>
+api.get('/reports/nodes.json')</pre>
   </div>
   <div class="tab-pane" id="python71">
 		<pre>
@@ -6261,8 +6261,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby72">
 		<pre>
-
-		</pre>
+id = '96061'
+api.get('/reports/'+id+'/nodes.json')</pre>
   </div>
   <div class="tab-pane" id="python72">
 		<pre>
@@ -6397,8 +6397,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby73">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/nodes.json/stats'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python73">
 		<pre>
@@ -6580,8 +6580,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby74">
 		<pre>
-
-		</pre>
+id = '96061'
+reportType = ''
+api.get('/reports/'+id+'/nodes.json/stats'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python74">
 		<pre>
@@ -6660,8 +6661,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby75">
 		<pre>
-
-		</pre>
+id = '1'
+api.get('/reports/nodes.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python75">
 		<pre>
@@ -6736,8 +6737,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby76">
 		<pre>
-
-		</pre>
+zoneId = '96061'
+nodeId = '1'
+api.get('/reports/'+zoneId+'/nodes.json/'+nodeId)</pre>
   </div>
   <div class="tab-pane" id="python76">
 		<pre>
@@ -6828,8 +6830,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby77">
 		<pre>
-
-		</pre>
+id = '1'
+reportType = ''
+api.get('/reports/nodes.json/'+id+'/stats'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python77">
 		<pre>
@@ -6923,8 +6926,10 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby78">
 		<pre>
-
-		</pre>
+zoneId='96061'
+nodeId='1'
+reportType = ''
+api.get('/reports/'+zoneId+'/nodes.json/'+nodeId+'/stats'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python78">
 		<pre>
@@ -7022,8 +7027,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby79">
 		<pre>
-
-		</pre>
+api.get('/reports/popularfiles.json')</pre>
   </div>
   <div class="tab-pane" id="python79">
 		<pre>
@@ -7112,8 +7116,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby80">
 		<pre>
-
-		</pre>
+type='pull'
+api.get('/reports/'+type+'/popularfiles.json')</pre>
   </div>
   <div class="tab-pane" id="python80">
 		<pre>
@@ -7201,8 +7205,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby81">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/statuscodes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python81">
 		<pre>
@@ -7290,8 +7294,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby82">
 		<pre>
-
-		</pre>
+reportType = ''
+id = '96061'
+api.get('/reports/'+id+'/statuscodes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python82">
 		<pre>
@@ -7376,8 +7381,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby83">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+api.get('/reports/'+zoneType+'/statuscodes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python83">
 		<pre>
@@ -7470,8 +7476,10 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby84">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+id = '96061'
+api.get('/reports/'+zoneType+'/'+id+'/statuscodes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python84">
 		<pre>
@@ -7559,8 +7567,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby85">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python85">
 		<pre>
@@ -7649,8 +7657,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby86">
 		<pre>
-
-		</pre>
+reportType = ''
+id = '96061'
+api.get('/reports/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python86">
 		<pre>
@@ -7729,8 +7738,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby87">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+api.get('/reports/'+zoneType+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python87">
 		<pre>
@@ -7824,8 +7834,10 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby88">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+id = '96061'
+api.get('/reports/'+zoneType+'/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python88">
 		<pre>
@@ -7925,8 +7937,10 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby89">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+id = '96061'
+api.get('/reports/'+zoneType+'/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python89">
 		<pre>
@@ -8023,8 +8037,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby90">
 		<pre>
-
-		</pre>
+reportType = ''
+id = '96061'
+api.get('/reports/'+id+'/filesizes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python90">
 		<pre>
@@ -8124,8 +8139,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby91">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+api.get('/reports/'+zoneType+'/filesizes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python91">
 		<pre>
@@ -8226,8 +8242,10 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby92">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneType = 'pull'
+id = '96061'
+api.get('/reports/'+zoneType+'/'+id+'/filesizes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python92">
 		<pre>
@@ -8329,8 +8347,8 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby93">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/statsbydir.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python93">
 		<pre>
@@ -8419,8 +8437,9 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby94">
 		<pre>
-
-		</pre>
+reportType = ''
+id = '96061'
+api.get('/reports/'+id+'/statsbydir.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python94">
 		<pre>
@@ -8526,13 +8545,14 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby95">
 		<pre>
-
-		</pre>
+reportType = ''
+clientId = ''
+api.get('/clients/'+clientId+'/reports/statsbyfilename.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python95">
 		<pre>
 reportType = ''
-clientId = '50'	
+clientId = ''	
 api.get('/clients/'+clientId+'/reports/statsbyfilename.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php95">
@@ -8666,14 +8686,16 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby96">
 		<pre>
-
-		</pre>
+reportType = ''
+id = ''
+clientId = ''
+api.get('/clients/'+clientId+'/reports/'+id+'/statsbyfilename.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python96">
 		<pre>
 reportType = ''
-id = '16888'
-clientId = '50'
+id = ''
+clientId = ''
 api.get('/clients/'+clientId+'/reports/'+id+'/statsbyfilename.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php96">
@@ -8750,13 +8772,14 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby97">
 		<pre>
-
-		</pre>
+reportType = ''
+clientId = ''
+api.get('/clients/'+clientId+'/reports/statsbycustomdomain.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python97">
 		<pre>
 reportType = ''
-clientId = '50'
+clientId = ''
 api.get('/clients/'+clientId+'/reports/statsbycustomdomain.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php97">
@@ -8851,8 +8874,11 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby98">
 		<pre>
-
-		</pre>
+reportType = ''
+zoneId = ''
+clientId = ''
+api.get('/clients/'+clientId+'/reports/'+zoneId+'/statsbycustomdomain.json'+reportType)
+</pre>
   </div>
   <div class="tab-pane" id="python98">
 		<pre>
@@ -8938,8 +8964,8 @@ Parameter | Default Value | Validation | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby99">
 		<pre>
-
-		</pre>
+reportType = ''
+api.get('/reports/live/connectionstats.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python99">
 		<pre>
