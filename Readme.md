@@ -198,7 +198,8 @@ api.put('/account.json',params=params)</pre>
 	</div>
   <div class="tab-pane" id="php2">
   	<pre>
-$api->put('/account.json',array("name"=>"newName"));</pre>
+$params = array("name"=>"newName");
+$api->put('/account.json',$params);</pre>
   </div>
   <div class="tab-pane" id="node2">
 	<pre>
@@ -2077,7 +2078,19 @@ api.purge(id, ['/file1.txt','/file2.txt'])</pre>
 	</div>
   <div class="tab-pane" id="php21">
   	<pre>
-Purge not yet available for PHP</pre>
+//Purge Zone
+$id = '97792';
+$api->delete('/zones/pull.json/'.$id.'/cache');
+
+//Purge File
+$id = '97792';
+$params = array('file'=>'/index.html');
+$api->delete('/zones/pull.json/'.$id.'/cache',$params);
+
+//Purge Files
+$id = '97792';
+$params = array('file'=>'/index.html','file2'=>'/robots.txt');
+$api->delete('/zones/pull.json/'.$id.'/cache',$params);</pre>
   </div>
   <div class="tab-pane" id="node21">
 	<pre>
@@ -2406,7 +2419,7 @@ api.put('/zones/pull/'+zoneId+'/customdomains.json/'+domainId,params=params)</pr
 $zoneId = '97167';
 $domainId = '79182';
 $params = array("custom_domain"=>"cdn.somenewdomain.com");
-$response =  $api->put('/zones/pull/'.$zoneId.'/customdomains.json/'.$domainId, $params);</pre>
+$api->put('/zones/pull/'.$zoneId.'/customdomains.json/'.$domainId, $params);</pre>
   </div>
   <div class="tab-pane" id="node25">
 	<pre>
@@ -3762,7 +3775,7 @@ api.post('/zones/vod.json',data=params)</pre>
   <div class="tab-pane" id="php41">
   	<pre>
 $params = array("name"=>"newVODZone3","password"=>"password");
-$response = $api->post('/zones/vod.json',$params);</pre>
+$api->post('/zones/vod.json',$params);</pre>
   </div>
   <div class="tab-pane" id="node41">
 	<pre>
@@ -4460,7 +4473,7 @@ api.get('/zones/vod/'+zoneId+'/customdomains.json/'+domainId)</pre>
   	<pre>
 $zoneId = '97183';
 $domainId = '79191';
-$response =  $api->get('/zones/vod/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
+$api->get('/zones/vod/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
   </div>
   <div class="tab-pane" id="node50">
 	<pre>
@@ -5063,7 +5076,7 @@ api.put('/zones/live.json/'+id,params=params)</pre>
   	<pre>
 $id = '97185';
 $params =  array("label"=>"Some other description");
-$response =  $api->put('/zones/live.json/'.$id,$params);
+$api->put('/zones/live.json/'.$id,$params);
 </pre>
   </div>
   <div class="tab-pane" id="node57">
@@ -5668,18 +5681,18 @@ Create and enable Upstream for a specific {zone_id}.
 
 Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`server_url` | - | <span class="label important">required</span><br /> | The server url or ip to provide the streaming resources | 1.0.1 |
-`port` | - | <span class="label important">required</span><br /> | The port where server is to be called | 1.0.1 |
+`server_url` | - | <span class="label important">required</span><br /> | The server url or ip to provide the streaming resources 
+`port` | - | <span class="label important">required</span><br /> | The port where server is to be called 
 
 
 ### Response Parameters
 
 Parameter | Description |
 --- | --- | ---
-`id` | The Upstream ID. | 1.0.1 |
-`bucket_id` | The bucket_id it belongs to | 1.0.1 |
-`server_url` | The server url or ip | 1.0.1 |
-`port` | The port it uses to call the server | 1.0.1 |
+`id` | The Upstream ID. 
+`bucket_id` | The bucket_id it belongs to 
+`server_url` | The server url or ip 
+`port` | The port it uses to call the server 
 
 ### Code Samples
 
@@ -5749,19 +5762,19 @@ Update the Upstream information for the specified {zone_id}.
 
 Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`upstream_id` | - | <span class="label important">required</span><br /> | The Upstream Information you're modifying. | 1.0.1 |
-`server_url` | - | <span class="label important">required</span><br /> | The server url or ip | 1.0.1 |
-`port` | - | <span class="label important">required</span><br /> | The port it uses to call the server | 1.0.1 |
+`upstream_id` | - | <span class="label important">required</span><br /> | The Upstream Information you're modifying. 
+`server_url` | - | <span class="label important">required</span><br /> | The server url or ip 
+`port` | - | <span class="label important">required</span><br /> | The port it uses to call the server 
 
 
 ### Response Parameters
 
 Parameter | Description |
 --- | --- | ---
-`id` | The Upstream ID. | 1.0.1 |
-`bucket_id` | The bucket_id it belongs to | 1.0.1 |
-`server_url` | The server url or ip | 1.0.1 |
-`port` | The port it uses to call the server | 1.0.1 |
+`id` | The Upstream ID. 
+`bucket_id` | The bucket_id it belongs to 
+`server_url` | The server url or ip 
+`port` | The port it uses to call the server 
 
 ### Code Samples
 
@@ -5924,22 +5937,22 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby69">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/stats.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python69">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/stats.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php69">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/stats.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node69">
 	<pre>
-var reportType = ''
+var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/stats.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
@@ -6015,25 +6028,25 @@ Parameter | Description |
   <div class="tab-pane active" id="ruby70">
 		<pre>
 id = '96061'
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/'+id+'/stats.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python70">
 		<pre>
 id = '96061'
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/'+id+'/stats.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php70">
   	<pre>
 $id = '96061';
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/'.$id.'/stats.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node70">
 	<pre>
 var id = '96061'
-var reportType = ''
+var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/' + id + '/stats.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
@@ -6366,22 +6379,22 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby73">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/nodes.json/stats'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python73">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/nodes.json/stats'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php73">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/nodes.json/stats/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node73">
 	<pre>
-var reportType = ''
+var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/nodes.json/stats/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
@@ -6550,25 +6563,25 @@ Parameter | Description |
   <div class="tab-pane active" id="ruby74">
 		<pre>
 id = '96061'
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/'+id+'/nodes.json/stats'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python74">
 		<pre>
 id = '96061'
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/'+id+'/nodes.json/stats'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php74">
   	<pre>
 $id = '96061';
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/'.$id.'/nodes.json/stats/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node74">
 	<pre>
 var id = '96061'
-var reportType = ''
+var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/' + id + '/nodes.json/stats/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
@@ -6800,25 +6813,25 @@ Parameter | Description |
   <div class="tab-pane active" id="ruby77">
 		<pre>
 id = '1'
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/nodes.json/'+id+'/stats'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python77">
 		<pre>
 id = '1'
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/nodes.json/'+id+'/stats'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php77">
   	<pre>
 $id = '1';
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/nodes.json/'.$id.'/stats/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node77">
 	<pre>
 var id = '1'
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/nodes.json/' + id + '/stats/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
@@ -6897,28 +6910,28 @@ Parameter | Description |
 		<pre>
 zoneId='96061'
 nodeId='1'
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/'+zoneId+'/nodes.json/'+nodeId+'/stats'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python78">
 		<pre>
 zoneId='96061'
 nodeId='1'
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/'+zoneId+'/nodes.json/'+nodeId+'/stats'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php78">
   	<pre>
 $zoneId='96061';
 $nodeId='1';
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/'.$zoneId.'/nodes.json/'.$nodeId.'/stats/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node78">
 	<pre>
 var zoneId = '96061'
 var nodeId = '1'
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/' + zoneId + '/nodes.json/' + nodeId + '/stats/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
@@ -7174,22 +7187,22 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby81">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/statuscodes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python81">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/statuscodes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php81">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/statuscodes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node81">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/statuscodes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
@@ -7263,25 +7276,25 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby82">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/statuscodes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python82">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/statuscodes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php82">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $id = '96061';
 $api->get('/reports/'.$id.'/statuscodes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node82">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var id = '96061'
 api.get('/reports/' + id + '/statuscodes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
@@ -7350,25 +7363,25 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby83">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 api.get('/reports/'+zoneType+'/statuscodes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python83">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 api.get('/reports/'+zoneType+'/statuscodes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php83">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneType = 'pull';
 $api->get('/reports/'.$zoneType.'/statuscodes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node83">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneType = 'pull'
 api.get('/reports/' + zoneType + '/statuscodes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
@@ -7445,28 +7458,28 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby84">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/statuscodes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python84">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/statuscodes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php84">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneType = 'pull';
 $id = '96061';
 $api->get('/reports/'.$zoneType.'/'.$id.'/statuscodes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node84">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneType = 'pull'
 var id = '96061'
 api.get('/reports/' + zoneType + '/' + id + '/statuscodes.json/' + reportType, function(err, response) {
@@ -7536,22 +7549,22 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby85">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python85">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/filetypes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php85">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/filetypes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node85">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/filetypes.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
@@ -7626,25 +7639,25 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby86">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python86">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/filetypes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php86">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $id = '96061';
 $api->get('/reports/'.$id.'/filetypes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node86">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var id = '96061'
 api.get('/reports/' + id + '/filetypes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
@@ -7707,25 +7720,25 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby87">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 api.get('/reports/'+zoneType+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python87">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 api.get('/reports/'+zoneType+'/filetypes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php87">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneType = 'pull';
 $api->get('/reports/'.$zoneType.'/filetypes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node87">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneType = 'pull'
 api.get('/reports/' + zoneType + '/filetypes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
@@ -7803,28 +7816,28 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby88">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python88">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/filetypes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php88">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneType = 'pull';
 $id = '96061';
 $api->get('/reports/'.$zoneType.'/'.$id.'/filetypes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node88">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneType = 'pull'
 var id = '96061'
 api.get('/reports/' + zoneType + '/' + id + '/filetypes.json/' + reportType, function(err, response) {
@@ -7906,24 +7919,24 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby89">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python89">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/filesizes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php89">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/filesizes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node89">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/filesizes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
@@ -8006,25 +8019,25 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby90">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/filesizes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python90">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/filesizes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php90">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $id = '96061';
 $api->get('/reports/'.$id.'/filesizes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node90">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var id = '96061'
 api.get('/reports/' + id + '/filesizes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
@@ -8108,25 +8121,25 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby91">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 api.get('/reports/'+zoneType+'/filesizes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python91">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 api.get('/reports/'+zoneType+'/filesizes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php91">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneType = 'pull';
 $api->get('/reports/'.$zoneType.'/filesizes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node91">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneType = 'pull'
 api.get('/reports/' + zoneType + '/filesizes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
@@ -8211,28 +8224,28 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby92">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/filesizes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python92">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/filesizes.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php92">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneType = 'pull';
 $id = '96061';
 $api->get('/reports/'.$zoneType.'/'.$id.'/filesizes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node92">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneType = 'pull'
 var id = '96061'
 api.get('/reports/' + zoneType + '/' + id + '/filesizes.json/' + reportType, function(err, response) {
@@ -8316,22 +8329,22 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby93">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/statsbydir.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python93">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/statsbydir.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php93">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/statsbydir.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node93">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/statsbydir.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
@@ -8406,25 +8419,25 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby94">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/statsbydir.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python94">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/statsbydir.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php94">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $id = '96061';
 $api->get('/reports/'.$id.'/statsbydir.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node94">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var id = '96061'
 api.get('/reports/' + id + '/' + '/statsbydir.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
@@ -8514,25 +8527,25 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby95">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 clientId = ''
 api.get('/clients/'+clientId+'/reports/statsbyfilename.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python95">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 clientId = ''	
 api.get('/clients/'+clientId+'/reports/statsbyfilename.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php95">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $clientId = '';
 $api->get('/clients/'.$clientId.'/reports/statsbyfilename.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node95">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var clientId = ''
 api.get('/clients/' + clientId + '/reports/statsbyfilename.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
@@ -8655,28 +8668,28 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby96">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = ''
 clientId = ''
 api.get('/clients/'+clientId+'/reports/'+id+'/statsbyfilename.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python96">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = ''
 clientId = ''
 api.get('/clients/'+clientId+'/reports/'+id+'/statsbyfilename.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php96">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $id = '96061';
 $clientId = '';
 $api->get('/clients/'.$clientId.'/reports/'.$id.'/statsbyfilename.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node96">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var id = '96061'
 var clientId = ''
 api.get('/clients/' + clientId + '/reports/' + id + '/statsbyfilename.json/' + reportType, function(err, response) {
@@ -8741,25 +8754,25 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby97">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 clientId = ''
 api.get('/clients/'+clientId+'/reports/statsbycustomdomain.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python97">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 clientId = ''
 api.get('/clients/'+clientId+'/reports/statsbycustomdomain.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php97">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $clientId = '';
 $api->get('clients/'.$clientId.'/reports/statsbycustomdomain.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node97">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var clientId = ''
 api.get('/clients/' + clientId + '/reports/statsbycustomdomain.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
@@ -8843,7 +8856,7 @@ Parameter | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby98">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneId = ''
 clientId = ''
 api.get('/clients/'+clientId+'/reports/'+zoneId+'/statsbycustomdomain.json'+reportType)
@@ -8851,21 +8864,21 @@ api.get('/clients/'+clientId+'/reports/'+zoneId+'/statsbycustomdomain.json'+repo
   </div>
   <div class="tab-pane" id="python98">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneId = '84199'
 clientId = '1'
 api.get('/clients/'+clientId+'/reports/'+zoneId+'/statsbycustomdomain.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php98">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneId = '';
 $clientId = '';
 $api->get('clients/'.$clientId.'/reports/'.$zoneId.'/statsbycustomdomain.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node98">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneId = ''
 var clientId = ''
 api.get('/clients/' + clientId + '/reports/' + zoneId + '/statsbycustomdomain.json/' + reportType, function(err, response) {
@@ -8933,22 +8946,22 @@ Parameter | Default Value | Validation | Description |
 <div class="tab-content">
   <div class="tab-pane active" id="ruby99">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/live/connectionstats.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python99">
 		<pre>
-reportType = ''
+reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/live/connectionstats.json'+reportType)</pre>
 	</div>
   <div class="tab-pane" id="php99">
   	<pre>
-$reportType = '';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/live/connectionstats.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node99">
 	<pre>
-var reportType = ''
+var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/live/connectionstats.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
