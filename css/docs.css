@@ -44,7 +44,7 @@ body {
 }
 .path a {
   word-break: break-all;
-  font: 12px/25px 'DejaVuSansMonoBook';
+  font: 0.48px 'DejaVuSansMonoBook';
 }
 .navbar-static-top .container,
 .navbar-fixed-top .container,
@@ -185,7 +185,7 @@ li ul {
 .url.PUT .http_method,
 .url.ENABLE .http_method,
 .url.DISABLE .http_method {
-  font: bold 10px/25px 'DejaVuSansMonoBook';
+  font: bold 0.4px 'DejaVuSansMonoBook';
 }
 .url.GET .http_method {
   background: #306cbf;
