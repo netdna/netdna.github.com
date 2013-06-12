@@ -43,7 +43,21 @@ Feel free to tweet and follow us [@netdna](https://twitter.com/netdna) and [@net
 
 ## Changelog
 
-Reference to [History.md](https://github.com/netdna/netdna-apidocs/blob/master/History.md#changelog) for a complete log of API changes and improvements.
+  - **2013-06-03**  Fixed formatting and display issues
+  - **2013-06-02**  Added Ruby Code examples
+  - **2013-05-31**  Added Python Code examples
+  - **2013-05-29**  Added Node Code examples
+  - **2013-05-28**  Added response examples
+  - **2013-05-25**  Added PHP Code examples
+  - **2013-03-29**  Added "Bad Request" for Purges without file(s) parameter in body
+  - **2013-03-14**  Added .ie to the TLD Validation
+  - **2013-03-12**  Added single file Purge to use cURL multi
+  - **2013-03-12**  Fixed SSL Update Bug
+  - **2013-03-08**  cURL Multi Purge Files
+  - **2013-03-07**  Fix 3-legged OAuth Restriction
+  - **2013-01-16**  Fixed SSL Bug
+  - **2012-12-05**  Added 2xx_hit calculation to all `statuscodebyfilename` Reports
+  - **2012-02-27**  Released Alpha Version of RWS API.
 
 ---
 
