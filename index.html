@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>API Docs (BETA)</title>
+    <title>API Docs</title>
     <meta name="description" content="Manage your platform on NetDNA&amp;#039;s CDN with our advanced RESTful API, allowing you to instantly manage users, zones, and accounts with ease.">
     <meta http-equiv="cleartype" content="on">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta property="og:site_name" content="API Docs (BETA)">
+    <meta property="og:site_name" content="API Docs">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="API Docs (BETA)">
+    <meta property="og:title" content="API Docs">
     <meta property="og:description" content="Manage your platform on NetDNA&amp;#039;s CDN with our advanced RESTful API, allowing you to instantly manage users, zones, and accounts with ease.">
     <meta property="og:image" content="https://www.netdna.com/wp-content/themes/newNetDNA/images/logo.png">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css">
@@ -21,7 +21,7 @@
     <div id="spacer"></div>
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container"><a href="/" class="brand">API Docs (BETA)</a></div>
+        <div class="container"><a href="/" class="brand">API Docs</a></div>
       </div>
     </div>
     <div class="container">
@@ -97,7 +97,6 @@
 <li><strong>2012-12-05</strong>  Added 2xx_hit calculation to all <code>statuscodebyfilename</code> Reports</li>
 <li><strong>2012-02-27</strong>  Released Alpha Version of RWS API.</li>
 </ul>
-<hr>
 <h1>Key: Path Parameters</h1>
 <table>
 <thead>
@@ -124,7 +123,6 @@
 </tr>
 </tbody>
 </table>
-<hr>
 <h1>Account API</h1>
 <h2>Get Account</h2>
 <p>Gets account information</p>
@@ -245,7 +243,7 @@ function callback(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Update Account</h2>
 <p>Updates account information</p>
 <div class="heading">
@@ -389,7 +387,7 @@ function callback(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Get Account Address</h2>
 <p>Gets account address information</p>
 <div class="heading">
@@ -511,7 +509,7 @@ function callback(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Update Account Address</h2>
 <p>Updates account address information</p>
 <div class="heading">
@@ -690,7 +688,6 @@ function callback(err, response) {
   })
 </script>
 
-<hr>
 <h1>Users API</h1>
 <h2>List Users</h2>
 <p>Returns a list of all users on the specified account</p>
@@ -876,7 +873,7 @@ function callback(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Create User</h2>
 <p>Creates a new user on the specified account</p>
 <div class="heading">
@@ -1073,7 +1070,6 @@ function callback(err, response) {
   })
 </script>
 
-<hr>
 <h2>Get User</h2>
 <p>Gets a user specified by the {user_id} parameter</p>
 <div class="heading">
@@ -1191,7 +1187,6 @@ function callback(err, response) {
   })
 </script>
 
-<hr>
 <h2>Update User</h2>
 <p>Updates a user specified by the {user_id} parameter</p>
 <div class="heading">
@@ -1359,7 +1354,7 @@ function callback(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Delete User</h2>
 <p>Deletes a user specified by the {user_id} parameter</p>
 <div class="heading">
@@ -1416,7 +1411,6 @@ function callback(err, response) {
   })
 </script>
 
-<h2>---</h2>
 <h1>Zones API</h1>
 <h2>List Zones</h2>
 <p>Returns a list of all zones on the specified account</p>
@@ -1500,7 +1494,6 @@ api.get(&#39;/zones.json&#39;, function(err, response) {
   })
 </script>
 
-<hr>
 <h2>Get Zone Summary</h2>
 <p>Gets a summarized count of all zone types on the specified
 account</p>
@@ -1591,7 +1584,7 @@ api.get(&#39;/zones.json/summary&#39;, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Get Zone Count</h2>
 <p>Counts all zones on the specified account</p>
 <div class="heading">
@@ -1660,7 +1653,7 @@ api.get(&#39;/zones.json/count&#39;, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h1>Pull Zone API</h1>
 <h2>List Pull Zones</h2>
 <p>Returns a list of all pull zones on the specified account</p>
@@ -1939,7 +1932,6 @@ api.get(&#39;/zones/pull.json&#39;, function(err, response) {
   })
 </script>
 
-<hr>
 <h2>Create Pull Zone</h2>
 <p>Creates a new pull zone</p>
 <div class="heading">
@@ -2350,7 +2342,6 @@ api.post(&#39;/zones/pull.json&#39;, { name: &#39;newPullZone2&#39;, url: &#39;<
   })
 </script>
 
-<hr>
 <h2>Get Pull Zones Count</h2>
 <p>Counts all pull zones on the specified account</p>
 <div class="heading">
@@ -2419,7 +2410,6 @@ api.get(&#39;/zones/pull.json/count&#39;, function(err, response) {
   })
 </script>
 
-<hr>
 <h2>Get Pull Zone</h2>
 <p>Gets a pull zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -2657,7 +2647,6 @@ api.get(&#39;/zones/pull.json&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
 <h2>Update Pull Zone</h2>
 <p>Updates a pull zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -3058,7 +3047,7 @@ api.put(&#39;/zones/pull.json&#39; + id, { label: &#39;Some other description&#3
   })
 </script>
 
-<hr>
+
 <h2>Delete Pull Zone</h2>
 <p>Deletes a pull zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -3113,7 +3102,7 @@ api.del(&#39;/zones/pull.json&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Enable Pull Zone</h2>
 <p>Enables a pull zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -3166,7 +3155,7 @@ api.enable(&#39;/zones/pull.json&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Disable Pull Zone</h2>
 <p>Disables a pull zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -3221,7 +3210,7 @@ api.disable(&#39;/zones/pull.json&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Purge Cache</h2>
 <p>Purges pull zone cache</p>
 <div class="heading">
@@ -3324,7 +3313,6 @@ function callback(err, response) {
   })
 </script>
 
-<hr>
 <h1>Pull Zone Custom Domains API</h1>
 <h2>List Custom Domains</h2>
 <p>Returns a list of all custom domains on the zone specified by
@@ -3417,7 +3405,7 @@ api.get(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json&#39;, function(er
   })
 </script>
 
-<hr>
+
 <h2>Create Custom Domain</h2>
 <p>Adds a new custom domain to {zone_id}</p>
 <div class="heading">
@@ -3535,7 +3523,6 @@ api.post(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json&#39;, { custom_d
   })
 </script>
 
-<hr>
 <h2>Get Custom Domain</h2>
 <p>Gets a custom domain specified by the {zone_id} and
 {customdomain_id} parameters</p>
@@ -3629,7 +3616,7 @@ api.get(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json/&#39; + domainId,
   })
 </script>
 
-<hr>
+
 <h2>Update Custom Domain</h2>
 <p>Updates a custom domain specified by the id parameter</p>
 <div class="heading">
@@ -3744,7 +3731,7 @@ api.put(&#39;/zones/pull/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
   })
 </script>
 
-<hr>
+
 <h2>Delete Custom Domain</h2>
 <p>Deletes a custom domain specified by the {zone_id} and
 {customdomain_id} parameters</p>
@@ -3804,7 +3791,6 @@ api.del(&#39;/zones/pull/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
   })
 </script>
 
-<hr>
 <h1>Push Zone API</h1>
 <h2>List Push Zones</h2>
 <p>Returns a list of all push zones on the specified account</p>
@@ -3967,7 +3953,7 @@ api.get(&#39;/zones/push.json&#39;, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Create Push Zone</h2>
 <p>Creates a new push zone</p>
 <div class="heading">
@@ -4159,7 +4145,6 @@ api.post(&#39;/zones/push.json&#39;, { name: &#39;newPushZone&#39;, password: &#
   })
 </script>
 
-<hr>
 <h2>Get Push Zones Count</h2>
 <p>Counts all push zones on the specified account</p>
 <div class="heading">
@@ -4229,7 +4214,7 @@ api.get(&#39;/zones/push.json/count&#39;, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Get Push Zone</h2>
 <p>Gets a push zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -4367,7 +4352,7 @@ api.get(&#39;/zones/push.json/&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Update Push Zone</h2>
 <p>Updates a push zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -4549,7 +4534,7 @@ api.get(&#39;/zones/push.json/&#39; + id, { label: &#39;Some other description&#
   })
 </script>
 
-<hr>
+
 <h2>Delete Push Zone</h2>
 <p>Deletes a push zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -4603,7 +4588,7 @@ api.del(&#39;/zones/push.json/&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Enable Push Zone</h2>
 <p>Enables a push zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -4657,7 +4642,7 @@ api.enable(&#39;/zones/push.json/&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Disable Push Zone</h2>
 <p>Disables a push zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -4712,8 +4697,6 @@ api.disable(&#39;/zones/push.json/&#39; + id, function(err, response) {
   })
 </script>
 
-
-<hr>
 <h1>Push Zone Custom Domains API</h1>
 <h2>List Custom Domains</h2>
 <p>Returns a list of all custom domains on the zone specified by
@@ -4806,7 +4789,7 @@ api.get(&#39;/zones/push/&#39; + id + &#39;/customdomains.json&#39;, function(er
   })
 </script>
 
-<hr>
+
 <h2>Create Custom Domain</h2>
 <p>Adds a new custom domain to {zone_id}</p>
 <div class="heading">
@@ -4925,7 +4908,7 @@ api.post(&#39;/zones/push/&#39; + id + &#39;/customdomains.json&#39;, { custom_d
   })
 </script>
 
-<hr>
+
 <h2>Get Custom Domain</h2>
 <p>Gets a custom domain specified by the {zone_id} and
 {customdomain_id} parameters</p>
@@ -5018,7 +5001,7 @@ api.get(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
   })
 </script>
 
-<hr>
+
 <h2>Update Custom Domain</h2>
 <p>Updates a custom domain specified by the id parameter</p>
 <div class="heading">
@@ -5134,7 +5117,7 @@ api.put(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
   })
 </script>
 
-<hr>
+
 <h2>Delete Custom Domain</h2>
 <p>Deletes a custom domain specified by the {zone_id} and
 {customdomain_id} parameters</p>
@@ -5194,8 +5177,6 @@ api.del(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
   })
 </script>
 
-
-<hr>
 <h1>VOD Zone API</h1>
 <h2>List VOD Zones</h2>
 <p>Returns a list of all VOD zones on the specified account</p>
@@ -5341,7 +5322,7 @@ api.get(&#39;/zones/vod.json&#39;, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Create VOD Zone</h2>
 <p>Creates a new VOD zone</p>
 <div class="heading">
@@ -5503,7 +5484,7 @@ api.post(&#39;/zones/vod.json&#39;, { name: &#39;newVODZone3&#39;, password: &#3
   })
 </script>
 
-<hr>
+
 <h2>Get VOD Zones Count</h2>
 <p>Counts all vod zones on the specified account</p>
 <div class="heading">
@@ -5572,7 +5553,7 @@ api.get(&#39;/zones/vod.json/count&#39;, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Get VOD Zone</h2>
 <p>Gets a VOD zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -5694,7 +5675,7 @@ api.get(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Update VOD Zone</h2>
 <p>Updates a VOD zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -5853,7 +5834,7 @@ api.put(&#39;/zones/vod.json/&#39; + id, { label: &#39;Some other description&#3
   })
 </script>
 
-<hr>
+
 <h2>Delete VOD Zone</h2>
 <p>Deletes a VOD zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -5907,7 +5888,7 @@ api.del(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Enable VOD Zone</h2>
 <p>Enables a VOD zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -5961,7 +5942,7 @@ api.enable(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Disable VOD Zone</h2>
 <p>Disables a VOD zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -6015,7 +5996,7 @@ api.disable(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h1>VOD Zone Custom Domains API</h1>
 <h2>List Custom Domains</h2>
 <p>Returns a list of all custom domains on the zone specified by
@@ -6108,7 +6089,7 @@ api.get(&#39;/zones/vod.json/&#39; + id + &#39;/customdomains.json, function(err
   })
 </script>
 
-<hr>
+
 <h2>Create Custom Domain</h2>
 <p>Adds a new custom domain to {zone_id}</p>
 <div class="heading">
@@ -6226,7 +6207,7 @@ api.post(&#39;/zones/vod/&#39; + id + &#39;/customdomains.json&#39;, { custom_do
   })
 </script>
 
-<hr>
+
 <h2>Get Custom Domain</h2>
 <p>Gets a custom domain specified by the {zone_id} and
 {customdomain_id} parameters</p>
@@ -6319,7 +6300,7 @@ api.get(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + domain
   })
 </script>
 
-<hr>
+
 <h2>Update Custom Domain</h2>
 <p>Updates a custom domain specified by the id parameter</p>
 <div class="heading">
@@ -6434,7 +6415,7 @@ api.put(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + domain
   })
 </script>
 
-<hr>
+
 <h2>Delete Custom Domain</h2>
 <p>Deletes a custom domain specified by the {zone_id} and
 {customdomain_id} parameters</p>
@@ -6494,7 +6475,7 @@ api.del(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + domain
   })
 </script>
 
-<hr>
+
 <h1>Live Zone API</h1>
 <h2>List Live Zones</h2>
 <p>Returns a list of all live zones on the specified account</p>
@@ -6630,7 +6611,7 @@ api.get(&#39;/zones/live.json&#39;, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Create Live Zone</h2>
 <p>Creates a new live zone</p>
 <div class="heading">
@@ -6780,7 +6761,7 @@ api.post(&#39;/zones/live.json&#39;,  { name: &#39;newLiveZone3&#39;, password: 
   })
 </script>
 
-<hr>
+
 <h2>Get Live Zones Count</h2>
 <p>Counts all live zones on the specified account</p>
 <div class="heading">
@@ -6850,7 +6831,7 @@ api.get(&#39;/zones.json&#39;, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Get Live Zone</h2>
 <p>Gets a live zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -6967,7 +6948,7 @@ api.get(&#39;/zones/live.json/&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Update Live Zone</h2>
 <p>Updates a live zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -7122,7 +7103,7 @@ api.put(&#39;/zones/live.json/&#39; + id, { label: &#39;Some other description&#
   })
 </script>
 
-<hr>
+
 <h2>Delete Live Zone</h2>
 <p>Deletes a live zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -7176,7 +7157,7 @@ api.del(&#39;/zones/live.json/&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Enable Live Zone</h2>
 <p>Enables a live zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -7230,7 +7211,7 @@ api.enable(&#39;/zones/live.json/&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Disable Live Zone</h2>
 <p>Disables a live zone specified by the {zone_id} parameter</p>
 <div class="heading">
@@ -7285,7 +7266,7 @@ api.disable(&#39;/zones/live.json/&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h1>Zones SSL API</h1>
 <h2>Get Zone&#39;s SSL Information</h2>
 <p>Get the SSL certificate for the specified {zone_type} and
@@ -7343,7 +7324,7 @@ api.get(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, funct
   })
 </script>
 
-<hr>
+
 <h2>Install SSL on Zone</h2>
 <p>Upload an SSL certificate for the specified {zone_type} and
 {zone_id}.</p>
@@ -7486,7 +7467,7 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ss
   })
 </script>
 
-<hr>
+
 <h2>Update Zone&#39;s SSL Information</h2>
 <p>Update the SSL certificate for the specified {zone_type} and
 {zone_id}.</p>
@@ -7629,7 +7610,7 @@ api.put(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ssl
   })
 </script>
 
-<hr>
+
 <h2>Remove Zone&#39;s SSL Information</h2>
 <p>Remove the SSL certificate for the specified {zone_type} and
 {zone_id}.</p>
@@ -7687,7 +7668,7 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, func
   })
 </script>
 
-<hr>
+
 <h1>Zones Upstream API</h1>
 <h2>Get Upstream information for the current zone</h2>
 <p>Get the upstream information for the specified {zone_id}.</p>
@@ -7744,7 +7725,7 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;,
   })
 </script>
 
-<hr>
+
 <h2>Enable Upstream on Zone</h2>
 <p>Create and enable Upstream for a specific {zone_id}.</p>
 <div class="heading">
@@ -7855,7 +7836,7 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;,
   })
 </script>
 
-<hr>
+
 <h2>Update Zone&#39;s Upstream Information</h2>
 <p>Update the Upstream information for the specified {zone_id}.</p>
 <div class="heading">
@@ -7972,7 +7953,7 @@ api.put(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;, 
   })
 </script>
 
-<hr>
+
 <h2>Remove Zone&#39;s Upstream Information</h2>
 <p>Remove the Upstream Information for the specified {zone_id}.</p>
 <div class="heading">
@@ -8029,7 +8010,7 @@ api.del(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;, 
   })
 </script>
 
-<hr>
+
 <h1>Reports by Zone API</h1>
 <h2>List Zone Stats</h2>
 <p>Gets all zone usage statistics optionally broken up by
@@ -8158,7 +8139,7 @@ api.get(&#39;/reports/stats.json/&#39; + reportType, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>List Stats per Zone</h2>
 <p>Gets the {zone_id} usage statistics optionally broken up by
 {report_type}. If no {report_type} is given the request will return
@@ -8296,7 +8277,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/stats.json/&#39; + reportType, function
   })
 </script>
 
-<hr>
+
 <h1>Reports by Location API</h1>
 <h2>List Nodes</h2>
 <p>Gets a list of all active nodes (locations)</p>
@@ -8437,7 +8418,7 @@ api.get(&#39;/reports/nodes.json&#39;, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>List Nodes by Zone</h2>
 <p>Gets a list of all active nodes (locations) specified by the
 {zone_id} parameter</p>
@@ -8572,7 +8553,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/nodes.json&#39;, function(err, response
   })
 </script>
 
-<hr>
+
 <h2>List Zone Node Stats by Report Type</h2>
 <p>Get usage statistics broken up by nodes and optionally
 {report_type}. If no {report_type} is given the request will return
@@ -8807,7 +8788,7 @@ api.get(&#39;/reports/nodes.json/stats/&#39; + reportType, function(err, respons
   })
 </script>
 
-<hr>
+
 <h2>List Node Stats by Zone and Report Type</h2>
 <p>Get usage statistics for a particular {zone_id} broken up by
 nodes and optionally {report_type}. If no {report_type} is given
@@ -8955,7 +8936,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/nodes.json/stats/&#39; + reportType, fu
   })
 </script>
 
-<hr>
+
 <h2>Get Zone Node</h2>
 <p>Gets the node information for the specified {node_id}</p>
 <div class="heading">
@@ -9043,7 +9024,7 @@ api.get(&#39;/reports/nodes.json/&#39; + id, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>Get Node by Zone</h2>
 <p>Gets the node information for the specified {node_id} and
 {zone_id}</p>
@@ -9138,7 +9119,6 @@ api.get(&#39;/reports/&#39; + zoneId + &#39;/nodes.json/&#39; + nodeId, function
   })
 </script>
 
-<hr>
 <h2>Get Zone Node Stats by Report Type</h2>
 <p>Get usage statistics for a particular {node_id} optionally
 broken up by {report_type}. If no {report_type} is given the
@@ -9272,7 +9252,7 @@ api.get(&#39;/reports/nodes.json/&#39; + id + &#39;/stats/&#39; + reportType, fu
   })7
 </script>
 
-<hr>
+
 <h2>Get Node Stats by Zone and Report Type</h2>
 <p>Get usage statistics for a particular {node_id} and {zone_id},
 optionally broken up by {report_type}. If no {report_type} is given
@@ -9410,7 +9390,8 @@ api.get(&#39;/reports/&#39; + zoneId + &#39;/nodes.json/&#39; + nodeId + &#39;/s
   })
 </script>
 
-<hr>
+
+
 <h1>Reports by Popular Files API</h1>
 <h2>List Popular Files</h2>
 <p>Gets the most popularly requested files for your account,
@@ -9542,7 +9523,7 @@ api.get(&#39;/reports/popularfiles.json&#39;, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>List Popular Files By Zone Type</h2>
 <p>Gets the most popularly requested files for your account,
 filtered by {zone_type} and grouped into daily statistics</p>
@@ -9677,7 +9658,7 @@ api.get(&#39;/reports/&#39; + type + &#39;/popularfiles.json&#39;, function(err,
   })
 </script>
 
-<hr>
+
 <h1>Reports by Status Codes API</h1>
 <h2>List Status Code Responses</h2>
 <p>Gets HTTP status code response statistics for your account</p>
@@ -9798,7 +9779,7 @@ api.get(&#39;/reports/statuscodes.json/&#39; + reportType, function(err, respons
   })
 </script>
 
-<hr>
+
 <h2>List Status Code Responses by Zone Id</h2>
 <p>Gets HTTP status code response statistics for a specific
 {zone_id}</p>
@@ -9917,7 +9898,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/statuscodes.json/&#39; + reportType, fu
   })
 </script>
 
-<hr>
+
 <h2>List Status Codes by Zone Type</h2>
 <p>Gets HTTP status code response statistics for a specific
 {zone_type}</p>
@@ -10042,7 +10023,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/statuscodes.json/&#39; + reportTy
   })
 </script>
 
-<hr>
+
 <h2>List Status Codes by Zone Id</h2>
 <p>Gets HTTP status code response statistics for a specific
 {zone_type} and {zone_id}</p>
@@ -10165,7 +10146,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/&#39; + id + &#39;/statuscodes.js
   })
 </script>
 
-<hr>
+
 <h1>Reports by File Types API</h1>
 <h2>List File Types</h2>
 <p>Gets file type statistics for your account</p>
@@ -10284,7 +10265,7 @@ api.get(&#39;/reports/filetypes.json&#39;, function(err, response) {
   })
 </script>
 
-<hr>
+
 <h2>List File Types by Zone Id</h2>
 <p>Gets file type statistics for a specific {zone_id}</p>
 <div class="heading">
@@ -10401,7 +10382,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/filetypes.json/&#39; + reportType, func
   })
 </script>
 
-<hr>
+
 <h2>List File Types by Zone Type</h2>
 <p>Gets file type statistics for a specific {zone_type}</p>
 <div class="heading">
@@ -10496,7 +10477,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/filetypes.json/&#39; + reportType
   })
 </script>
 
-<hr>
+
 <h2>List File Types by Zone Id</h2>
 <p>Gets file type statistics for a specific {zone_type} and
 {zone_id}</p>
@@ -10618,7 +10599,8 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/&#39; + id + &#39;/filetypes.json
   })
 </script>
 
-<hr>
+
+
 <h1>Reports by File Size Ranges API</h1>
 <h2>List File Sizes</h2>
 <p>Gets request statistics for your account based on file size
@@ -10771,7 +10753,7 @@ api.get(&#39;/reports/filesizes.json/&#39; + reportType, function(err, response)
   })
 </script>
 
-<hr>
+
 <h2>List File Sizes by Zone Id</h2>
 <p>Gets request statistics for the specified {zone_id} based on
 file size ranges</p>
@@ -10925,7 +10907,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/filesizes.json/&#39; + reportType, func
   })
 </script>
 
-<hr>
+
 <h2>List File Sizes by Zone Type</h2>
 <p>Gets request statistics for the specified {zone_type} based on
 file size ranges</p>
@@ -11079,7 +11061,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/filesizes.json/&#39; + reportType
   })
 </script>
 
-<hr>
+
 <h2>List File Sizes by Zone Id</h2>
 <p>Gets request statistics for the specified {zone_type} and
 {zone_id} based on file size ranges</p>
@@ -11237,7 +11219,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/&#39; + id + &#39;/filesizes.json
   })
 </script>
 
-<hr>
+
 <h1>Reports By Directory API</h1>
 <h2>List Stats By Directory</h2>
 <p>Gets usage statistics by directory for your account. (This
@@ -11363,7 +11345,6 @@ api.get(&#39;/reports/statsbydir.json/&#39; + reportType, function(err, response
   })
 </script>
 
-<hr>
 <h2>List Stats By Directory and Zone Id</h2>
 <p>Gets usage statistics by directory for the specified {zone_id}.
 (This report has to be enabled by Sales).</p>
@@ -11492,7 +11473,8 @@ api.get(&#39;/reports/&#39; + id + &#39;/&#39; + &#39;/statsbydir.json/&#39; + r
   })
 </script>
 
-<hr>
+
+
 <h1>Reports By File Name API</h1>
 <h2>List Stats By File Name</h2>
 <p>Gets usage statistics by file name for your account</p>
@@ -11720,7 +11702,7 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbyfilename.json/&#39
   })
 </script>
 
-<hr>
+
 <h2>List Stats By File Name and Zone Id</h2>
 <p>Gets usage statistics by file name for the specified
 {zone_id}</p>
@@ -11905,7 +11887,8 @@ Non functional</pre>
   })
 </script>
 
-<hr>
+
+
 <h1>Reports By Custom Domain API</h1>
 <h2>List Stats By Directory</h2>
 <p>Gets usage statistics by custom domain for your account. (This
@@ -12043,7 +12026,7 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbycustomdomain.json/
   })
 </script>
 
-<hr>
+
 <h2>List Stats By Custom Domain and Zone Id</h2>
 <p>Gets usage statistics by custom domain for the specified
 {zone_id}. (This report has to be enabled by Sales).</p>
@@ -12177,7 +12160,8 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/&#39; + zoneId + &#39;/st
   })
 </script>
 
-<hr>
+
+
 <h1>Reports for Live Zones API</h1>
 <h2>List Connection Stats</h2>
 <p>Gets zone stats in hourly, daily, or monthly summaries</p>
@@ -12267,8 +12251,6 @@ api.get(&#39;/reports/live/connectionstats.json/&#39; + reportType, function(err
   })
 </script>
 
-<hr>
-
         </div>
       </div>
     </div>
@@ -12290,6 +12272,14 @@ api.get(&#39;/reports/live/connectionstats.json/&#39; + reportType, function(err
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-30196337-2', 'netdna.com');
+      ga('send', 'pageview');
     </script>
   </body>
 </html>
