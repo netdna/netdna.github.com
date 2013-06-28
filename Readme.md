@@ -8470,8 +8470,7 @@ Parameter | Description |
 `3xx` | The amount of 3xx hits |
 `404` | The amount of 404 hits |
 `4xx` | The amount of 4xx hits |
-`5xx` | The amount of 206 hits |
-`5xx` | The amount of 206 hits |
+`5xx` | The amount of 5xx hits |
 `timestampf` | Timestamp |
 
 
