@@ -11546,21 +11546,6 @@ api.get(&#39;/reports/&#39; + id + &#39;/&#39; + &#39;/statsbydir.json/&#39; + r
 </thead>
 <tbody>
 <tr>
-<td><code>bucket_id</code></td>
-<td>The Zone ID for the top level directory</td>
-<td></td>
-</tr>
-<tr>
-<td><code>hit</code></td>
-<td>The number of requests made to files within this directory</td>
-<td></td>
-</tr>
-<tr>
-<td><code>size</code></td>
-<td>The amount of bytes transferred from within this directory</td>
-<td></td>
-</tr>
-<tr>
 <td><code>200</code></td>
 <td>The amount of 200 hits</td>
 <td></td>
@@ -11592,17 +11577,37 @@ api.get(&#39;/reports/&#39; + id + &#39;/&#39; + &#39;/statsbydir.json/&#39; + r
 </tr>
 <tr>
 <td><code>5xx</code></td>
-<td>The amount of 206 hits</td>
+<td>The amount of 5xx hits</td>
 <td></td>
 </tr>
 <tr>
-<td><code>5xx</code></td>
-<td>The amount of 206 hits</td>
+<td><code>bucket_id</code></td>
+<td>The Zone ID for the top level directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>file_name</code></td>
+<td>URI</td>
+<td></td>
+</tr>
+<tr>
+<td><code>hit</code></td>
+<td>The number of requests made to files within this directory</td>
+<td></td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>The amount of bytes transferred from within this directory</td>
 <td></td>
 </tr>
 <tr>
 <td><code>timestampf</code></td>
 <td>Timestamp</td>
+<td></td>
+</tr>
+<tr>
+<td><code>vhost</code></td>
+<td>CDN URL</td>
 <td></td>
 </tr>
 </tbody>
