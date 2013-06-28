@@ -8322,18 +8322,19 @@ Parameter | Default Value | Validation | Description |
 
 Parameter | Description |
 --- | --- | ---
-`bucket_id` | The Zone ID for the top level directory |
-`hit` | The number of requests made to files within this directory |
-`size` | The amount of bytes transferred from within this directory |
 `200` | The amount of 200 hits |
 `206` | The amount of 206 hits |
 `2xx` | The amount of 2xx hits |
 `3xx` | The amount of 3xx hits |
 `404` | The amount of 404 hits |
 `4xx` | The amount of 4xx hits |
-`5xx` | The amount of 206 hits |
-`5xx` | The amount of 206 hits |
+`5xx` | The amount of 5xx hits |
+`bucket_id` | The Zone ID for the top level directory |
+`file_name` | URI |
+`hit` | The number of requests made to files within this directory |
+`size` | The amount of bytes transferred from within this directory |
 `timestampf` | Timestamp |
+`vhost` | CDN URL |
 
 ### Code Samples
 
