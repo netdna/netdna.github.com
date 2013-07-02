@@ -48,6 +48,15 @@ $(function() {
 
 })
 
+$(document).ready(function(){
+	var hashTag = window.location.href;
+	if (hashTag.indexOf('#') > 0){
+		hashTag = hashTag.substr(hashTag.indexOf('#'));
+		var offsetTop = $(hashTag).offset().top - 80;
+		$('html, body').animate({scrollTop: $(hashTag).offset().top-45}, 1);
+	}
+});
+
 $(function() {
 
   // make code pretty
