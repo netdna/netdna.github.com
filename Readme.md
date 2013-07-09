@@ -44,6 +44,7 @@ Feel free to tweet and follow us [@netdna](https://twitter.com/netdna) and [@net
 
 ## Changelog
 
+  - **2013-07-09**  Added Authentication section
   - **2013-06-03**  Fixed formatting and display issues
   - **2013-06-02**  Added Ruby Code examples
   - **2013-05-31**  Added Python Code examples
