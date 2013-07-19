@@ -3147,8 +3147,8 @@ api.del(&#39;/zones/pull.json&#39; + id, function(err, response) {
 <h2>Enable Pull Zone</h2>
 <p>Enables a pull zone specified by the {zone_id} parameter</p>
 <div class="heading">
-<div class="url ENABLE"><span class="http_method">ENABLE</span>
-<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}</a></span></div>
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/enable.json">https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/enable.json</a></span></div>
 </div>
 
 
@@ -3165,27 +3165,30 @@ api.del(&#39;/zones/pull.json&#39; + id, function(err, response) {
   <div class="tab-pane active" id="ruby19">
         <pre>
 id = &#39;97167&#39;
-api.enable(&#39;/zones/pull.json/&#39;+id)</pre>
+api.put(&#39;/zones/pull/&#39;+id+&#39;/enable.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python19">
         <pre>
 id = &#39;97167&#39;
-api.enable(&#39;/zones/pull.json/&#39;+id)</pre>
+api.put(&#39;/zones/pull/&#39;+id+&#39;/enable.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php19">
       <pre>
 $id = &#39;97167&#39;;
-$api-&gt;enable(&#39;/zones/pull.json/&#39;.$id);</pre>
+$api-&gt;put(&#39;/zones/pull/&#39;.$id.&#39;/enable.json&#39;);</pre>
   </div>
   <div class="tab-pane" id="node19">
     <pre>
 var id = &#39;97167&#39;
-api.enable(&#39;/zones/pull.json&#39; + id, function(err, response) {
+api.put(&#39;/zones/pull/&#39; + id + &#39;/enable.json&#39;, function(err, response) {
   console.log(&#39;err&#39;, err, &#39;response&#39;, response)
 })</pre>
   </div>
   <div class="tab-pane" id="response19">
         <pre>
+{
+    &quot;code&quot;:200
+}
 </pre>
   </div>
 </div>
@@ -3200,8 +3203,8 @@ api.enable(&#39;/zones/pull.json&#39; + id, function(err, response) {
 <h2>Disable Pull Zone</h2>
 <p>Disables a pull zone specified by the {zone_id} parameter</p>
 <div class="heading">
-<div class="url DISABLE"><span class="http_method">DISABLE</span>
-<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}</a></span></div>
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/disable.json">https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/disable.json</a></span></div>
 </div>
 
 
@@ -3218,22 +3221,22 @@ api.enable(&#39;/zones/pull.json&#39; + id, function(err, response) {
   <div class="tab-pane active" id="ruby20">
         <pre>
 id = &#39;97167&#39;
-api.disable(&#39;/zones/pull.json/&#39;+id)</pre>
+api.put(&#39;/zones/pull/&#39;+id+&#39;/disable.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python20">
         <pre>
 id = &#39;97167&#39;
-api.disable(&#39;/zones/pull.json/&#39;+id)</pre>
+api.put(&#39;/zones/pull/&#39;+id+&#39;/disable.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php20">
       <pre>
 $id = &#39;97167&#39;;
-$api-&gt;disable(&#39;/zones/pull.json/&#39;.$id);</pre>
+$api-&gt;put(&#39;/zones/pull&#39;.$id.&#39;disable.json);</pre>
   </div>
   <div class="tab-pane" id="node20">
     <pre>
 var id = &#39;97167&#39;
-api.disable(&#39;/zones/pull.json&#39; + id, function(err, response) {
+api.put(&#39;/zones/pull&#39; + id + &#39;disable.json&#39;, function(err, response) {
   console.log(&#39;err&#39;, err, &#39;response&#39;, response)
 })</pre>
   </div>
@@ -4633,8 +4636,8 @@ api.del(&#39;/zones/push.json/&#39; + id, function(err, response) {
 <h2>Enable Push Zone</h2>
 <p>Enables a push zone specified by the {zone_id} parameter</p>
 <div class="heading">
-<div class="url ENABLE"><span class="http_method">ENABLE</span>
-<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}</a></span></div>
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/enable.json">https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/enable.json</a></span></div>
 </div>
 
 <h3>Code Samples</h3>
@@ -4650,22 +4653,22 @@ api.del(&#39;/zones/push.json/&#39; + id, function(err, response) {
   <div class="tab-pane active" id="ruby33">
         <pre>
 id = &#39;97793&#39;
-api.enable(&#39;/zones/push.json/&#39;+id)</pre>
+api.put(&#39;/zones/push/&#39;+id+&#39;/enable.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python33">
         <pre>
 id = &#39;96182&#39;
-api.enable(&#39;/zones/push.json/&#39;+id)</pre>
+api.put(&#39;/zones/push/&#39;+id+&#39;/enable.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php33">
       <pre>
 $id = &#39;97181&#39;;
-$api-&gt;enable(&#39;/zones/push.json/&#39;.$id);</pre>
+$api-&gt;put(&#39;/zones/push/&#39;.$id.&#39;/enable.json&#39;);</pre>
   </div>
   <div class="tab-pane" id="node33">
     <pre>
 var id = &#39;97181&#39;
-api.enable(&#39;/zones/push.json/&#39; + id, function(err, response) {
+api.put(&#39;/zones/push/&#39; + id + &#39;/enable.json&#39;, function(err, response) {
   console.log(&#39;err&#39;, err, &#39;response&#39;, response)
 })</pre>
   </div>
@@ -4687,8 +4690,8 @@ api.enable(&#39;/zones/push.json/&#39; + id, function(err, response) {
 <h2>Disable Push Zone</h2>
 <p>Disables a push zone specified by the {zone_id} parameter</p>
 <div class="heading">
-<div class="url DISABLE"><span class="http_method">DISABLE</span>
-<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}</a></span></div>
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/disable.json">https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/disable.json</a></span></div>
 </div>
 
 
@@ -4705,22 +4708,22 @@ api.enable(&#39;/zones/push.json/&#39; + id, function(err, response) {
   <div class="tab-pane active" id="ruby34">
         <pre>
 id = &#39;97793&#39;
-api.disable(&#39;/zones/push.json/&#39;+id)</pre>
+api.put(&#39;/zones/push/&#39;+id+&#39;/disable.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python34">
         <pre>
 id = &#39;96182&#39;
-api.disable(&#39;/zones/push.json/&#39;+id)</pre>
+api.put(&#39;/zones/push/&#39;+id+&#39;/disable.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php34">
       <pre>
 $id = &#39;97181&#39;;
-$api-&gt;disable(&#39;/zones/push.json/&#39;.$id);</pre>
+$api-&gt;put(&#39;/zones/push/&#39;.$id.&#39;/disable.json&#39;);</pre>
   </div>
   <div class="tab-pane" id="node34">
     <pre>
 var id = &#39;97181&#39;
-api.disable(&#39;/zones/push.json/&#39; + id, function(err, response) {
+api.put(&#39;/zones/push/&#39; + id + &#39;/disable.json&#39;, function(err, response) {
   console.log(&#39;err&#39;, err, &#39;response&#39;, response)
 })</pre>
   </div>
@@ -5933,8 +5936,8 @@ api.del(&#39;/zones/vod.json/&#39; + id, function(err, response) {
 <h2>Enable VOD Zone</h2>
 <p>Enables a VOD zone specified by the {zone_id} parameter</p>
 <div class="heading">
-<div class="url ENABLE"><span class="http_method">ENABLE</span>
-<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}</a></span></div>
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/enable.json">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/enable.json</a></span></div>
 </div>
 
 <h3>Code Samples</h3>
@@ -5950,22 +5953,22 @@ api.del(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   <div class="tab-pane active" id="ruby46">
         <pre>
 id = &#39;97794&#39;
-api.enable(&#39;/zones/vod.json/&#39;+id)</pre>
+api.put(&#39;/zones/vod/&#39;+id+&#39;/enable.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python46">
         <pre>
 id = &#39;96187&#39;
-api.enable(&#39;/zones/vod.json/&#39;+id)</pre>
+api.put(&#39;/zones/vod/&#39;+id+&#39;/enable.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php46">
       <pre>
 $id = &#39;96187&#39;;
-$api-&gt;enable(&#39;/zones/vod.json/&#39;.$id);</pre>
+$api-&gt;put(&#39;/zones/vod/&#39;.$id.&#39;/enable.json&#39;);</pre>
   </div>
   <div class="tab-pane" id="node46">
     <pre>
 var id = &#39;96187&#39;
-api.enable(&#39;/zones/vod.json/&#39; + id, function(err, response) {
+api.put(&#39;/zones/vod/&#39; + id + &#39;/enable.json&#39;, function(err, response) {
   console.log(&#39;err&#39;, err, &#39;response&#39;, response)
 })</pre>
   </div>
@@ -5987,8 +5990,8 @@ api.enable(&#39;/zones/vod.json/&#39; + id, function(err, response) {
 <h2>Disable VOD Zone</h2>
 <p>Disables a VOD zone specified by the {zone_id} parameter</p>
 <div class="heading">
-<div class="url DISABLE"><span class="http_method">DISABLE</span>
-<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}</a></span></div>
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/disable.json">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/disable.json</a></span></div>
 </div>
 
 <h3>Code Samples</h3>
@@ -6004,22 +6007,22 @@ api.enable(&#39;/zones/vod.json/&#39; + id, function(err, response) {
   <div class="tab-pane active" id="ruby47">
         <pre>
 id = &#39;97794&#39;
-api.disable(&#39;/zones/vod.json/&#39;+id)</pre>
+api.put(&#39;/zones/vod/&#39;+id+&#39;/disable.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python47">
         <pre>
 id = &#39;96187&#39;
-api.disable(&#39;/zones/vod.json/&#39;+id)</pre>
+api.put(&#39;/zones/vod/&#39;+id+&#39;/disable.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php47">
       <pre>
 $id = &#39;96187&#39;;
-$api-&gt;disable(&#39;/zones/vod.json/&#39;.$id);</pre>
+$api-&gt;put(&#39;/zones/vod/&#39;.$id.&#39;/disable.json&#39;);</pre>
   </div>
   <div class="tab-pane" id="node47">
     <pre>
 var id = &#39;96187&#39;
-api.disable(&#39;/zones/vod.json/&#39; + id, function(err, response) {
+api.put(&#39;/zones/vod/&#39; + id + &#39;/disable.json&#39;, function(err, response) {
   console.log(&#39;err&#39;, err, &#39;response&#39;, response)
 })</pre>
   </div>
@@ -7202,8 +7205,8 @@ api.del(&#39;/zones/live.json/&#39; + id, function(err, response) {
 <h2>Enable Live Zone</h2>
 <p>Enables a live zone specified by the {zone_id} parameter</p>
 <div class="heading">
-<div class="url ENABLE"><span class="http_method">ENABLE</span>
-<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}</a></span></div>
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live/{zone_id}/enable.json">https://rws.netdna.com/{companyalias}/zones/live/{zone_id}/enable.json</a></span></div>
 </div>
 
 <h3>Code Samples</h3>
@@ -7219,22 +7222,22 @@ api.del(&#39;/zones/live.json/&#39; + id, function(err, response) {
   <div class="tab-pane active" id="ruby59">
         <pre>
 id = &#39;97795&#39;
-api.enable(&#39;/zones/live.json/&#39;+id)</pre>
+api.put(&#39;/zones/live/&#39;+id+&#39;/enable.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python59">
         <pre>
 id = &#39;96193&#39;
-api.enable(&#39;/zones/live.json/&#39;+id)</pre>
+api.put(&#39;/zones/live/&#39;+id+&#39;/enable.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php59">
       <pre>
 $id = &#39;96061&#39;;
-$api-&gt;enable(&#39;/zones/live.json/&#39;.$id);</pre>
+$api-&gt;put(&#39;/zones/live/&#39;.$id.&#39;/enable.json&#39;);</pre>
   </div>
   <div class="tab-pane" id="node59">
     <pre>
 var id = &#39;96061&#39;
-api.enable(&#39;/zones/live.json/&#39; + id, function(err, response) {
+api.put(&#39;/zones/live/&#39; + id + &#39;/enable.json&#39;, function(err, response) {
   console.log(&#39;err&#39;, err, &#39;response&#39;, response)
 })</pre>
   </div>
@@ -7256,8 +7259,8 @@ api.enable(&#39;/zones/live.json/&#39; + id, function(err, response) {
 <h2>Disable Live Zone</h2>
 <p>Disables a live zone specified by the {zone_id} parameter</p>
 <div class="heading">
-<div class="url DISABLE"><span class="http_method">DISABLE</span>
-<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}</a></span></div>
+<div class="url PUT"><span class="http_method">PUT</span>
+<span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live/{zone_id}/disable.json">https://rws.netdna.com/{companyalias}/zones/live/{zone_id}/disable.json</a></span></div>
 </div>
 
 
@@ -7274,22 +7277,22 @@ api.enable(&#39;/zones/live.json/&#39; + id, function(err, response) {
   <div class="tab-pane active" id="ruby60">
         <pre>
 id = &#39;97795&#39;
-api.disable(&#39;/zones/live.json/&#39;+id)</pre>
+api.put(&#39;/zones/live/&#39;+id+&#39;/disable.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python60">
         <pre>
 id = &#39;96193&#39;
-api.disable(&#39;/zones/live.json/&#39;+id)</pre>
+api.put(&#39;/zones/live/&#39;+id+&#39;/disable.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php60">
       <pre>
 $id = &#39;96061&#39;;
-api-&gt;disable(&#39;/zones/live.json/&#39;.$id);</pre>
+api-&gt;put(&#39;/zones/live/&#39;.$id.&#39;/disable.json&#39;);</pre>
   </div>
   <div class="tab-pane" id="node60">
     <pre>
 var id = &#39;96061&#39;
-api.disable(&#39;/zones/live.json/&#39; + id, function(err, response) {
+api.put(&#39;/zones/live/&#39; + id + &#39;/disable.json&#39;, function(err, response) {
   console.log(&#39;err&#39;, err, &#39;response&#39;, response)
 })</pre>
   </div>
