@@ -35,11 +35,10 @@ Follow the documentation for our API below!
 
 ## Support
 
-Have a question? Check out our [Knowledge base](http://support.netdna.com/) to see if your question has already been answered.
-
-Still need help?  Visit our [Contact](http://www.netdna.com/contact/) page to get in touch.
-
-Feel free to tweet and follow us [@netdna](https://twitter.com/netdna) and [@netdnasupport](https://twitter.com/netdnasupport).
+* Have a question? Check out our [Knowledge Base](http://support.netdna.com/) to see if your question has already been answered.
+* Still need help?  Visit our [Contact Page](http://www.netdna.com/contact/) to get in touch.
+* Found a Bug? Visit our [GitHub Issues](https://github.com/netdna/rws-bugs/issues?state=open) page to report it.
+* Feel free to tweet and follow us [@NetDNADeveloper](https://twitter.com/netdnadeveloper) and/or [@NetDNAStatus](https://twitter.com/netdnastatus).
 
 
 ## Changelog
@@ -70,9 +69,9 @@ The first thing to do in order to use the NetDNA REST Web Service is to register
 
 The NetDNA RWS supports both 2-legged and 3-legged authentication.
 
-3-legged oauth is best used to allow a 3rd party app (like w3-total-cache plugin) access to a users profile - the user just needs to grant access to the app.
+3-legged OAuth is best used to allow a 3rd party apps/services (e.g. [Leftronic](https://www.leftronic.com/services/maxcdn/)) access to a users profile - the user just needs to grant access to the app.
 
-2-legged oauth is more limited in that it only allows a consumer access to resources that belong to it (this is also useful for building a 3rd party app or a control panel where the consumer is a reseller or an account with sub-accounts - this means the reseller/main account also has access to sub-account resources). This does not require any user intervention in the process.
+2-legged OAuth is more limited in that it only allows a consumer access to resources that belong to it (this is also useful for building a 3rd party app or a control panel where the consumer is a reseller or an account with sub-accounts - this means the reseller/main account also has access to sub-account resources). This does not require any user intervention in the process.
 
 ### 3-legged OAuth
 3-legged OAuth describes the scenario for which OAuth was originally developed: a resource owner wants to give a client access to a server without sharing his credentials (i.e. username/password).
