@@ -199,12 +199,6 @@ function callback(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab1 a:last').tab('show');
-  })
-</script>
-
 
 ## Update Account
 
@@ -296,12 +290,6 @@ function callback(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab2 a:last').tab('show');
-  })
-</script>
-
 
 ## Get Account Address
 
@@ -379,12 +367,6 @@ function callback(err, response) {
 </pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab3 a:last').tab('show');
-  })
-</script>
 
 
 ## Update Account Address
@@ -477,12 +459,6 @@ function callback(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab4 a:last').tab('show');
-  })
-</script>
 
 # Users API
 
@@ -617,12 +593,6 @@ function callback(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab5 a:last').tab('show');
-  })
-</script>
-
 
 ## Create User
 
@@ -725,11 +695,6 @@ function callback(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab6 a:last').tab('show');
-  })
-</script>
 
 ## Get User
 
@@ -816,11 +781,6 @@ function callback(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab7 a:last').tab('show');
-  })
-</script>
 
 ## Update User
 
@@ -919,12 +879,6 @@ function callback(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab8 a:last').tab('show');
-  })
-</script>
-
 
 ## Delete User
 
@@ -979,11 +933,6 @@ function callback(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab9 a:last').tab('show');
-  })
-</script>
 
 # Zones API
 
@@ -1066,11 +1015,6 @@ api.get('/zones.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab10 a:last').tab('show');
-  })
-</script>
 
 ## Get Zone Summary
 
@@ -1138,12 +1082,6 @@ api.get('/zones.json/summary', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab11 a:last').tab('show');
-  })
-</script>
-
 
 ## Get Zone Count
 
@@ -1201,12 +1139,6 @@ api.get('/zones.json/count', function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab12 a:last').tab('show');
-  })
-</script>
 
 
 # Pull Zone API
@@ -1371,11 +1303,6 @@ api.get('/zones/pull.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab13 a:last').tab('show');
-  })
-</script>
 
 ## Create Pull Zone
 
@@ -1525,11 +1452,6 @@ api.post('/zones/pull.json', { name: 'newPullZone2', url: 'http://somedomain.net
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab14 a:last').tab('show');
-  })
-</script>
 
 ## Get Pull Zones Count
 
@@ -1586,11 +1508,6 @@ api.get('/zones/pull.json/count', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab15 a:last').tab('show');
-  })
-</script>
 
 ## Get Pull Zone
 
@@ -1712,11 +1629,6 @@ api.get('/zones/pull.json' + id, function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab16 a:last').tab('show');
-  })
-</script>
 
 ## Update Pull Zone
 
@@ -1869,12 +1781,6 @@ api.put('/zones/pull.json' + id, { label: 'Some other description' }, function(e
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab17 a:last').tab('show');
-  })
-</script>
-
 
 ## Delete Pull Zone
 
@@ -1926,12 +1832,6 @@ api.del('/zones/pull.json' + id, function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab18 a:last').tab('show');
-  })
-</script>
 
 
 ## Enable Pull Zone
@@ -1986,12 +1886,6 @@ api.put('/zones/pull/' + id + '/enable.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab19 a:last').tab('show');
-  })
-</script>
-
 
 ## Disable Pull Zone
 
@@ -2043,12 +1937,6 @@ api.put('/zones/pull' + id + 'disable.json', function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab20 a:last').tab('show');
-  })
-</script>
 
 
 ## Purge Cache
@@ -2137,11 +2025,6 @@ function callback(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab21 a:last').tab('show');
-  })
-</script>
 
 # Pull Zone Custom Domains API
 
@@ -2214,12 +2097,6 @@ api.get('/zones/pull/' + id + '/customdomains.json', function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab22 a:last').tab('show');
-  })
-</script>
 
 
 ## Create Custom Domain
@@ -2300,11 +2177,6 @@ api.post('/zones/pull/' + id + '/customdomains.json', { custom_domain: 'cdn.some
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab23 a:last').tab('show');
-  })
-</script>
 
 ## Get Custom Domain
 
@@ -2377,12 +2249,6 @@ api.get('/zones/pull/' + id + '/customdomains.json/' + domainId, function(err, r
 </pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab24 a:last').tab('show');
-  })
-</script>
 
 
 ## Update Custom Domain
@@ -2466,12 +2332,6 @@ api.put('/zones/pull/' + zoneId + '/customdomains.json/' + domainId, { custom_do
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab25 a:last').tab('show');
-  })
-</script>
-
 
 ## Delete Custom Domain
 
@@ -2529,11 +2389,6 @@ api.del('/zones/pull/' + zoneId + '/customdomains.json/' + domainId, function(er
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab26 a:last').tab('show');
-  })
-</script>
 
 # Push Zone API
 
@@ -2649,12 +2504,6 @@ api.get('/zones/push.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab27 a:last').tab('show');
-  })
-</script>
-
 
 ## Create Push Zone
 
@@ -2755,11 +2604,6 @@ api.post('/zones/push.json', { name: 'newPushZone', password: 'password' }, func
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab28 a:last').tab('show');
-  })
-</script>
 
 ## Get Push Zones Count
 
@@ -2816,12 +2660,6 @@ api.get('/zones/push.json/count', function(err, response) {
 </pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab29 a:last').tab('show');
-  })
-</script>
 
 
 ## Get Push Zone
@@ -2911,12 +2749,6 @@ api.get('/zones/push.json/' + id, function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab30 a:last').tab('show');
-  })
-</script>
 
 
 ## Update Push Zone
@@ -3020,12 +2852,6 @@ api.get('/zones/push.json/' + id, { label: 'Some other description' }, function(
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab31 a:last').tab('show');
-  })
-</script>
-
 
 ## Delete Push Zone
 
@@ -3077,12 +2903,6 @@ api.del('/zones/push.json/' + id, function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab32 a:last').tab('show');
-  })
-</script>
-
 
 ## Enable Push Zone
 
@@ -3133,12 +2953,6 @@ api.put('/zones/push/' + id + '/enable.json', function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab33 a:last').tab('show');
-  })
-</script>
 
 
 ## Disable Push Zone
@@ -3192,11 +3006,6 @@ api.put('/zones/push/' + id + '/disable.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab34 a:last').tab('show');
-  })
-</script>
 
 # Push Zone Custom Domains API
 
@@ -3269,12 +3078,6 @@ api.get('/zones/push/' + id + '/customdomains.json', function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab35 a:last').tab('show');
-  })
-</script>
 
 
 ## Create Custom Domain
@@ -3355,12 +3158,6 @@ api.post('/zones/push/' + id + '/customdomains.json', { custom_domain: 'cdn.some
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab36 a:last').tab('show');
-  })
-</script>
-
 
 ## Get Custom Domain
 
@@ -3432,12 +3229,6 @@ api.get('/zones/push/' + zoneId + '/customdomains.json/' + domainId, function(er
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab37 a:last').tab('show');
-  })
-</script>
 
 
 ## Update Custom Domain
@@ -3521,12 +3312,6 @@ api.put('/zones/push/' + zoneId + '/customdomains.json/' + domainId, { custom_do
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab38 a:last').tab('show');
-  })
-</script>
-
 
 ## Delete Custom Domain
 
@@ -3584,11 +3369,6 @@ api.del('/zones/push/' + zoneId + '/customdomains.json/' + domainId, function(er
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab39 a:last').tab('show');
-  })
-</script>
 
 # VOD Zone API
 
@@ -3699,12 +3479,6 @@ api.get('/zones/vod.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab40 a:last').tab('show');
-  })
-</script>
-
 
 ## Create VOD Zone
 
@@ -3799,12 +3573,6 @@ api.post('/zones/vod.json', { name: 'newVODZone3', password: 'password' }, funct
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab41 a:last').tab('show');
-  })
-</script>
-
 
 ## Get VOD Zones Count
 
@@ -3860,12 +3628,6 @@ api.get('/zones/vod.json/count', function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab42 a:last').tab('show');
-  })
-</script>
 
 
 ## Get VOD Zone
@@ -3951,12 +3713,6 @@ api.get('/zones/vod.json/' + id, function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab43 a:last').tab('show');
-  })
-</script>
 
 
 ## Update VOD Zone
@@ -4055,12 +3811,6 @@ api.put('/zones/vod.json/' + id, { label: 'Some other description' }, function(e
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab44 a:last').tab('show');
-  })
-</script>
-
 
 ## Delete VOD Zone
 
@@ -4111,12 +3861,6 @@ api.del('/zones/vod.json/' + id, function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab45 a:last').tab('show');
-  })
-</script>
 
 
 ## Enable VOD Zone
@@ -4169,12 +3913,6 @@ api.put('/zones/vod/' + id + '/enable.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab46 a:last').tab('show');
-  })
-</script>
-
 
 ## Disable VOD Zone
 
@@ -4225,12 +3963,6 @@ api.put('/zones/vod/' + id + '/disable.json', function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab47 a:last').tab('show');
-  })
-</script>
 
 
 # VOD Zone Custom Domains API
@@ -4304,12 +4036,6 @@ api.get('/zones/vod.json/' + id + '/customdomains.json, function(err, response) 
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab48 a:last').tab('show');
-  })
-</script>
 
 
 ## Create Custom Domain
@@ -4389,12 +4115,6 @@ api.post('/zones/vod/' + id + '/customdomains.json', { custom_domain: 'cdn.somed
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab49 a:last').tab('show');
-  })
-</script>
-
 
 ## Get Custom Domain
 
@@ -4466,12 +4186,6 @@ api.get('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, function(err
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab50 a:last').tab('show');
-  })
-</script>
 
 
 ## Update Custom Domain
@@ -4554,12 +4268,6 @@ api.put('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, { custom_dom
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab51 a:last').tab('show');
-  })
-</script>
-
 
 ## Delete Custom Domain
 
@@ -4616,12 +4324,6 @@ api.del('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, function(err
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab52 a:last').tab('show');
-  })
-</script>
 
 
 # Live Zone API
@@ -4723,12 +4425,6 @@ api.get('/zones/live.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab53 a:last').tab('show');
-  })
-</script>
-
 
 ## Create Live Zone
 
@@ -4817,12 +4513,6 @@ api.post('/zones/live.json',  { name: 'newLiveZone3', password: 'password' }, fu
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab54 a:last').tab('show');
-  })
-</script>
-
 
 ## Get Live Zones Count
 
@@ -4879,12 +4569,6 @@ api.get('/zones.json', function(err, response) {
 </pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab55 a:last').tab('show');
-  })
-</script>
 
 
 ## Get Live Zone
@@ -4965,12 +4649,6 @@ api.get('/zones/live.json/' + id, function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab56 a:last').tab('show');
-  })
-</script>
 
 
 ## Update Live Zone
@@ -5065,12 +4743,6 @@ api.put('/zones/live.json/' + id, { label: 'Some other description' }, function(
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab57 a:last').tab('show');
-  })
-</script>
-
 
 ## Delete Live Zone
 
@@ -5121,12 +4793,6 @@ api.del('/zones/live.json/' + id, function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab58 a:last').tab('show');
-  })
-</script>
 
 
 ## Enable Live Zone
@@ -5179,12 +4845,6 @@ api.put('/zones/live/' + id + '/enable.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab59 a:last').tab('show');
-  })
-</script>
-
 
 ## Disable Live Zone
 
@@ -5236,12 +4896,6 @@ api.put('/zones/live/' + id + '/disable.json', function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab60 a:last').tab('show');
-  })
-</script>
 
 
 # Zones SSL API
@@ -5298,12 +4952,6 @@ api.get('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
 </pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab61 a:last').tab('show');
-  })
-</script>
 
 
 ## Install SSL on Zone
@@ -5387,12 +5035,6 @@ api.post('/zones/' + type + '/' + id + '/ssl.json', { ssl_crt: ssl_crt, ssl_key:
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab62 a:last').tab('show');
-  })
-</script>
-
 
 ## Update Zone's SSL Information
 
@@ -5475,12 +5117,6 @@ api.put('/zones/' + type + '/' + id + '/ssl.json', { ssl_crt: ssl_crt, ssl_key: 
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab63 a:last').tab('show');
-  })
-</script>
-
 
 ## Remove Zone's SSL Information
 
@@ -5536,12 +5172,6 @@ api.post('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab64 a:last').tab('show');
-  })
-</script>
-
 
 # Zones Upstream API
 
@@ -5596,12 +5226,6 @@ api.post('/zones/' + type + '/' + id + '/upstream.json', function(err, response)
 </pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab65 a:last').tab('show');
-  })
-</script>
 
 
 ## Enable Upstream on Zone
@@ -5675,12 +5299,6 @@ api.post('/zones/' + type + '/' + id + '/upstream.json', { server_url: 'http://c
 </pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab a:last').tab('show');
-  })
-</script>
 
 
 ## Update Zone's Upstream Information
@@ -5756,12 +5374,6 @@ api.put('/zones/' + type + '/' + id + '/upstream.json', { upstream_id: '93013', 
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab67 a:last').tab('show');
-  })
-</script>
-
 
 ## Remove Zone's Upstream Information
 
@@ -5815,12 +5427,6 @@ api.del('/zones/' + type + '/' + id + '/upstream.json', function(err, response) 
 </pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab68 a:last').tab('show');
-  })
-</script>
 
 
 # Reports by Zone API
@@ -5903,12 +5509,6 @@ api.get('/reports/stats.json/' + reportType, function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab69 a:last').tab('show');
-  })
-</script>
 
 
 ## List Stats per Zone
@@ -6001,12 +5601,6 @@ api.get('/reports/' + id + '/stats.json/' + reportType, function(err, response) 
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab70 a:last').tab('show');
-  })
-</script>
 
 
 # Reports by Location API
@@ -6129,12 +5723,6 @@ api.get('/reports/nodes.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab71 a:last').tab('show');
-  })
-</script>
-
 
 ## List Nodes by Zone
 
@@ -6248,12 +5836,6 @@ api.get('/reports/' + id + '/nodes.json', function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab72 a:last').tab('show');
-  })
-</script>
 
 
 ## List Zone Node Stats by Report Type
@@ -6430,12 +6012,6 @@ api.get('/reports/nodes.json/stats/' + reportType, function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab73 a:last').tab('show');
-  })
-</script>
-
 
 ## List Node Stats by Zone and Report Type
 
@@ -6524,12 +6100,6 @@ api.get('/reports/' + id + '/nodes.json/stats/' + reportType, function(err, resp
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab74 a:last').tab('show');
-  })
-</script>
-
 
 ## Get Zone Node
 
@@ -6596,12 +6166,6 @@ api.get('/reports/nodes.json/' + id, function(err, response) {
 </pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab75 a:last').tab('show');
-  })
-</script>
 
 
 ## Get Node by Zone
@@ -6677,11 +6241,6 @@ api.get('/reports/' + zoneId + '/nodes.json/' + nodeId, function(err, response) 
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab76 a:last').tab('show');
-  })
-</script>
 
 ## Get Zone Node Stats by Report Type
 
@@ -6767,12 +6326,6 @@ api.get('/reports/nodes.json/' + id + '/stats/' + reportType, function(err, resp
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab77 a:last').tab('show');
-  })7
-</script>
 
 
 ## Get Node Stats by Zone and Report Type
@@ -6866,13 +6419,6 @@ api.get('/reports/' + zoneId + '/nodes.json/' + nodeId + '/stats/' + reportType,
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab78 a:last').tab('show');
-  })
-</script>
-
-
 
 # Reports by Popular Files API
 
@@ -6953,12 +6499,6 @@ api.get('/reports/popularfiles.json', function(err, response) {
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab79 a:last').tab('show');
-  })
-</script>
 
 
 ## List Popular Files By Zone Type
@@ -7045,12 +6585,6 @@ api.get('/reports/' + type + '/popularfiles.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab80 a:last').tab('show');
-  })
-</script>
-
 
 # Reports by Status Codes API
 
@@ -7133,12 +6667,6 @@ api.get('/reports/statuscodes.json/' + reportType, function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab81 a:last').tab('show');
-  })
-</script>
-
 
 ## List Status Code Responses by Zone Id
 
@@ -7217,12 +6745,6 @@ api.get('/reports/' + id + '/statuscodes.json/' + reportType, function(err, resp
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab82 a:last').tab('show');
-  })
-</script>
 
 
 ## List Status Codes by Zone Type
@@ -7309,12 +6831,6 @@ api.get('/reports/' + zoneType + '/statuscodes.json/' + reportType, function(err
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab83 a:last').tab('show');
-  })
-</script>
-
 
 ## List Status Codes by Zone Id
 
@@ -7400,12 +6916,6 @@ api.get('/reports/' + zoneType + '/' + id + '/statuscodes.json/' + reportType, f
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab84 a:last').tab('show');
-  })
-</script>
-
 
 # Reports by File Types API
 
@@ -7490,12 +7000,6 @@ api.get('/reports/filetypes.json', function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab85 a:last').tab('show');
-  })
-</script>
-
 
 ## List File Types by Zone Id
 
@@ -7577,12 +7081,6 @@ api.get('/reports/' + id + '/filetypes.json/' + reportType, function(err, respon
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab86 a:last').tab('show');
-  })
-</script>
-
 
 ## List File Types by Zone Type
 
@@ -7660,12 +7158,6 @@ api.get('/reports/' + zoneType + '/filetypes.json/' + reportType, function(err, 
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab87 a:last').tab('show');
-  })
-</script>
 
 
 ## List File Types by Zone Id
@@ -7753,13 +7245,6 @@ api.get('/reports/' + zoneType + '/' + id + '/filetypes.json/' + reportType, fun
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab88 a:last').tab('show');
-  })
-</script>
-
 
 
 # Reports by File Size Ranges API
@@ -7855,12 +7340,6 @@ api.get('/reports/filesizes.json/' + reportType, function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab89 a:last').tab('show');
-  })
-</script>
-
 
 ## List File Sizes by Zone Id
 
@@ -7955,12 +7434,6 @@ api.get('/reports/' + id + '/filesizes.json/' + reportType, function(err, respon
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab90 a:last').tab('show');
-  })
-</script>
-
 
 ## List File Sizes by Zone Type
 
@@ -8054,12 +7527,6 @@ api.get('/reports/' + zoneType + '/filesizes.json/' + reportType, function(err, 
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab91 a:last').tab('show');
-  })
-</script>
 
 
 ## List File Sizes by Zone Id
@@ -8160,12 +7627,6 @@ api.get('/reports/' + zoneType + '/' + id + '/filesizes.json/' + reportType, fun
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab92 a:last').tab('show');
-  })
-</script>
-
 
 # Reports By Directory API
 
@@ -8249,11 +7710,6 @@ api.get('/reports/statsbydir.json/' + reportType, function(err, response) {
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab93 a:last').tab('show');
-  })
-</script>
 
 ## List Stats By Directory and Zone Id
 
@@ -8339,13 +7795,6 @@ api.get('/reports/' + id + '/' + '/statsbydir.json/' + reportType, function(err,
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab94 a:last').tab('show');
-  })
-</script>
-
 
 
 # Reports By File Name API
@@ -8481,12 +7930,6 @@ api.get('/clients/' + clientId + '/reports/statsbyfilename.json/' + reportType, 
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab95 a:last').tab('show');
-  })
-</script>
-
 
 ## List Stats By File Name and Zone Id
 
@@ -8574,12 +8017,6 @@ api.get('/clients/' + clientId + '/reports/' + id + '/statsbyfilename.json/' + r
 Non functional</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab96 a:last').tab('show');
-  })
-</script>
 
 
 
@@ -8677,12 +8114,6 @@ api.get('/clients/' + clientId + '/reports/statsbycustomdomain.json/' + reportTy
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab97 a:last').tab('show');
-  })
-</script>
-
 
 ## List Stats By Custom Domain and Zone Id
 
@@ -8774,13 +8205,6 @@ api.get('/clients/' + clientId + '/reports/' + zoneId + '/statsbycustomdomain.js
   </div>
 </div>
 
-<script>
-  $(function () {
-    $('#myTab98 a:last').tab('show');
-  })
-</script>
-
-
 
 # Reports for Live Zones API
 
@@ -8848,9 +8272,3 @@ api.get('/reports/live/connectionstats.json/' + reportType, function(err, respon
 }</pre>
   </div>
 </div>
-
-<script>
-  $(function () {
-    $('#myTab99 a:last').tab('show');
-  })
-</script>
