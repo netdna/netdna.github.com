@@ -188,7 +188,7 @@ function callback(err, response) {
             "name": "NetDNA sampleCode",
             "secure_token_pull_credits": "0",
             "server_id": "18",
-            "ssl_credits": "-1",
+            "ssl_credits": "1",
             "status": "2",
             "storage_quota": "107374182400",
             "storage_server_id": "11",
@@ -4949,6 +4949,21 @@ api.get('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
   </div>
   <div class="tab-pane" id="response61">
 		<pre>
+{
+	"code":201,
+	"data":{
+		"ssl":{
+			"id":1459,
+			"ssl_crt":"-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
+			"ssl_key":"-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----",
+			"ssl_cabundle":null,
+			"date_expiration":"2014-01-24",
+			"anycast_ip_id":null,
+			"wildcard":1,
+			"domain":"*.idcreator.com"
+		}
+	}
+}
 </pre>
   </div>
 </div>
@@ -5000,37 +5015,56 @@ Parameter | Description |
 		<pre>
 id = '96061'
 type = 'pull'
-ssl_crt = ""
-params = {"ssl_crt"=> ssl_crt,"ssl_key"=> "somesslkey"}
+ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
+ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
+params = {"ssl_crt"=> ssl_crt,"ssl_key"=> ssl_key}
 api.post('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
   </div>
   <div class="tab-pane" id="python62">
 		<pre>
 id = '96061'
 type = 'pull'
-ssl_crt = ""
-params = {"ssl_crt": ssl_crt,"ssl_key": "somesslkey"}
+ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
+ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
+params = {"ssl_crt": ssl_crt,"ssl_key": ssl_key}
 api.post('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
 	</div>
   <div class="tab-pane" id="php62">
   	<pre>
 $id = '96061';
 $type = 'pull';
-$ssl_crt = " ... ";
-$params = array("ssl_crt"=>$ssl_crt,"ssl_key"=>"somesslkey");
+$ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n";
+$ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----";
+$params = array("ssl_crt"=>$ssl_crt,"ssl_key"=>$ssl_key);
 $api->post('/zones/'.$type.'/'.$id.'/ssl.json',$params);</pre>
   </div>
   <div class="tab-pane" id="node62">
 	<pre>
 var id = '96061'
 var type = 'pull'
-var ssl_crt = " ... "
-api.post('/zones/' + type + '/' + id + '/ssl.json', { ssl_crt: ssl_crt, ssl_key: 'somesslkey' }, function(err, response) {
+var ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
+var ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
+api.post('/zones/' + type + '/' + id + '/ssl.json', { ssl_crt: ssl_crt, ssl_key: ssl_key }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response62">
 		<pre>
+{
+	"code":201,
+	"data":{
+		"ssl":{
+			"id":1459,
+			"ssl_crt":"-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
+			"ssl_key":"-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----",
+			"ssl_cabundle":null,
+			"date_expiration":"2014-01-24",
+			"anycast_ip_id":null,
+			"wildcard":1,
+			"domain":"*.idcreator.com"
+		}
+	}
+}
 </pre>
   </div>
 </div>
@@ -5082,37 +5116,57 @@ Parameter | Description |
 		<pre>
 id = '96061'
 type = 'pull'
-ssl_crt = ""
-params = {"ssl_crt"=> ssl_crt,"ssl_key"=> "somesslkey"}
+ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
+ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
+params = {"ssl_crt"=> ssl_crt,"ssl_key"=> ssl_key}
 api.put('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
   </div>
   <div class="tab-pane" id="python63">
 		<pre>
 id = '96061'
 type = 'pull'
-ssl_crt = ""
-params = {"ssl_crt": ssl_crt,"ssl_key": "somesslkey"}
+ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
+ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
+params = {"ssl_crt": ssl_crt,"ssl_key": ssl_key}
 api.put('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
 	</div>
   <div class="tab-pane" id="php63">
   	<pre>
 $id = '96061';
 $type = 'pull';
-$ssl_crt = " ... ";
-$params = array("ssl_crt"=>$ssl_crt,"ssl_key"=>"somesslkey");
+$ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n";
+$ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----";
+$ssl_key = "
+$params = array("ssl_crt"=>$ssl_crt,"ssl_key"=>$ssl_key);
 $api->put('/zones/'.$type.'/'.$id.'/ssl.json',$params);</pre>
   </div>
   <div class="tab-pane" id="node63">
 	<pre>
 var id = '96061'
 var type = 'pull'
-var ssl_crt = " ... "
-api.put('/zones/' + type + '/' + id + '/ssl.json', { ssl_crt: ssl_crt, ssl_key: 'somesslkey' }, function(err, response) {
+var ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
+var ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
+api.put('/zones/' + type + '/' + id + '/ssl.json', { ssl_crt: ssl_crt, ssl_key: ssl_key }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response63">
 		<pre>
+{
+	"code":201,
+	"data":{
+		"ssl":{
+			"id":1459,
+			"ssl_crt":"-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
+			"ssl_key":"-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----",
+			"ssl_cabundle":null,
+			"date_expiration":"2014-01-24",
+			"anycast_ip_id":null,
+			"wildcard":1,
+			"domain":"*.idcreator.com"
+		}
+	}
+}
 </pre>
   </div>
 </div>
@@ -5144,30 +5198,87 @@ Remove the SSL certificate for the specified {zone_type} and
 		<pre>
 id = '96061'
 type = 'pull'
-api.post('/zones/'+type+'/'+id+'/ssl.json')</pre>
+api.delete('/zones/'+type+'/'+id+'/ssl.json')</pre>
   </div>
   <div class="tab-pane" id="python64">
 		<pre>
 id = '96061'
 type = 'pull'
-api.post('/zones/'+type+'/'+id+'/ssl.json')</pre>
+api.delete('/zones/'+type+'/'+id+'/ssl.json')</pre>
 	</div>
   <div class="tab-pane" id="php64">
   	<pre>
 $id = '96061';
 $type = 'pull';
-$api->post('/zones/'.$type.'/'.$id.'/ssl.json');</pre>
+$api->delete('/zones/'.$type.'/'.$id.'/ssl.json');</pre>
   </div>
   <div class="tab-pane" id="node64">
 	<pre>
 var id = '96061'
 var type = 'pull'
-api.post('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
+api.delete('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response64">
 		<pre>
+{
+	"code":200,
+	"data":{
+		"zone":{
+			"id":"90652",
+			"name":"newpullzonec5",
+			"username":"username",
+			"company_id":"1234",
+			"url":"http:\/\/someplace.net",
+			"port":"80",
+			"ip":"123.0.0.49",
+			"vhost":"someplace.net",
+			"type":"2",
+			"compress":"0",
+			"backend_compress":"0",
+			"queries":"1",
+			"max_cache_size":"50000",
+			"suspend":"0",
+			"cache_valid":"1d",
+			"content_encoding":"1",
+			"label":"",
+			"inactive":"0",
+			"valid_referers":null,
+			"key_zone_size":"50m",
+			"expires":null,
+			"disallow_robots":"0",
+			"disallow_robots_txt":null,
+			"canonical_link_headers":"0",
+			"content_disposition":"0",
+			"custom_domain_limit":"7",
+			"locked":"0",
+			"server_id":"123",
+			"ssl":0,
+			"sslshared":"0",
+			"creation_date":"2013-07-22 19:00:54",
+			"dsa_ip":null,
+			"geo_enabled":"0",
+			"set_host_header":null,
+			"ssl_id":0,
+			"dns_check":"1",
+			"hit_bandwidth_by_dir":"0",
+			"hit_bandwidth_by_custom_domain":"0",
+			"hit_bandwidth_by_file_name_status_code":"0",
+			"cache_version":"0",
+			"ignore_setcookie_header":"0",
+			"hide_setcookie_header":"0",
+			"ignore_cache_control":"0",
+			"use_stale":"0",
+			"proxy_cache_lock":"0",
+			"pseudo_streaming":"0",
+			"secret":null,
+			"upstream_enabled":"0",
+			"cdn_url":"newpullzonec5.username.netdna-cdn.com",
+			"tmp_url":"newpullzonec5.nycacorp.netdna-cdn.com"
+		}
+	}
+}
 </pre>
   </div>
 </div>
