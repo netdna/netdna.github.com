@@ -43,6 +43,7 @@ Follow the documentation for our API below!
 
 ## Changelog
 
+  - **2013-07-22**  Added JSON responses to SSL
   - **2013-07-09**  Added Authentication section
   - **2013-06-03**  Fixed formatting and display issues
   - **2013-06-02**  Added Ruby Code examples
