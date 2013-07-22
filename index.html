@@ -270,7 +270,7 @@ function callback(err, response) {
             &quot;name&quot;: &quot;NetDNA sampleCode&quot;,
             &quot;secure_token_pull_credits&quot;: &quot;0&quot;,
             &quot;server_id&quot;: &quot;18&quot;,
-            &quot;ssl_credits&quot;: &quot;-1&quot;,
+            &quot;ssl_credits&quot;: &quot;1&quot;,
             &quot;status&quot;: &quot;2&quot;,
             &quot;storage_quota&quot;: &quot;107374182400&quot;,
             &quot;storage_server_id&quot;: &quot;11&quot;,
@@ -7015,6 +7015,21 @@ api.get(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, funct
   </div>
   <div class="tab-pane" id="response61">
         <pre>
+{
+    &quot;code&quot;:201,
+    &quot;data&quot;:{
+        &quot;ssl&quot;:{
+            &quot;id&quot;:1459,
+            &quot;ssl_crt&quot;:&quot;-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n&quot;,
+            &quot;ssl_key&quot;:&quot;-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----&quot;,
+            &quot;ssl_cabundle&quot;:null,
+            &quot;date_expiration&quot;:&quot;2014-01-24&quot;,
+            &quot;anycast_ip_id&quot;:null,
+            &quot;wildcard&quot;:1,
+            &quot;domain&quot;:&quot;*.idcreator.com&quot;
+        }
+    }
+}
 </pre>
   </div>
 </div>
@@ -7121,37 +7136,56 @@ api.get(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, funct
         <pre>
 id = &#39;96061&#39;
 type = &#39;pull&#39;
-ssl_crt = &quot;&quot;
-params = {&quot;ssl_crt&quot;=&gt; ssl_crt,&quot;ssl_key&quot;=&gt; &quot;somesslkey&quot;}
+ssl_crt = &quot;-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n&quot;
+ssl_key = &quot;-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----&quot;
+params = {&quot;ssl_crt&quot;=&gt; ssl_crt,&quot;ssl_key&quot;=&gt; ssl_key}
 api.post(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/ssl.json&#39;,params)</pre>
   </div>
   <div class="tab-pane" id="python62">
         <pre>
 id = &#39;96061&#39;
 type = &#39;pull&#39;
-ssl_crt = &quot;&quot;
-params = {&quot;ssl_crt&quot;: ssl_crt,&quot;ssl_key&quot;: &quot;somesslkey&quot;}
+ssl_crt = &quot;-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n&quot;
+ssl_key = &quot;-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----&quot;
+params = {&quot;ssl_crt&quot;: ssl_crt,&quot;ssl_key&quot;: ssl_key}
 api.post(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/ssl.json&#39;,params)</pre>
     </div>
   <div class="tab-pane" id="php62">
       <pre>
 $id = &#39;96061&#39;;
 $type = &#39;pull&#39;;
-$ssl_crt = &quot; ... &quot;;
-$params = array(&quot;ssl_crt&quot;=&gt;$ssl_crt,&quot;ssl_key&quot;=&gt;&quot;somesslkey&quot;);
+$ssl_crt = &quot;-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n&quot;;
+$ssl_key = &quot;-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----&quot;;
+$params = array(&quot;ssl_crt&quot;=&gt;$ssl_crt,&quot;ssl_key&quot;=&gt;$ssl_key);
 $api-&gt;post(&#39;/zones/&#39;.$type.&#39;/&#39;.$id.&#39;/ssl.json&#39;,$params);</pre>
   </div>
   <div class="tab-pane" id="node62">
     <pre>
 var id = &#39;96061&#39;
 var type = &#39;pull&#39;
-var ssl_crt = &quot; ... &quot;
-api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ssl_crt: ssl_crt, ssl_key: &#39;somesslkey&#39; }, function(err, response) {
+var ssl_crt = &quot;-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n&quot;
+var ssl_key = &quot;-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----&quot;
+api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ssl_crt: ssl_crt, ssl_key: ssl_key }, function(err, response) {
   console.log(&#39;err&#39;, err, &#39;response&#39;, response)
 })</pre>
   </div>
   <div class="tab-pane" id="response62">
         <pre>
+{
+    &quot;code&quot;:201,
+    &quot;data&quot;:{
+        &quot;ssl&quot;:{
+            &quot;id&quot;:1459,
+            &quot;ssl_crt&quot;:&quot;-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n&quot;,
+            &quot;ssl_key&quot;:&quot;-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----&quot;,
+            &quot;ssl_cabundle&quot;:null,
+            &quot;date_expiration&quot;:&quot;2014-01-24&quot;,
+            &quot;anycast_ip_id&quot;:null,
+            &quot;wildcard&quot;:1,
+            &quot;domain&quot;:&quot;*.idcreator.com&quot;
+        }
+    }
+}
 </pre>
   </div>
 </div>
@@ -7258,37 +7292,57 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ss
         <pre>
 id = &#39;96061&#39;
 type = &#39;pull&#39;
-ssl_crt = &quot;&quot;
-params = {&quot;ssl_crt&quot;=&gt; ssl_crt,&quot;ssl_key&quot;=&gt; &quot;somesslkey&quot;}
+ssl_crt = &quot;-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n&quot;
+ssl_key = &quot;-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----&quot;
+params = {&quot;ssl_crt&quot;=&gt; ssl_crt,&quot;ssl_key&quot;=&gt; ssl_key}
 api.put(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/ssl.json&#39;,params)</pre>
   </div>
   <div class="tab-pane" id="python63">
         <pre>
 id = &#39;96061&#39;
 type = &#39;pull&#39;
-ssl_crt = &quot;&quot;
-params = {&quot;ssl_crt&quot;: ssl_crt,&quot;ssl_key&quot;: &quot;somesslkey&quot;}
+ssl_crt = &quot;-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n&quot;
+ssl_key = &quot;-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----&quot;
+params = {&quot;ssl_crt&quot;: ssl_crt,&quot;ssl_key&quot;: ssl_key}
 api.put(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/ssl.json&#39;,params)</pre>
     </div>
   <div class="tab-pane" id="php63">
       <pre>
 $id = &#39;96061&#39;;
 $type = &#39;pull&#39;;
-$ssl_crt = &quot; ... &quot;;
-$params = array(&quot;ssl_crt&quot;=&gt;$ssl_crt,&quot;ssl_key&quot;=&gt;&quot;somesslkey&quot;);
+$ssl_crt = &quot;-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n&quot;;
+$ssl_key = &quot;-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----&quot;;
+$ssl_key = &quot;
+$params = array(&quot;ssl_crt&quot;=&gt;$ssl_crt,&quot;ssl_key&quot;=&gt;$ssl_key);
 $api-&gt;put(&#39;/zones/&#39;.$type.&#39;/&#39;.$id.&#39;/ssl.json&#39;,$params);</pre>
   </div>
   <div class="tab-pane" id="node63">
     <pre>
 var id = &#39;96061&#39;
 var type = &#39;pull&#39;
-var ssl_crt = &quot; ... &quot;
-api.put(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ssl_crt: ssl_crt, ssl_key: &#39;somesslkey&#39; }, function(err, response) {
+var ssl_crt = &quot;-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n&quot;
+var ssl_key = &quot;-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----&quot;
+api.put(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ssl_crt: ssl_crt, ssl_key: ssl_key }, function(err, response) {
   console.log(&#39;err&#39;, err, &#39;response&#39;, response)
 })</pre>
   </div>
   <div class="tab-pane" id="response63">
         <pre>
+{
+    &quot;code&quot;:201,
+    &quot;data&quot;:{
+        &quot;ssl&quot;:{
+            &quot;id&quot;:1459,
+            &quot;ssl_crt&quot;:&quot;-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n&quot;,
+            &quot;ssl_key&quot;:&quot;-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----&quot;,
+            &quot;ssl_cabundle&quot;:null,
+            &quot;date_expiration&quot;:&quot;2014-01-24&quot;,
+            &quot;anycast_ip_id&quot;:null,
+            &quot;wildcard&quot;:1,
+            &quot;domain&quot;:&quot;*.idcreator.com&quot;
+        }
+    }
+}
 </pre>
   </div>
 </div>
@@ -7317,30 +7371,87 @@ api.put(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ssl
         <pre>
 id = &#39;96061&#39;
 type = &#39;pull&#39;
-api.post(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/ssl.json&#39;)</pre>
+api.delete(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/ssl.json&#39;)</pre>
   </div>
   <div class="tab-pane" id="python64">
         <pre>
 id = &#39;96061&#39;
 type = &#39;pull&#39;
-api.post(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/ssl.json&#39;)</pre>
+api.delete(&#39;/zones/&#39;+type+&#39;/&#39;+id+&#39;/ssl.json&#39;)</pre>
     </div>
   <div class="tab-pane" id="php64">
       <pre>
 $id = &#39;96061&#39;;
 $type = &#39;pull&#39;;
-$api-&gt;post(&#39;/zones/&#39;.$type.&#39;/&#39;.$id.&#39;/ssl.json&#39;);</pre>
+$api-&gt;delete(&#39;/zones/&#39;.$type.&#39;/&#39;.$id.&#39;/ssl.json&#39;);</pre>
   </div>
   <div class="tab-pane" id="node64">
     <pre>
 var id = &#39;96061&#39;
 var type = &#39;pull&#39;
-api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, function(err, response) {
+api.delete(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, function(err, response) {
   console.log(&#39;err&#39;, err, &#39;response&#39;, response)
 })</pre>
   </div>
   <div class="tab-pane" id="response64">
         <pre>
+{
+    &quot;code&quot;:200,
+    &quot;data&quot;:{
+        &quot;zone&quot;:{
+            &quot;id&quot;:&quot;90652&quot;,
+            &quot;name&quot;:&quot;newpullzonec5&quot;,
+            &quot;username&quot;:&quot;username&quot;,
+            &quot;company_id&quot;:&quot;1234&quot;,
+            &quot;url&quot;:&quot;http:\/\/someplace.net&quot;,
+            &quot;port&quot;:&quot;80&quot;,
+            &quot;ip&quot;:&quot;123.0.0.49&quot;,
+            &quot;vhost&quot;:&quot;someplace.net&quot;,
+            &quot;type&quot;:&quot;2&quot;,
+            &quot;compress&quot;:&quot;0&quot;,
+            &quot;backend_compress&quot;:&quot;0&quot;,
+            &quot;queries&quot;:&quot;1&quot;,
+            &quot;max_cache_size&quot;:&quot;50000&quot;,
+            &quot;suspend&quot;:&quot;0&quot;,
+            &quot;cache_valid&quot;:&quot;1d&quot;,
+            &quot;content_encoding&quot;:&quot;1&quot;,
+            &quot;label&quot;:&quot;&quot;,
+            &quot;inactive&quot;:&quot;0&quot;,
+            &quot;valid_referers&quot;:null,
+            &quot;key_zone_size&quot;:&quot;50m&quot;,
+            &quot;expires&quot;:null,
+            &quot;disallow_robots&quot;:&quot;0&quot;,
+            &quot;disallow_robots_txt&quot;:null,
+            &quot;canonical_link_headers&quot;:&quot;0&quot;,
+            &quot;content_disposition&quot;:&quot;0&quot;,
+            &quot;custom_domain_limit&quot;:&quot;7&quot;,
+            &quot;locked&quot;:&quot;0&quot;,
+            &quot;server_id&quot;:&quot;123&quot;,
+            &quot;ssl&quot;:0,
+            &quot;sslshared&quot;:&quot;0&quot;,
+            &quot;creation_date&quot;:&quot;2013-07-22 19:00:54&quot;,
+            &quot;dsa_ip&quot;:null,
+            &quot;geo_enabled&quot;:&quot;0&quot;,
+            &quot;set_host_header&quot;:null,
+            &quot;ssl_id&quot;:0,
+            &quot;dns_check&quot;:&quot;1&quot;,
+            &quot;hit_bandwidth_by_dir&quot;:&quot;0&quot;,
+            &quot;hit_bandwidth_by_custom_domain&quot;:&quot;0&quot;,
+            &quot;hit_bandwidth_by_file_name_status_code&quot;:&quot;0&quot;,
+            &quot;cache_version&quot;:&quot;0&quot;,
+            &quot;ignore_setcookie_header&quot;:&quot;0&quot;,
+            &quot;hide_setcookie_header&quot;:&quot;0&quot;,
+            &quot;ignore_cache_control&quot;:&quot;0&quot;,
+            &quot;use_stale&quot;:&quot;0&quot;,
+            &quot;proxy_cache_lock&quot;:&quot;0&quot;,
+            &quot;pseudo_streaming&quot;:&quot;0&quot;,
+            &quot;secret&quot;:null,
+            &quot;upstream_enabled&quot;:&quot;0&quot;,
+            &quot;cdn_url&quot;:&quot;newpullzonec5.username.netdna-cdn.com&quot;,
+            &quot;tmp_url&quot;:&quot;newpullzonec5.nycacorp.netdna-cdn.com&quot;
+        }
+    }
+}
 </pre>
   </div>
 </div>
