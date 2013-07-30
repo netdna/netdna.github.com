@@ -4441,7 +4441,7 @@ Creates a new live zone
 Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
 `name` | - | <span class="label important">required</span><br />length: 3-30 chars; only letters, digits, and dash (-)accepted | Your desired zone name |
-`password` | - | length: 5-30 chars | Your desired password |
+`password` | - | <span class="label important">required</span><br />length: 5-30 chars | Your desired password |
 `label` | - | length: 1-255 chars | Something that describes your zone |
 
 
