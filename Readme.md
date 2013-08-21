@@ -2012,13 +2012,12 @@ $api->delete('/zones/pull.json/'.$id.'/cache',$params);</pre>
   </div>
   <div class="tab-pane" id="node21">
 	<pre>
-api.del('/zones/pull.json/zone_id', callback)
+var id = '96167'
+api.del('/zones/pull.json/' + id + '/cache', callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
-}</pre>
-  </div>
-  <div class="tab-pane" id="response21">
+}
 	<pre>
 {
     "code": 200
