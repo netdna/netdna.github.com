@@ -2017,8 +2017,10 @@ api.del('/zones/pull.json/' + id + '/cache', callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
-}
-	<pre>
+}</pre>
+  </div>
+  <div class="tab-pane" id="response21">
+		<pre>
 {
     "code": 200
 }</pre>
