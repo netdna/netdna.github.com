@@ -3229,13 +3229,12 @@ $api-&gt;delete(&#39;/zones/pull.json/&#39;.$id.&#39;/cache&#39;,$params);</pre>
   </div>
   <div class="tab-pane" id="node21">
     <pre>
-api.del(&#39;/zones/pull.json/zone_id&#39;, callback)
+var id = &#39;96167&#39;
+api.del(&#39;/zones/pull.json/&#39; + id + &#39;/cache&#39;, callback)
 function callback(err, response) {
   if (err) return console.log(err)
   console.log(response)
-}</pre>
-  </div>
-  <div class="tab-pane" id="response21">
+}
     <pre>
 {
     &quot;code&quot;: 200
