@@ -20,7 +20,7 @@ $(function() {
 $(function() {
 
   if (window.location.host.indexOf('netdna.com') !== -1) {
-    window.redirect = 'http://docs.maxcdn.com' + window.location.pathname
+    window.location = 'http://docs.maxcdn.com' + window.location.pathname
     return
   }
 
@@ -106,11 +106,11 @@ $('a').click(function(ev) {
 
   var target = this.hash;
 
-	if (target.toString().indexOf('#ruby') ==-1 &&
-			target.toString().indexOf('#python') ==-1 &&
-			target.toString().indexOf('#php') ==-1 &&
-			target.toString().indexOf('#node') ==-1 &&
-			target.toString().indexOf('#response') ==-1 ){
+	if (target.toString().indexOf('#ruby') ===-1 &&
+			target.toString().indexOf('#python') ===-1 &&
+			target.toString().indexOf('#php') ===-1 &&
+			target.toString().indexOf('#node') ===-1 &&
+			target.toString().indexOf('#response') ===-1 ){
 		if (this.href !== '#') {
 			$('html, body').animate({
 				scrollTop: $(target).offset().top - 80
