@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>API Docs</title>
-    <meta name="description" content="Manage your platform on MaxCDN with our advanced RESTful API, allowing you to instantly manage users, zones, and accounts with ease.">
+    <meta name="description" content="Manage your platform on NetDNA&amp;#039;s CDN with our advanced RESTful API, allowing you to instantly manage users, zones, and accounts with ease.">
     <meta http-equiv="cleartype" content="on">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta property="og:site_name" content="API Docs">
     <meta property="og:type" content="website">
     <meta property="og:title" content="API Docs">
-    <meta property="og:description" content="Manage your platform on MaxCDN with our advanced RESTful API, allowing you to instantly manage users, zones, and accounts with ease.">
+    <meta property="og:description" content="Manage your platform on NetDNA&amp;#039;s CDN with our advanced RESTful API, allowing you to instantly manage users, zones, and accounts with ease.">
     <meta property="og:image" content="https://www.netdna.com/wp-content/themes/newNetDNA/images/logo.png">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css">
@@ -47,7 +47,7 @@
           </div>
         </div>
         <div id="readme-docs" class="span9"><p><a href="http://www.netdna.com">NetDNA</a> is a content delivery network (&quot;CDN&quot;) provider.</p>
-<h2>Index</h2>
+<h2 id="index">Index</h2>
 <ul>
 <li><a href="#overview">Overview</a></li>
 <li><a href="#support">Support</a></li>
@@ -59,7 +59,7 @@
 <li><a href="#reports-by-zone-api">Reports API</a></li>
 <li><a href="#reports-by-file-name-api">Clients API</a></li>
 </ul>
-<h2>Overview</h2>
+<h2 id="overview">Overview</h2>
 <ol>
 <li><p>Sign up for a free NetDNA <a href="http://www.netdna.com/netdna-free-trial/">developer account</a>.</p>
 </li>
@@ -77,14 +77,14 @@
 </li>
 </ol>
 <p>Follow the documentation for our API below!</p>
-<h2>Support</h2>
+<h2 id="support">Support</h2>
 <ul>
 <li>Have a question? Check out our <a href="http://support.netdna.com/">Knowledge Base</a> to see if your question has already been answered.</li>
 <li>Still need help?  Visit our <a href="http://www.netdna.com/contact/">Contact Page</a> to get in touch.</li>
 <li>Found a Bug? Visit our <a href="https://github.com/netdna/rws-bugs/issues?state=open">GitHub Issues</a> page to report it.</li>
 <li>Feel free to tweet and follow us <a href="https://twitter.com/netdnadeveloper">@NetDNADeveloper</a> and/or <a href="https://twitter.com/netdnastatus">@NetDNAStatus</a>.</li>
 </ul>
-<h2>Changelog</h2>
+<h2 id="changelog">Changelog</h2>
 <ul>
 <li><strong>2013-07-22</strong>  Added JSON responses to SSL</li>
 <li><strong>2013-07-09</strong>  Added Authentication section</li>
@@ -104,15 +104,15 @@
 <li><strong>2012-12-05</strong>  Added 2xx_hit calculation to all <code>statuscodebyfilename</code> Reports</li>
 <li><strong>2012-02-27</strong>  Released Alpha Version of RWS API.</li>
 </ul>
-<h2>Authentication</h2>
-<h3>Overview</h3>
+<h2 id="authentication">Authentication</h2>
+<h3 id="overview">Overview</h3>
 <p>The first thing to do in order to use the NetDNA REST Web Service is to register your application. Upon registration, your application will be issued a consumer key and secret which is similar to public and private keys used in ssh protocol. You will need to use this in conjunction with an OAuth library in the programming language of your choice.</p>
 <blockquote><p>OAuth defines three roles: client, server, and resource owner (nicknamed the OAuth Love Triangle by Leah Culver).</p></blockquote>
 
 <p>The NetDNA RWS supports both 2-legged and 3-legged authentication.</p>
 <p>3-legged OAuth is best used to allow a 3rd party apps/services (e.g. <a href="https://www.leftronic.com/services/maxcdn/">Leftronic</a>) access to a users profile - the user just needs to grant access to the app.</p>
 <p>2-legged OAuth is more limited in that it only allows a consumer access to resources that belong to it (this is also useful for building a 3rd party app or a control panel where the consumer is a reseller or an account with sub-accounts - this means the reseller/main account also has access to sub-account resources). This does not require any user intervention in the process.</p>
-<h3>3-legged OAuth</h3>
+<h3 id="3-legged-oauth">3-legged OAuth</h3>
 <p>3-legged OAuth describes the scenario for which OAuth was originally developed: a resource owner wants to give a client access to a server without sharing his credentials (i.e. username/password).
 On a conceptual level it works in the following way:</p>
 <ul>
@@ -125,24 +125,24 @@ On a conceptual level it works in the following way:</p>
 <li>Client uses the temporary credentials to retrieve the token credentials (also known as &quot;access token&quot;) from the server</li>
 <li>Client uses the token credentials to access the protected resources on the server</li>
 </ul>
-<h3>2-legged OAuth</h3>
+<h3 id="2-legged-oauth">2-legged OAuth</h3>
 <p>2-legged OAuth describes a typical client-server scenario, without any user involvement.</p>
 <p>On a conceptual level 2-legged OAuth simply consists of the first and last steps of 3-legged OAuth:</p>
 <ul>
 <li>Client has signed up to the server and got his client credentials (also known as &quot;consumer key and secret&quot;</li>
 <li>Client uses his client credentials (and empty token credentials) to access the protected resources on the server</li>
 </ul>
-<h3>Registering Your Application</h3>
+<h3 id="registering-your-application">Registering Your Application</h3>
 <p>Login and go to <a href="https://developer.netdna.com/api/apps/create">https://developer.netdna.com/api/apps/create</a></p>
-<h3>Signing Requests</h3>
+<h3 id="signing-requests">Signing Requests</h3>
 <p>All OAuth 1.0a requests use the same basic algorithm for creating a signature base string and a signature.</p>
-<h3>Request Tokens</h3>
+<h3 id="request-tokens">Request Tokens</h3>
 <p>The first step to authenticating a user is to obtain a request token from NetDNA.</p>
 <p>The end point for requesting a token is <a href="https://rws.netdna.com/oauth/request_token">https://rws.netdna.com/oauth/request_token</a>.</p>
-<h3>User Authorization</h3>
+<h3 id="user-authorization">User Authorization</h3>
 <p>The authorize step is where you send the user to the NetDNA RWS authorization page that will allow them to grant your application privileges to use their account with the API. You will need the oauth_token from the previous step to complete this.</p>
 <p>The endpoint for the authorization url is <a href="https://rws.netdna.com/oauth/authorize">https://rws.netdna.com/oauth/authorize</a></p>
-<h1>Key: Path Parameters</h1>
+<h1 id="key-path-parameters">Key: Path Parameters</h1>
 <table>
 <thead>
 <tr>
@@ -168,15 +168,15 @@ On a conceptual level it works in the following way:</p>
 </tr>
 </tbody>
 </table>
-<h1>Account API</h1>
-<h2>Get Account</h2>
+<h1 id="account-api">Account API</h1>
+<h2 id="get-account">Get Account</h2>
 <p>Gets account information</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/account.json">https://rws.netdna.com/{companyalias}/account.json</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -227,7 +227,7 @@ On a conceptual level it works in the following way:</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab1">
   <li class="active"><a href="#ruby1" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python1" data-toggle='tab'>Python</a></li>
@@ -283,14 +283,14 @@ function callback(err, response) {
 </div>
 
 
-<h2>Update Account</h2>
+<h2 id="update-account">Update Account</h2>
 <p>Updates account information</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/account.json">https://rws.netdna.com/{companyalias}/account.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -310,7 +310,7 @@ function callback(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -361,7 +361,7 @@ function callback(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab2">
   <li class="active"><a href="#ruby2" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python2" data-toggle='tab'>Python</a></li>
@@ -421,14 +421,14 @@ function callback(err, response) {
 </div>
 
 
-<h2>Get Account Address</h2>
+<h2 id="get-account-address">Get Account Address</h2>
 <p>Gets account address information</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/account.json/address">https://rws.netdna.com/{companyalias}/account.json/address</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -484,7 +484,7 @@ function callback(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab3">
   <li class="active"><a href="#ruby3" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python3" data-toggle='tab'>Python</a></li>
@@ -537,14 +537,14 @@ function callback(err, response) {
 </div>
 
 
-<h2>Update Account Address</h2>
+<h2 id="update-account-address">Update Account Address</h2>
 <p>Updates account address information</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/account.json/address">https://rws.netdna.com/{companyalias}/account.json/address</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -599,7 +599,7 @@ function callback(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -655,7 +655,7 @@ function callback(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab4">
   <li class="active"><a href="#ruby4" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python4" data-toggle='tab'>Python</a></li>
@@ -709,15 +709,15 @@ function callback(err, response) {
   </div>
 </div>
 
-<h1>Users API</h1>
-<h2>List Users</h2>
+<h1 id="users-api">Users API</h1>
+<h2 id="list-users">List Users</h2>
 <p>Returns a list of all users on the specified account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/users.json">https://rws.netdna.com/{companyalias}/users.json</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -783,7 +783,7 @@ function callback(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab5">
   <li class="active"><a href="#ruby5" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python5" data-toggle='tab'>Python</a></li>
@@ -889,14 +889,14 @@ function callback(err, response) {
 </div>
 
 
-<h2>Create User</h2>
+<h2 id="create-user">Create User</h2>
 <p>Creates a new user on the specified account</p>
 <div class="heading">
 <div class="url POST"><span class="http_method">POST</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/users.json">https://rws.netdna.com/{companyalias}/users.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -951,7 +951,7 @@ function callback(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -1017,7 +1017,7 @@ function callback(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab6">
   <li class="active"><a href="#ruby6" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python6" data-toggle='tab'>Python</a></li>
@@ -1080,14 +1080,14 @@ function callback(err, response) {
 </div>
 
 
-<h2>Get User</h2>
+<h2 id="get-user">Get User</h2>
 <p>Gets a user specified by the {user_id} parameter</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/users.json/{user_id}">https://rws.netdna.com/{companyalias}/users.json/{user_id}</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -1128,7 +1128,7 @@ function callback(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab7">
   <li class="active"><a href="#ruby7" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python7" data-toggle='tab'>Python</a></li>
@@ -1192,14 +1192,14 @@ function callback(err, response) {
 </div>
 
 
-<h2>Update User</h2>
+<h2 id="update-user">Update User</h2>
 <p>Updates a user specified by the {user_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/users.json/{user_id}">https://rws.netdna.com/{companyalias}/users.json/{user_id}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -1247,7 +1247,7 @@ function callback(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -1288,7 +1288,7 @@ function callback(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab8">
   <li class="active"><a href="#ruby8" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python8" data-toggle='tab'>Python</a></li>
@@ -1354,7 +1354,7 @@ function callback(err, response) {
 </div>
 
 
-<h2>Delete User</h2>
+<h2 id="delete-user">Delete User</h2>
 <p>Deletes a user specified by the {user_id} parameter</p>
 <div class="heading">
 <div class="url DELETE"><span class="http_method">DELETE</span>
@@ -1362,7 +1362,7 @@ function callback(err, response) {
 </div>
 
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab9">
   <li class="active"><a href="#ruby9" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python9" data-toggle='tab'>Python</a></li>
@@ -1405,15 +1405,15 @@ function callback(err, response) {
 </div>
 
 
-<h1>Zones API</h1>
-<h2>List Zones</h2>
+<h1 id="zones-api">Zones API</h1>
+<h2 id="list-zones">List Zones</h2>
 <p>Returns a list of all zones on the specified account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones.json">https://rws.netdna.com/{companyalias}/zones.json</a></span></div>
 </div>
 
-<h3>Code Samples    @</h3>
+<h3 id="code-samples-">Code Samples    @</h3>
 <ul class="nav nav-tabs" id="myTab10">
   <li class="active"><a href="#ruby10" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python10" data-toggle='tab'>Python</a></li>
@@ -1483,7 +1483,7 @@ api.get(&#39;/zones.json&#39;, function(err, response) {
 </div>
 
 
-<h2>Get Zone Summary</h2>
+<h2 id="get-zone-summary">Get Zone Summary</h2>
 <p>Gets a summarized count of all zone types on the specified
 account</p>
 <div class="heading">
@@ -1492,7 +1492,7 @@ account</p>
 </div>
 
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -1523,7 +1523,7 @@ account</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab11">
   <li class="active"><a href="#ruby11" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python11" data-toggle='tab'>Python</a></li>
@@ -1568,14 +1568,14 @@ api.get(&#39;/zones.json/summary&#39;, function(err, response) {
 </div>
 
 
-<h2>Get Zone Count</h2>
+<h2 id="get-zone-count">Get Zone Count</h2>
 <p>Counts all zones on the specified account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones.json/count">https://rws.netdna.com/{companyalias}/zones.json/count</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -1591,7 +1591,7 @@ api.get(&#39;/zones.json/summary&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab12">
   <li class="active"><a href="#ruby12" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python12" data-toggle='tab'>Python</a></li>
@@ -1631,15 +1631,15 @@ api.get(&#39;/zones.json/count&#39;, function(err, response) {
 </div>
 
 
-<h1>Pull Zone API</h1>
-<h2>List Pull Zones</h2>
+<h1 id="pull-zone-api">Pull Zone API</h1>
+<h2 id="list-pull-zones">List Pull Zones</h2>
 <p>Returns a list of all pull zones on the specified account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json">https://rws.netdna.com/{companyalias}/zones/pull.json</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -1785,7 +1785,7 @@ api.get(&#39;/zones.json/count&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab13">
   <li class="active"><a href="#ruby13" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python13" data-toggle='tab'>Python</a></li>
@@ -1904,14 +1904,14 @@ api.get(&#39;/zones/pull.json&#39;, function(err, response) {
 </div>
 
 
-<h2>Create Pull Zone</h2>
+<h2 id="create-pull-zone">Create Pull Zone</h2>
 <p>Creates a new pull zone</p>
 <div class="heading">
 <div class="url POST"><span class="http_method">POST</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json">https://rws.netdna.com/{companyalias}/zones/pull.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -2085,7 +2085,7 @@ api.get(&#39;/zones/pull.json&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -2231,7 +2231,7 @@ api.get(&#39;/zones/pull.json&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab14">
   <li class="active"><a href="#ruby14" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python14" data-toggle='tab'>Python</a></li>
@@ -2309,14 +2309,14 @@ api.post(&#39;/zones/pull.json&#39;, { name: &#39;newPullZone2&#39;, url: &#39;<
 </div>
 
 
-<h2>Get Pull Zones Count</h2>
+<h2 id="get-pull-zones-count">Get Pull Zones Count</h2>
 <p>Counts all pull zones on the specified account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/count">https://rws.netdna.com/{companyalias}/zones/pull.json/count</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -2332,7 +2332,7 @@ api.post(&#39;/zones/pull.json&#39;, { name: &#39;newPullZone2&#39;, url: &#39;<
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab15">
   <li class="active"><a href="#ruby15" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python15" data-toggle='tab'>Python</a></li>
@@ -2372,14 +2372,14 @@ api.get(&#39;/zones/pull.json/count&#39;, function(err, response) {
 </div>
 
 
-<h2>Get Pull Zone</h2>
+<h2 id="get-pull-zone">Get Pull Zone</h2>
 <p>Gets a pull zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -2525,7 +2525,7 @@ api.get(&#39;/zones/pull.json/count&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab16">
   <li class="active"><a href="#ruby16" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python16" data-toggle='tab'>Python</a></li>
@@ -2604,14 +2604,14 @@ api.get(&#39;/zones/pull.json&#39; + id, function(err, response) {
 </div>
 
 
-<h2>Update Pull Zone</h2>
+<h2 id="update-pull-zone">Update Pull Zone</h2>
 <p>Updates a pull zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -2771,7 +2771,7 @@ api.get(&#39;/zones/pull.json&#39; + id, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -2917,7 +2917,7 @@ api.get(&#39;/zones/pull.json&#39; + id, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab17">
   <li class="active"><a href="#ruby17" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python17" data-toggle='tab'>Python</a></li>
@@ -2999,7 +2999,7 @@ api.put(&#39;/zones/pull.json&#39; + id, { label: &#39;Some other description&#3
 </div>
 
 
-<h2>Delete Pull Zone</h2>
+<h2 id="delete-pull-zone">Delete Pull Zone</h2>
 <p>Deletes a pull zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url DELETE"><span class="http_method">DELETE</span>
@@ -3007,7 +3007,7 @@ api.put(&#39;/zones/pull.json&#39; + id, { label: &#39;Some other description&#3
 </div>
 
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab18">
   <li class="active"><a href="#ruby18" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python18" data-toggle='tab'>Python</a></li>
@@ -3048,7 +3048,7 @@ api.del(&#39;/zones/pull.json&#39; + id, function(err, response) {
 </div>
 
 
-<h2>Enable Pull Zone</h2>
+<h2 id="enable-pull-zone">Enable Pull Zone</h2>
 <p>Enables a pull zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
@@ -3056,7 +3056,7 @@ api.del(&#39;/zones/pull.json&#39; + id, function(err, response) {
 </div>
 
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab19">
   <li class="active"><a href="#ruby19" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python19" data-toggle='tab'>Python</a></li>
@@ -3098,7 +3098,7 @@ api.put(&#39;/zones/pull/&#39; + id + &#39;/enable.json&#39;, function(err, resp
 </div>
 
 
-<h2>Disable Pull Zone</h2>
+<h2 id="disable-pull-zone">Disable Pull Zone</h2>
 <p>Disables a pull zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
@@ -3106,7 +3106,7 @@ api.put(&#39;/zones/pull/&#39; + id + &#39;/enable.json&#39;, function(err, resp
 </div>
 
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab20">
   <li class="active"><a href="#ruby20" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python20" data-toggle='tab'>Python</a></li>
@@ -3147,14 +3147,14 @@ api.put(&#39;/zones/pull&#39; + id + &#39;disable.json&#39;, function(err, respo
 </div>
 
 
-<h2>Purge Cache</h2>
+<h2 id="purge-cache">Purge Cache</h2>
 <p>Purges pull zone cache</p>
 <div class="heading">
 <div class="url DELETE"><span class="http_method">DELETE</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}/cache">https://rws.netdna.com/{companyalias}/zones/pull.json/{zone_id}/cache</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3173,7 +3173,7 @@ api.put(&#39;/zones/pull&#39; + id + &#39;disable.json&#39;, function(err, respo
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab21">
   <li class="active"><a href="#ruby21" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python21" data-toggle='tab'>Python</a></li>
@@ -3245,8 +3245,8 @@ function callback(err, response) {
 </div>
 
 
-<h1>Pull Zone Custom Domains API</h1>
-<h2>List Custom Domains</h2>
+<h1 id="pull-zone-custom-domains-api">Pull Zone Custom Domains API</h1>
+<h2 id="list-custom-domains">List Custom Domains</h2>
 <p>Returns a list of all custom domains on the zone specified by
 {zone_id}</p>
 <div class="heading">
@@ -3254,7 +3254,7 @@ function callback(err, response) {
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json">https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3280,7 +3280,7 @@ function callback(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab22">
   <li class="active"><a href="#ruby22" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python22" data-toggle='tab'>Python</a></li>
@@ -3332,14 +3332,14 @@ api.get(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json&#39;, function(er
 </div>
 
 
-<h2>Create Custom Domain</h2>
+<h2 id="create-custom-domain">Create Custom Domain</h2>
 <p>Adds a new custom domain to {zone_id}</p>
 <div class="heading">
 <div class="url POST"><span class="http_method">POST</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json">https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3366,7 +3366,7 @@ api.get(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json&#39;, function(er
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3392,7 +3392,7 @@ api.get(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json&#39;, function(er
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab23">
   <li class="active"><a href="#ruby23" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python23" data-toggle='tab'>Python</a></li>
@@ -3444,7 +3444,7 @@ api.post(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json&#39;, { custom_d
 </div>
 
 
-<h2>Get Custom Domain</h2>
+<h2 id="get-custom-domain">Get Custom Domain</h2>
 <p>Gets a custom domain specified by the {zone_id} and
 {customdomain_id} parameters</p>
 <div class="heading">
@@ -3452,7 +3452,7 @@ api.post(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json&#39;, { custom_d
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3478,7 +3478,7 @@ api.post(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json&#39;, { custom_d
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab24">
   <li class="active"><a href="#ruby24" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python24" data-toggle='tab'>Python</a></li>
@@ -3532,14 +3532,14 @@ api.get(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json/&#39; + domainId,
 </div>
 
 
-<h2>Update Custom Domain</h2>
+<h2 id="update-custom-domain">Update Custom Domain</h2>
 <p>Updates a custom domain specified by the id parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/pull/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3559,7 +3559,7 @@ api.get(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json/&#39; + domainId,
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3585,7 +3585,7 @@ api.get(&#39;/zones/pull/&#39; + id + &#39;/customdomains.json/&#39; + domainId,
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab25">
   <li class="active"><a href="#ruby25" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python25" data-toggle='tab'>Python</a></li>
@@ -3641,7 +3641,7 @@ api.put(&#39;/zones/pull/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
 </div>
 
 
-<h2>Delete Custom Domain</h2>
+<h2 id="delete-custom-domain">Delete Custom Domain</h2>
 <p>Deletes a custom domain specified by the {zone_id} and
 {customdomain_id} parameters</p>
 <div class="heading">
@@ -3650,7 +3650,7 @@ api.put(&#39;/zones/pull/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
 </div>
 
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab26">
   <li class="active"><a href="#ruby26" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python26" data-toggle='tab'>Python</a></li>
@@ -3695,15 +3695,15 @@ api.del(&#39;/zones/pull/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
 </div>
 
 
-<h1>Push Zone API</h1>
-<h2>List Push Zones</h2>
+<h1 id="push-zone-api">Push Zone API</h1>
+<h2 id="list-push-zones">List Push Zones</h2>
 <p>Returns a list of all push zones on the specified account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json">https://rws.netdna.com/{companyalias}/zones/push.json</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3764,7 +3764,7 @@ api.del(&#39;/zones/pull/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab27">
   <li class="active"><a href="#ruby27" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python27" data-toggle='tab'>Python</a></li>
@@ -3852,14 +3852,14 @@ api.get(&#39;/zones/push.json&#39;, function(err, response) {
 </div>
 
 
-<h2>Create Push Zone</h2>
+<h2 id="create-push-zone">Create Push Zone</h2>
 <p>Creates a new push zone</p>
 <div class="heading">
 <div class="url POST"><span class="http_method">POST</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json">https://rws.netdna.com/{companyalias}/zones/push.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3914,7 +3914,7 @@ api.get(&#39;/zones/push.json&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -3975,7 +3975,7 @@ api.get(&#39;/zones/push.json&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab28">
   <li class="active"><a href="#ruby28" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python28" data-toggle='tab'>Python</a></li>
@@ -4038,14 +4038,14 @@ api.post(&#39;/zones/push.json&#39;, { name: &#39;newPushZone&#39;, password: &#
 </div>
 
 
-<h2>Get Push Zones Count</h2>
+<h2 id="get-push-zones-count">Get Push Zones Count</h2>
 <p>Counts all push zones on the specified account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json/count">https://rws.netdna.com/{companyalias}/zones/push.json/count</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -4061,7 +4061,7 @@ api.post(&#39;/zones/push.json&#39;, { name: &#39;newPushZone&#39;, password: &#
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab29">
   <li class="active"><a href="#ruby29" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python29" data-toggle='tab'>Python</a></li>
@@ -4102,14 +4102,14 @@ api.get(&#39;/zones/push.json/count&#39;, function(err, response) {
 </div>
 
 
-<h2>Get Push Zone</h2>
+<h2 id="get-push-zone">Get Push Zone</h2>
 <p>Gets a push zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -4170,7 +4170,7 @@ api.get(&#39;/zones/push.json/count&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab30">
   <li class="active"><a href="#ruby30" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python30" data-toggle='tab'>Python</a></li>
@@ -4234,14 +4234,14 @@ api.get(&#39;/zones/push.json/&#39; + id, function(err, response) {
 </div>
 
 
-<h2>Update Push Zone</h2>
+<h2 id="update-push-zone">Update Push Zone</h2>
 <p>Updates a push zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -4282,7 +4282,7 @@ api.get(&#39;/zones/push.json/&#39; + id, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -4343,7 +4343,7 @@ api.get(&#39;/zones/push.json/&#39; + id, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab31">
   <li class="active"><a href="#ruby31" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python31" data-toggle='tab'>Python</a></li>
@@ -4410,14 +4410,14 @@ api.get(&#39;/zones/push.json/&#39; + id, { label: &#39;Some other description&#
 </div>
 
 
-<h2>Delete Push Zone</h2>
+<h2 id="delete-push-zone">Delete Push Zone</h2>
 <p>Deletes a push zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url DELETE"><span class="http_method">DELETE</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/push.json/{zone_id}</a></span></div>
 </div>
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab32">
   <li class="active"><a href="#ruby32" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python32" data-toggle='tab'>Python</a></li>
@@ -4458,14 +4458,14 @@ api.del(&#39;/zones/push.json/&#39; + id, function(err, response) {
 </div>
 
 
-<h2>Enable Push Zone</h2>
+<h2 id="enable-push-zone">Enable Push Zone</h2>
 <p>Enables a push zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/enable.json">https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/enable.json</a></span></div>
 </div>
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab33">
   <li class="active"><a href="#ruby33" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python33" data-toggle='tab'>Python</a></li>
@@ -4506,7 +4506,7 @@ api.put(&#39;/zones/push/&#39; + id + &#39;/enable.json&#39;, function(err, resp
 </div>
 
 
-<h2>Disable Push Zone</h2>
+<h2 id="disable-push-zone">Disable Push Zone</h2>
 <p>Disables a push zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
@@ -4514,7 +4514,7 @@ api.put(&#39;/zones/push/&#39; + id + &#39;/enable.json&#39;, function(err, resp
 </div>
 
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab34">
   <li class="active"><a href="#ruby34" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python34" data-toggle='tab'>Python</a></li>
@@ -4555,8 +4555,8 @@ api.put(&#39;/zones/push/&#39; + id + &#39;/disable.json&#39;, function(err, res
 </div>
 
 
-<h1>Push Zone Custom Domains API</h1>
-<h2>List Custom Domains</h2>
+<h1 id="push-zone-custom-domains-api">Push Zone Custom Domains API</h1>
+<h2 id="list-custom-domains">List Custom Domains</h2>
 <p>Returns a list of all custom domains on the zone specified by
 {zone_id}</p>
 <div class="heading">
@@ -4564,7 +4564,7 @@ api.put(&#39;/zones/push/&#39; + id + &#39;/disable.json&#39;, function(err, res
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json">https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -4590,7 +4590,7 @@ api.put(&#39;/zones/push/&#39; + id + &#39;/disable.json&#39;, function(err, res
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab35">
   <li class="active"><a href="#ruby35" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python35" data-toggle='tab'>Python</a></li>
@@ -4642,14 +4642,14 @@ api.get(&#39;/zones/push/&#39; + id + &#39;/customdomains.json&#39;, function(er
 </div>
 
 
-<h2>Create Custom Domain</h2>
+<h2 id="create-custom-domain">Create Custom Domain</h2>
 <p>Adds a new custom domain to {zone_id}</p>
 <div class="heading">
 <div class="url POST"><span class="http_method">POST</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json">https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -4676,7 +4676,7 @@ api.get(&#39;/zones/push/&#39; + id + &#39;/customdomains.json&#39;, function(er
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -4702,7 +4702,7 @@ api.get(&#39;/zones/push/&#39; + id + &#39;/customdomains.json&#39;, function(er
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab36">
   <li class="active"><a href="#ruby36" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python36" data-toggle='tab'>Python</a></li>
@@ -4755,7 +4755,7 @@ api.post(&#39;/zones/push/&#39; + id + &#39;/customdomains.json&#39;, { custom_d
 </div>
 
 
-<h2>Get Custom Domain</h2>
+<h2 id="get-custom-domain">Get Custom Domain</h2>
 <p>Gets a custom domain specified by the {zone_id} and
 {customdomain_id} parameters</p>
 <div class="heading">
@@ -4763,7 +4763,7 @@ api.post(&#39;/zones/push/&#39; + id + &#39;/customdomains.json&#39;, { custom_d
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -4789,7 +4789,7 @@ api.post(&#39;/zones/push/&#39; + id + &#39;/customdomains.json&#39;, { custom_d
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab37">
   <li class="active"><a href="#ruby37" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python37" data-toggle='tab'>Python</a></li>
@@ -4842,14 +4842,14 @@ api.get(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
 </div>
 
 
-<h2>Update Custom Domain</h2>
+<h2 id="update-custom-domain">Update Custom Domain</h2>
 <p>Updates a custom domain specified by the id parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/push/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -4869,7 +4869,7 @@ api.get(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -4895,7 +4895,7 @@ api.get(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab38">
   <li class="active"><a href="#ruby38" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python38" data-toggle='tab'>Python</a></li>
@@ -4952,7 +4952,7 @@ api.put(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
 </div>
 
 
-<h2>Delete Custom Domain</h2>
+<h2 id="delete-custom-domain">Delete Custom Domain</h2>
 <p>Deletes a custom domain specified by the {zone_id} and
 {customdomain_id} parameters</p>
 <div class="heading">
@@ -4961,7 +4961,7 @@ api.put(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
 </div>
 
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab39">
   <li class="active"><a href="#ruby39" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python39" data-toggle='tab'>Python</a></li>
@@ -5006,15 +5006,15 @@ api.del(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
 </div>
 
 
-<h1>VOD Zone API</h1>
-<h2>List VOD Zones</h2>
+<h1 id="vod-zone-api">VOD Zone API</h1>
+<h2 id="list-vod-zones">List VOD Zones</h2>
 <p>Returns a list of all VOD zones on the specified account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json">https://rws.netdna.com/{companyalias}/zones/vod.json</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -5060,7 +5060,7 @@ api.del(&#39;/zones/push/&#39; + zoneId + &#39;/customdomains.json/&#39; + domai
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab40">
   <li class="active"><a href="#ruby40" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python40" data-toggle='tab'>Python</a></li>
@@ -5146,14 +5146,14 @@ api.get(&#39;/zones/vod.json&#39;, function(err, response) {
 </div>
 
 
-<h2>Create VOD Zone</h2>
+<h2 id="create-vod-zone">Create VOD Zone</h2>
 <p>Creates a new VOD zone</p>
 <div class="heading">
 <div class="url POST"><span class="http_method">POST</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json">https://rws.netdna.com/{companyalias}/zones/vod.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -5194,7 +5194,7 @@ api.get(&#39;/zones/vod.json&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -5240,7 +5240,7 @@ api.get(&#39;/zones/vod.json&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab41">
   <li class="active"><a href="#ruby41" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python41" data-toggle='tab'>Python</a></li>
@@ -5302,14 +5302,14 @@ api.post(&#39;/zones/vod.json&#39;, { name: &#39;newVODZone3&#39;, password: &#3
 </div>
 
 
-<h2>Get VOD Zones Count</h2>
+<h2 id="get-vod-zones-count">Get VOD Zones Count</h2>
 <p>Counts all vod zones on the specified account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json/count">https://rws.netdna.com/{companyalias}/zones/vod.json/count</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -5325,7 +5325,7 @@ api.post(&#39;/zones/vod.json&#39;, { name: &#39;newVODZone3&#39;, password: &#3
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab42">
   <li class="active"><a href="#ruby42" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python42" data-toggle='tab'>Python</a></li>
@@ -5365,14 +5365,14 @@ api.get(&#39;/zones/vod.json/count&#39;, function(err, response) {
 </div>
 
 
-<h2>Get VOD Zone</h2>
+<h2 id="get-vod-zone">Get VOD Zone</h2>
 <p>Gets a VOD zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -5418,7 +5418,7 @@ api.get(&#39;/zones/vod.json/count&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab43">
   <li class="active"><a href="#ruby43" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python43" data-toggle='tab'>Python</a></li>
@@ -5481,14 +5481,14 @@ api.get(&#39;/zones/vod.json/&#39; + id, function(err, response) {
 </div>
 
 
-<h2>Update VOD Zone</h2>
+<h2 id="update-vod-zone">Update VOD Zone</h2>
 <p>Updates a VOD zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -5522,7 +5522,7 @@ api.get(&#39;/zones/vod.json/&#39; + id, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -5568,7 +5568,7 @@ api.get(&#39;/zones/vod.json/&#39; + id, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab44">
   <li class="active"><a href="#ruby44" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python44" data-toggle='tab'>Python</a></li>
@@ -5634,14 +5634,14 @@ api.put(&#39;/zones/vod.json/&#39; + id, { label: &#39;Some other description&#3
 </div>
 
 
-<h2>Delete VOD Zone</h2>
+<h2 id="delete-vod-zone">Delete VOD Zone</h2>
 <p>Deletes a VOD zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url DELETE"><span class="http_method">DELETE</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/vod.json/{zone_id}</a></span></div>
 </div>
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab45">
   <li class="active"><a href="#ruby45" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python45" data-toggle='tab'>Python</a></li>
@@ -5682,14 +5682,14 @@ api.del(&#39;/zones/vod.json/&#39; + id, function(err, response) {
 </div>
 
 
-<h2>Enable VOD Zone</h2>
+<h2 id="enable-vod-zone">Enable VOD Zone</h2>
 <p>Enables a VOD zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/enable.json">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/enable.json</a></span></div>
 </div>
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab46">
   <li class="active"><a href="#ruby46" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python46" data-toggle='tab'>Python</a></li>
@@ -5730,14 +5730,14 @@ api.put(&#39;/zones/vod/&#39; + id + &#39;/enable.json&#39;, function(err, respo
 </div>
 
 
-<h2>Disable VOD Zone</h2>
+<h2 id="disable-vod-zone">Disable VOD Zone</h2>
 <p>Disables a VOD zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/disable.json">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/disable.json</a></span></div>
 </div>
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab47">
   <li class="active"><a href="#ruby47" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python47" data-toggle='tab'>Python</a></li>
@@ -5778,8 +5778,8 @@ api.put(&#39;/zones/vod/&#39; + id + &#39;/disable.json&#39;, function(err, resp
 </div>
 
 
-<h1>VOD Zone Custom Domains API</h1>
-<h2>List Custom Domains</h2>
+<h1 id="vod-zone-custom-domains-api">VOD Zone Custom Domains API</h1>
+<h2 id="list-custom-domains">List Custom Domains</h2>
 <p>Returns a list of all custom domains on the zone specified by
 {zone_id}</p>
 <div class="heading">
@@ -5787,7 +5787,7 @@ api.put(&#39;/zones/vod/&#39; + id + &#39;/disable.json&#39;, function(err, resp
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -5813,7 +5813,7 @@ api.put(&#39;/zones/vod/&#39; + id + &#39;/disable.json&#39;, function(err, resp
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab48">
   <li class="active"><a href="#ruby48" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python48" data-toggle='tab'>Python</a></li>
@@ -5865,14 +5865,14 @@ api.get(&#39;/zones/vod.json/&#39; + id + &#39;/customdomains.json, function(err
 </div>
 
 
-<h2>Create Custom Domain</h2>
+<h2 id="create-custom-domain">Create Custom Domain</h2>
 <p>Adds a new custom domain to {zone_id}</p>
 <div class="heading">
 <div class="url POST"><span class="http_method">POST</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -5899,7 +5899,7 @@ api.get(&#39;/zones/vod.json/&#39; + id + &#39;/customdomains.json, function(err
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -5925,7 +5925,7 @@ api.get(&#39;/zones/vod.json/&#39; + id + &#39;/customdomains.json, function(err
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab49">
   <li class="active"><a href="#ruby49" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python49" data-toggle='tab'>Python</a></li>
@@ -5977,7 +5977,7 @@ api.post(&#39;/zones/vod/&#39; + id + &#39;/customdomains.json&#39;, { custom_do
 </div>
 
 
-<h2>Get Custom Domain</h2>
+<h2 id="get-custom-domain">Get Custom Domain</h2>
 <p>Gets a custom domain specified by the {zone_id} and
 {customdomain_id} parameters</p>
 <div class="heading">
@@ -5985,7 +5985,7 @@ api.post(&#39;/zones/vod/&#39; + id + &#39;/customdomains.json&#39;, { custom_do
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -6011,7 +6011,7 @@ api.post(&#39;/zones/vod/&#39; + id + &#39;/customdomains.json&#39;, { custom_do
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab50">
   <li class="active"><a href="#ruby50" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python50" data-toggle='tab'>Python</a></li>
@@ -6064,14 +6064,14 @@ api.get(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + domain
 </div>
 
 
-<h2>Update Custom Domain</h2>
+<h2 id="update-custom-domain">Update Custom Domain</h2>
 <p>Updates a custom domain specified by the id parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json/{customdomain_id}">https://rws.netdna.com/{companyalias}/zones/vod/{zone_id}/customdomains.json/{customdomain_id}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -6091,7 +6091,7 @@ api.get(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + domain
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -6117,7 +6117,7 @@ api.get(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + domain
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab51">
   <li class="active"><a href="#ruby51" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python51" data-toggle='tab'>Python</a></li>
@@ -6173,7 +6173,7 @@ api.put(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + domain
 </div>
 
 
-<h2>Delete Custom Domain</h2>
+<h2 id="delete-custom-domain">Delete Custom Domain</h2>
 <p>Deletes a custom domain specified by the {zone_id} and
 {customdomain_id} parameters</p>
 <div class="heading">
@@ -6182,7 +6182,7 @@ api.put(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + domain
 </div>
 
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab52">
   <li class="active"><a href="#ruby52" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python52" data-toggle='tab'>Python</a></li>
@@ -6227,15 +6227,15 @@ api.del(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + domain
 </div>
 
 
-<h1>Live Zone API</h1>
-<h2>List Live Zones</h2>
+<h1 id="live-zone-api">Live Zone API</h1>
+<h2 id="list-live-zones">List Live Zones</h2>
 <p>Returns a list of all live zones on the specified account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json">https://rws.netdna.com/{companyalias}/zones/live.json</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -6281,7 +6281,7 @@ api.del(&#39;/zones/vod/&#39; + zoneId + &#39;/customdomains.json/&#39; + domain
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab53">
   <li class="active"><a href="#ruby53" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python53" data-toggle='tab'>Python</a></li>
@@ -6357,14 +6357,14 @@ api.get(&#39;/zones/live.json&#39;, function(err, response) {
 </div>
 
 
-<h2>Create Live Zone</h2>
+<h2 id="create-live-zone">Create Live Zone</h2>
 <p>Creates a new live zone</p>
 <div class="heading">
 <div class="url POST"><span class="http_method">POST</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json">https://rws.netdna.com/{companyalias}/zones/live.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -6398,7 +6398,7 @@ api.get(&#39;/zones/live.json&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -6444,7 +6444,7 @@ api.get(&#39;/zones/live.json&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab54">
   <li class="active"><a href="#ruby54" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python54" data-toggle='tab'>Python</a></li>
@@ -6501,14 +6501,14 @@ api.post(&#39;/zones/live.json&#39;,  { name: &#39;newLiveZone3&#39;, password: 
 </div>
 
 
-<h2>Get Live Zones Count</h2>
+<h2 id="get-live-zones-count">Get Live Zones Count</h2>
 <p>Counts all live zones on the specified account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json/count">https://rws.netdna.com/{companyalias}/zones/live.json/count</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -6524,7 +6524,7 @@ api.post(&#39;/zones/live.json&#39;,  { name: &#39;newLiveZone3&#39;, password: 
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab55">
   <li class="active"><a href="#ruby55" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python55" data-toggle='tab'>Python</a></li>
@@ -6565,14 +6565,14 @@ api.get(&#39;/zones.json&#39;, function(err, response) {
 </div>
 
 
-<h2>Get Live Zone</h2>
+<h2 id="get-live-zone">Get Live Zone</h2>
 <p>Gets a live zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -6618,7 +6618,7 @@ api.get(&#39;/zones.json&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab56">
   <li class="active56"><a href="#ruby" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python56" data-toggle='tab'>Python</a></li>
@@ -6676,14 +6676,14 @@ api.get(&#39;/zones/live.json/&#39; + id, function(err, response) {
 </div>
 
 
-<h2>Update Live Zone</h2>
+<h2 id="update-live-zone">Update Live Zone</h2>
 <p>Updates a live zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -6717,7 +6717,7 @@ api.get(&#39;/zones/live.json/&#39; + id, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -6763,7 +6763,7 @@ api.get(&#39;/zones/live.json/&#39; + id, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab57">
   <li class="active"><a href="#ruby57" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python57" data-toggle='tab'>Python</a></li>
@@ -6825,14 +6825,14 @@ api.put(&#39;/zones/live.json/&#39; + id, { label: &#39;Some other description&#
 </div>
 
 
-<h2>Delete Live Zone</h2>
+<h2 id="delete-live-zone">Delete Live Zone</h2>
 <p>Deletes a live zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url DELETE"><span class="http_method">DELETE</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}">https://rws.netdna.com/{companyalias}/zones/live.json/{zone_id}</a></span></div>
 </div>
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab58">
   <li class="active"><a href="#ruby58" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python58" data-toggle='tab'>Python</a></li>
@@ -6873,14 +6873,14 @@ api.del(&#39;/zones/live.json/&#39; + id, function(err, response) {
 </div>
 
 
-<h2>Enable Live Zone</h2>
+<h2 id="enable-live-zone">Enable Live Zone</h2>
 <p>Enables a live zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/live/{zone_id}/enable.json">https://rws.netdna.com/{companyalias}/zones/live/{zone_id}/enable.json</a></span></div>
 </div>
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab59">
   <li class="active"><a href="#ruby59" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python59" data-toggle='tab'>Python</a></li>
@@ -6921,7 +6921,7 @@ api.put(&#39;/zones/live/&#39; + id + &#39;/enable.json&#39;, function(err, resp
 </div>
 
 
-<h2>Disable Live Zone</h2>
+<h2 id="disable-live-zone">Disable Live Zone</h2>
 <p>Disables a live zone specified by the {zone_id} parameter</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
@@ -6929,7 +6929,7 @@ api.put(&#39;/zones/live/&#39; + id + &#39;/enable.json&#39;, function(err, resp
 </div>
 
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab60">
   <li class="active"><a href="#ruby60" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python60" data-toggle='tab'>Python</a></li>
@@ -6970,8 +6970,8 @@ api.put(&#39;/zones/live/&#39; + id + &#39;/disable.json&#39;, function(err, res
 </div>
 
 
-<h1>Zones SSL API</h1>
-<h2>Get Zone&#39;s SSL Information</h2>
+<h1 id="zones-ssl-api">Zones SSL API</h1>
+<h2 id="get-zone-s-ssl-information">Get Zone&#39;s SSL Information</h2>
 <p>Get the SSL certificate for the specified {zone_type} and
 {zone_id}.</p>
 <div class="heading">
@@ -6979,7 +6979,7 @@ api.put(&#39;/zones/live/&#39; + id + &#39;/disable.json&#39;, function(err, res
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json</a></span></div>
 </div>
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab61">
   <li class="active"><a href="#ruby61" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python61" data-toggle='tab'>Python</a></li>
@@ -7037,7 +7037,7 @@ api.get(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, funct
 </div>
 
 
-<h2>Install SSL on Zone</h2>
+<h2 id="install-ssl-on-zone">Install SSL on Zone</h2>
 <p>Upload an SSL certificate for the specified {zone_type} and
 {zone_id}.</p>
 <div class="heading">
@@ -7045,7 +7045,7 @@ api.get(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, funct
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -7078,7 +7078,7 @@ api.get(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, funct
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -7124,7 +7124,7 @@ api.get(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, funct
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab62">
   <li class="active"><a href="#ruby62" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python62" data-toggle='tab'>Python</a></li>
@@ -7193,7 +7193,7 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ss
 </div>
 
 
-<h2>Update Zone&#39;s SSL Information</h2>
+<h2 id="update-zone-s-ssl-information">Update Zone&#39;s SSL Information</h2>
 <p>Update the SSL certificate for the specified {zone_type} and
 {zone_id}.</p>
 <div class="heading">
@@ -7201,7 +7201,7 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ss
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/ssl.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -7234,7 +7234,7 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ss
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -7280,7 +7280,7 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ss
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab63">
   <li class="active"><a href="#ruby63" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python63" data-toggle='tab'>Python</a></li>
@@ -7350,7 +7350,7 @@ api.put(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ssl
 </div>
 
 
-<h2>Remove Zone&#39;s SSL Information</h2>
+<h2 id="remove-zone-s-ssl-information">Remove Zone&#39;s SSL Information</h2>
 <p>Remove the SSL certificate for the specified {zone_type} and
 {zone_id}.</p>
 <div class="heading">
@@ -7359,7 +7359,7 @@ api.put(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, { ssl
 </div>
 
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab64">
   <li class="active"><a href="#ruby64" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python64" data-toggle='tab'>Python</a></li>
@@ -7459,15 +7459,15 @@ api.delete(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/ssl.json&#39;, fu
 </div>
 
 
-<h1>Zones Upstream API</h1>
-<h2>Get Upstream information for the current zone</h2>
+<h1 id="zones-upstream-api">Zones Upstream API</h1>
+<h2 id="get-upstream-information-for-the-current-zone">Get Upstream information for the current zone</h2>
 <p>Get the upstream information for the specified {zone_id}.</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json</a></span></div>
 </div>
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab65">
   <li class="active"><a href="#ruby65" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python65" data-toggle='tab'>Python</a></li>
@@ -7510,14 +7510,14 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;,
 </div>
 
 
-<h2>Enable Upstream on Zone</h2>
+<h2 id="enable-upstream-on-zone">Enable Upstream on Zone</h2>
 <p>Create and enable Upstream for a specific {zone_id}.</p>
 <div class="heading">
 <div class="url POST"><span class="http_method">POST</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -7542,7 +7542,7 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;,
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -7569,7 +7569,7 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;,
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab66">
   <li class="active"><a href="#ruby66" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python66" data-toggle='tab'>Python</a></li>
@@ -7615,14 +7615,14 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;,
 </div>
 
 
-<h2>Update Zone&#39;s Upstream Information</h2>
+<h2 id="update-zone-s-upstream-information">Update Zone&#39;s Upstream Information</h2>
 <p>Update the Upstream information for the specified {zone_id}.</p>
 <div class="heading">
 <div class="url PUT"><span class="http_method">PUT</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json">https://rws.netdna.com/{companyalias}/zones/{zone_type}/{zone_id}/upstream.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -7653,7 +7653,7 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;,
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -7680,7 +7680,7 @@ api.post(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;,
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab67">
   <li class="active"><a href="#ruby67" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python67" data-toggle='tab'>Python</a></li>
@@ -7726,7 +7726,7 @@ api.put(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;, 
 </div>
 
 
-<h2>Remove Zone&#39;s Upstream Information</h2>
+<h2 id="remove-zone-s-upstream-information">Remove Zone&#39;s Upstream Information</h2>
 <p>Remove the Upstream Information for the specified {zone_id}.</p>
 <div class="heading">
 <div class="url DELETE"><span class="http_method">DELETE</span>
@@ -7734,7 +7734,7 @@ api.put(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;, 
 </div>
 
 
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab68">
   <li class="active"><a href="#ruby68" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python68" data-toggle='tab'>Python</a></li>
@@ -7777,8 +7777,8 @@ api.del(&#39;/zones/&#39; + type + &#39;/&#39; + id + &#39;/upstream.json&#39;, 
 </div>
 
 
-<h1>Reports by Zone API</h1>
-<h2>List Zone Stats</h2>
+<h1 id="reports-by-zone-api">Reports by Zone API</h1>
+<h2 id="list-zone-stats">List Zone Stats</h2>
 <p>Gets all zone usage statistics optionally broken up by
 {report_type}. If no {report_type} is given the request will return
 the total usage for the zones.</p>
@@ -7787,7 +7787,7 @@ the total usage for the zones.</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/stats.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/stats.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -7814,7 +7814,7 @@ the total usage for the zones.</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -7850,7 +7850,7 @@ the total usage for the zones.</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab69">
   <li class="active"><a href="#ruby69" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python69" data-toggle='tab'>Python</a></li>
@@ -7900,7 +7900,7 @@ api.get(&#39;/reports/stats.json/&#39; + reportType, function(err, response) {
 </div>
 
 
-<h2>List Stats per Zone</h2>
+<h2 id="list-stats-per-zone">List Stats per Zone</h2>
 <p>Gets the {zone_id} usage statistics optionally broken up by
 {report_type}. If no {report_type} is given the request will return
 the total usage for the zones.</p>
@@ -7909,7 +7909,7 @@ the total usage for the zones.</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/stats.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/stats.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -7936,7 +7936,7 @@ the total usage for the zones.</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -7972,7 +7972,7 @@ the total usage for the zones.</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab70">
   <li class="active"><a href="#ruby70" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python70" data-toggle='tab'>Python</a></li>
@@ -8032,15 +8032,15 @@ api.get(&#39;/reports/&#39; + id + &#39;/stats.json/&#39; + reportType, function
 </div>
 
 
-<h1>Reports by Location API</h1>
-<h2>List Nodes</h2>
+<h1 id="reports-by-location-api">Reports by Location API</h1>
+<h2 id="list-nodes">List Nodes</h2>
 <p>Gets a list of all active nodes (locations)</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/nodes.json">https://rws.netdna.com/{companyalias}/reports/nodes.json</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -8066,7 +8066,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/stats.json/&#39; + reportType, function
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab71">
   <li class="active"><a href="#ruby71" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python71" data-toggle='tab'>Python</a></li>
@@ -8167,7 +8167,7 @@ api.get(&#39;/reports/nodes.json&#39;, function(err, response) {
 </div>
 
 
-<h2>List Nodes by Zone</h2>
+<h2 id="list-nodes-by-zone">List Nodes by Zone</h2>
 <p>Gets a list of all active nodes (locations) specified by the
 {zone_id} parameter</p>
 <div class="heading">
@@ -8175,7 +8175,7 @@ api.get(&#39;/reports/nodes.json&#39;, function(err, response) {
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json">https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -8201,7 +8201,7 @@ api.get(&#39;/reports/nodes.json&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab72">
   <li class="active"><a href="#ruby72" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python72" data-toggle='tab'>Python</a></li>
@@ -8296,7 +8296,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/nodes.json&#39;, function(err, response
 </div>
 
 
-<h2>List Zone Node Stats by Report Type</h2>
+<h2 id="list-zone-node-stats-by-report-type">List Zone Node Stats by Report Type</h2>
 <p>Get usage statistics broken up by nodes and optionally
 {report_type}. If no {report_type} is given the request will return
 the total usage broken up by node.</p>
@@ -8305,7 +8305,7 @@ the total usage broken up by node.</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/nodes.json/stats/{report_type}">https://rws.netdna.com/{companyalias}/reports/nodes.json/stats/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -8332,7 +8332,7 @@ the total usage broken up by node.</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -8383,7 +8383,7 @@ the total usage broken up by node.</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab73">
   <li class="active"><a href="#ruby73" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python73" data-toggle='tab'>Python</a></li>
@@ -8525,7 +8525,7 @@ api.get(&#39;/reports/nodes.json/stats/&#39; + reportType, function(err, respons
 </div>
 
 
-<h2>List Node Stats by Zone and Report Type</h2>
+<h2 id="list-node-stats-by-zone-and-report-type">List Node Stats by Zone and Report Type</h2>
 <p>Get usage statistics for a particular {zone_id} broken up by
 nodes and optionally {report_type}. If no {report_type} is given
 the request will return the total usage broken up by node.</p>
@@ -8534,7 +8534,7 @@ the request will return the total usage broken up by node.</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json/stats/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json/stats/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -8561,7 +8561,7 @@ the request will return the total usage broken up by node.</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -8612,7 +8612,7 @@ the request will return the total usage broken up by node.</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab74">
   <li class="active"><a href="#ruby74" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python74" data-toggle='tab'>Python</a></li>
@@ -8667,14 +8667,14 @@ api.get(&#39;/reports/&#39; + id + &#39;/nodes.json/stats/&#39; + reportType, fu
 </div>
 
 
-<h2>Get Zone Node</h2>
+<h2 id="get-zone-node">Get Zone Node</h2>
 <p>Gets the node information for the specified {node_id}</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/nodes.json/{node_id}">https://rws.netdna.com/{companyalias}/reports/nodes.json/{node_id}</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -8700,7 +8700,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/nodes.json/stats/&#39; + reportType, fu
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab75">
   <li class="active"><a href="#ruby75" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python75" data-toggle='tab'>Python</a></li>
@@ -8749,7 +8749,7 @@ api.get(&#39;/reports/nodes.json/&#39; + id, function(err, response) {
 </div>
 
 
-<h2>Get Node by Zone</h2>
+<h2 id="get-node-by-zone">Get Node by Zone</h2>
 <p>Gets the node information for the specified {node_id} and
 {zone_id}</p>
 <div class="heading">
@@ -8757,7 +8757,7 @@ api.get(&#39;/reports/nodes.json/&#39; + id, function(err, response) {
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json/{node_id}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json/{node_id}</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -8783,7 +8783,7 @@ api.get(&#39;/reports/nodes.json/&#39; + id, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab76">
   <li class="active"><a href="#ruby76" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python76" data-toggle='tab'>Python</a></li>
@@ -8838,7 +8838,7 @@ api.get(&#39;/reports/&#39; + zoneId + &#39;/nodes.json/&#39; + nodeId, function
 </div>
 
 
-<h2>Get Zone Node Stats by Report Type</h2>
+<h2 id="get-zone-node-stats-by-report-type">Get Zone Node Stats by Report Type</h2>
 <p>Get usage statistics for a particular {node_id} optionally
 broken up by {report_type}. If no {report_type} is given the
 request will return the total usage for the node.</p>
@@ -8847,7 +8847,7 @@ request will return the total usage for the node.</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/nodes.json/{node_id}/stats/{report_type}">https://rws.netdna.com/{companyalias}/reports/nodes.json/{node_id}/stats/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -8874,7 +8874,7 @@ request will return the total usage for the node.</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -8910,7 +8910,7 @@ request will return the total usage for the node.</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab77">
   <li class="active"><a href="#ruby77" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python77" data-toggle='tab'>Python</a></li>
@@ -8966,7 +8966,7 @@ api.get(&#39;/reports/nodes.json/&#39; + id + &#39;/stats/&#39; + reportType, fu
 </div>
 
 
-<h2>Get Node Stats by Zone and Report Type</h2>
+<h2 id="get-node-stats-by-zone-and-report-type">Get Node Stats by Zone and Report Type</h2>
 <p>Get usage statistics for a particular {node_id} and {zone_id},
 optionally broken up by {report_type}. If no {report_type} is given
 the request will return the total usage for the node.</p>
@@ -8975,7 +8975,7 @@ the request will return the total usage for the node.</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json/{node_id}/stats/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/nodes.json/{node_id}/stats/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9002,7 +9002,7 @@ the request will return the total usage for the node.</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9038,7 +9038,7 @@ the request will return the total usage for the node.</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab78">
   <li class="active"><a href="#ruby78" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python78" data-toggle='tab'>Python</a></li>
@@ -9098,8 +9098,8 @@ api.get(&#39;/reports/&#39; + zoneId + &#39;/nodes.json/&#39; + nodeId + &#39;/s
 </div>
 
 
-<h1>Reports by Popular Files API</h1>
-<h2>List Popular Files</h2>
+<h1 id="reports-by-popular-files-api">Reports by Popular Files API</h1>
+<h2 id="list-popular-files">List Popular Files</h2>
 <p>Gets the most popularly requested files for your account,
 grouped into daily statistics</p>
 <div class="heading">
@@ -9107,7 +9107,7 @@ grouped into daily statistics</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/popularfiles.json">https://rws.netdna.com/{companyalias}/reports/popularfiles.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9134,7 +9134,7 @@ grouped into daily statistics</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9175,7 +9175,7 @@ grouped into daily statistics</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab79">
   <li class="active"><a href="#ruby79" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python79" data-toggle='tab'>Python</a></li>
@@ -9224,7 +9224,7 @@ api.get(&#39;/reports/popularfiles.json&#39;, function(err, response) {
 </div>
 
 
-<h2>List Popular Files By Zone Type</h2>
+<h2 id="list-popular-files-by-zone-type">List Popular Files By Zone Type</h2>
 <p>Gets the most popularly requested files for your account,
 filtered by {zone_type} and grouped into daily statistics</p>
 <div class="heading">
@@ -9232,7 +9232,7 @@ filtered by {zone_type} and grouped into daily statistics</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/popularfiles.json">https://rws.netdna.com/{companyalias}/reports/{zone_type}/popularfiles.json</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9259,7 +9259,7 @@ filtered by {zone_type} and grouped into daily statistics</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9300,7 +9300,7 @@ filtered by {zone_type} and grouped into daily statistics</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab80">
   <li class="active"><a href="#ruby80" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python80" data-toggle='tab'>Python</a></li>
@@ -9353,15 +9353,15 @@ api.get(&#39;/reports/&#39; + type + &#39;/popularfiles.json&#39;, function(err,
 </div>
 
 
-<h1>Reports by Status Codes API</h1>
-<h2>List Status Code Responses</h2>
+<h1 id="reports-by-status-codes-api">Reports by Status Codes API</h1>
+<h2 id="list-status-code-responses">List Status Code Responses</h2>
 <p>Gets HTTP status code response statistics for your account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/statuscodes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/statuscodes.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9388,7 +9388,7 @@ api.get(&#39;/reports/&#39; + type + &#39;/popularfiles.json&#39;, function(err,
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9414,7 +9414,7 @@ api.get(&#39;/reports/&#39; + type + &#39;/popularfiles.json&#39;, function(err,
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab81">
   <li class="active"><a href="#ruby81" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python81" data-toggle='tab'>Python</a></li>
@@ -9468,7 +9468,7 @@ api.get(&#39;/reports/statuscodes.json/&#39; + reportType, function(err, respons
 </div>
 
 
-<h2>List Status Code Responses by Zone Id</h2>
+<h2 id="list-status-code-responses-by-zone-id">List Status Code Responses by Zone Id</h2>
 <p>Gets HTTP status code response statistics for a specific
 {zone_id}</p>
 <div class="heading">
@@ -9476,7 +9476,7 @@ api.get(&#39;/reports/statuscodes.json/&#39; + reportType, function(err, respons
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/statuscodes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/statuscodes.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9503,7 +9503,7 @@ api.get(&#39;/reports/statuscodes.json/&#39; + reportType, function(err, respons
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9529,7 +9529,7 @@ api.get(&#39;/reports/statuscodes.json/&#39; + reportType, function(err, respons
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab82">
   <li class="active"><a href="#ruby82" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python82" data-toggle='tab'>Python</a></li>
@@ -9581,7 +9581,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/statuscodes.json/&#39; + reportType, fu
 </div>
 
 
-<h2>List Status Codes by Zone Type</h2>
+<h2 id="list-status-codes-by-zone-type">List Status Codes by Zone Type</h2>
 <p>Gets HTTP status code response statistics for a specific
 {zone_type}</p>
 <div class="heading">
@@ -9589,7 +9589,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/statuscodes.json/&#39; + reportType, fu
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/statuscodes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_type}/statuscodes.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9616,7 +9616,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/statuscodes.json/&#39; + reportType, fu
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9642,7 +9642,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/statuscodes.json/&#39; + reportType, fu
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab83">
   <li class="active"><a href="#ruby83" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python83" data-toggle='tab'>Python</a></li>
@@ -9700,7 +9700,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/statuscodes.json/&#39; + reportTy
 </div>
 
 
-<h2>List Status Codes by Zone Id</h2>
+<h2 id="list-status-codes-by-zone-id">List Status Codes by Zone Id</h2>
 <p>Gets HTTP status code response statistics for a specific
 {zone_type} and {zone_id}</p>
 <div class="heading">
@@ -9708,7 +9708,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/statuscodes.json/&#39; + reportTy
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/{zone_id}/statuscodes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_type}/{zone_id}/statuscodes.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9735,7 +9735,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/statuscodes.json/&#39; + reportTy
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9761,7 +9761,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/statuscodes.json/&#39; + reportTy
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab84">
   <li class="active"><a href="#ruby84" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python84" data-toggle='tab'>Python</a></li>
@@ -9817,15 +9817,15 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/&#39; + id + &#39;/statuscodes.js
 </div>
 
 
-<h1>Reports by File Types API</h1>
-<h2>List File Types</h2>
+<h1 id="reports-by-file-types-api">Reports by File Types API</h1>
+<h2 id="list-file-types">List File Types</h2>
 <p>Gets file type statistics for your account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/filetypes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/filetypes.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9852,7 +9852,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/&#39; + id + &#39;/statuscodes.js
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9873,7 +9873,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/&#39; + id + &#39;/statuscodes.js
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab85">
   <li class="active"><a href="#ruby85" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python85" data-toggle='tab'>Python</a></li>
@@ -9930,14 +9930,14 @@ api.get(&#39;/reports/filetypes.json&#39;, function(err, response) {
 </div>
 
 
-<h2>List File Types by Zone Id</h2>
+<h2 id="list-file-types-by-zone-id">List File Types by Zone Id</h2>
 <p>Gets file type statistics for a specific {zone_id}</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/filetypes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/filetypes.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9964,7 +9964,7 @@ api.get(&#39;/reports/filetypes.json&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -9985,7 +9985,7 @@ api.get(&#39;/reports/filetypes.json&#39;, function(err, response) {
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab86">
   <li class="active"><a href="#ruby86" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python86" data-toggle='tab'>Python</a></li>
@@ -10041,14 +10041,14 @@ api.get(&#39;/reports/&#39; + id + &#39;/filetypes.json/&#39; + reportType, func
 </div>
 
 
-<h2>List File Types by Zone Type</h2>
+<h2 id="list-file-types-by-zone-type">List File Types by Zone Type</h2>
 <p>Gets file type statistics for a specific {zone_type}</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/filetypes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_type}/filetypes.json/{report_type}</a></span></div>
 </div>
 
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10069,7 +10069,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/filetypes.json/&#39; + reportType, func
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab87">
   <li class="active"><a href="#ruby87" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python87" data-toggle='tab'>Python</a></li>
@@ -10130,7 +10130,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/filetypes.json/&#39; + reportType
 </div>
 
 
-<h2>List File Types by Zone Id</h2>
+<h2 id="list-file-types-by-zone-id">List File Types by Zone Id</h2>
 <p>Gets file type statistics for a specific {zone_type} and
 {zone_id}</p>
 <div class="heading">
@@ -10138,7 +10138,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/filetypes.json/&#39; + reportType
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/{zone_id}/filetypes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_type}/{zone_id}/filetypes.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10165,7 +10165,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/filetypes.json/&#39; + reportType
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10186,7 +10186,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/filetypes.json/&#39; + reportType
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab88">
   <li class="active"><a href="#ruby88" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python88" data-toggle='tab'>Python</a></li>
@@ -10246,8 +10246,8 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/&#39; + id + &#39;/filetypes.json
 </div>
 
 
-<h1>Reports by File Size Ranges API</h1>
-<h2>List File Sizes</h2>
+<h1 id="reports-by-file-size-ranges-api">Reports by File Size Ranges API</h1>
+<h2 id="list-file-sizes">List File Sizes</h2>
 <p>Gets request statistics for your account based on file size
 ranges</p>
 <div class="heading">
@@ -10255,7 +10255,7 @@ ranges</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/filesizes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/filesizes.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10282,7 +10282,7 @@ ranges</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10333,7 +10333,7 @@ ranges</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab89">
   <li class="active"><a href="#ruby89" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python89" data-toggle='tab'>Python</a></li>
@@ -10393,7 +10393,7 @@ api.get(&#39;/reports/filesizes.json/&#39; + reportType, function(err, response)
 </div>
 
 
-<h2>List File Sizes by Zone Id</h2>
+<h2 id="list-file-sizes-by-zone-id">List File Sizes by Zone Id</h2>
 <p>Gets request statistics for the specified {zone_id} based on
 file size ranges</p>
 <div class="heading">
@@ -10401,7 +10401,7 @@ file size ranges</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/filesizes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/filesizes.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10428,7 +10428,7 @@ file size ranges</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10479,7 +10479,7 @@ file size ranges</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab90">
   <li class="active"><a href="#ruby90" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python90" data-toggle='tab'>Python</a></li>
@@ -10541,7 +10541,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/filesizes.json/&#39; + reportType, func
 </div>
 
 
-<h2>List File Sizes by Zone Type</h2>
+<h2 id="list-file-sizes-by-zone-type">List File Sizes by Zone Type</h2>
 <p>Gets request statistics for the specified {zone_type} based on
 file size ranges</p>
 <div class="heading">
@@ -10549,7 +10549,7 @@ file size ranges</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/filesizes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_type}/filesizes.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10576,7 +10576,7 @@ file size ranges</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10627,7 +10627,7 @@ file size ranges</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab91">
   <li class="active"><a href="#ruby91" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python91" data-toggle='tab'>Python</a></li>
@@ -10689,7 +10689,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/filesizes.json/&#39; + reportType
 </div>
 
 
-<h2>List File Sizes by Zone Id</h2>
+<h2 id="list-file-sizes-by-zone-id">List File Sizes by Zone Id</h2>
 <p>Gets request statistics for the specified {zone_type} and
 {zone_id} based on file size ranges</p>
 <div class="heading">
@@ -10697,7 +10697,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/filesizes.json/&#39; + reportType
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_type}/{zone_id}/filesizes.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_type}/{zone_id}/filesizes.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10724,7 +10724,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/filesizes.json/&#39; + reportType
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10775,7 +10775,7 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/filesizes.json/&#39; + reportType
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab92">
   <li class="active"><a href="#ruby92" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python92" data-toggle='tab'>Python</a></li>
@@ -10841,8 +10841,8 @@ api.get(&#39;/reports/&#39; + zoneType + &#39;/&#39; + id + &#39;/filesizes.json
 </div>
 
 
-<h1>Reports By Directory API</h1>
-<h2>List Stats By Directory</h2>
+<h1 id="reports-by-directory-api">Reports By Directory API</h1>
+<h2 id="list-stats-by-directory">List Stats By Directory</h2>
 <p>Gets usage statistics by directory for your account. (This
 report has to be enabled by Sales).</p>
 <div class="heading">
@@ -10850,7 +10850,7 @@ report has to be enabled by Sales).</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/statsbydir.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/statsbydir.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10877,7 +10877,7 @@ report has to be enabled by Sales).</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10908,7 +10908,7 @@ report has to be enabled by Sales).</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab93">
   <li class="active"><a href="#ruby93" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python93" data-toggle='tab'>Python</a></li>
@@ -10961,7 +10961,7 @@ api.get(&#39;/reports/statsbydir.json/&#39; + reportType, function(err, response
 </div>
 
 
-<h2>List Stats By Directory and Zone Id</h2>
+<h2 id="list-stats-by-directory-and-zone-id">List Stats By Directory and Zone Id</h2>
 <p>Gets usage statistics by directory for the specified {zone_id}.
 (This report has to be enabled by Sales).</p>
 <div class="heading">
@@ -10969,7 +10969,7 @@ api.get(&#39;/reports/statsbydir.json/&#39; + reportType, function(err, response
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/{zone_id}/statsbydir.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/{zone_id}/statsbydir.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -10996,7 +10996,7 @@ api.get(&#39;/reports/statsbydir.json/&#39; + reportType, function(err, response
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -11027,7 +11027,7 @@ api.get(&#39;/reports/statsbydir.json/&#39; + reportType, function(err, response
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab94">
   <li class="active"><a href="#ruby94" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python94" data-toggle='tab'>Python</a></li>
@@ -11084,15 +11084,15 @@ api.get(&#39;/reports/&#39; + id + &#39;/&#39; + &#39;/statsbydir.json/&#39; + r
 </div>
 
 
-<h1>Reports By File Name API</h1>
-<h2>List Stats By File Name</h2>
+<h1 id="reports-by-file-name-api">Reports By File Name API</h1>
+<h2 id="list-stats-by-file-name">List Stats By File Name</h2>
 <p>Gets usage statistics by file name for your account</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/statsbyfilename.json/{report_type}">https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/statsbyfilename.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -11145,7 +11145,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/&#39; + &#39;/statsbydir.json/&#39; + r
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -11221,7 +11221,7 @@ api.get(&#39;/reports/&#39; + id + &#39;/&#39; + &#39;/statsbydir.json/&#39; + r
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab95">
   <li class="active"><a href="#ruby95" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python95" data-toggle='tab'>Python</a></li>
@@ -11311,7 +11311,7 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbyfilename.json/&#39
 </div>
 
 
-<h2>List Stats By File Name and Zone Id</h2>
+<h2 id="list-stats-by-file-name-and-zone-id">List Stats By File Name and Zone Id</h2>
 <p>Gets usage statistics by file name for the specified
 {zone_id}</p>
 <div class="heading">
@@ -11319,7 +11319,7 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbyfilename.json/&#39
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/{zone_id}/statsbyfilename.json/{report_type}">https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/{zone_id}/statsbyfilename.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -11372,7 +11372,7 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbyfilename.json/&#39
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -11438,7 +11438,7 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbyfilename.json/&#39
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab96">
   <li class="active"><a href="#ruby96" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python96" data-toggle='tab'>Python</a></li>
@@ -11486,8 +11486,8 @@ Non functional</pre>
 
 
 
-<h1>Reports By Custom Domain API</h1>
-<h2>List Stats By Directory</h2>
+<h1 id="reports-by-custom-domain-api">Reports By Custom Domain API</h1>
+<h2 id="list-stats-by-directory">List Stats By Directory</h2>
 <p>Gets usage statistics by custom domain for your account. (This
 report has to be enabled by Sales).</p>
 <div class="heading">
@@ -11495,7 +11495,7 @@ report has to be enabled by Sales).</p>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/statsbycustomdomain.json/{report_type}">https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/statsbycustomdomain.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -11522,7 +11522,7 @@ report has to be enabled by Sales).</p>
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -11553,7 +11553,7 @@ report has to be enabled by Sales).</p>
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab97">
   <li class="active"><a href="#ruby97" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python97" data-toggle='tab'>Python</a></li>
@@ -11618,7 +11618,7 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbycustomdomain.json/
 </div>
 
 
-<h2>List Stats By Custom Domain and Zone Id</h2>
+<h2 id="list-stats-by-custom-domain-and-zone-id">List Stats By Custom Domain and Zone Id</h2>
 <p>Gets usage statistics by custom domain for the specified
 {zone_id}. (This report has to be enabled by Sales).</p>
 <div class="heading">
@@ -11626,7 +11626,7 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbycustomdomain.json/
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/{zone_id}/statsbycustomdomain.json/{report_type}">https://rws.netdna.com/{companyalias}/clients/{client_id}/reports/{zone_id}/statsbycustomdomain.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -11653,7 +11653,7 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbycustomdomain.json/
 </tr>
 </tbody>
 </table>
-<h3>Response Parameters</h3>
+<h3 id="response-parameters">Response Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -11684,7 +11684,7 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/statsbycustomdomain.json/
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab98">
   <li class="active"><a href="#ruby98" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python98" data-toggle='tab'>Python</a></li>
@@ -11746,15 +11746,15 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/&#39; + zoneId + &#39;/st
 </div>
 
 
-<h1>Reports for Live Zones API</h1>
-<h2>List Connection Stats</h2>
+<h1 id="reports-for-live-zones-api">Reports for Live Zones API</h1>
+<h2 id="list-connection-stats">List Connection Stats</h2>
 <p>Gets zone stats in hourly, daily, or monthly summaries</p>
 <div class="heading">
 <div class="url GET"><span class="http_method">GET</span>
 <span class="path"><a href="https://rws.netdna.com/{companyalias}/reports/live/connectionstats.json/{report_type}">https://rws.netdna.com/{companyalias}/reports/live/connectionstats.json/{report_type}</a></span></div>
 </div>
 
-<h3>Accepted Request Parameters</h3>
+<h3 id="accepted-request-parameters">Accepted Request Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -11781,7 +11781,7 @@ api.get(&#39;/clients/&#39; + clientId + &#39;/reports/&#39; + zoneId + &#39;/st
 </tr>
 </tbody>
 </table>
-<h3>Code Samples</h3>
+<h3 id="code-samples">Code Samples</h3>
 <ul class="nav nav-tabs" id="myTab99">
   <li class="active"><a href="#ruby99" data-toggle='tab'>Ruby</a></li>
   <li><a href="#python99" data-toggle='tab'>Python</a></li>
@@ -11839,7 +11839,7 @@ api.get(&#39;/reports/live/connectionstats.json/&#39; + reportType, function(err
     <script src="/js/vendor/jquery.ba-hashchange.js"></script>
     <script src="/js/vendor/jquery.scrollTo.js"></script>
     <script src="/js/vendor/bootstrap-adjust-hash.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/js/main.2.js"></script>
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-9245214-1']);
