@@ -20,7 +20,7 @@ $(function() {
 $(function() {
 
   if (window.location.host.indexOf('netdna.com') !== -1) {
-    window.location = 'http://docs.maxcdn.com' + window.location.pathname
+    window.location = 'http://docs.maxcdn.com' + window.location.pathname + window.location.hash
     return
   }
 
