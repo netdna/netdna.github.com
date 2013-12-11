@@ -156,18 +156,18 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby1">
-		<pre>
+        <pre>
 api.get("/account.json")</pre>
   </div>
   <div class="tab-pane" id="python1">
-		<pre>api.get("/account.json")</pre>
-	</div>
+        <pre>api.get("/account.json")</pre>
+    </div>
   <div class="tab-pane" id="php1">
-  	<pre>
+      <pre>
 $api->get('/account.json');</pre>
   </div>
   <div class="tab-pane" id="node1">
-	<pre>
+    <pre>
 api.get('/account.json', callback)
 function callback(err, response) {
   if (err) return console.log(err)
@@ -175,7 +175,7 @@ function callback(err, response) {
 }</pre>
   </div>
   <div class="tab-pane" id="response1">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -243,22 +243,22 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby2">
-		<pre>
+        <pre>
 params={"name"=> "UserName"}
 api.put('/account.json',params)</pre>
   </div>
   <div class="tab-pane" id="python2">
-		<pre>
+        <pre>
 params={"name": "Monty"}
 api.put('/account.json',params=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php2">
-  	<pre>
+      <pre>
 $params = array("name"=>"newName");
 $api->put('/account.json',$params);</pre>
   </div>
   <div class="tab-pane" id="node2">
-	<pre>
+    <pre>
 api.put('/account.json', { name: 'newName' }, callback)
 function callback(err, response) {
   if (err) return console.log(err)
@@ -266,7 +266,7 @@ function callback(err, response) {
 }</pre>
   </div>
   <div class="tab-pane" id="response2">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -328,19 +328,19 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby3">
-		<pre>
+        <pre>
 api.get('/account.json/address')</pre>
   </div>
   <div class="tab-pane" id="python3">
-		<pre>
+        <pre>
 api.get('/account.json/address')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php3">
-  	<pre>
+      <pre>
 $api->get('/account.json/address')</pre>
   </div>
   <div class="tab-pane" id="node3">
-	<pre>
+    <pre>
 api.get('/account.json/address', callback)
 function callback(err, response) {
   if (err) return console.log(err)
@@ -348,7 +348,7 @@ function callback(err, response) {
 }</pre>
   </div>
   <div class="tab-pane" id="response3">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -418,22 +418,22 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby4">
-		<pre>
+        <pre>
 params = {"street1"=> "1234 Main Street", "street2"=> "apt 42", "state"=> "CA"}
 api.put('/account.json/address',params)</pre>
   </div>
   <div class="tab-pane" id="python4">
-		<pre>
+        <pre>
 params = {"street1": "1234 Main Street", "street2": "apt 42", "state": "CA"}
 api.put('/account.json/address',params=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php4">
-  	<pre>
+      <pre>
 $params = array("street1"=>"123 Main Street", "street2"=>"apt 42", "state"=>"CA");
 $api->put('/account.json/address',$params);</pre>
   </div>
   <div class="tab-pane" id="node4">
-	<pre>
+    <pre>
 api.put('/account.json/address', { street1: '123 Main Street', street2: 'apt 42', state: 'CA' }, callback)
 function callback(err, response) {
   if (err) return console.log(err)
@@ -441,7 +441,7 @@ function callback(err, response) {
 }</pre>
   </div>
   <div class="tab-pane" id="response4">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -500,19 +500,19 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby5">
-		<pre>
+        <pre>
 api.get('/users.json')</pre>
   </div>
   <div class="tab-pane" id="python5">
-		<pre>
+        <pre>
 api.get('/users.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php5">
-  	<pre>
+      <pre>
 $api->get('/users.json');</pre>
   </div>
   <div class="tab-pane" id="node5">
-	<pre>
+    <pre>
 api.get('/users.json', callback)
 function callback(err, response) {
   if (err) return console.log(err)
@@ -520,7 +520,7 @@ function callback(err, response) {
 }</pre>
   </div>
   <div class="tab-pane" id="response5">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -645,22 +645,22 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby6">
-		<pre>
+        <pre>
 params={"email"=>"name44@domain.com","password"=>"password","firstname"=>"Given","lastname"=>"Family"}
 api.post('/users.json',params )</pre>
   </div>
   <div class="tab-pane" id="python6">
-		<pre>
+        <pre>
 params={'email':'name43@domain.com','password':'password','firstname':'Given','lastname':'Family'}
 api.post('/users.json',data=params )</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php6">
-  	<pre>
+      <pre>
 $params = array("email"=>"name@domain.com","password"=>"password","firstname"=>"Given","lastname"=>"Family");
 $api->post('/users.json',$params );</pre>
   </div>
   <div class="tab-pane" id="node6">
-	<pre>
+    <pre>
 api.post('/users.json', { email: 'name@domain.com', password: 'password', firstname: 'Given', lastname: 'Family' }, callback)
 function callback(err, response) {
   if (err) return console.log(err)
@@ -668,7 +668,7 @@ function callback(err, response) {
 }</pre>
   </div>
   <div class="tab-pane" id="response6">
-		<pre>
+        <pre>
 {
     "code": 201,
     "data": {
@@ -730,22 +730,22 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby7">
-		<pre>
+        <pre>
 id = '33706'
 api.get('/users.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python7">
-		<pre>
+        <pre>
 id = '33706'
 api.get('/users.json/'+id)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php7">
-  	<pre>
+      <pre>
 $id = '33941';
 $api->get('/users.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node7">
-	<pre>
+    <pre>
 var id = '33941'
 api.get('/users.json/' + id, callback)
 function callback(err, response) {
@@ -754,7 +754,7 @@ function callback(err, response) {
 }</pre>
   </div>
   <div class="tab-pane" id="response7">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -833,17 +833,17 @@ api.put('/users.json/'+id,params)
 </pre>
   </div>
   <div class="tab-pane" id="python8">
-		<pre>
+        <pre>
 api.put('/users.json/'+id,params={'firstname': 'name'})</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php8">
-  	<pre>
+      <pre>
 $id = '33941';
 $params =  array("firstname"=>"Billy");
 $api->put('/users.json/'.$id,$params);</pre>
 </div>
   <div class="tab-pane" id="node8">
-	<pre>
+    <pre>
 var id = '33941'
 api.put('/users.json/' + id, { firstname: 'Billy' }, callback)
 function callback(err, response) {
@@ -852,7 +852,7 @@ function callback(err, response) {
 }</pre>
   </div>
   <div class="tab-pane" id="response8">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -903,22 +903,22 @@ Deletes a user specified by the {user_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby9">
-		<pre>
+        <pre>
 id = '33706'
 api.delete('/users.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python9">
-		<pre>
+        <pre>
 id = '33706'
 api.delete('/users.json/'+id)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php9">
-  	<pre>
+      <pre>
 $id = '33715';
 $api->delete('/users.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node9">
-	<pre>
+    <pre>
 var id = '33715'
 api.del('/users.json/' + id, callback)
 function callback(err, response) {
@@ -927,9 +927,9 @@ function callback(err, response) {
 }</pre>
   </div>
   <div class="tab-pane" id="response9">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -946,7 +946,7 @@ Returns a list of all zones on the specified account
 <span class="path">https://rws.netdna.com/{companyalias}/zones.json</span></div>
 </div>
 
-### Code Samples	@
+### Code Samples    @
 
 <ul class="nav nav-tabs" id="myTab10">
   <li class="active"><a href="#ruby10" data-toggle='tab'>Ruby</a></li>
@@ -958,25 +958,25 @@ Returns a list of all zones on the specified account
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby10">
-		<pre>
+        <pre>
 api.get('/zones.json')</pre>
   </div>
   <div class="tab-pane" id="python10">
-		<pre>
+        <pre>
 api.get('/zones.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php10">
-  	<pre>
+      <pre>
 $api->get('/zones.json');</pre>
   </div>
   <div class="tab-pane" id="node10">
-	<pre>
+    <pre>
 api.get('/zones.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response10">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -1050,25 +1050,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby11">
-		<pre>
+        <pre>
 api.get('/zones.json/summary')</pre>
   </div>
   <div class="tab-pane" id="python11">
-		<pre>
+        <pre>
 api.get('/zones.json/summary')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php11">
-  	<pre>
+      <pre>
 $api->get('/zones.json/summary');</pre>
   </div>
   <div class="tab-pane" id="node11">
-	<pre>
+    <pre>
 api.get('/zones.json/summary', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response11">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -1113,30 +1113,30 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby12">
-		<pre>
+        <pre>
 api.get('/zones.json/count')</pre>
   </div>
   <div class="tab-pane" id="python12">
-		<pre>
+        <pre>
 api.get('/zones.json/count')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php12">
-  	<pre>
+      <pre>
 $api->get('/zones.json/count');</pre>
   </div>
   <div class="tab-pane" id="node12">
-	<pre>
+    <pre>
 api.get('/zones.json/count', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response12">
-		<pre>
+        <pre>
 {
-	"code":200,"data":
-		{
-			"count":"4"
-		}
+    "code":200,"data":
+        {
+            "count":"4"
+        }
 }</pre>
   </div>
 </div>
@@ -1197,25 +1197,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby13">
-		<pre>
+        <pre>
 api.get('/zones/pull.json')</pre>
   </div>
   <div class="tab-pane" id="python13">
-		<pre>
+        <pre>
 api.get('/zones/pull.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php13">
-  	<pre>
+      <pre>
 $api->get('/zones/pull.json');</pre>
   </div>
   <div class="tab-pane" id="node13">
-	<pre>
+    <pre>
 api.get('/zones/pull.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response13">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -1387,28 +1387,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby14">
-		<pre>
+        <pre>
 params = {"name"=>"newPullZone6","url"=>"http://somedomain.com"}
 api.post('/zones/pull.json',params)</pre>
   </div>
   <div class="tab-pane" id="python14">
-		<pre>
+        <pre>
 params = {"name":"newPullZone5","url":"http://somedomain.net"}
 api.post('/zones/pull.json',data=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php14">
-  	<pre>
+      <pre>
 $params =  array("name"=>"newPullZone2","url"=>"http://somedomain.net");
 $api->post('/zones/pull.json',$params);</pre>
   </div>
   <div class="tab-pane" id="node14">
-	<pre>
+    <pre>
 api.post('/zones/pull.json', { name: 'newPullZone2', url: 'http://somedomain.net' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response14">
-		<pre>
+        <pre>
 {
     "code": 201,
     "data": {
@@ -1481,30 +1481,30 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby15">
-		<pre>
+        <pre>
 api.get('/zones/pull.json/count')</pre>
   </div>
   <div class="tab-pane" id="python15">
-		<pre>
+        <pre>
 api.get('/zones/pull.json/count')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php15">
-  	<pre>
+      <pre>
 $api->get('/zones/pull.json/count');</pre>
   </div>
   <div class="tab-pane" id="node15">
-	<pre>
+    <pre>
 api.get('/zones/pull.json/count', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response15">
-		<pre>
+        <pre>
 {
-	"code":200,"data":
-		{
-			"count": "3"
-		}
+    "code":200,"data":
+        {
+            "count": "3"
+        }
 }</pre>
   </div>
 </div>
@@ -1563,29 +1563,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby16">
-		<pre>
+        <pre>
 id = '97167'
 api.get('/zones/pull.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python16">
-		<pre>
+        <pre>
 id = '97167'
 api.get('/zones/pull.json/'+id)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php16">
-  	<pre>
+      <pre>
 $id = '96076';
 $api->get('/zones/pull.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node16">
-	<pre>
+    <pre>
 var id = '96076'
 api.get('/zones/pull.json' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response16">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -1712,32 +1712,32 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby17">
-		<pre>
+        <pre>
 id = '97167'
 params = {"label"=>"Some other description"}
 api.put('/zones/pull.json/'+id,params)</pre>
   </div>
   <div class="tab-pane" id="python17">
-		<pre>
+        <pre>
 id = '97167'
 params = {"label":"Some other description"}
 api.put('/zones/pull.json/'+id,params=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php17">
-  	<pre>
+      <pre>
 $id = '96167';
 $params = array("label"=>"Some other description");
 $api->put('/zones/pull.json/'.$id, $params);</pre>
   </div>
   <div class="tab-pane" id="node17">
-	<pre>
+    <pre>
 var id = '96167'
 api.put('/zones/pull.json' + id, { label: 'Some other description' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response17">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -1805,31 +1805,31 @@ Deletes a pull zone specified by the {zone_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby18">
-		<pre>
+        <pre>
 id = '97167'
 api.delete('/zones/pull.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python18">
-		<pre>
+        <pre>
 id = '97167'
 api.delete('/zones/pull.json/'+id)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php18">
-  	<pre>
+      <pre>
 $id = '97167';
 $api->delete('/zones/pull.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node18">
-	<pre>
+    <pre>
 var id = '97167'
 api.del('/zones/pull.json' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response18">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -1857,31 +1857,31 @@ Enables a pull zone specified by the {zone_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby19">
-		<pre>
+        <pre>
 id = '97167'
 api.put('/zones/pull/'+id+'/enable.json')</pre>
   </div>
   <div class="tab-pane" id="python19">
-		<pre>
+        <pre>
 id = '97167'
 api.put('/zones/pull/'+id+'/enable.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php19">
-  	<pre>
+      <pre>
 $id = '97167';
 $api->put('/zones/pull/'.$id.'/enable.json');</pre>
   </div>
   <div class="tab-pane" id="node19">
-	<pre>
+    <pre>
 var id = '97167'
 api.put('/zones/pull/' + id + '/enable.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response19">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }
 </pre>
   </div>
@@ -1910,31 +1910,31 @@ Disables a pull zone specified by the {zone_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby20">
-		<pre>
+        <pre>
 id = '97167'
 api.put('/zones/pull/'+id+'/disable.json')</pre>
   </div>
   <div class="tab-pane" id="python20">
-		<pre>
+        <pre>
 id = '97167'
 api.put('/zones/pull/'+id+'/disable.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php20">
-  	<pre>
+      <pre>
 $id = '97167';
 $api->put('/zones/pull'.$id.'disable.json);</pre>
   </div>
   <div class="tab-pane" id="node20">
-	<pre>
+    <pre>
 var id = '97167'
 api.put('/zones/pull' + id + 'disable.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response20">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -1967,7 +1967,7 @@ Parameter | Default Value | Validation | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby21">
-	<pre>
+    <pre>
 #Purge Zone
 id = '97167'
 api.purge(id)
@@ -1981,7 +1981,7 @@ id = '97167'
 api.purge(id, ['/file1.txt','/file2.txt'])</pre>
   </div>
   <div class="tab-pane" id="python21">
-	<pre>
+    <pre>
 #Purge Zone
 id = '97167'
 api.purge(id)
@@ -1993,9 +1993,9 @@ api.purge(id,'/file1.txt')
 #Purge Files
 id = '97167'
 api.purge(id, ['/file1.txt','/file2.txt'])</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php21">
-  	<pre>
+      <pre>
 //Purge Zone
 $id = '97792';
 $api->delete('/zones/pull.json/'.$id.'/cache');
@@ -2011,7 +2011,7 @@ $params = array('file'=>'/index.html','file2'=>'/robots.txt');
 $api->delete('/zones/pull.json/'.$id.'/cache',$params);</pre>
   </div>
   <div class="tab-pane" id="node21">
-	<pre>
+    <pre>
 var id = '96167'
 api.del('/zones/pull.json/' + id + '/cache', callback)
 function callback(err, response) {
@@ -2020,7 +2020,7 @@ function callback(err, response) {
 }</pre>
   </div>
   <div class="tab-pane" id="response21">
-		<pre>
+        <pre>
 {
     "code": 200
 }</pre>
@@ -2060,29 +2060,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby22">
-		<pre>
+        <pre>
 id = '97167'
 api.get('/zones/pull/'+id+'/customdomains.json')</pre>
   </div>
   <div class="tab-pane" id="python22">
-		<pre>
+        <pre>
 id = '97167'
 api.get('/zones/pull/'+id+'/customdomains.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php22">
-  	<pre>
+      <pre>
 $id = '96061';
 $api->get('/zones/pull/'.$id.'/customdomains.json');</pre>
   </div>
   <div class="tab-pane" id="node22">
-	<pre>
+    <pre>
 var id = '96061'
 api.get('/zones/pull/' + id + '/customdomains.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response22">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -2139,32 +2139,32 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby23">
-		<pre>
+        <pre>
 id = '97167'
 params = {"custom_domain"=>"cdn.somedomain14.com"}
 api.post('/zones/pull/'+id+'/customdomains.json', params)</pre>
   </div>
   <div class="tab-pane" id="python23">
-		<pre>
+        <pre>
 id = '97167'
 params = {"custom_domain":"cdn.somedomain13.com"}
 api.post('/zones/pull/'+id+'/customdomains.json', params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php23">
-  	<pre>
+      <pre>
 $id = '97167';
 $params = array("custom_domain"=>"cdn.somedomain3.com");
 $api->post('/zones/pull/'.$id.'/customdomains.json', $params);</pre>
   </div>
   <div class="tab-pane" id="node23">
-	<pre>
+    <pre>
 var id = '96167'
 api.post('/zones/pull/' + id + '/customdomains.json', { custom_domain: 'cdn.somedomain3.com' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response23">
-		<pre>
+        <pre>
 {
     "code": 201,
     "data": {
@@ -2210,25 +2210,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby24">
-		<pre>
+        <pre>
 zoneId = '97167'
 domainId = '79182'
 api.get('/zones/pull/'+zoneId+'/customdomains.json/'+domainId)</pre>
   </div>
   <div class="tab-pane" id="python24">
-		<pre>
+        <pre>
 zoneId = '97167'
 domainId = '79182'
 api.get('/zones/pull/'+zoneId+'/customdomains.json/'+domainId)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php24">
-  	<pre>
+      <pre>
 $zoneId = '97167';
 $domainId = '79182';
 $api->get('/zones/pull/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
   </div>
   <div class="tab-pane" id="node24">
-	<pre>
+    <pre>
 var id = '97167'
 var domainId = '79182'
 api.get('/zones/pull/' + id + '/customdomains.json/' + domainId, function(err, response) {
@@ -2236,7 +2236,7 @@ api.get('/zones/pull/' + id + '/customdomains.json/' + domainId, function(err, r
 })</pre>
   </div>
   <div class="tab-pane" id="response24">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -2290,28 +2290,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby25">
-		<pre>
+        <pre>
 zoneId = '97167'
 domainId = '79182'
 params = {"custom_domain"=>"cdn.somenewdomain41.com"}
 api.put('/zones/pull/'+zoneId+'/customdomains.json/'+domainId,params)</pre>
   </div>
   <div class="tab-pane" id="python25">
-		<pre>
+        <pre>
 zoneId = '97167'
 domainId = '79182'
 params = {"custom_domain":"cdn.somenewdomain41.com"}
 api.put('/zones/pull/'+zoneId+'/customdomains.json/'+domainId,params=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php25">
-  	<pre>
+      <pre>
 $zoneId = '97167';
 $domainId = '79182';
 $params = array("custom_domain"=>"cdn.somenewdomain.com");
 $api->put('/zones/pull/'.$zoneId.'/customdomains.json/'.$domainId, $params);</pre>
   </div>
   <div class="tab-pane" id="node25">
-	<pre>
+    <pre>
 var zoneId = '97167'
 var domainId = '79182'
 api.put('/zones/pull/' + zoneId + '/customdomains.json/' + domainId, { custom_domain: 'cdn.somenewdomain.com' }, function(err, response) {
@@ -2319,7 +2319,7 @@ api.put('/zones/pull/' + zoneId + '/customdomains.json/' + domainId, { custom_do
 })</pre>
   </div>
   <div class="tab-pane" id="response25">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -2358,25 +2358,25 @@ Deletes a custom domain specified by the {zone_id} and
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby26">
-		<pre>
+        <pre>
 zoneId = '97167'
 domainId = '79182'
 api.delete('/zones/pull/'+zoneId+'/customdomains.json/'+domainId)</pre>
   </div>
   <div class="tab-pane" id="python26">
-		<pre>
+        <pre>
 zoneId = '97167'
 domainId = '79182'
 api.delete('/zones/pull/'+zoneId+'/customdomains.json/'+domainId)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php26">
-  	<pre>
+      <pre>
 $zoneId = '97167';
 $domainId = '79182';
 $api->delete('/zones/pull/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
   </div>
   <div class="tab-pane" id="node26">
-	<pre>
+    <pre>
 var zoneId = '97167'
 var domainId = '79182'
 api.del('/zones/pull/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
@@ -2384,9 +2384,9 @@ api.del('/zones/pull/' + zoneId + '/customdomains.json/' + domainId, function(er
 })</pre>
   </div>
   <div class="tab-pane" id="response26">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -2430,25 +2430,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby27">
-		<pre>
+        <pre>
 api.get('/zones/push.json')</pre>
   </div>
   <div class="tab-pane" id="python27">
-		<pre>
+        <pre>
 api.get('/zones/push.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php27">
-  	<pre>
+      <pre>
 $api->get('/zones/push.json');</pre>
   </div>
   <div class="tab-pane" id="node27">
-	<pre>
+    <pre>
 api.get('/zones/push.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response27">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -2555,28 +2555,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby28">
-		<pre>
+        <pre>
 params = {"name"=>"newPushZone99","password"=>"password"}
 api.post('/zones/push.json',params)</pre>
   </div>
   <div class="tab-pane" id="python28">
-		<pre>
+        <pre>
 params = {"name":"newPushZone6","password":"password"}
 api.post('/zones/push.json',data=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php28">
-  	<pre>
+      <pre>
 $params = array("name"=>"newPushZone","password"=>"password");
 $api->post('/zones/push.json', $params);</pre>
   </div>
   <div class="tab-pane" id="node28">
-	<pre>
+    <pre>
 api.post('/zones/push.json', { name: 'newPushZone', password: 'password' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response28">
-		<pre>
+        <pre>
 {
     "code": 201,
     "data": {
@@ -2634,25 +2634,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby29">
-		<pre>
+        <pre>
 api.get('/zones/push.json/count')</pre>
   </div>
   <div class="tab-pane" id="python29">
-		<pre>
+        <pre>
 api.get('/zones/push.json/count')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php29">
-  	<pre>
+      <pre>
 $api->get('/zones/push.json/count');</pre>
   </div>
   <div class="tab-pane" id="node29">
-	<pre>
+    <pre>
 api.get('/zones/push.json/count', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response29">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -2700,29 +2700,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby30">
-		<pre>
+        <pre>
 id = '97793'
 api.get('/zones/push.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python30">
-		<pre>
+        <pre>
 id = '96182'
 api.get('/zones/push.json/'+id)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php30">
-  	<pre>
+      <pre>
 $id = '97181';
 $api->get('/zones/push.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node30">
-	<pre>
+    <pre>
 var id = '97182'
 api.get('/zones/push.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response30">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -2799,32 +2799,32 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby31">
-		<pre>
+        <pre>
 id = '97793'
 params = {"label"=>"Some other description"}
 api.put('/zones/push.json/'+id,params)</pre>
   </div>
   <div class="tab-pane" id="python31">
-		<pre>
+        <pre>
 id = '96182'
 params = {"label":"Some other description"}
 api.put('/zones/push.json/'+id,params=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php31">
-  	<pre>
+      <pre>
 $id = '97181';
 $params = array("label"=>"Some other description");
 $api->put('/zones/push.json/'.$id, $params);</pre>
   </div>
   <div class="tab-pane" id="node31">
-	<pre>
+    <pre>
 var id = '97182'
 api.get('/zones/push.json/' + id, { label: 'Some other description' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response31">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -2876,31 +2876,31 @@ Deletes a push zone specified by the {zone_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby32">
-		<pre>
+        <pre>
 id = '97793'
 api.delete('/zones/push.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python32">
-		<pre>
+        <pre>
 id = '96182'
 api.delete('/zones/push.json/'+id)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php32">
-  	<pre>
+      <pre>
 $id = '97181';
 $api->delete('/zones/push.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node32">
-	<pre>
+    <pre>
 var id = '97181'
 api.del('/zones/push.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response32">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -2927,31 +2927,31 @@ Enables a push zone specified by the {zone_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby33">
-		<pre>
+        <pre>
 id = '97793'
 api.put('/zones/push/'+id+'/enable.json')</pre>
   </div>
   <div class="tab-pane" id="python33">
-		<pre>
+        <pre>
 id = '96182'
 api.put('/zones/push/'+id+'/enable.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php33">
-  	<pre>
+      <pre>
 $id = '97181';
 $api->put('/zones/push/'.$id.'/enable.json');</pre>
   </div>
   <div class="tab-pane" id="node33">
-	<pre>
+    <pre>
 var id = '97181'
 api.put('/zones/push/' + id + '/enable.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response33">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -2979,31 +2979,31 @@ Disables a push zone specified by the {zone_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby34">
-		<pre>
+        <pre>
 id = '97793'
 api.put('/zones/push/'+id+'/disable.json')</pre>
   </div>
   <div class="tab-pane" id="python34">
-		<pre>
+        <pre>
 id = '96182'
 api.put('/zones/push/'+id+'/disable.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php34">
-  	<pre>
+      <pre>
 $id = '97181';
 $api->put('/zones/push/'.$id.'/disable.json');</pre>
   </div>
   <div class="tab-pane" id="node34">
-	<pre>
+    <pre>
 var id = '97181'
 api.put('/zones/push/' + id + '/disable.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response34">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -3041,29 +3041,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby35">
-		<pre>
+        <pre>
 id = '97793'
 api.get('/zones/push/'+id+'/customdomains.json')</pre>
   </div>
   <div class="tab-pane" id="python35">
-		<pre>
+        <pre>
 id = '96182'
 api.get('/zones/push/'+id+'/customdomains.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php35">
-  	<pre>
+      <pre>
 $id = '96061';
 $api->get('/zones/push/'.$id.'/customdomains.json');</pre>
   </div>
   <div class="tab-pane" id="node35">
-	<pre>
+    <pre>
 var id = '96061'
 api.get('/zones/push/' + id + '/customdomains.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response35">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -3119,32 +3119,32 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby36">
-		<pre>
+        <pre>
 id = '97793'
 params = {"custom_domain"=>"cdn.somedomain19.com"}
 api.post('/zones/push/'+id+'/customdomains.json', params)</pre>
   </div>
   <div class="tab-pane" id="python36">
-		<pre>
+        <pre>
 id = '96182'
 params = {"custom_domain":"cdn.somedomain15.com"}
 api.post('/zones/push/'+id+'/customdomains.json', params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php36">
-  	<pre>
+      <pre>
 $id = '97181';
 $params = array("custom_domain"=>"cdn.somedomain2.net");
 $api->post('/zones/push/'.$id.'/customdomains.json', $params);</pre>
   </div>
   <div class="tab-pane" id="node36">
-	<pre>
+    <pre>
 var id = '97181'
 api.post('/zones/push/' + id + '/customdomains.json', { custom_domain: 'cdn.somedomain2.net' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response36">
-		<pre>
+        <pre>
 {
     "code": 201,
     "data": {
@@ -3191,25 +3191,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby37">
-		<pre>
+        <pre>
 zoneId = '97793'
 domainId = '79747'
 api.get('/zones/push/'+zoneId+'/customdomains.json/'+domainId)</pre>
   </div>
   <div class="tab-pane" id="python37">
-		<pre>
+        <pre>
 zoneId = '96182'
 domainId = '79320'
 api.get('/zones/push/'+zoneId+'/customdomains.json/'+domainId)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php37">
-  	<pre>
+      <pre>
 $zoneId = '97181';
 $domainId = '79188';
 $api->get('/zones/push/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
   </div>
   <div class="tab-pane" id="node37">
-	<pre>
+    <pre>
 var zoneId = '97181'
 var domainId = '79188'
 api.get('/zones/push/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
@@ -3217,7 +3217,7 @@ api.get('/zones/push/' + zoneId + '/customdomains.json/' + domainId, function(er
 })</pre>
   </div>
   <div class="tab-pane" id="response37">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -3269,21 +3269,21 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby38">
-		<pre>
+        <pre>
 zoneId = '97793'
 domainId = '79747'
 params = {"custom_domain"=>"cdn.somenewdomain41.com"}
 api.put('/zones/push/'+zoneId+'/customdomains.json/'+domainId,params)</pre>
   </div>
   <div class="tab-pane" id="python38">
-		<pre>
+        <pre>
 zoneId = '96182'
 domainId = '79320'
 params = {"custom_domain":"cdn.somenewdomain40.com"}
 api.put('/zones/push/'+zoneId+'/customdomains.json/'+domainId,params=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php38">
-  	<pre>
+      <pre>
 $zoneId = '97181';
 $domainId = '79188';
 $params = array("custom_domain"=>"cdn.somenewdomain2.com");
@@ -3291,7 +3291,7 @@ $api->put('/zones/push/'.$zoneId.'/customdomains.json/'.$domainId, $params);
 </pre>
   </div>
   <div class="tab-pane" id="node38">
-	<pre>
+    <pre>
 var zoneId = '97181'
 var domainId = '79188'
 api.put('/zones/push/' + zoneId + '/customdomains.json/' + domainId, { custom_domain: 'cdn.somenewdomain2.com' }, function(err, response) {
@@ -3299,7 +3299,7 @@ api.put('/zones/push/' + zoneId + '/customdomains.json/' + domainId, { custom_do
 })</pre>
   </div>
   <div class="tab-pane" id="response38">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -3338,25 +3338,25 @@ Deletes a custom domain specified by the {zone_id} and
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby39">
-		<pre>
+        <pre>
 zoneId = '97793'
 domainId = '79747'
 api.delete('/zones/push/'+zoneId+'/customdomains.json/'+domainId)</pre>
   </div>
   <div class="tab-pane" id="python39">
-		<pre>
+        <pre>
 zoneId = '96182'
 domainId = '79320'
 api.delete('/zones/push/'+zoneId+'/customdomains.json/'+domainId)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php39">
-  	<pre>
+      <pre>
 $zoneId = '97181';
 $domainId = '79188';
 $api->delete('/zones/push/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
   </div>
   <div class="tab-pane" id="node39">
-	<pre>
+    <pre>
 var zoneId = '97181'
 var domainId = '79188'
 api.del('/zones/push/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
@@ -3364,9 +3364,9 @@ api.del('/zones/push/' + zoneId + '/customdomains.json/' + domainId, function(er
 })</pre>
   </div>
   <div class="tab-pane" id="response39">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -3407,25 +3407,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby40">
-		<pre>
+        <pre>
 api.get('/zones/vod.json')</pre>
   </div>
   <div class="tab-pane" id="python40">
-		<pre>
+        <pre>
 api.get('/zones/vod.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php40">
-  	<pre>
+      <pre>
 $api->get('/zones/vod.json');</pre>
   </div>
   <div class="tab-pane" id="node40">
-	<pre>
+    <pre>
 api.get('/zones/vod.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response40">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -3525,28 +3525,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby41">
-		<pre>
+        <pre>
 params = {"name"=>"newVodZone99","password"=>"password"}
 api.post('/zones/vod.json',params)</pre>
   </div>
   <div class="tab-pane" id="python41">
-		<pre>
+        <pre>
 params = {"name":"newvodZone7","password":"password"}
 api.post('/zones/vod.json',data=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php41">
-  	<pre>
+      <pre>
 $params = array("name"=>"newVODZone3","password"=>"password");
 $api->post('/zones/vod.json',$params);</pre>
   </div>
   <div class="tab-pane" id="node41">
-	<pre>
+    <pre>
 api.post('/zones/vod.json', { name: 'newVODZone3', password: 'password' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response41">
-		<pre>
+        <pre>
 {
     "code": 201,
     "data": {
@@ -3603,25 +3603,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby42">
-		<pre>
+        <pre>
 api.get('/zones/vod.json/count')</pre>
   </div>
   <div class="tab-pane" id="python42">
-		<pre>
+        <pre>
 api.get('/zones/vod.json/count')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php42">
-  	<pre>
+      <pre>
 $api->get('/zones/vod.json/count');</pre>
   </div>
   <div class="tab-pane" id="node42">
-	<pre>
+    <pre>
 api.get('/zones/vod.json/count', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response42">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -3665,29 +3665,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby43">
-		<pre>
+        <pre>
 id = '97794'
 api.get('/zones/vod.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python43">
-		<pre>
+        <pre>
 id = '96187'
 api.get('/zones/vod.json/'+id)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php43">
-  	<pre>
+      <pre>
 $id = '97183';
 $api->get('/zones/vod.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node43">
-	<pre>
+    <pre>
 var id = '97183'
 api.get('/zones/vod.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response43">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -3759,32 +3759,32 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby44">
-		<pre>
+        <pre>
 id = '97794'
 params = {"label"=>"Some other description"}
 api.put('/zones/vod.json/'+id,params)</pre>
   </div>
   <div class="tab-pane" id="python44">
-		<pre>
+        <pre>
 id = '96187'
 params = {"label":"Some other description"}
 api.put('/zones/vod.json/'+id,params=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php44">
-  	<pre>
+      <pre>
 $id = '97183';
 $params =  array("label"=>"Some other description");
 $api->put('/zones/vod.json/'.$id,$params);</pre>
   </div>
   <div class="tab-pane" id="node44">
-	<pre>
+    <pre>
 var id = '97183'
 api.put('/zones/vod.json/' + id, { label: 'Some other description' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response44">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -3835,31 +3835,31 @@ Deletes a VOD zone specified by the {zone_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby45">
-		<pre>
+        <pre>
 id = '97794'
 api.delete('/zones/vod.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python45">
-		<pre>
+        <pre>
 id = '96187'
 api.delete('/zones/vod.json/'+id)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php45">
-  	<pre>
+      <pre>
 $id = '97183';
 $api->delete('/zones/vod.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node45">
-	<pre>
+    <pre>
 var id = '97183'
 api.del('/zones/vod.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response45">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -3886,31 +3886,31 @@ Enables a VOD zone specified by the {zone_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby46">
-		<pre>
+        <pre>
 id = '97794'
 api.put('/zones/vod/'+id+'/enable.json')</pre>
   </div>
   <div class="tab-pane" id="python46">
-		<pre>
+        <pre>
 id = '96187'
 api.put('/zones/vod/'+id+'/enable.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php46">
-  	<pre>
+      <pre>
 $id = '96187';
 $api->put('/zones/vod/'.$id.'/enable.json');</pre>
   </div>
   <div class="tab-pane" id="node46">
-	<pre>
+    <pre>
 var id = '96187'
 api.put('/zones/vod/' + id + '/enable.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response46">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -3937,31 +3937,31 @@ Disables a VOD zone specified by the {zone_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby47">
-		<pre>
+        <pre>
 id = '97794'
 api.put('/zones/vod/'+id+'/disable.json')</pre>
   </div>
   <div class="tab-pane" id="python47">
-		<pre>
+        <pre>
 id = '96187'
 api.put('/zones/vod/'+id+'/disable.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php47">
-  	<pre>
+      <pre>
 $id = '96187';
 $api->put('/zones/vod/'.$id.'/disable.json');</pre>
   </div>
   <div class="tab-pane" id="node47">
-	<pre>
+    <pre>
 var id = '96187'
 api.put('/zones/vod/' + id + '/disable.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response47">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -3999,29 +3999,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby48">
-		<pre>
+        <pre>
 id = '97794'
 api.get('/zones/vod/'+id+'/customdomains.json')</pre>
   </div>
   <div class="tab-pane" id="python48">
-		<pre>
+        <pre>
 id = '96187'
 api.get('/zones/vod/'+id+'/customdomains.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php48">
-  	<pre>
+      <pre>
 $id = '97183';
 $api->get('/zones/vod/'.$id.'/customdomains.json');</pre>
   </div>
   <div class="tab-pane" id="node48">
-	<pre>
+    <pre>
 var id = '97183'
 api.get('/zones/vod.json/' + id + '/customdomains.json, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response48">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -4077,32 +4077,32 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby49">
-		<pre>
+        <pre>
 id = '97794'
 params = {"custom_domain"=>"cdn.somedomain39.com","type"=>"vod-rtmp"}
 api.post('/zones/vod/'+id+'/customdomains.json', params)</pre>
   </div>
   <div class="tab-pane" id="python49">
-		<pre>
+        <pre>
 id = '96187'
 params = {"custom_domain":"cdn.somedomain16.com","type":"vod-rtmp"}
 api.post('/zones/vod/'+id+'/customdomains.json', params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php49">
-  	<pre>
+      <pre>
 $id = '97183';
 $params = array("custom_domain"=>"cdn.somedomain2.com","type"=>"vod-rtmp");
 $api->post('/zones/vod/'.$id.'/customdomains.json', $params);</pre>
   </div>
   <div class="tab-pane" id="node49">
-	<pre>
+    <pre>
 var id = '97183'
 api.post('/zones/vod/' + id + '/customdomains.json', { custom_domain: 'cdn.somedomain2.com', type: 'vod-rtmp' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response49">
-		<pre>
+        <pre>
 {
     "code": 201,
     "data": {
@@ -4148,25 +4148,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby50">
-		<pre>
+        <pre>
 zoneId = '97794'
 domainId = '79748'
 api.get('/zones/vod/'+zoneId+'/customdomains.json/'+domainId)</pre>
   </div>
   <div class="tab-pane" id="python50">
-		<pre>
+        <pre>
 zoneId = '96187'
 domainId = '79321'
 api.get('/zones/vod/'+zoneId+'/customdomains.json/'+domainId)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php50">
-  	<pre>
+      <pre>
 $zoneId = '97183';
 $domainId = '79191';
 $api->get('/zones/vod/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
   </div>
   <div class="tab-pane" id="node50">
-	<pre>
+    <pre>
 var zoneId = '97183'
 var domainId = '79191'
 api.get('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
@@ -4174,7 +4174,7 @@ api.get('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, function(err
 })</pre>
   </div>
   <div class="tab-pane" id="response50">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -4226,28 +4226,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby51">
-		<pre>
+        <pre>
 zoneId = '97794'
 domainId = '79748'
 params = {"custom_domain"=>"cdn.somenewdomain49.com"}
 api.put('/zones/vod/'+zoneId+'/customdomains.json/'+domainId,params)</pre>
   </div>
   <div class="tab-pane" id="python51">
-		<pre>
+        <pre>
 zoneId = '96187'
 domainId = '79321'
 params = {"custom_domain":"cdn.somenewdomain401.com"}
 api.put('/zones/vod/'+zoneId+'/customdomains.json/'+domainId,params=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php51">
-  	<pre>
+      <pre>
 $zoneId = '97183';
 $domainId = '79191';
 $params = array("custom_domain"=>"cdn.somenewdomain3.com");
 $api->put('/zones/vod/'.$zoneId.'/customdomains.json/'.$domainId, $params);</pre>
   </div>
   <div class="tab-pane" id="node51">
-	<pre>
+    <pre>
 var zoneId = '97183'
 var domainId = '79191'
 api.put('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, { custom_domain: 'cdn.somenewdomain3.com' }, function(err, response) {
@@ -4255,7 +4255,7 @@ api.put('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, { custom_dom
 })</pre>
   </div>
   <div class="tab-pane" id="response51">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -4294,25 +4294,25 @@ Deletes a custom domain specified by the {zone_id} and
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby52">
-		<pre>
+        <pre>
 zoneId = '97794'
 domainId = '79748'
 api.delete('/zones/vod/'+zoneId+'/customdomains.json/'+domainId)</pre>
   </div>
   <div class="tab-pane" id="python52">
-		<pre>
+        <pre>
 zoneId = '96187'
 domainId = '79321'
 api.delete('/zones/vod/'+zoneId+'/customdomains.json/'+domainId)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php52">
-  	<pre>
+      <pre>
 $zoneId = '97183';
 $domainId = '79191';
 $api->delete('/zones/vod/'.$zoneId.'/customdomains.json/'.$domainId);</pre>
   </div>
   <div class="tab-pane" id="node52">
-	<pre>
+    <pre>
 var zoneId = '97183'
 var domainId = '79191'
 api.del('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, function(err, response) {
@@ -4320,9 +4320,9 @@ api.del('/zones/vod/' + zoneId + '/customdomains.json/' + domainId, function(err
 })</pre>
   </div>
   <div class="tab-pane" id="response52">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -4363,25 +4363,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby53">
-		<pre>
+        <pre>
 api.get('/zones/live.json')</pre>
   </div>
   <div class="tab-pane" id="python53">
-		<pre>
+        <pre>
 api.get('/zones/live.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php53">
-  	<pre>
+      <pre>
 $api->get('/zones/live.json');</pre>
   </div>
   <div class="tab-pane" id="node53">
-	<pre>
+    <pre>
 api.get('/zones/live.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response53">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -4470,28 +4470,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby54">
-		<pre>
+        <pre>
 params = {"name"=>"newLiveZone99","password"=>"password"}
 api.post('/zones/live.json',params)</pre>
   </div>
   <div class="tab-pane" id="python54">
-		<pre>
+        <pre>
 params = {"name":"newliveZone7","password":"password"}
 api.post('/zones/live.json',data=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php54">
-  	<pre>
+      <pre>
 $params = array("name"=>"newLiveZone3","password"=>"password");
 $api->post('/zones/live.json', $params);</pre>
   </div>
   <div class="tab-pane" id="node54">
-	<pre>
+    <pre>
 api.post('/zones/live.json',  { name: 'newLiveZone3', password: 'password' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response54">
-		<pre>
+        <pre>
 {
     "code": 201,
     "data": {
@@ -4543,25 +4543,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby55">
-		<pre>
+        <pre>
 api.get('/zones/live.json/count')</pre>
   </div>
   <div class="tab-pane" id="python55">
-		<pre>
+        <pre>
 api.get('/zones/live.json/count')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php55">
-  	<pre>
+      <pre>
 $api->get('/zones/live.json/count');</pre>
   </div>
   <div class="tab-pane" id="node55">
-	<pre>
+    <pre>
 api.get('/zones.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response55">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -4606,29 +4606,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby56">
-		<pre>
+        <pre>
 id = '97795'
 api.get('/zones/live.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python56">
-		<pre>
+        <pre>
 id = '96193'
 api.get('/zones/live.json/'+id)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php56">
-  	<pre>
+      <pre>
 $id = '97185';
 $api->get('/zones/live.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node56">
-	<pre>
+    <pre>
 var id = '97185'
 api.get('/zones/live.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response56">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -4695,33 +4695,33 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby57">
-		<pre>
+        <pre>
 id = '96193'
 params = {"label"=>"Some other description"}
 api.put('/zones/live.json/'+id,params)</pre>
   </div>
   <div class="tab-pane" id="python57">
-		<pre>
+        <pre>
 id = '96193'
 params = {"label":"Some other description"}
 api.put('/zones/live.json/'+id,params=params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php57">
-  	<pre>
+      <pre>
 $id = '97185';
 $params =  array("label"=>"Some other description");
 $api->put('/zones/live.json/'.$id,$params);
 </pre>
   </div>
   <div class="tab-pane" id="node57">
-	<pre>
+    <pre>
 var id = '97185'
 api.put('/zones/live.json/' + id, { label: 'Some other description' }, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response57">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -4767,31 +4767,31 @@ Deletes a live zone specified by the {zone_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby58">
-		<pre>
+        <pre>
 id = '97795'
 api.delete('/zones/live.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python58">
-		<pre>
+        <pre>
 id = '96193'
 api.delete('/zones/live.json/'+id)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php58">
-  	<pre>
+      <pre>
 $id = '97185';
 $api->delete('/zones/live.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node58">
-	<pre>
+    <pre>
 var id = '97185'
 api.del('/zones/live.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response58">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -4818,31 +4818,31 @@ Enables a live zone specified by the {zone_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby59">
-		<pre>
+        <pre>
 id = '97795'
 api.put('/zones/live/'+id+'/enable.json')</pre>
   </div>
   <div class="tab-pane" id="python59">
-		<pre>
+        <pre>
 id = '96193'
 api.put('/zones/live/'+id+'/enable.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php59">
-  	<pre>
+      <pre>
 $id = '96061';
 $api->put('/zones/live/'.$id.'/enable.json');</pre>
   </div>
   <div class="tab-pane" id="node59">
-	<pre>
+    <pre>
 var id = '96061'
 api.put('/zones/live/' + id + '/enable.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response59">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -4870,31 +4870,31 @@ Disables a live zone specified by the {zone_id} parameter
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby60">
-		<pre>
+        <pre>
 id = '97795'
 api.put('/zones/live/'+id+'/disable.json')</pre>
   </div>
   <div class="tab-pane" id="python60">
-		<pre>
+        <pre>
 id = '96193'
 api.put('/zones/live/'+id+'/disable.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php60">
-  	<pre>
+      <pre>
 $id = '96061';
 api->put('/zones/live/'.$id.'/disable.json');</pre>
   </div>
   <div class="tab-pane" id="node60">
-	<pre>
+    <pre>
 var id = '96061'
 api.put('/zones/live/' + id + '/disable.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response60">
-		<pre>
+        <pre>
 {
-	"code":200
+    "code":200
 }</pre>
   </div>
 </div>
@@ -4924,25 +4924,25 @@ Get the SSL certificate for the specified {zone_type} and
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby61">
-		<pre>
+        <pre>
 id = '96061'
 type = 'pull'
 api.get('/zones/'+type+'/'+id+'/ssl.json')</pre>
   </div>
   <div class="tab-pane" id="python61">
-		<pre>
+        <pre>
 id = '96061'
 type = 'pull'
 api.get('/zones/'+type+'/'+id+'/ssl.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php61">
-  	<pre>
+      <pre>
 $id = '96061';
 $type = 'pull';
 $api->get('/zones/'.$type.'/'.$id.'/ssl.json');</pre>
   </div>
   <div class="tab-pane" id="node61">
-	<pre>
+    <pre>
 var id = '96061'
 var type = 'pull'
 api.get('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
@@ -4950,21 +4950,21 @@ api.get('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
 })</pre>
   </div>
   <div class="tab-pane" id="response61">
-		<pre>
+        <pre>
 {
-	"code":201,
-	"data":{
-		"ssl":{
-			"id":1459,
-			"ssl_crt":"-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
-			"ssl_key":"-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----",
-			"ssl_cabundle":null,
-			"date_expiration":"2014-01-24",
-			"anycast_ip_id":null,
-			"wildcard":1,
-			"domain":"*.idcreator.com"
-		}
-	}
+    "code":201,
+    "data":{
+        "ssl":{
+            "id":1459,
+            "ssl_crt":"-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
+            "ssl_key":"-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----",
+            "ssl_cabundle":null,
+            "date_expiration":"2014-01-24",
+            "anycast_ip_id":null,
+            "wildcard":1,
+            "domain":"*.idcreator.com"
+        }
+    }
 }
 </pre>
   </div>
@@ -5014,7 +5014,7 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby62">
-		<pre>
+        <pre>
 id = '96061'
 type = 'pull'
 ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
@@ -5023,16 +5023,16 @@ params = {"ssl_crt"=> ssl_crt,"ssl_key"=> ssl_key}
 api.post('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
   </div>
   <div class="tab-pane" id="python62">
-		<pre>
+        <pre>
 id = '96061'
 type = 'pull'
 ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
 ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
 params = {"ssl_crt": ssl_crt,"ssl_key": ssl_key}
 api.post('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php62">
-  	<pre>
+      <pre>
 $id = '96061';
 $type = 'pull';
 $ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n";
@@ -5041,7 +5041,7 @@ $params = array("ssl_crt"=>$ssl_crt,"ssl_key"=>$ssl_key);
 $api->post('/zones/'.$type.'/'.$id.'/ssl.json',$params);</pre>
   </div>
   <div class="tab-pane" id="node62">
-	<pre>
+    <pre>
 var id = '96061'
 var type = 'pull'
 var ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
@@ -5051,21 +5051,21 @@ api.post('/zones/' + type + '/' + id + '/ssl.json', { ssl_crt: ssl_crt, ssl_key:
 })</pre>
   </div>
   <div class="tab-pane" id="response62">
-		<pre>
+        <pre>
 {
-	"code":201,
-	"data":{
-		"ssl":{
-			"id":1459,
-			"ssl_crt":"-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
-			"ssl_key":"-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----",
-			"ssl_cabundle":null,
-			"date_expiration":"2014-01-24",
-			"anycast_ip_id":null,
-			"wildcard":1,
-			"domain":"*.idcreator.com"
-		}
-	}
+    "code":201,
+    "data":{
+        "ssl":{
+            "id":1459,
+            "ssl_crt":"-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
+            "ssl_key":"-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----",
+            "ssl_cabundle":null,
+            "date_expiration":"2014-01-24",
+            "anycast_ip_id":null,
+            "wildcard":1,
+            "domain":"*.idcreator.com"
+        }
+    }
 }
 </pre>
   </div>
@@ -5115,7 +5115,7 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby63">
-		<pre>
+        <pre>
 id = '96061'
 type = 'pull'
 ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
@@ -5124,16 +5124,16 @@ params = {"ssl_crt"=> ssl_crt,"ssl_key"=> ssl_key}
 api.put('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
   </div>
   <div class="tab-pane" id="python63">
-		<pre>
+        <pre>
 id = '96061'
 type = 'pull'
 ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
 ssl_key = "-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----"
 params = {"ssl_crt": ssl_crt,"ssl_key": ssl_key}
 api.put('/zones/'+type+'/'+id+'/ssl.json',params)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php63">
-  	<pre>
+      <pre>
 $id = '96061';
 $type = 'pull';
 $ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n";
@@ -5143,7 +5143,7 @@ $params = array("ssl_crt"=>$ssl_crt,"ssl_key"=>$ssl_key);
 $api->put('/zones/'.$type.'/'.$id.'/ssl.json',$params);</pre>
   </div>
   <div class="tab-pane" id="node63">
-	<pre>
+    <pre>
 var id = '96061'
 var type = 'pull'
 var ssl_crt = "-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n"
@@ -5153,21 +5153,21 @@ api.put('/zones/' + type + '/' + id + '/ssl.json', { ssl_crt: ssl_crt, ssl_key: 
 })</pre>
   </div>
   <div class="tab-pane" id="response63">
-		<pre>
+        <pre>
 {
-	"code":201,
-	"data":{
-		"ssl":{
-			"id":1459,
-			"ssl_crt":"-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
-			"ssl_key":"-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----",
-			"ssl_cabundle":null,
-			"date_expiration":"2014-01-24",
-			"anycast_ip_id":null,
-			"wildcard":1,
-			"domain":"*.idcreator.com"
-		}
-	}
+    "code":201,
+    "data":{
+        "ssl":{
+            "id":1459,
+            "ssl_crt":"-----BEGIN CERTIFICATE-----\n{ ... your certificate ... }\n-----END CERTIFICATE-----\n",
+            "ssl_key":"-----BEGIN RSA PRIVATE KEY-----\n{ ... your key ... }\n-----END RSA PRIVATE KEY-----",
+            "ssl_cabundle":null,
+            "date_expiration":"2014-01-24",
+            "anycast_ip_id":null,
+            "wildcard":1,
+            "domain":"*.idcreator.com"
+        }
+    }
 }
 </pre>
   </div>
@@ -5197,25 +5197,25 @@ Remove the SSL certificate for the specified {zone_type} and
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby64">
-		<pre>
+        <pre>
 id = '96061'
 type = 'pull'
 api.delete('/zones/'+type+'/'+id+'/ssl.json')</pre>
   </div>
   <div class="tab-pane" id="python64">
-		<pre>
+        <pre>
 id = '96061'
 type = 'pull'
 api.delete('/zones/'+type+'/'+id+'/ssl.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php64">
-  	<pre>
+      <pre>
 $id = '96061';
 $type = 'pull';
 $api->delete('/zones/'.$type.'/'.$id.'/ssl.json');</pre>
   </div>
   <div class="tab-pane" id="node64">
-	<pre>
+    <pre>
 var id = '96061'
 var type = 'pull'
 api.delete('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
@@ -5223,63 +5223,63 @@ api.delete('/zones/' + type + '/' + id + '/ssl.json', function(err, response) {
 })</pre>
   </div>
   <div class="tab-pane" id="response64">
-		<pre>
+        <pre>
 {
-	"code":200,
-	"data":{
-		"zone":{
-			"id":"90652",
-			"name":"newpullzonec5",
-			"username":"username",
-			"company_id":"1234",
-			"url":"http:\/\/someplace.net",
-			"port":"80",
-			"ip":"123.0.0.49",
-			"vhost":"someplace.net",
-			"type":"2",
-			"compress":"0",
-			"backend_compress":"0",
-			"queries":"1",
-			"max_cache_size":"50000",
-			"suspend":"0",
-			"cache_valid":"1d",
-			"content_encoding":"1",
-			"label":"",
-			"inactive":"0",
-			"valid_referers":null,
-			"key_zone_size":"50m",
-			"expires":null,
-			"disallow_robots":"0",
-			"disallow_robots_txt":null,
-			"canonical_link_headers":"0",
-			"content_disposition":"0",
-			"custom_domain_limit":"7",
-			"locked":"0",
-			"server_id":"123",
-			"ssl":0,
-			"sslshared":"0",
-			"creation_date":"2013-07-22 19:00:54",
-			"dsa_ip":null,
-			"geo_enabled":"0",
-			"set_host_header":null,
-			"ssl_id":0,
-			"dns_check":"1",
-			"hit_bandwidth_by_dir":"0",
-			"hit_bandwidth_by_custom_domain":"0",
-			"hit_bandwidth_by_file_name_status_code":"0",
-			"cache_version":"0",
-			"ignore_setcookie_header":"0",
-			"hide_setcookie_header":"0",
-			"ignore_cache_control":"0",
-			"use_stale":"0",
-			"proxy_cache_lock":"0",
-			"pseudo_streaming":"0",
-			"secret":null,
-			"upstream_enabled":"0",
-			"cdn_url":"newpullzonec5.username.netdna-cdn.com",
-			"tmp_url":"newpullzonec5.nycacorp.netdna-cdn.com"
-		}
-	}
+    "code":200,
+    "data":{
+        "zone":{
+            "id":"90652",
+            "name":"newpullzonec5",
+            "username":"username",
+            "company_id":"1234",
+            "url":"http:\/\/someplace.net",
+            "port":"80",
+            "ip":"123.0.0.49",
+            "vhost":"someplace.net",
+            "type":"2",
+            "compress":"0",
+            "backend_compress":"0",
+            "queries":"1",
+            "max_cache_size":"50000",
+            "suspend":"0",
+            "cache_valid":"1d",
+            "content_encoding":"1",
+            "label":"",
+            "inactive":"0",
+            "valid_referers":null,
+            "key_zone_size":"50m",
+            "expires":null,
+            "disallow_robots":"0",
+            "disallow_robots_txt":null,
+            "canonical_link_headers":"0",
+            "content_disposition":"0",
+            "custom_domain_limit":"7",
+            "locked":"0",
+            "server_id":"123",
+            "ssl":0,
+            "sslshared":"0",
+            "creation_date":"2013-07-22 19:00:54",
+            "dsa_ip":null,
+            "geo_enabled":"0",
+            "set_host_header":null,
+            "ssl_id":0,
+            "dns_check":"1",
+            "hit_bandwidth_by_dir":"0",
+            "hit_bandwidth_by_custom_domain":"0",
+            "hit_bandwidth_by_file_name_status_code":"0",
+            "cache_version":"0",
+            "ignore_setcookie_header":"0",
+            "hide_setcookie_header":"0",
+            "ignore_cache_control":"0",
+            "use_stale":"0",
+            "proxy_cache_lock":"0",
+            "pseudo_streaming":"0",
+            "secret":null,
+            "upstream_enabled":"0",
+            "cdn_url":"newpullzonec5.username.netdna-cdn.com",
+            "tmp_url":"newpullzonec5.nycacorp.netdna-cdn.com"
+        }
+    }
 }
 </pre>
   </div>
@@ -5309,25 +5309,25 @@ Get the upstream information for the specified {zone_id}.
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby65">
-		<pre>
+        <pre>
 type = 'pull'
 id = '96061'
 api.post('/zones/'+type+'/'+id+'/upstream.json')</pre>
   </div>
   <div class="tab-pane" id="python65">
-		<pre>
+        <pre>
 type = 'pull'
 id = '96061'
 api.post('/zones/'+type+'/'+id+'/upstream.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php65">
-  	<pre>
+      <pre>
 $type = 'pull';
 $id = '96061';
 $api->post('/zones/'.$type.'/'.$id.'/upstream.json');</pre>
   </div>
   <div class="tab-pane" id="node65">
-	<pre>
+    <pre>
 var type = 'pull'
 var id = '96061'
 api.post('/zones/' + type + '/' + id + '/upstream.json', function(err, response) {
@@ -5335,7 +5335,7 @@ api.post('/zones/' + type + '/' + id + '/upstream.json', function(err, response)
 })</pre>
   </div>
   <div class="tab-pane" id="response65">
-		<pre>
+        <pre>
 </pre>
   </div>
 </div>
@@ -5354,18 +5354,18 @@ Create and enable Upstream for a specific {zone_id}.
 
 Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`server_url` | - | <span class="label important">required</span><br /> | The server url or ip to provide the streaming resources 
-`port` | - | <span class="label important">required</span><br /> | The port where server is to be called 
+`server_url` | - | <span class="label important">required</span><br /> | The server url or ip to provide the streaming resources
+`port` | - | <span class="label important">required</span><br /> | The port where server is to be called
 
 
 ### Response Parameters
 
 Parameter | Description |
 --- | --- | ---
-`id` | The Upstream ID. 
-`bucket_id` | The bucket_id it belongs to 
-`server_url` | The server url or ip 
-`port` | The port it uses to call the server 
+`id` | The Upstream ID.
+`bucket_id` | The bucket_id it belongs to
+`server_url` | The server url or ip
+`port` | The port it uses to call the server
 
 ### Code Samples
 
@@ -5379,28 +5379,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby66">
-		<pre>
+        <pre>
 type = 'pull'
 id = '96061'
 params = {"server_url"=> "http=>//cdn.somedomain.com","server"=> "http=>//cdn.somedomain.com","port"=> "80"}
 api.post('/zones/'+type+'/'+id+'/upstream.json')</pre>
   </div>
   <div class="tab-pane" id="python66">
-		<pre>
+        <pre>
 type = 'pull'
 id = '96061'
 params = {"server_url": "http://cdn.somedomain.com","server": "http://cdn.somedomain.com","port": "80"}
 api.post('/zones/'+type+'/'+id+'/upstream.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php66">
-  	<pre>
+      <pre>
 $type = 'pull';
 $id = '96061';
 $params = array("server_url"=>"http://cdn.somedomain.com","server"=>"http://cdn.somedomain.com","port"=>"80");
 $api->post('/zones/'.$type.'/'.$id.'/upstream.json');</pre>
   </div>
   <div class="tab-pane" id="node66">
-	<pre>
+    <pre>
 var type = 'pull'
 var id = '96061'
 api.post('/zones/' + type + '/' + id + '/upstream.json', { server_url: 'http://cdn.somedomain.com', server: 'http://cdn.somedomain.com', port: '80' }, function(err, response) {
@@ -5408,7 +5408,7 @@ api.post('/zones/' + type + '/' + id + '/upstream.json', { server_url: 'http://c
 })</pre>
   </div>
   <div class="tab-pane" id="response66">
-		<pre>
+        <pre>
 </pre>
   </div>
 </div>
@@ -5427,19 +5427,19 @@ Update the Upstream information for the specified {zone_id}.
 
 Parameter | Default Value | Validation | Description |
 --- | --- | --- | --- | ---
-`upstream_id` | - | <span class="label important">required</span><br /> | The Upstream Information you're modifying. 
-`server_url` | - | <span class="label important">required</span><br /> | The server url or ip 
-`port` | - | <span class="label important">required</span><br /> | The port it uses to call the server 
+`upstream_id` | - | <span class="label important">required</span><br /> | The Upstream Information you're modifying.
+`server_url` | - | <span class="label important">required</span><br /> | The server url or ip
+`port` | - | <span class="label important">required</span><br /> | The port it uses to call the server
 
 
 ### Response Parameters
 
 Parameter | Description |
 --- | --- | ---
-`id` | The Upstream ID. 
-`bucket_id` | The bucket_id it belongs to 
-`server_url` | The server url or ip 
-`port` | The port it uses to call the server 
+`id` | The Upstream ID.
+`bucket_id` | The bucket_id it belongs to
+`server_url` | The server url or ip
+`port` | The port it uses to call the server
 
 ### Code Samples
 
@@ -5453,28 +5453,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby67">
-		<pre>
+        <pre>
 type = 'pull'
 id = '96061'
 params = {"upsream_id"=> "93013","server_url"=> "http=>//somedomain.com","port"=> "80"}
 api.put('/zones/'+type+'/'+id+'/upstream.json')</pre>
   </div>
   <div class="tab-pane" id="python67">
-		<pre>
+        <pre>
 type = 'pull'
 id = '96061'
 params = {"upsream_id": "93013","server_url": "http://somedomain.net","port": "80"}
 api.put('/zones/'+type+'/'+id+'/upstream.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php67">
-  	<pre>
+      <pre>
 $type = 'pull';
 $id = '96061';
 $params = array("upstream_id"=>"93013","server_url"=>"http://somedomain.net","port"=>"80");
 $api->put('/zones/'.$type.'/'.$id.'/upstream.json');</pre>
   </div>
   <div class="tab-pane" id="node67">
-	<pre>
+    <pre>
 var type = 'pull'
 var id = '96061'
 api.put('/zones/' + type + '/' + id + '/upstream.json', { upstream_id: '93013', server_url: 'http://somedomain.net', port: '80' }, function(err, response) {
@@ -5482,7 +5482,7 @@ api.put('/zones/' + type + '/' + id + '/upstream.json', { upstream_id: '93013', 
 })</pre>
   </div>
   <div class="tab-pane" id="response67">
-		<pre>
+        <pre>
 </pre>
   </div>
 </div>
@@ -5510,25 +5510,25 @@ Remove the Upstream Information for the specified {zone_id}.
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby68">
-		<pre>
+        <pre>
 type = 'pull'
 id = '96061'
 api.delete('/zones/'+type+'/'+id+'/upstream.json')</pre>
   </div>
   <div class="tab-pane" id="python68">
-		<pre>
+        <pre>
 type = 'pull'
 id = '96061'
 api.delete('/zones/'+type+'/'+id+'/upstream.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php68">
-  	<pre>
+      <pre>
 $type = 'pull';
 $id = '96061';
 $api->delete('/zones/'.$type.'/'.$id.'/upstream.json');</pre>
   </div>
   <div class="tab-pane" id="node68">
-	<pre>
+    <pre>
 var type = 'pull'
 var id = '96061'
 api.del('/zones/' + type + '/' + id + '/upstream.json', function(err, response) {
@@ -5536,7 +5536,7 @@ api.del('/zones/' + type + '/' + id + '/upstream.json', function(err, response) 
 })</pre>
   </div>
   <div class="tab-pane" id="response68">
-		<pre>
+        <pre>
 </pre>
   </div>
 </div>
@@ -5585,29 +5585,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby69">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/stats.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python69">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/stats.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php69">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/stats.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node69">
-	<pre>
+    <pre>
 var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/stats.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response69">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -5667,25 +5667,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby70">
-		<pre>
+        <pre>
 id = '96061'
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/'+id+'/stats.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python70">
-		<pre>
+        <pre>
 id = '96061'
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/'+id+'/stats.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php70">
-  	<pre>
+      <pre>
 $id = '96061';
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/'.$id.'/stats.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node70">
-	<pre>
+    <pre>
 var id = '96061'
 var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/' + id + '/stats.json/' + reportType, function(err, response) {
@@ -5693,7 +5693,7 @@ api.get('/reports/' + id + '/stats.json/' + reportType, function(err, response) 
 })</pre>
   </div>
   <div class="tab-pane" id="response70">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -5715,6 +5715,943 @@ api.get('/reports/' + id + '/stats.json/' + reportType, function(err, response) 
   </div>
 </div>
 
+## List Traffic by Zone
+
+Gets the {zone_id} traffic statistics optionally broken up by
+{report_type}. If no {report_type} is given the request will return
+the total traffic for the zones.
+
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path">https://rws.netdna.com/{companyalias}/reports/trafficbyzone.json/{report_type}</span></div>
+</div>
+
+### Accepted Request Parameters
+
+Parameter | Default Value | Validation | Description |
+--- | --- | --- | --- | ---
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
+
+
+### Response Parameters
+Parameter | Description |
+--- | --- | ---
+`bucket_id` | The zone ID |
+`bytes` | The amount of bytes transferred |
+`hits` | The number of times files were requested |
+`cache_misses` | The number of times a requested file was not in cache |
+`cache_hits` | The number of times a requested file was already cached |
+`errors` | iThe number of times a request returned an error |
+`hits_1b_to_10kb` | The number of requests for files between 1 byte and 10KB |
+`hits_10_to_50kb` | The number of requests for files between 10KB and 50KB |
+`hits_50_to_100kb` | The number of requests for files between 50KB and 100KB |
+`hits_100_to_500kb` | The number of requests for files between 100KB and 500KB |
+`hits_500kb_to_1mb` | The number of requests for files between 500KB and 1MB |
+`hits_1_to_10mb` | The number of requests for files between 1MB and 10MB |
+`hits_10_to_100mb` | The number of requests for files between 10MB and 100MB |
+`hits_100_to_500mb` | The number of requests for files between 100MB and 500MB |
+`hits_500mb_to_1gb` | The number of requests for files 500MB and 1GB |
+`hits_1gb_or_greater` | The number of requests for files &gt;= 1GB |
+`hits_2xx` | The amount of 2xx hits |
+`hits_206` | The amount of 206 hits |
+`hits_3xx` | The amount of 3xx hits |
+`hits_304` | The amount of 304 hits |
+`hits_4xx` | The amount of 4xx hits |
+`hits_403` | The amount of 403 hits |
+`hits_404` | The amount of 404 hits |
+`hits_408` | The amount of 408 hits |
+`hits_499` | The amount of 499 hits |
+`hits_5xx` | The amount of 5xx hits |
+`hits_500` | The amount of 500 hits |
+`hits_502` | The amount of 502 hits |
+`hits_503` | The amount of 503 hits |
+`hits_504` | The amount of 504 hits |
+`hits_bot` | The amount of bot hits |
+`hits_browser_chrome` | The amount of hits from Chrome |
+`hits_browser_firefox` | The amount of hits from Firefox |
+`hits_browser_msie` | The amount of hits from Internet Explorer |
+`hits_browser_opera` | The amount of hits from Opera |
+`hits_browser_safari` | The amount of hits from Safari |
+`hits_browser_other` | The amount of hits from Other Browsers |
+`hits_facebook` | The amount of hits from Facebook |
+`hits_from_as` | The amount of hits from Asia |
+`hits_from_eu` | The amount of hits from Europe |
+`hits_from_na` | The amount of hits from North America |
+`hits_from_oc` | The amount of hits from Oceania |
+`hits_from_sa` | The amount of hits from South America |
+`hits_mobile` | The amount of hits from Mobile Devices |
+`hits_os_android` | The amount of hits from Android |
+`hits_os_ios` | The amount of hits from iOS |
+`hits_os_linux` | The amount of hits from Linux |
+`hits_os_mac` | The amount of hits from Mac OS X |
+`hits_os_windows` | The amount of hits from Windows |
+`hits_ssl` | The amount of hits to SSL resources |
+`timestamp` | The timestamp for the corresponding {report_type}. |
+
+
+### Code Samples
+
+<ul class="nav nav-tabs" id="myTab100">
+  <li class="active"><a href="#ruby100" data-toggle='tab'>Ruby</a></li>
+  <li><a href="#python100" data-toggle='tab'>Python</a></li>
+  <li><a href="#php100" data-toggle='tab'>PHP</a></li>
+  <li><a href="#node100" data-toggle='tab'>Node</a></li>
+  <li><a href="#response100" data-toggle='tab'>Response</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="ruby100">
+<pre>
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/trafficbyzone.json#{reportType}')</pre>
+  </div>
+  <div class="tab-pane" id="python100">
+<pre>
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/trafficbyzone.json%s' % (report_type,))</pre>
+  </div>
+  <div class="tab-pane" id="php100">
+<pre>
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+$api->get("/reports/trafficbyzone.json/$reportType");</pre>
+  </div>
+  <div class="tab-pane" id="node100">
+<pre>
+var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/trafficbyzone.json/' + reportType, function(err, response) {
+  console.log('err', err, 'response', response)
+})</pre>
+  </div>
+  <div class="tab-pane" id="response100">
+<pre>
+{
+    "code": 200,
+    "data": {
+        "trafficbyzone": [],
+        "summary": {
+            "bytes": null,
+            "hits": null,
+            "cache_misses": null,
+            "cache_hits": null,
+            "errors": null,
+            "hits_1b_to_10kb": null,
+            "hits_10_to_50kb": null,
+            "hits_50_to_100kb": null,
+            "hits_100_to_500kb": null,
+            "hits_500kb_to_1mb": null,
+            "hits_1_to_10mb": null,
+            "hits_10_to_100mb": null,
+            "hits_100_to_500mb": null,
+            "hits_500mb_to_1gb": null,
+            "hits_1gb_or_greater": null,
+            "hits_2xx": null,
+            "hits_206": null,
+            "hits_3xx": null,
+            "hits_304": null,
+            "hits_4xx": null,
+            "hits_403": null,
+            "hits_404": null,
+            "hits_408": null,
+            "hits_499": null,
+            "hits_5xx": null,
+            "hits_500": null,
+            "hits_502": null,
+            "hits_503": null,
+            "hits_504": null,
+            "hits_bot": null,
+            "hits_browser_chrome": null,
+            "hits_browser_firefox": null,
+            "hits_browser_msie": null,
+            "hits_browser_opera": null,
+            "hits_browser_safari": null,
+            "hits_browser_other": null,
+            "hits_facebook": null,
+            "hits_from_as": null,
+            "hits_from_eu": null,
+            "hits_from_na": null,
+            "hits_from_oc": null,
+            "hits_from_sa": null,
+            "hits_mobile": null,
+            "hits_os_android": null,
+            "hits_os_ios": null,
+            "hits_os_linux": null,
+            "hits_os_mac": null,
+            "hits_os_windows": null,
+            "hits_ssl": null,
+        },
+        "total": "0"
+    }
+}</pre>
+  </div>
+</div>
+
+## Traffic by Zone
+
+Gets the {zone_id} traffic statistics optionally broken up by
+{report_type}. If no {report_type} is given the request will return
+the total traffic for the zones.
+
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path">https://rws.netdna.com/{companyalias}/reports/{zone_id}/trafficbyzone.json/{report_type}</span></div>
+</div>
+
+### Accepted Request Parameters
+
+Parameter | Default Value | Validation | Description |
+--- | --- | --- | --- | ---
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
+
+
+### Response Parameters
+Parameter | Description |
+--- | --- | ---
+`bucket_id` | The zone ID |
+`bytes` | The amount of bytes transferred |
+`hits` | The number of times files were requested |
+`cache_misses` | The number of times a requested file was not in cache |
+`cache_hits` | The number of times a requested file was already cached |
+`errors` | iThe number of times a request returned an error |
+`hits_1b_to_10kb` | The number of requests for files between 1 byte and 10KB |
+`hits_10_to_50kb` | The number of requests for files between 10KB and 50KB |
+`hits_50_to_100kb` | The number of requests for files between 50KB and 100KB |
+`hits_100_to_500kb` | The number of requests for files between 100KB and 500KB |
+`hits_500kb_to_1mb` | The number of requests for files between 500KB and 1MB |
+`hits_1_to_10mb` | The number of requests for files between 1MB and 10MB |
+`hits_10_to_100mb` | The number of requests for files between 10MB and 100MB |
+`hits_100_to_500mb` | The number of requests for files between 100MB and 500MB |
+`hits_500mb_to_1gb` | The number of requests for files 500MB and 1GB |
+`hits_1gb_or_greater` | The number of requests for files &gt;= 1GB |
+`hits_2xx` | The amount of 2xx hits |
+`hits_206` | The amount of 206 hits |
+`hits_3xx` | The amount of 3xx hits |
+`hits_304` | The amount of 304 hits |
+`hits_4xx` | The amount of 4xx hits |
+`hits_403` | The amount of 403 hits |
+`hits_404` | The amount of 404 hits |
+`hits_408` | The amount of 408 hits |
+`hits_499` | The amount of 499 hits |
+`hits_5xx` | The amount of 5xx hits |
+`hits_500` | The amount of 500 hits |
+`hits_502` | The amount of 502 hits |
+`hits_503` | The amount of 503 hits |
+`hits_504` | The amount of 504 hits |
+`hits_bot` | The amount of bot hits |
+`hits_browser_chrome` | The amount of hits from Chrome |
+`hits_browser_firefox` | The amount of hits from Firefox |
+`hits_browser_msie` | The amount of hits from Internet Explorer |
+`hits_browser_opera` | The amount of hits from Opera |
+`hits_browser_safari` | The amount of hits from Safari |
+`hits_browser_other` | The amount of hits from Other Browsers |
+`hits_facebook` | The amount of hits from Facebook |
+`hits_from_as` | The amount of hits from Asia |
+`hits_from_eu` | The amount of hits from Europe |
+`hits_from_na` | The amount of hits from North America |
+`hits_from_oc` | The amount of hits from Oceania |
+`hits_from_sa` | The amount of hits from South America |
+`hits_mobile` | The amount of hits from Mobile Devices |
+`hits_os_android` | The amount of hits from Android |
+`hits_os_ios` | The amount of hits from iOS |
+`hits_os_linux` | The amount of hits from Linux |
+`hits_os_mac` | The amount of hits from Mac OS X |
+`hits_os_windows` | The amount of hits from Windows |
+`hits_ssl` | The amount of hits to SSL resources |
+`timestamp` | The timestamp for the corresponding {report_type}. |
+
+
+### Code Samples
+
+<ul class="nav nav-tabs" id="myTab101">
+  <li class="active"><a href="#ruby101" data-toggle='tab'>Ruby</a></li>
+  <li><a href="#python101" data-toggle='tab'>Python</a></li>
+  <li><a href="#php101" data-toggle='tab'>PHP</a></li>
+  <li><a href="#node101" data-toggle='tab'>Node</a></li>
+  <li><a href="#response101" data-toggle='tab'>Response</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="ruby101">
+<pre>
+id = '96061'
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/#{id}/trafficbyzone.json#{report_type}')</pre>
+  </div>
+  <div class="tab-pane" id="python101">
+<pre>
+id = '96061'
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/%d/trafficbyzone.json%s' % (id, report_type))</pre>
+  </div>
+  <div class="tab-pane" id="php101">
+<pre>
+$id = '96061';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+$api->get("/reports/$id/trafficbyzone.json/$reportType");</pre>
+  </div>
+  <div class="tab-pane" id="node101">
+<pre>
+var id = '96061'
+var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/' + id + '/trafficbyzone.json/' + reportType, function(err, response) {
+  console.log('err', err, 'response', response)
+})</pre>
+  </div>
+  <div class="tab-pane" id="response101">
+<pre>
+{
+    "code": 200,
+    "data": {
+        "trafficbyzone": {
+            "bucket_id": 96061,
+            "bytes": null,
+            "hits": null,
+            "cache_misses": null,
+            "cache_hits": null,
+            "errors": null,
+            "hits_1b_to_10kb": null,
+            "hits_10_to_50kb": null,
+            "hits_50_to_100kb": null,
+            "hits_100_to_500kb": null,
+            "hits_500kb_to_1mb": null,
+            "hits_1_to_10mb": null,
+            "hits_10_to_100mb": null,
+            "hits_100_to_500mb": null,
+            "hits_500mb_to_1gb": null,
+            "hits_1gb_or_greater": null,
+            "hits_2xx": null,
+            "hits_206": null,
+            "hits_3xx": null,
+            "hits_304": null,
+            "hits_4xx": null,
+            "hits_403": null,
+            "hits_404": null,
+            "hits_408": null,
+            "hits_499": null,
+            "hits_5xx": null,
+            "hits_500": null,
+            "hits_502": null,
+            "hits_503": null,
+            "hits_504": null,
+            "hits_bot": null,
+            "hits_browser_chrome": null,
+            "hits_browser_firefox": null,
+            "hits_browser_msie": null,
+            "hits_browser_opera": null,
+            "hits_browser_safari": null,
+            "hits_browser_other": null,
+            "hits_facebook": null,
+            "hits_from_as": null,
+            "hits_from_eu": null,
+            "hits_from_na": null,
+            "hits_from_oc": null,
+            "hits_from_sa": null,
+            "hits_mobile": null,
+            "hits_os_android": null,
+            "hits_os_ios": null,
+            "hits_os_linux": null,
+            "hits_os_mac": null,
+            "hits_os_windows": null,
+            "hits_ssl": null,
+            "timestamp": null,
+        },
+        "summary": {
+            "bytes": null,
+            "hits": null,
+            "cache_misses": null,
+            "cache_hits": null,
+            "errors": null,
+            "hits_1b_to_10kb": null,
+            "hits_10_to_50kb": null,
+            "hits_50_to_100kb": null,
+            "hits_100_to_500kb": null,
+            "hits_500kb_to_1mb": null,
+            "hits_1_to_10mb": null,
+            "hits_10_to_100mb": null,
+            "hits_100_to_500mb": null,
+            "hits_500mb_to_1gb": null,
+            "hits_1gb_or_greater": null,
+            "hits_2xx": null,
+            "hits_206": null,
+            "hits_3xx": null,
+            "hits_304": null,
+            "hits_4xx": null,
+            "hits_403": null,
+            "hits_404": null,
+            "hits_408": null,
+            "hits_499": null,
+            "hits_5xx": null,
+            "hits_500": null,
+            "hits_502": null,
+            "hits_503": null,
+            "hits_504": null,
+            "hits_bot": null,
+            "hits_browser_chrome": null,
+            "hits_browser_firefox": null,
+            "hits_browser_msie": null,
+            "hits_browser_opera": null,
+            "hits_browser_safari": null,
+            "hits_browser_other": null,
+            "hits_facebook": null,
+            "hits_from_as": null,
+            "hits_from_eu": null,
+            "hits_from_na": null,
+            "hits_from_oc": null,
+            "hits_from_sa": null,
+            "hits_mobile": null,
+            "hits_os_android": null,
+            "hits_os_ios": null,
+            "hits_os_linux": null,
+            "hits_os_mac": null,
+            "hits_os_windows": null,
+            "hits_ssl": null,
+        },
+        "total": "0"
+    }
+}</pre>
+  </div>
+</div>
+
+## List Continental Traffic by Zone
+
+Gets the {zone_id} continental traffic statistics optionally broken up by
+{report_type}. If no {report_type} is given the request will return
+the total traffic for the zones.
+
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path">https://rws.netdna.com/{companyalias}/reports/continents.json/{report_type}</span></div>
+</div>
+
+### Accepted Request Parameters
+
+Parameter | Default Value | Validation | Description |
+--- | --- | --- | --- | ---
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
+
+
+### Response Parameters
+Parameter | Description |
+--- | --- | ---
+`bucket_id` | The zone ID |
+`asian_hits` | The amount of hits from Asia |
+`european_hits` | The amount of hits from Europe |
+`north_american_hits` | The amount of hits from North America |
+`oceanian_hits` | The amount of hits from Oceania |
+`south_american_hits` | The amount of hits from South America |
+`timestamp` | The timestamp for the corresponding {report_type}. |
+
+
+### Code Samples
+
+<ul class="nav nav-tabs" id="myTab102">
+  <li class="active"><a href="#ruby102" data-toggle='tab'>Ruby</a></li>
+  <li><a href="#python102" data-toggle='tab'>Python</a></li>
+  <li><a href="#php102" data-toggle='tab'>PHP</a></li>
+  <li><a href="#node102" data-toggle='tab'>Node</a></li>
+  <li><a href="#response102" data-toggle='tab'>Response</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="ruby102">
+<pre>
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/continents.json#{report_type}')</pre>
+  </div>
+  <div class="tab-pane" id="python102">
+<pre>
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/continents.json%s' % (report_type,))</pre>
+  </div>
+  <div class="tab-pane" id="php102">
+<pre>
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+$api->get("/reports/continents.json/$reportType");</pre>
+  </div>
+  <div class="tab-pane" id="node102">
+<pre>
+var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/continents.json/' + reportType, function(err, response) {
+  console.log('err', err, 'response', response)
+})</pre>
+  </div>
+  <div class="tab-pane" id="response102">
+<pre>
+{
+    "code": 200,
+    "data": {
+        "continents": [],
+        "summary": {
+            "asian_hits": null,
+            "european_hits": null,
+            "north_american_hits": null,
+            "oceanian_hits": null,
+            "south_american_hits": null,
+        },
+        "total": "0"
+    }
+}</pre>
+  </div>
+</div>
+
+## Continental Traffic by Zone
+
+Gets the {zone_id} continental traffic statistics optionally broken up by
+{report_type}. If no {report_type} is given the request will return
+the total traffic for the zones.
+
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path">https://rws.netdna.com/{companyalias}/reports/{zone_id}/continents.json/{report_type}</span></div>
+</div>
+
+### Accepted Request Parameters
+
+Parameter | Default Value | Validation | Description |
+--- | --- | --- | --- | ---
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
+
+
+### Response Parameters
+Parameter | Description |
+--- | --- | ---
+`bucket_id` | The zone ID |
+`asian_hits` | The amount of hits from Asia |
+`european_hits` | The amount of hits from Europe |
+`north_american_hits` | The amount of hits from North America |
+`oceanian_hits` | The amount of hits from Oceania |
+`south_american_hits` | The amount of hits from South America |
+`timestamp` | The timestamp for the corresponding {report_type}. |
+
+
+### Code Samples
+
+<ul class="nav nav-tabs" id="myTab103">
+  <li class="active"><a href="#ruby103" data-toggle='tab'>Ruby</a></li>
+  <li><a href="#python103" data-toggle='tab'>Python</a></li>
+  <li><a href="#php103" data-toggle='tab'>PHP</a></li>
+  <li><a href="#node103" data-toggle='tab'>Node</a></li>
+  <li><a href="#response103" data-toggle='tab'>Response</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="ruby103">
+<pre>
+id = '96061'
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/#{id}/continents.json#{report_type}')</pre>
+  </div>
+  <div class="tab-pane" id="python103">
+<pre>
+id = '96061'
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/%d/continents.json%s' % (id, report_type))</pre>
+  </div>
+  <div class="tab-pane" id="php103">
+<pre>
+$id = '96061';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+$api->get("/reports/$id/continents.json/$reportType");</pre>
+  </div>
+  <div class="tab-pane" id="node103">
+<pre>
+var id = '96061'
+var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/' + id + '/continents.json/' + reportType, function(err, response) {
+  console.log('err', err, 'response', response)
+})</pre>
+  </div>
+  <div class="tab-pane" id="response103">
+<pre>
+{
+    "code": 200,
+    "data": {
+        "continents": {
+            "bucket_id": 96061,
+            "asian_hits": null,
+            "european_hits": null,
+            "north_american_hits": null,
+            "oceanian_hits": null,
+            "south_american_hits": null,
+            "timestamp": null,
+        },
+        "summary": {
+            "asian_hits": null,
+            "european_hits": null,
+            "north_american_hits": null,
+            "oceanian_hits": null,
+            "south_american_hits": null,
+        },
+        "total": "0"
+    }
+}</pre>
+  </div>
+</div>
+
+## List Browsers Traffic by Zone
+
+Gets the {zone_id} browsers traffic statistics optionally broken up by
+{report_type}. If no {report_type} is given the request will return
+the total traffic for the zones.
+
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path">https://rws.netdna.com/{companyalias}/reports/browsers.json/{report_type}</span></div>
+</div>
+
+### Accepted Request Parameters
+
+Parameter | Default Value | Validation | Description |
+--- | --- | --- | --- | ---
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
+
+
+### Response Parameters
+Parameter | Description |
+--- | --- | ---
+`bucket_id` | The zone ID |
+`chrome_hits` | The amount of hits from Chrome |
+`firefox_hits` | The amount of hits from Firefox |
+`msie_hits` | The amount of hits from Internet Explorer |
+`opera_hits` | The amount of hits from Opera |
+`safari_hits` | The amount of hits from Safari |
+`other_browsers_hits` | The amount of hits from Other Browsers |
+`timestamp` | The timestamp for the corresponding {report_type}. |
+
+
+### Code Samples
+
+<ul class="nav nav-tabs" id="myTab104">
+  <li class="active"><a href="#ruby104" data-toggle='tab'>Ruby</a></li>
+  <li><a href="#python104" data-toggle='tab'>Python</a></li>
+  <li><a href="#php104" data-toggle='tab'>PHP</a></li>
+  <li><a href="#node104" data-toggle='tab'>Node</a></li>
+  <li><a href="#response104" data-toggle='tab'>Response</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="ruby104">
+<pre>
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/browsers.json#{report_type}')</pre>
+  </div>
+  <div class="tab-pane" id="python104">
+<pre>
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/browsers.json%s' % (report_type,))</pre>
+  </div>
+  <div class="tab-pane" id="php104">
+<pre>
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+$api->get("/reports/browsers.json/$reportType");</pre>
+  </div>
+  <div class="tab-pane" id="node104">
+<pre>
+var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/browsers.json/' + reportType, function(err, response) {
+  console.log('err', err, 'response', response)
+})</pre>
+  </div>
+  <div class="tab-pane" id="response104">
+<pre>
+{
+    "code": 200,
+    "data": {
+        "browsers": [],
+        "summary": {
+            "chrome_hits": null,
+            "firefox_hits": null,
+            "msie_hits": null,
+            "opera_hits": null,
+            "safari_hits": null,
+            "other_browsers_hits": null,
+        },
+        "total": "0"
+    }
+}</pre>
+  </div>
+</div>
+
+## Browsers Traffic by Zone
+
+Gets the {zone_id} browsers traffic statistics optionally broken up by
+{report_type}. If no {report_type} is given the request will return
+the total traffic for the zones.
+
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path">https://rws.netdna.com/{companyalias}/reports/{zone_id}/browsers.json/{report_type}</span></div>
+</div>
+
+### Accepted Request Parameters
+
+Parameter | Default Value | Validation | Description |
+--- | --- | --- | --- | ---
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
+
+
+### Response Parameters
+Parameter | Description |
+--- | --- | ---
+`bucket_id` | The zone ID |
+`chrome_hits` | The amount of hits from Chrome |
+`firefox_hits` | The amount of hits from Firefox |
+`msie_hits` | The amount of hits from Internet Explorer |
+`opera_hits` | The amount of hits from Opera |
+`safari_hits` | The amount of hits from Safari |
+`other_browsers_hits` | The amount of hits from Other Browsers |
+`timestamp` | The timestamp for the corresponding {report_type}. |
+
+
+### Code Samples
+
+<ul class="nav nav-tabs" id="myTab105">
+  <li class="active"><a href="#ruby105" data-toggle='tab'>Ruby</a></li>
+  <li><a href="#python105" data-toggle='tab'>Python</a></li>
+  <li><a href="#php105" data-toggle='tab'>PHP</a></li>
+  <li><a href="#node105" data-toggle='tab'>Node</a></li>
+  <li><a href="#response105" data-toggle='tab'>Response</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="ruby105">
+<pre>
+id = '96061'
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/#{id}/browsers.json#{report_type}')</pre>
+  </div>
+  <div class="tab-pane" id="python105">
+<pre>
+id = '96061'
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/%d/browsers.json%s' % (id, report_type))</pre>
+  </div>
+  <div class="tab-pane" id="php105">
+<pre>
+$id = '96061';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+$api->get("/reports/$id/browsers.json/$reportType");</pre>
+  </div>
+  <div class="tab-pane" id="node105">
+<pre>
+var id = '96061'
+var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/' + id + '/browsers.json/' + reportType, function(err, response) {
+  console.log('err', err, 'response', response)
+})</pre>
+  </div>
+  <div class="tab-pane" id="response105">
+<pre>
+{
+    "code": 200,
+    "data": {
+        "browsers": {
+            "bucket_id": 96061,
+            "chrome_hits": null,
+            "firefox_hits": null,
+            "msie_hits": null,
+            "opera_hits": null,
+            "safari_hits": null,
+            "other_browsers_hits": null,
+            "timestamp": null,
+        },
+        "summary": {
+            "chrome_hits": null,
+            "firefox_hits": null,
+            "msie_hits": null,
+            "opera_hits": null,
+            "safari_hits": null,
+            "other_browsers_hits": null,
+        },
+        "total": "0"
+    }
+}</pre>
+  </div>
+</div>
+
+## List Operating Systems Traffic by Zone
+
+Gets the {zone_id} operating systems traffic statistics optionally broken up by
+{report_type}. If no {report_type} is given the request will return
+the total traffic for the zones.
+
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path">https://rws.netdna.com/{companyalias}/reports/operatingsystems.json/{report_type}</span></div>
+</div>
+
+### Accepted Request Parameters
+
+Parameter | Default Value | Validation | Description |
+--- | --- | --- | --- | ---
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
+
+
+### Response Parameters
+Parameter | Description |
+--- | --- | ---
+`bucket_id` | The zone ID |
+`android_hits` | The amount of hits from Android |
+`ios_hits` | The amount of hits from iOS |
+`linux_hits` | The amount of hits from Linux |
+`mac_hits` | The amount of hits from Mac OS X |
+`windows_hits` | The amount of hits from Windows |
+`timestamp` | The timestamp for the corresponding {report_type}. |
+
+
+### Code Samples
+
+<ul class="nav nav-tabs" id="myTab106">
+  <li class="active"><a href="#ruby106" data-toggle='tab'>Ruby</a></li>
+  <li><a href="#python106" data-toggle='tab'>Python</a></li>
+  <li><a href="#php106" data-toggle='tab'>PHP</a></li>
+  <li><a href="#node106" data-toggle='tab'>Node</a></li>
+  <li><a href="#response106" data-toggle='tab'>Response</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="ruby106">
+<pre>
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/operatingsystems.json#{report_type}')</pre>
+  </div>
+  <div class="tab-pane" id="python106">
+<pre>
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/operatingsystems.json%s' % (report_type,))</pre>
+  </div>
+  <div class="tab-pane" id="php106">
+<pre>
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+$api->get("/reports/operatingsystems.json/$reportType");</pre>
+  </div>
+  <div class="tab-pane" id="node106">
+<pre>
+var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/operatingsystems.json/' + reportType, function(err, response) {
+  console.log('err', err, 'response', response)
+})</pre>
+  </div>
+  <div class="tab-pane" id="response106">
+<pre>
+{
+    "code": 200,
+    "data": {
+        "operatingsystems": [],
+        "summary": {
+            "android_hits": null,
+            "ios_hits": null,
+            "linux_hits": null,
+            "mac_hits": null,
+            "windows_hits": null,
+        },
+        "total": "0"
+    }
+}</pre>
+  </div>
+</div>
+
+## Operating Systems Traffic by Zone
+
+Gets the {zone_id} operating systems traffic statistics optionally broken up by
+{report_type}. If no {report_type} is given the request will return
+the total traffic for the zones.
+
+<div class="heading">
+<div class="url GET"><span class="http_method">GET</span>
+<span class="path">https://rws.netdna.com/{companyalias}/reports/{zone_id}/operatingsystems.json/{report_type}</span></div>
+</div>
+
+### Accepted Request Parameters
+
+Parameter | Default Value | Validation | Description |
+--- | --- | --- | --- | ---
+`date_from` | now() - 1 month | Y-m-d (e.g. 2012-01-01) | Start date |
+`date_to` | now() | Y-m-d (e.g. 2012-01-01) | End date |
+
+
+### Response Parameters
+Parameter | Description |
+--- | --- | ---
+`bucket_id` | The zone ID |
+`android_hits` | The amount of hits from Android |
+`ios_hits` | The amount of hits from iOS |
+`linux_hits` | The amount of hits from Linux |
+`mac_hits` | The amount of hits from Mac OS X |
+`windows_hits` | The amount of hits from Windows |
+`timestamp` | The timestamp for the corresponding {report_type}. |
+
+
+### Code Samples
+
+<ul class="nav nav-tabs" id="myTab107">
+  <li class="active"><a href="#ruby107" data-toggle='tab'>Ruby</a></li>
+  <li><a href="#python107" data-toggle='tab'>Python</a></li>
+  <li><a href="#php107" data-toggle='tab'>PHP</a></li>
+  <li><a href="#node107" data-toggle='tab'>Node</a></li>
+  <li><a href="#response107" data-toggle='tab'>Response</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="ruby107">
+<pre>
+id = '96061'
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/#{id}/operatingsystems.json#{report_type}')</pre>
+  </div>
+  <div class="tab-pane" id="python107">
+<pre>
+id = '96061'
+report_type = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/%d/operatingsystems.json%s' % (id, report_type))</pre>
+  </div>
+  <div class="tab-pane" id="php107">
+<pre>
+$id = '96061';
+$reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+$api->get("/reports/$id/operatingsystems.json/$reportType");</pre>
+  </div>
+  <div class="tab-pane" id="node107">
+<pre>
+var id = '96061'
+var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
+api.get('/reports/' + id + '/operatingsystems.json/' + reportType, function(err, response) {
+  console.log('err', err, 'response', response)
+})</pre>
+  </div>
+  <div class="tab-pane" id="response107">
+<pre>
+{
+    "code": 200,
+    "data": {
+        "operatingsystems": {
+            "bucket_id": 96061,
+            "android_hits": null,
+            "ios_hits": null,
+            "linux_hits": null,
+            "mac_hits": null,
+            "windows_hits": null,
+            "timestamp": null,
+        },
+        "summary": {
+            "chrome_hits": null,
+            "firefox_hits": null,
+            "msie_hits": null,
+            "opera_hits": null,
+            "safari_hits": null,
+            "other_operatingsystems_hits": null,
+        },
+        "total": "0"
+    }
+}</pre>
+  </div>
+</div>
 
 # Reports by Location API
 
@@ -5747,25 +6684,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby71">
-		<pre>
+        <pre>
 api.get('/reports/nodes.json')</pre>
   </div>
   <div class="tab-pane" id="python71">
-		<pre>
+        <pre>
 api.get('/reports/nodes.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php71">
-  	<pre>
+      <pre>
 $api->get('/reports/nodes.json');</pre>
   </div>
   <div class="tab-pane" id="node71">
-	<pre>
+    <pre>
 api.get('/reports/nodes.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response71">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -5867,29 +6804,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby72">
-		<pre>
+        <pre>
 id = '96061'
 api.get('/reports/'+id+'/nodes.json')</pre>
   </div>
   <div class="tab-pane" id="python72">
-		<pre>
+        <pre>
 id = '96061'
 api.get('/reports/'+id+'/nodes.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php72">
-  	<pre>
+      <pre>
 $id = '96061';
 $api->get('/reports/'.$id.'/nodes.json');</pre>
   </div>
   <div class="tab-pane" id="node72">
-	<pre>
+    <pre>
 var id = '96061'
 api.get('/reports/' + id + '/nodes.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response72">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -5995,29 +6932,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby73">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/nodes.json/stats'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python73">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/nodes.json/stats'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php73">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/nodes.json/stats/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node73">
-	<pre>
+    <pre>
 var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/nodes.json/stats/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response73">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -6170,25 +7107,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby74">
-		<pre>
+        <pre>
 id = '96061'
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/'+id+'/nodes.json/stats'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python74">
-		<pre>
+        <pre>
 id = '96061'
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/'+id+'/nodes.json/stats'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php74">
-  	<pre>
+      <pre>
 $id = '96061';
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/'.$id.'/nodes.json/stats/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node74">
-	<pre>
+    <pre>
 var id = '96061'
 var reportType = '' //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/' + id + '/nodes.json/stats/' + reportType, function(err, response) {
@@ -6196,7 +7133,7 @@ api.get('/reports/' + id + '/nodes.json/stats/' + reportType, function(err, resp
 })</pre>
   </div>
   <div class="tab-pane" id="response74">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -6243,29 +7180,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby75">
-		<pre>
+        <pre>
 id = '1'
 api.get('/reports/nodes.json/'+id)</pre>
   </div>
   <div class="tab-pane" id="python75">
-		<pre>
+        <pre>
 id = '1'
 api.get('/reports/nodes.json/'+id)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php75">
-  	<pre>
+      <pre>
 $id = '1';
 $api->get('/reports/nodes.json/'.$id);</pre>
   </div>
   <div class="tab-pane" id="node75">
-	<pre>
+    <pre>
 var id = '1'
 api.get('/reports/nodes.json/' + id, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response75">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -6311,25 +7248,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby76">
-		<pre>
+        <pre>
 zoneId = '96061'
 nodeId = '1'
 api.get('/reports/'+zoneId+'/nodes.json/'+nodeId)</pre>
   </div>
   <div class="tab-pane" id="python76">
-		<pre>
+        <pre>
 zoneId = '96061'
 nodeId = '1'
 api.get('/reports/'+zoneId+'/nodes.json/'+nodeId)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php76">
-  	<pre>
+      <pre>
 $zoneId = '96061';
 $nodeId = '1';
 $api->get('/reports/'.$zoneId.'/nodes.json/'.$nodeId);</pre>
   </div>
   <div class="tab-pane" id="node76">
-	<pre>
+    <pre>
 var zoneId = '96061'
 var nodeId = '1'
 api.get('/reports/' + zoneId + '/nodes.json/' + nodeId, function(err, response) {
@@ -6337,7 +7274,7 @@ api.get('/reports/' + zoneId + '/nodes.json/' + nodeId, function(err, response) 
 })</pre>
   </div>
   <div class="tab-pane" id="response76">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -6396,25 +7333,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby77">
-		<pre>
+        <pre>
 id = '1'
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/nodes.json/'+id+'/stats'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python77">
-		<pre>
+        <pre>
 id = '1'
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/nodes.json/'+id+'/stats'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php77">
-  	<pre>
+      <pre>
 $id = '1';
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/nodes.json/'.$id.'/stats/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node77">
-	<pre>
+    <pre>
 var id = '1'
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/nodes.json/' + id + '/stats/' + reportType, function(err, response) {
@@ -6422,7 +7359,7 @@ api.get('/reports/nodes.json/' + id + '/stats/' + reportType, function(err, resp
 })</pre>
   </div>
   <div class="tab-pane" id="response77">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -6484,28 +7421,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby78">
-		<pre>
+        <pre>
 zoneId='96061'
 nodeId='1'
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/'+zoneId+'/nodes.json/'+nodeId+'/stats'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python78">
-		<pre>
+        <pre>
 zoneId='96061'
 nodeId='1'
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/'+zoneId+'/nodes.json/'+nodeId+'/stats'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php78">
-  	<pre>
+      <pre>
 $zoneId='96061';
 $nodeId='1';
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/'.$zoneId.'/nodes.json/'.$nodeId.'/stats/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node78">
-	<pre>
+    <pre>
 var zoneId = '96061'
 var nodeId = '1'
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
@@ -6514,7 +7451,7 @@ api.get('/reports/' + zoneId + '/nodes.json/' + nodeId + '/stats/' + reportType,
 })</pre>
   </div>
   <div class="tab-pane" id="response78">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -6576,25 +7513,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby79">
-		<pre>
+        <pre>
 api.get('/reports/popularfiles.json')</pre>
   </div>
   <div class="tab-pane" id="python79">
-		<pre>
+        <pre>
 api.get('/reports/popularfiles.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php79">
-  	<pre>
+      <pre>
 $api->get('/reports/popularfiles.json');</pre>
   </div>
   <div class="tab-pane" id="node79">
-	<pre>
+    <pre>
 api.get('/reports/popularfiles.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response79">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -6657,29 +7594,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby80">
-		<pre>
+        <pre>
 type='pull'
 api.get('/reports/'+type+'/popularfiles.json')</pre>
   </div>
   <div class="tab-pane" id="python80">
-		<pre>
+        <pre>
 type='pull'
 api.get('/reports/'+type+'/popularfiles.json')</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php80">
-  	<pre>
+      <pre>
 $type='pull';
 $api->get('/reports/'.$type.'/popularfiles.json');</pre>
   </div>
   <div class="tab-pane" id="node80">
-	<pre>
+    <pre>
 var type = 'pull'
 api.get('/reports/' + type + '/popularfiles.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response80">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -6738,29 +7675,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby81">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/statuscodes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python81">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/statuscodes.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php81">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/statuscodes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node81">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/statuscodes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response81">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -6819,25 +7756,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby82">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/statuscodes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python82">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/statuscodes.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php82">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $id = '96061';
 $api->get('/reports/'.$id.'/statuscodes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node82">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var id = '96061'
 api.get('/reports/' + id + '/statuscodes.json/' + reportType, function(err, response) {
@@ -6845,7 +7782,7 @@ api.get('/reports/' + id + '/statuscodes.json/' + reportType, function(err, resp
 })</pre>
   </div>
   <div class="tab-pane" id="response82">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -6898,25 +7835,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby83">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 api.get('/reports/'+zoneType+'/statuscodes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python83">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 api.get('/reports/'+zoneType+'/statuscodes.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php83">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneType = 'pull';
 $api->get('/reports/'.$zoneType.'/statuscodes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node83">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneType = 'pull'
 api.get('/reports/' + zoneType + '/statuscodes.json/' + reportType, function(err, response) {
@@ -6924,7 +7861,7 @@ api.get('/reports/' + zoneType + '/statuscodes.json/' + reportType, function(err
 })</pre>
   </div>
   <div class="tab-pane" id="response83">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -6985,28 +7922,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby84">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/statuscodes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python84">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/statuscodes.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php84">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneType = 'pull';
 $id = '96061';
 $api->get('/reports/'.$zoneType.'/'.$id.'/statuscodes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node84">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneType = 'pull'
 var id = '96061'
@@ -7015,7 +7952,7 @@ api.get('/reports/' + zoneType + '/' + id + '/statuscodes.json/' + reportType, f
 })</pre>
   </div>
   <div class="tab-pane" id="response84">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -7068,29 +8005,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby85">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python85">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/filetypes.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php85">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/filetypes.json'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node85">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/filetypes.json', function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response85">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -7150,25 +8087,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby86">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python86">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/filetypes.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php86">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $id = '96061';
 $api->get('/reports/'.$id.'/filetypes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node86">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var id = '96061'
 api.get('/reports/' + id + '/filetypes.json/' + reportType, function(err, response) {
@@ -7176,7 +8113,7 @@ api.get('/reports/' + id + '/filetypes.json/' + reportType, function(err, respon
 })</pre>
   </div>
   <div class="tab-pane" id="response86">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -7223,25 +8160,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby87">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 api.get('/reports/'+zoneType+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python87">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 api.get('/reports/'+zoneType+'/filetypes.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php87">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneType = 'pull';
 $api->get('/reports/'.$zoneType.'/filetypes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node87">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneType = 'pull'
 api.get('/reports/' + zoneType + '/filetypes.json/' + reportType, function(err, response) {
@@ -7249,7 +8186,7 @@ api.get('/reports/' + zoneType + '/filetypes.json/' + reportType, function(err, 
 })</pre>
   </div>
   <div class="tab-pane" id="response87">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -7311,28 +8248,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby88">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python88">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/filetypes.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php88">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneType = 'pull';
 $id = '96061';
 $api->get('/reports/'.$zoneType.'/'.$id.'/filetypes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node88">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneType = 'pull'
 var id = '96061'
@@ -7341,7 +8278,7 @@ api.get('/reports/' + zoneType + '/' + id + '/filetypes.json/' + reportType, fun
 })</pre>
   </div>
   <div class="tab-pane" id="response88">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -7405,31 +8342,31 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby89">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/filetypes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python89">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/filesizes.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php89">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/filesizes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node89">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/filesizes.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response89">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -7497,25 +8434,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby90">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/filesizes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python90">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/filesizes.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php90">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $id = '96061';
 $api->get('/reports/'.$id.'/filesizes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node90">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var id = '96061'
 api.get('/reports/' + id + '/filesizes.json/' + reportType, function(err, response) {
@@ -7523,7 +8460,7 @@ api.get('/reports/' + id + '/filesizes.json/' + reportType, function(err, respon
 })</pre>
   </div>
   <div class="tab-pane" id="response90">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -7591,25 +8528,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby91">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 api.get('/reports/'+zoneType+'/filesizes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python91">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 api.get('/reports/'+zoneType+'/filesizes.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php91">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneType = 'pull';
 $api->get('/reports/'.$zoneType.'/filesizes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node91">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneType = 'pull'
 api.get('/reports/' + zoneType + '/filesizes.json/' + reportType, function(err, response) {
@@ -7617,7 +8554,7 @@ api.get('/reports/' + zoneType + '/filesizes.json/' + reportType, function(err, 
 })</pre>
   </div>
   <div class="tab-pane" id="response91">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -7686,28 +8623,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby92">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/filesizes.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python92">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneType = 'pull'
 id = '96061'
 api.get('/reports/'+zoneType+'/'+id+'/filesizes.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php92">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneType = 'pull';
 $id = '96061';
 $api->get('/reports/'.$zoneType.'/'.$id.'/filesizes.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node92">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneType = 'pull'
 var id = '96061'
@@ -7716,7 +8653,7 @@ api.get('/reports/' + zoneType + '/' + id + '/filesizes.json/' + reportType, fun
 })</pre>
   </div>
   <div class="tab-pane" id="response92">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -7782,29 +8719,29 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby93">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/statsbydir.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python93">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/statsbydir.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php93">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/statsbydir.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node93">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/statsbydir.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response93">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -7864,25 +8801,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby94">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/statsbydir.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python94">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = '96061'
 api.get('/reports/'+id+'/statsbydir.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php94">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $id = '96061';
 $api->get('/reports/'.$id.'/statsbydir.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node94">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var id = '96061'
 api.get('/reports/' + id + '/' + '/statsbydir.json/' + reportType, function(err, response) {
@@ -7890,7 +8827,7 @@ api.get('/reports/' + id + '/' + '/statsbydir.json/' + reportType, function(err,
 })</pre>
   </div>
   <div class="tab-pane" id="response94">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -7964,25 +8901,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby95">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 clientId = ''
 api.get('/clients/'+clientId+'/reports/statsbyfilename.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python95">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
-clientId = ''	
+clientId = ''
 api.get('/clients/'+clientId+'/reports/statsbyfilename.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php95">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $clientId = '';
 $api->get('/clients/'.$clientId.'/reports/statsbyfilename.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node95">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var clientId = ''
 api.get('/clients/' + clientId + '/reports/statsbyfilename.json/' + reportType, function(err, response) {
@@ -7990,7 +8927,7 @@ api.get('/clients/' + clientId + '/reports/statsbyfilename.json/' + reportType, 
 })</pre>
   </div>
   <div class="tab-pane" id="response95">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -8096,28 +9033,28 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby96">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = ''
 clientId = ''
 api.get('/clients/'+clientId+'/reports/'+id+'/statsbyfilename.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python96">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 id = ''
 clientId = ''
 api.get('/clients/'+clientId+'/reports/'+id+'/statsbyfilename.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php96">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $id = '96061';
 $clientId = '';
 $api->get('/clients/'.$clientId.'/reports/'.$id.'/statsbyfilename.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node96">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var id = '96061'
 var clientId = ''
@@ -8126,7 +9063,7 @@ api.get('/clients/' + clientId + '/reports/' + id + '/statsbyfilename.json/' + r
 })</pre>
   </div>
   <div class="tab-pane" id="response96">
-		<pre>
+        <pre>
 Non functional</pre>
   </div>
 </div>
@@ -8174,25 +9111,25 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby97">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 clientId = ''
 api.get('/clients/'+clientId+'/reports/statsbycustomdomain.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python97">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 clientId = ''
 api.get('/clients/'+clientId+'/reports/statsbycustomdomain.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php97">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $clientId = '';
 $api->get('clients/'.$clientId.'/reports/statsbycustomdomain.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node97">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var clientId = ''
 api.get('/clients/' + clientId + '/reports/statsbycustomdomain.json/' + reportType, function(err, response) {
@@ -8200,7 +9137,7 @@ api.get('/clients/' + clientId + '/reports/statsbycustomdomain.json/' + reportTy
 })</pre>
   </div>
   <div class="tab-pane" id="response97">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -8268,7 +9205,7 @@ Parameter | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby98">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneId = ''
 clientId = ''
@@ -8276,21 +9213,21 @@ api.get('/clients/'+clientId+'/reports/'+zoneId+'/statsbycustomdomain.json'+repo
 </pre>
   </div>
   <div class="tab-pane" id="python98">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 zoneId = '84199'
 clientId = '1'
 api.get('/clients/'+clientId+'/reports/'+zoneId+'/statsbycustomdomain.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php98">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $zoneId = '';
 $clientId = '';
 $api->get('clients/'.$clientId.'/reports/'.$zoneId.'/statsbycustomdomain.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node98">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 var zoneId = ''
 var clientId = ''
@@ -8299,7 +9236,7 @@ api.get('/clients/' + clientId + '/reports/' + zoneId + '/statsbycustomdomain.js
 })</pre>
   </div>
   <div class="tab-pane" id="response98">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
@@ -8349,29 +9286,29 @@ Parameter | Default Value | Validation | Description |
 
 <div class="tab-content">
   <div class="tab-pane active" id="ruby99">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/live/connectionstats.json'+reportType)</pre>
   </div>
   <div class="tab-pane" id="python99">
-		<pre>
+        <pre>
 reportType = '' #Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/live/connectionstats.json'+reportType)</pre>
-	</div>
+    </div>
   <div class="tab-pane" id="php99">
-  	<pre>
+      <pre>
 $reportType = ''; //Vaild input includes '/daily', '/hourly', '/monthly' or ''
 $api->get('/reports/live/connectionstats.json/'.$reportType);</pre>
   </div>
   <div class="tab-pane" id="node99">
-	<pre>
+    <pre>
 var reportType = '' //Valid input includes '/daily', '/hourly', '/monthly' or ''
 api.get('/reports/live/connectionstats.json/' + reportType, function(err, response) {
   console.log('err', err, 'response', response)
 })</pre>
   </div>
   <div class="tab-pane" id="response99">
-		<pre>
+        <pre>
 {
     "code": 200,
     "data": {
